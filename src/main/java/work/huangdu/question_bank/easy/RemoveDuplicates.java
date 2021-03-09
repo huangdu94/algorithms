@@ -18,18 +18,33 @@ package work.huangdu.question_bank.easy;
  * @date 2021/3/9
  */
 public class RemoveDuplicates {
-    public String removeDuplicates(String s) {
+    public String removeDuplicates2(String s) {
         int n = s.length();
         for (int i = 0; i < n; i++) {
-            if (i + 1 < n && s.charAt(i) == s.charAt(i + 1)) {
-                int left = i - 1, right = i + 2;
-                while (left >= 0 && right < n && s.charAt(left) == s.charAt(right)) {
-                    left--;
-                    right++;
-                }
-                return removeDuplicates(s.substring(0, left + 1).concat(s.substring(right)));
+            int left = i, right = i + 1;
+            while (left >= 0 && right < n && s.charAt(left) == s.charAt(right)) {
+                left--;
+                right++;
+            }
+            if (right - left - 1 > 0) {
+                return removeDuplicates2(s.substring(0, left + 1).concat(s.substring(right)));
             }
         }
         return s;
+    }
+
+    // 栈
+    public String removeDuplicates(String s) {
+        if (s.length() == 1) { return s; }
+        int top = 0;
+        char[] stack = s.toCharArray();
+        for (char c : stack) {
+            if (top != 0 && stack[top - 1] == c) {
+                top--;
+            } else {
+                stack[top++] = c;
+            }
+        }
+        return new String(stack, 0, top);
     }
 }
