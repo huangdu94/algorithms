@@ -1,11 +1,11 @@
-package work.huangdu.question_bank.medium;
-
-import work.huangdu.data_structure.TreeNode;
+package work.huangdu.exploration.start_from_scratch.tree.reconsitution;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 106. 从中序与后序遍历序列构造二叉树
@@ -26,7 +26,7 @@ import java.util.Map;
  * @date 2020/9/25 16:02
  * @see work.huangdu.exploration.intermediate_algorithms.tree_graph.BuildTree
  */
-public class BuildTree {
+public class BuildTree2 {
     private int postIndex;
 
     public TreeNode buildTree2(int[] inorder, int[] postorder) {
@@ -41,7 +41,7 @@ public class BuildTree {
     }
 
     private TreeNode buildTree(Map<Integer, Integer> inorderMap, int il, int ir, int[] postorder, int pl, int pr) {
-        if (il > ir) return null;
+        if (il > ir) { return null; }
         int rootVal = postorder[pr];
         int index = inorderMap.get(rootVal);
         TreeNode root = new TreeNode(rootVal);
@@ -51,7 +51,7 @@ public class BuildTree {
     }
 
     private TreeNode buildTree(Map<Integer, Integer> inorderMap, int[] postorder, int il, int ir) {
-        if (il > ir) return null;
+        if (il > ir) { return null; }
         int rootVal = postorder[postIndex--];
         int index = inorderMap.get(rootVal);
         TreeNode root = new TreeNode(rootVal);
@@ -60,8 +60,9 @@ public class BuildTree {
         return root;
     }
 
+    // 此处的cur.val == inorder[inIndex]可以理解为cur的右子树已经生成，或者说cur没有右子树
     public TreeNode buildTree(int[] inorder, int[] postorder) {
-        if (inorder.length == 0) return null;
+        if (inorder.length == 0) { return null; }
         int n = inorder.length, inIndex = n - 1;
         Deque<TreeNode> stack = new ArrayDeque<>();
         TreeNode root = new TreeNode(postorder[n - 1]);
@@ -82,5 +83,25 @@ public class BuildTree {
             }
         }
         return root;
+    }
+
+    public TreeNode buildTree3(int[] inorder, int[] postorder) {
+        int n = inorder.length;
+        // key: node value: index
+        Map<Integer, Integer> inorderMap = new HashMap<>(n);
+        for (int i = 0; i < n; i++) {
+            inorderMap.put(inorder[i], i);
+        }
+        return buildTree(postorder, 0, n - 1, inorderMap, 0);
+    }
+
+    private TreeNode buildTree(int[] postorder, int postLeft, int postRight,
+        Map<Integer, Integer> inorderMap, int inLeft) {
+        if (postLeft > postRight) { return null; }
+        int value = postorder[postRight];
+        int index = inorderMap.get(value);
+        TreeNode left = buildTree(postorder, postLeft, postLeft + index - inLeft - 1, inorderMap, inLeft);
+        TreeNode right = buildTree(postorder, postLeft + index - inLeft, postRight - 1, inorderMap, index + 1);
+        return new TreeNode(value, left, right);
     }
 }

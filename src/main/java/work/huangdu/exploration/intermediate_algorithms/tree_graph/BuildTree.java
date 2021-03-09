@@ -1,8 +1,10 @@
 package work.huangdu.exploration.intermediate_algorithms.tree_graph;
 
-import work.huangdu.data_structure.TreeNode;
-
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 105. 从前序与中序遍历序列构造二叉树
@@ -24,8 +26,7 @@ import java.util.Stack;
  */
 public class BuildTree {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        if (preorder == null || inorder == null)
-            return null;
+        if (preorder == null || inorder == null) { return null; }
         return this.buildTree(preorder, 0, preorder.length, inorder, 0, inorder.length);
     }
 
@@ -42,13 +43,10 @@ public class BuildTree {
      */
     private TreeNode buildTree(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd) {
         // inStart == inEnd
-        if (preStart == preEnd)
-            return null;
+        if (preStart == preEnd) { return null; }
         int rootVal = preorder[preStart];
         int inMiddle;
-        for (inMiddle = inStart; inMiddle < inEnd; inMiddle++)
-            if (inorder[inMiddle] == rootVal)
-                break;
+        for (inMiddle = inStart; inMiddle < inEnd; inMiddle++) { if (inorder[inMiddle] == rootVal) { break; } }
         int preMiddle = preStart + (inMiddle - inStart) + 1;
         TreeNode root = new TreeNode(rootVal);
         root.left = this.buildTree(preorder, preStart + 1, preMiddle, inorder, inStart, inMiddle);
@@ -57,8 +55,7 @@ public class BuildTree {
     }
 
     public TreeNode buildTree2(int[] preorder, int[] inorder) {
-        if (preorder == null || preorder.length == 0)
-            return null;
+        if (preorder == null || preorder.length == 0) { return null; }
         Stack<TreeNode> stack = new Stack<>();
         TreeNode root = new TreeNode(preorder[0]);
         stack.push(root);
@@ -79,5 +76,27 @@ public class BuildTree {
             }
         }
         return root;
+    }
+}
+
+class BuildTree2 {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        int n = inorder.length;
+        // key: node value: index
+        Map<Integer, Integer> inorderMap = new HashMap<>(n);
+        for (int i = 0; i < n; i++) {
+            inorderMap.put(inorder[i], i);
+        }
+        return buildTree(preorder, 0, n - 1, inorderMap, 0);
+    }
+
+    private TreeNode buildTree(int[] preorder, int preLeft, int preRight,
+        Map<Integer, Integer> inorderMap, int inLeft) {
+        if (preLeft > preRight) { return null; }
+        int value = preorder[preLeft];
+        int index = inorderMap.get(value);
+        TreeNode left = buildTree(preorder, preLeft + 1, preLeft + index - inLeft, inorderMap, inLeft);
+        TreeNode right = buildTree(preorder, preLeft + index - inLeft + 1, preRight, inorderMap, index + 1);
+        return new TreeNode(value, left, right);
     }
 }
