@@ -16,18 +16,19 @@ package work.huangdu.question_bank.difficult;
  * 1 <= s.length <= 3 * 105
  * s 由数字、'+'、'-'、'('、')'、和 ' ' 组成
  * s 表示一个有效的表达式
+ *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/3/10
  */
 public class Calculate {
     private int n;
     private int i;
-    private char[] chars;
+    private String s;
 
     public int calculate(String s) {
         this.n = s.length();
         this.i = 0;
-        this.chars = s.toCharArray();
+        this.s = s;
         return calculate();
     }
 
@@ -35,7 +36,7 @@ public class Calculate {
         int sum = 0, num = 0;
         char op = '+';
         while (i < n) {
-            char c = chars[i++];
+            char c = s.charAt(i++);
             if (c != ' ') {
                 if (c == ')') { return compute(sum, num, op);}
                 if (c == '(') {
@@ -59,8 +60,9 @@ public class Calculate {
                 return sum + num;
             case '-':
                 return sum - num;
+            default:
+                throw new RuntimeException(String.format("%s operator is not support!", op));
         }
-        return 0;
     }
 
     public static void main(String[] args) {
