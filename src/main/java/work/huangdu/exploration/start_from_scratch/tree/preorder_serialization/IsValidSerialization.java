@@ -1,6 +1,5 @@
 package work.huangdu.exploration.start_from_scratch.tree.preorder_serialization;
 
-import java.lang.management.BufferPoolMXBean;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -73,6 +72,22 @@ public class IsValidSerialization {
             }
         }
         return i == n - 1;
+    }
+
+    public boolean isValidSerialization3(String preorder) {
+        int n = preorder.length(), i = 0, slot = 1;
+        while (i < n) {
+            if (preorder.charAt(i) == '#') {
+                if (--slot == 0) { return i == n - 1; }
+                i += 2;
+            } else {
+                slot++;
+                int next = preorder.indexOf(',', i);
+                if (next == -1) {return false;}
+                i = next + 1;
+            }
+        }
+        return slot == 0;
     }
 
     public static void main(String[] args) {
