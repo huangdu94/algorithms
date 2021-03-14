@@ -1,5 +1,8 @@
 package work.huangdu.exploration.start_from_scratch.tree.flatten;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import work.huangdu.data_structure.TreeNode;
 
 /**
@@ -25,34 +28,33 @@ import work.huangdu.data_structure.TreeNode;
  * @date 2021/3/9
  */
 public class Flatten {
-    // TODO
+    //原地算法 寻找前驱节点
     public void flatten(TreeNode root) {
-        if (root == null || root.left == null && root.right == null) { return; }
-        TreeNode cur = root, dummy = new TreeNode(), tail = dummy;
-        while (cur != null) {
-            if (cur.left == null) {
-                tail.right = new TreeNode(cur.val);
-                tail = tail.right;
-                cur = cur.right;
+        if (root == null) {return;}
+        List<TreeNode> preorder = new ArrayList<>();
+        while (root != null) {
+            if (root.left == null) {
+                preorder.add(root);
+                root = root.right;
             } else {
-                TreeNode prev = cur.left;
-                while (prev.right != null && prev.right != cur) {
+                TreeNode prev = root.left;
+                while (prev.right != null && prev.right != root) {
                     prev = prev.right;
                 }
                 if (prev.right == null) {
-                    tail.right = new TreeNode(cur.val);
-                    tail = tail.right;
-                    prev.right = cur;
-                    cur = cur.left;
+                    preorder.add(root);
+                    prev.right = root;
+                    root = root.left;
                 } else {
                     prev.right = null;
-                    cur = cur.right;
+                    root = root.right;
                 }
             }
         }
-        root.val = dummy.right.val;
-        root.left = null;
-        root.right = dummy.right.right;
+        for (int i = 0, n = preorder.size() - 1; i < n; i++) {
+            preorder.get(i).left = null;
+            preorder.get(i).right = preorder.get(i + 1);
+        }
     }
 
     public static void main(String[] args) {
