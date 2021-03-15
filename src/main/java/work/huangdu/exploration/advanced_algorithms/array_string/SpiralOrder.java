@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 螺旋矩阵
+ * 54.螺旋矩阵
  * 给定一个包含 m x n 个元素的矩阵（m 行, n 列），请按照顺时针螺旋顺序，返回矩阵中的所有元素。
  * 示例 1:
  * 输入:
@@ -28,8 +28,7 @@ import java.util.List;
  */
 public class SpiralOrder {
     public List<Integer> spiralOrder(int[][] matrix) {
-        if (matrix.length == 0 || matrix[0].length == 0)
-            return new ArrayList<>();
+        if (matrix.length == 0 || matrix[0].length == 0) { return new ArrayList<>(); }
         int m = matrix.length;
         int n = matrix[0].length;
         int capacity = m * n;
@@ -38,23 +37,17 @@ public class SpiralOrder {
         while (result.size() < capacity) {
             int right = n - loop - 1;
             int down = m - loop - 1;
-            for (int i = loop; i <= right; i++)
-                result.add(matrix[loop][i]);
-            for (int i = 1 + loop; i <= down; i++)
-                result.add(matrix[i][right]);
-            if (down > loop)
-                for (int i = right - 1; i >= loop; i--)
-                    result.add(matrix[down][i]);
-            if (right > loop)
-                for (int i = down - 1; i >= loop + 1; i--)
-                    result.add(matrix[i][loop]);
+            for (int i = loop; i <= right; i++) { result.add(matrix[loop][i]); }
+            for (int i = 1 + loop; i <= down; i++) { result.add(matrix[i][right]); }
+            if (down > loop) { for (int i = right - 1; i >= loop; i--) { result.add(matrix[down][i]); } }
+            if (right > loop) { for (int i = down - 1; i >= loop + 1; i--) { result.add(matrix[i][loop]); } }
             loop++;
         }
         return result;
     }
 
     public List<Integer> spiralOrder2(int[][] matrix) {
-        if (matrix.length == 0) return new ArrayList<>();
+        if (matrix.length == 0) { return new ArrayList<>(); }
         int n = matrix.length, m = matrix[0].length, capacity = n * m;
         List<Integer> res = new ArrayList<>(capacity);
         int u = 0, d = n - 1, l = 0, r = m - 1;
@@ -83,13 +76,44 @@ public class SpiralOrder {
         return res;
     }
 
+    public List<Integer> spiralOrder3(int[][] matrix) {
+        int m = matrix.length, n = matrix[0].length,
+            right = n - 1,
+            bottom = m - 1,
+            left = 0,
+            top = 0;
+        List<Integer> order = new ArrayList<>(m * n);
+        while (left <= right && top <= bottom) {
+            for (int j = left; j <= right; j++) {
+                order.add(matrix[top][j]);
+            }
+            for (int i = top + 1; i <= bottom; i++) {
+                order.add(matrix[i][right]);
+            }
+            if (top < bottom) {
+                for (int j = right - 1; j >= left; j--) {
+                    order.add(matrix[bottom][j]);
+                }
+            }
+            if (left < right) {
+                for (int i = bottom - 1; i > top; i--) {
+                    order.add(matrix[i][left]);
+                }
+            }
+            left++;
+            right--;
+            top++;
+            bottom--;
+        }
+        return order;
+    }
 
     public static void main(String[] args) {
-        int[][] matrix = {
-                {1, 2, 3, 4},
-                {5, 6, 7, 8},
-                {9, 10, 11, 12}
-        };
+        int[][] matrix;
+        // matrix = new int[][] {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+        // matrix = new int[][] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        // matrix = new int[][] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
+        matrix = new int[][] {{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}};
         SpiralOrder spiralOrder = new SpiralOrder();
         System.out.println(spiralOrder.spiralOrder(matrix));
     }
