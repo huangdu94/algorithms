@@ -21,7 +21,7 @@ public class GenerateMatrix {
     private int num;
 
     public int[][] generateMatrix(int n) {
-        if (n == 1) return new int[][]{{1}};
+        if (n == 1) { return new int[][] {{1}}; }
         this.res = new int[n][n];
         this.n = n;
         this.num = 1;
@@ -30,7 +30,7 @@ public class GenerateMatrix {
     }
 
     private void goRight(int i, int j) {
-        if (res[i][j] != 0) return;
+        if (res[i][j] != 0) { return; }
         while (j < n && res[i][j] == 0) {
             res[i][j++] = num++;
         }
@@ -38,7 +38,7 @@ public class GenerateMatrix {
     }
 
     private void goDown(int i, int j) {
-        if (res[i][j] != 0) return;
+        if (res[i][j] != 0) { return; }
         while (i < n && res[i][j] == 0) {
             res[i++][j] = num++;
         }
@@ -46,7 +46,7 @@ public class GenerateMatrix {
     }
 
     private void goLeft(int i, int j) {
-        if (res[i][j] != 0) return;
+        if (res[i][j] != 0) { return; }
         while (j >= 0 && res[i][j] == 0) {
             res[i][j--] = num++;
         }
@@ -54,10 +54,34 @@ public class GenerateMatrix {
     }
 
     private void goUp(int i, int j) {
-        if (res[i][j] != 0) return;
+        if (res[i][j] != 0) { return; }
         while (i >= 0 && res[i][j] == 0) {
             res[i--][j] = num++;
         }
         goRight(i + 1, j + 1);
+    }
+
+    public int[][] generateMatrix2(int n) {
+        int[][] matrix = new int[n][n];
+        int min = 0, max = n - 1, num = 1;
+        while (min <= max) {
+            for (int j = min; j <= max; j++) {
+                matrix[min][j] = num++;
+            }
+            for (int i = min + 1; i <= max; i++) {
+                matrix[i][max] = num++;
+            }
+            if (min < max) {
+                for (int j = max - 1; j >= min; j--) {
+                    matrix[max][j] = num++;
+                }
+                for (int i = max - 1; i > min; i--) {
+                    matrix[i][min] = num++;
+                }
+            }
+            min++;
+            max--;
+        }
+        return matrix;
     }
 }
