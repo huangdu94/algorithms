@@ -1,9 +1,9 @@
-package work.huangdu.question_bank.easy;
-
-import work.huangdu.data_structure.TreeNode;
+package work.huangdu.exploration.start_from_scratch.tree.morris;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 501. 二叉搜索树中的众数

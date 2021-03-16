@@ -1,8 +1,8 @@
 package work.huangdu.question_bank.difficult;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.Stack;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 99. 恢复二叉搜索树
@@ -41,7 +41,15 @@ import java.util.Stack;
  * @date 2020/8/8 10:57
  */
 public class RecoverTree {
-    // 莫里斯中序遍历
+    /**
+     * 核心分析：
+     * 我们来看下如果在一个递增的序列中交换两个值会造成什么影响。假设有一个递增序列 a=[1,2,3,4,5,6,7]。
+     * 如果我们交换两个不相邻的数字，例如 2 和 6，原序列变成了a=[1,6,3,4,5,2,7]，那么显然序列中有两个位置不满足 a(i)<a(i+1)，
+     * 在这个序列中体现为 6>3，5>2，因此只要我们找到这两个位置，即可找到被错误交换的两个节点。
+     * 如果我们交换两个相邻的数字，例如 2 和 3，此时交换后的序列只有一个位置不满足 a(i)<a(i+1)。
+     * 因此整个值序列中不满足条件的位置或者有两个，或者有一个。
+     * 莫里斯中序遍历
+     */
     public void recoverTree(TreeNode root) {
         TreeNode a = null;
         TreeNode b = null;
@@ -52,21 +60,20 @@ public class RecoverTree {
             if (cur.left == null) {
                 if (pre != null && pre.val > cur.val) {
                     b = cur;
-                    if (a == null) a = pre;
+                    if (a == null) { a = pre; }
                 }
                 pre = cur;
                 cur = cur.right;
             } else {
                 prev = cur.left;
-                while (prev.right != null && prev.right != cur)
-                    prev = prev.right;
+                while (prev.right != null && prev.right != cur) { prev = prev.right; }
                 if (prev.right == null) {
                     prev.right = cur;
                     cur = cur.left;
                 } else {
                     if (pre != null && pre.val > cur.val) {
                         b = cur;
-                        if (a == null) a = pre;
+                        if (a == null) { a = pre; }
                     }
                     pre = cur;
                     prev.right = null;
@@ -91,10 +98,7 @@ public class RecoverTree {
             cur = stack.pop();
             if (pre != null && pre.val > cur.val) {
                 b = cur;
-                if (a == null)
-                    a = pre;
-                else
-                    break;
+                if (a == null) { a = pre; } else { break; }
             }
             pre = cur;
             cur = cur.right;
