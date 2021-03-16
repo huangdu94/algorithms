@@ -21,17 +21,61 @@ import work.huangdu.data_structure.TreeNode;
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/6 16:00
- * @see work.huangdu.question_bank.easy.LowestCommonAncestor
  */
 public class LowestCommonAncestor {
-
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null) return null;
-        if (root == p || root == q) return root;
-        TreeNode left = this.lowestCommonAncestor(root.left, p, q);
-        TreeNode right = this.lowestCommonAncestor(root.right, p, q);
-        if (left != null && right != null) return root;
-        if (left != null) return left;
+        TreeNode commonAncestor = root;
+        while (true) {
+            if (commonAncestor.val > p.val && commonAncestor.val > q.val) {
+                commonAncestor = commonAncestor.left;
+            } else if (commonAncestor.val < p.val && commonAncestor.val < q.val) {
+                commonAncestor = commonAncestor.right;
+            } else {
+                break;
+            }
+        }
+        return commonAncestor;
+    }
+
+    private int pVal;
+    private int qVal;
+
+    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
+        pVal = p.val;
+        qVal = q.val;
+        return lowestCommonAncestor(root);
+    }
+
+    private TreeNode lowestCommonAncestor(TreeNode root) {
+        int rootVal = root.val;
+        if (pVal == rootVal || qVal == rootVal) { return root; }
+        if (pVal < rootVal && qVal < rootVal) { return lowestCommonAncestor(root.left); }
+        if (pVal > rootVal && qVal > rootVal) { return lowestCommonAncestor(root.right); }
+        return root;
+    }
+
+    public TreeNode lowestCommonAncestor3(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null) { return null; }
+        if (root == p || root == q) { return root; }
+        TreeNode left = this.lowestCommonAncestor3(root.left, p, q);
+        TreeNode right = this.lowestCommonAncestor3(root.right, p, q);
+        if (left != null && right != null) { return root; }
+        if (left != null) { return left; }
         return right;
+    }
+
+    public TreeNode lowestCommonAncestor4(TreeNode root, TreeNode p, TreeNode q) {
+        if (root.val == p.val || root.val == q.val) {return root;}
+        boolean leftP = exist(root.left, p),
+            leftQ = exist(root.left, q);
+        if (leftP ^ leftQ) { return root;}
+        if (leftP) { return lowestCommonAncestor4(root.left, p, q); }
+        return lowestCommonAncestor4(root.right, p, q);
+    }
+
+    private boolean exist(TreeNode root, TreeNode node) {
+        if (root == null) {return false;}
+        if (root.val == node.val) {return true;}
+        return exist(root.left, node) || exist(root.right, node);
     }
 }
