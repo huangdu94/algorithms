@@ -51,10 +51,7 @@ public class EvalRPN {
         // 以下程序不对溢出做任何处理
         Stack<Integer> numberStack = new Stack<>();
         for (String token : tokens) {
-            if (this.isNumber(token))
-                numberStack.push(Integer.parseInt(token));
-            else
-                numberStack.push(this.operation(numberStack.pop(), numberStack.pop(), token));
+            if (this.isNumber(token)) { numberStack.push(Integer.parseInt(token)); } else { numberStack.push(this.operation(numberStack.pop(), numberStack.pop(), token)); }
         }
         return numberStack.pop();
     }
@@ -69,7 +66,6 @@ public class EvalRPN {
     private boolean isNumber(String token) {
         return !token.equals("+") && !token.equals("-") && !token.equals("*") && !token.equals("/");
     }
-
 
     /**
      * a 操作 b的结果
@@ -116,5 +112,33 @@ public class EvalRPN {
             }
         }
         return stack.pop();
+    }
+
+    public int evalRPN3(String[] tokens) {
+        int n = tokens.length, top = 0;
+        int[] stack = new int[n / 2 + 1];
+        for (String token : tokens) {
+            switch (token) {
+                case "+":
+                    top--;
+                    stack[top - 1] += stack[top];
+                    break;
+                case "-":
+                    top--;
+                    stack[top - 1] -= stack[top];
+                    break;
+                case "*":
+                    top--;
+                    stack[top - 1] *= stack[top];
+                    break;
+                case "/":
+                    top--;
+                    stack[top - 1] /= stack[top];
+                    break;
+                default:
+                    stack[top++] = Integer.parseInt(token);
+            }
+        }
+        return stack[0];
     }
 }
