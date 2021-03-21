@@ -1,5 +1,7 @@
 package work.huangdu.exploration.intermediate_algorithms.array_string;
 
+import java.util.Arrays;
+
 /**
  * 矩阵置零
  * 给定一个 m x n 的矩阵，如果一个元素为 0，则将其所在行和列的所有元素都设为 0。请使用原地算法。
@@ -39,14 +41,11 @@ package work.huangdu.exploration.intermediate_algorithms.array_string;
  */
 public class SetZeroes {
     public void setZeroes(int[][] matrix) {
-        if (matrix == null)
-            return;
+        if (matrix == null) { return; }
         int m = matrix.length;
-        if (m == 0)
-            return;
+        if (m == 0) { return; }
         int n = matrix[0].length;
-        if (n == 0)
-            return;
+        if (n == 0) { return; }
         boolean[] rowFlag = new boolean[m];
         boolean[] colFlag = new boolean[n];
         for (int i = 0; i < m; i++) {
@@ -105,6 +104,49 @@ public class SetZeroes {
         if (flag) {
             for (int j = 0; j < n; j++) {
                 matrix[0][j] = 0;
+            }
+        }
+    }
+
+    public void setZeroes3(int[][] matrix) {
+        int m = matrix.length, n = matrix[0].length;
+        // 1. 标记
+        boolean zeroVerticalFlag = false;
+        for (int[] row : matrix) {
+            if (row[0] == 0) {
+                zeroVerticalFlag = true;
+                break;
+            }
+        }
+        for (int j = 0; j < n; j++) {
+            if (matrix[0][j] == 0) {
+                matrix[0][0] = 0;
+                break;
+            }
+        }
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if (matrix[i][j] == 0) {
+                    matrix[i][0] = 0;
+                    matrix[0][j] = 0;
+                }
+            }
+        }
+        // 2. 除第0行和第0列以外行列置零
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if (matrix[i][0] == 0 || matrix[0][j] == 0) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+        // 3. 第0行和第0列置零
+        if (matrix[0][0] == 0) {
+            Arrays.fill(matrix[0], 0);
+        }
+        if (zeroVerticalFlag) {
+            for (int i = 0; i < m; i++) {
+                matrix[i][0] = 0;
             }
         }
     }
