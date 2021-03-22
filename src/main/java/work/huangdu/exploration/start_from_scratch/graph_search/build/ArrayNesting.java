@@ -1,5 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.graph_search.build;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 565. 数组嵌套
  * 索引从0开始长度为N的数组A，包含0到N - 1的所有整数。找到最大的集合S并返回其大小，其中 S[i] = {A[i], A[A[i]], A[A[A[i]]], ... }且遵守以下的规则。
@@ -21,7 +25,65 @@ package work.huangdu.exploration.start_from_scratch.graph_search.build;
  */
 public class ArrayNesting {
     public int arrayNesting(int[] nums) {
-        // TODO
-        return -1;
+        int n = nums.length, max = 1;
+        int[] visited = new int[n];
+        for (int i = 0; i < n; i++) {
+            if (visited[i] == 0) {
+                int cur = i, size = 0;
+                do {
+                    visited[cur] = i;
+                    cur = nums[cur];
+                    size++;
+                } while (visited[cur] != i);
+                if (max < size) { max = size; }
+            }
+        }
+        return max;
+    }
+
+    public int arrayNesting2(int[] nums) {
+        int n = nums.length, max = 1;
+        boolean[] allVisited = new boolean[n];
+        boolean[] visited = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            if (!allVisited[i]) {
+                int cur = i, size = 0;
+                do {
+                    visited[cur] = true;
+                    allVisited[cur] = true;
+                    cur = nums[cur];
+                    size++;
+                } while (!visited[cur]);
+                Arrays.fill(visited, false);
+                if (max < size) { max = size; }
+            }
+        }
+        return max;
+    }
+
+    public int arrayNesting3(int[] nums) {
+        int n = nums.length, max = 1;
+        boolean[] allVisited = new boolean[n];
+        // Set<Integer> visited = new HashSet<>(n);
+        for (int i = 0; i < n; i++) {
+            if (!allVisited[i]) {
+                Set<Integer> visited = new HashSet<>();
+                int cur = i;
+                do {
+                    visited.add(cur);
+                    allVisited[cur] = true;
+                    cur = nums[cur];
+                } while (!visited.contains(cur));
+                max = Math.max(max, visited.size());
+                // visited.clear();
+            }
+        }
+        return max;
+    }
+
+    public static void main(String[] args) {
+        ArrayNesting an = new ArrayNesting();
+        int[] nums = {5, 4, 0, 3, 1, 6, 2};
+        System.out.println(an.arrayNesting(nums));
     }
 }
