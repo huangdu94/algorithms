@@ -26,6 +26,23 @@ import java.util.Set;
 public class ArrayNesting {
     public int arrayNesting(int[] nums) {
         int n = nums.length, max = 1;
+        for (int i = 0; i < n; i++) {
+            if (nums[i] != -1) {
+                int cur = i, size = 0;
+                do {
+                    int next = nums[cur];
+                    nums[cur] = -1;
+                    cur = next;
+                    size++;
+                } while (nums[cur] != -1);
+                if (max < size) { max = size; }
+            }
+        }
+        return max;
+    }
+
+    public int arrayNesting2(int[] nums) {
+        int n = nums.length, max = 1;
         int[] visited = new int[n];
         for (int i = 0; i < n; i++) {
             if (visited[i] == 0) {
@@ -41,7 +58,7 @@ public class ArrayNesting {
         return max;
     }
 
-    public int arrayNesting2(int[] nums) {
+    public int arrayNesting3(int[] nums) {
         int n = nums.length, max = 1;
         boolean[] allVisited = new boolean[n];
         boolean[] visited = new boolean[n];
@@ -61,7 +78,7 @@ public class ArrayNesting {
         return max;
     }
 
-    public int arrayNesting3(int[] nums) {
+    public int arrayNesting4(int[] nums) {
         int n = nums.length, max = 1;
         boolean[] allVisited = new boolean[n];
         // Set<Integer> visited = new HashSet<>(n);
