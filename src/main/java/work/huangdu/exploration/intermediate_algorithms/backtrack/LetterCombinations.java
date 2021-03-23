@@ -1,39 +1,44 @@
 package work.huangdu.exploration.intermediate_algorithms.backtrack;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 电话号码的字母组合
- * 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。
+ * 17. 电话号码的字母组合
+ * 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
  * 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
- * abc def ghi jkl mno pqrs tuv wxyz
- * 2   3   4   5   6   7    8   9
- * 示例:
- * 输入："23"
- * 输出：["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
- * 说明:
- * 尽管上面的答案是按字典序排列的，但是你可以任意选择答案输出的顺序。
+ * 示例 1：
+ * 输入：digits = "23"
+ * 输出：["ad","ae","af","bd","be","bf","cd","ce","cf"]
+ * 示例 2：
+ * 输入：digits = ""
+ * 输出：[]
+ * 示例 3：
+ * 输入：digits = "2"
+ * 输出：["a","b","c"]
+ * 提示：
+ * 0 <= digits.length <= 4
+ * digits[i] 是范围 ['2', '9'] 的一个数字。
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/9 0:19
  */
 public class LetterCombinations {
     private static final char[][] dictionary = {
-            {'a', 'b', 'c'},
-            {'d', 'e', 'f'},
-            {'g', 'h', 'i'},
-            {'j', 'k', 'l'},
-            {'m', 'n', 'o'},
-            {'p', 'q', 'r', 's'},
-            {'t', 'u', 'v'},
-            {'w', 'x', 'y', 'z'}
+        {'a', 'b', 'c'},
+        {'d', 'e', 'f'},
+        {'g', 'h', 'i'},
+        {'j', 'k', 'l'},
+        {'m', 'n', 'o'},
+        {'p', 'q', 'r', 's'},
+        {'t', 'u', 'v'},
+        {'w', 'x', 'y', 'z'}
     };
 
     public List<String> letterCombinations(String digits) {
         List<String> resultList = new ArrayList<>();
-        if (digits == null || digits.length() == 0)
-            return resultList;
+        if (digits == null || digits.length() == 0) { return resultList; }
         //this.backtrack(digits.toCharArray(), 0, resultList, "");
         this.backtrack2(digits.toCharArray(), 0, resultList, new char[digits.length()]);
         return resultList;
@@ -52,8 +57,7 @@ public class LetterCombinations {
             resultList.add(pre);
             return;
         }
-        for (char c : dictionary[numArr[depth++] - '2'])
-            this.backtrack(numArr, depth, resultList, pre + c);
+        for (char c : dictionary[numArr[depth++] - '2']) { this.backtrack(numArr, depth, resultList, pre + c); }
     }
 
     /**
@@ -73,6 +77,33 @@ public class LetterCombinations {
             pre[depth] = c;
             this.backtrack2(numArr, depth + 1, resultList, pre);
         }
+    }
+
+    private static final String[][] map = {
+        {"a", "b", "c"},
+        {"d", "e", "f"},
+        {"g", "h", "i"},
+        {"j", "k", "l"},
+        {"m", "n", "o"},
+        {"p", "q", "r", "s"},
+        {"t", "u", "v"},
+        {"w", "x", "y", "z"}
+    };
+
+    public List<String> letterCombinations2(String digits) {
+        LinkedList<String> queue = new LinkedList<>();
+        if (digits.length() == 0) {return queue;}
+        queue.addLast("");
+        for (char digit : digits.toCharArray()) {
+            int size = queue.size();
+            while (size-- > 0) {
+                String cur = queue.removeFirst();
+                for (String next : map[digit - '2']) {
+                    queue.addLast(cur.concat(next));
+                }
+            }
+        }
+        return queue;
     }
 
     public static void main(String[] args) {
