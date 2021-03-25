@@ -1,7 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.greedy.stack;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.List;
 
 /**
  * 456. 132模式
@@ -26,7 +28,7 @@ import java.util.Deque;
 public class Find132pattern {
     public boolean find132pattern(int[] nums) {
         // 0. 如果数组长度小于3，一定返回false
-        if (nums.length < 3) return false;
+        if (nums.length < 3) { return false; }
         Deque<int[]> stack = new ArrayDeque<>();
         int n = nums.length, first = nums[0], second = Integer.MIN_VALUE;
         for (int i = 1; i < n; i++) {
@@ -37,7 +39,7 @@ public class Find132pattern {
             } else if (num < first && second != Integer.MIN_VALUE) {
                 // 2. 如果first比num要大，并且此时second有的话
                 // 那就需要对原来的first，second压栈，并更新更新first值，second值置为最小
-                stack.push(new int[]{first, second});
+                stack.push(new int[] {first, second});
                 first = num;
                 second = Integer.MIN_VALUE;
             } else if (num > first && num < second) {
@@ -57,6 +59,35 @@ public class Find132pattern {
                 }
                 // 4.3. 更新second
                 second = num;
+            }
+        }
+        return false;
+    }
+
+    private static final int NULL = -1000000001;
+
+    public boolean find132pattern2(int[] nums) {
+        int n = nums.length, top = 0;
+        List<int[]> intervals = new ArrayList<>();
+        for (int num : nums) {
+            if (intervals.isEmpty()) {
+                intervals.add(new int[] {num, NULL});
+            } else {
+                int lastIndex = intervals.size() - 1;
+                for (int i = lastIndex; i >= 0; i--) {
+                    int[] interval = intervals.get(i);
+                    if (num > interval[0] && num < interval[1]) { return true; }
+                    if (i == lastIndex && num < interval[0]) {
+                        if (interval[1] == NULL) {
+                            interval[0] = num;
+                        } else {
+                            intervals.add(new int[] {num, NULL});
+                        }
+                        break;
+                    } else if (num > interval[1]) {
+                        interval[1] = num;
+                    }
+                }
             }
         }
         return false;
