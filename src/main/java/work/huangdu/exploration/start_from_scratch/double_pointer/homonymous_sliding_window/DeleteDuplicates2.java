@@ -17,6 +17,24 @@ import work.huangdu.data_structure.ListNode;
  */
 public class DeleteDuplicates2 {
     public ListNode deleteDuplicates(ListNode head) {
+        ListNode dummy = new ListNode(), cur = dummy;
+        dummy.next = head;
+        while (cur.next != null && cur.next.next != null) {
+            if (cur.next.val != cur.next.next.val) {
+                cur = cur.next;
+            } else {
+                ListNode tail = cur.next.next;
+                int val = tail.val;
+                while (tail.next != null && val == tail.next.val) {
+                    tail.next = tail.next.next;
+                }
+                cur.next = tail.next;
+            }
+        }
+        return dummy.next;
+    }
+
+    public ListNode deleteDuplicates2(ListNode head) {
         ListNode dummy = new ListNode(0), cur = dummy;
         dummy.next = head;
         while (cur.next != null) {
@@ -32,5 +50,11 @@ public class DeleteDuplicates2 {
             }
         }
         return dummy.next;
+    }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(3, new ListNode(4, new ListNode(4, new ListNode(5)))))));
+        ListNode newHead = new DeleteDuplicates2().deleteDuplicates(head);
+        System.out.println("Done!");
     }
 }
