@@ -23,7 +23,32 @@ package work.huangdu.exploration.start_from_scratch.graph_search.baktrack;
  * @date 2021/3/26
  */
 public class CountArrangement {
+    private int count;
+    private int n;
+
     public int countArrangement(int n) {
-        return -1;
+        this.count = 0;
+        this.n = n;
+        backtrack(new boolean[n + 1], 1);
+        return this.count;
+    }
+
+    private void backtrack(boolean[] used, int index) {
+        if (index > n) {
+            count++;
+            return;
+        }
+        for (int num = 1; num <= n; num++) {
+            if (!used[num] && (num % index == 0 || index % num == 0)) {
+                used[num] = true;
+                backtrack(used, index + 1);
+                used[num] = false;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        CountArrangement ca = new CountArrangement();
+        System.out.println(ca.countArrangement(15));
     }
 }
