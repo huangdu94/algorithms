@@ -11,18 +11,22 @@ import work.huangdu.data_structure.ListNode;
  * 示例 2:
  * 输入: 1->1->2->3->3
  * 输出: 1->2->3
+ * 提示：
+ * 链表中节点数目在范围 [0, 300] 内
+ * -100 <= Node.val <= 100
+ * 题目数据保证链表已经按升序排列
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/8 10:39
  */
 public class DeleteDuplicates {
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null) return null;
+        if (head == null) { return null; }
         ListNode slow = head;
         ListNode fast = head.next;
         while (fast != null) {
             if (fast.val != slow.val) {
-                if (slow.next != fast) slow.next = fast;
+                if (slow.next != fast) { slow.next = fast; }
                 slow = slow.next;
             }
             fast = fast.next;
@@ -32,7 +36,7 @@ public class DeleteDuplicates {
     }
 
     public ListNode deleteDuplicates2(ListNode head) {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null) { return head; }
         ListNode cur = head;
         while (cur.next != null) {
             if (cur.val == cur.next.val) {
