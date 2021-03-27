@@ -46,4 +46,24 @@ public class RotateRight {
         tail.next = head;
         return newHead;
     }
+
+    public ListNode rotateRight2(ListNode originHead, int k) {
+        if (originHead == null || originHead.next == null) { return originHead; }
+        int n = 1;
+        ListNode originTail = originHead;
+        while (originTail.next != null) {
+            n++;
+            originTail = originTail.next;
+        }
+        if ((k %= n) == 0) {return originHead;}
+        k = n - k;
+        ListNode newTail = originHead;
+        while (--k > 0) {
+            newTail = newTail.next;
+        }
+        ListNode newHead = newTail.next;
+        newTail.next = null;
+        originTail.next = originHead;
+        return newHead;
+    }
 }
