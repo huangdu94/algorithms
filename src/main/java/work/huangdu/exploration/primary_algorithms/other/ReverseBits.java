@@ -1,7 +1,7 @@
 package work.huangdu.exploration.primary_algorithms.other;
 
 /**
- * 颠倒二进制位
+ * 190.颠倒二进制位
  * 颠倒给定的 32 位无符号整数的二进制位。
  * 示例 1：
  * 输入: 00000010100101000001111010011100
@@ -28,11 +28,20 @@ public class ReverseBits {
         int result = 0;
         int mask = 1;
         while (mask != 0) {
-            if ((n & mask) != 0)
-                result++;
+            if ((n & mask) != 0) { result++; }
             mask <<= 1;
-            if (mask != 0)
-                result <<= 1;
+            if (mask != 0) { result <<= 1; }
+        }
+        return result;
+    }
+
+    // you need treat n as an unsigned value
+    public int reverseBits2(int n) {
+        int mask = 1, result = 0;
+        while (mask != 0) {
+            result <<= 1;
+            result |= ((n & mask) == 0 ? 0 : 1);
+            mask <<= 1;
         }
         return result;
     }
