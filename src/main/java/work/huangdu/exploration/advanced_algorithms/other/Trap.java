@@ -15,6 +15,25 @@ import java.util.Deque;
  * @date 2020/9/8 11:43
  */
 public class Trap {
+    public int trap(int[] height) {
+        if (height.length == 0) { return 0; }
+        int n = height.length, max = height[0], ans = 0;
+        int[] leftMax = new int[n], rightMax = new int[n];
+        for (int i = 1; i < n; i++) {
+            leftMax[i] = max;
+            max = Math.max(max, height[i]);
+        }
+        max = height[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
+            rightMax[i] = max;
+            max = Math.max(max, height[i]);
+        }
+        for (int i = 1; i < n - 1; i++) {
+            ans += Math.max(0, Math.min(leftMax[i], rightMax[i]) - height[i]);
+        }
+        return ans;
+    }
+
     public int trap1(int[] height) {
         int volume = 0, leftHeight = 0;
         Deque<Integer> monoStack = new ArrayDeque<>();
@@ -22,10 +41,10 @@ public class Trap {
             int minSide = Math.min(leftHeight, height[i]);
             while (!monoStack.isEmpty() && height[monoStack.peek()] <= height[i]) {
                 int index = monoStack.pop();
-                if (monoStack.isEmpty()) break;
+                if (monoStack.isEmpty()) { break; }
                 volume += (minSide - height[index]) * (index - monoStack.peek());
             }
-            if (monoStack.isEmpty()) leftHeight = height[i];
+            if (monoStack.isEmpty()) { leftHeight = height[i]; }
             monoStack.push(i);
         }
         return volume;
@@ -37,7 +56,7 @@ public class Trap {
         for (int i = 0; i < height.length; i++) {
             while (!monoStack.isEmpty() && height[monoStack.peek()] <= height[i]) {
                 int index = monoStack.pop();
-                if (monoStack.isEmpty()) break;
+                if (monoStack.isEmpty()) { break; }
                 volume += (Math.min(height[monoStack.peek()], height[i]) - height[index]) * (i - monoStack.peek() - 1);
             }
             monoStack.push(i);
@@ -45,16 +64,14 @@ public class Trap {
         return volume;
     }
 
-    public int trap(int[] height) {
+    public int trap3(int[] height) {
         int volume = 0, i = 0, j = height.length - 1, left = 0, right = 0;
         while (i < j) {
             if (height[i] <= height[j]) {
-                if (left < height[i]) left = height[i];
-                else if (left > height[i]) volume += (left - height[i]);
+                if (left < height[i]) { left = height[i]; } else if (left > height[i]) { volume += (left - height[i]); }
                 i++;
             } else {
-                if (right < height[j]) right = height[j];
-                else if (right > height[j]) volume += (right - height[j]);
+                if (right < height[j]) { right = height[j]; } else if (right > height[j]) { volume += (right - height[j]); }
                 j--;
             }
         }
@@ -67,7 +84,7 @@ public class Trap {
         System.out.println(trap.trap(heights));
     }
 
-    public int trap5(int[] height) {
+    public int trap4(int[] height) {
         int n = height.length, top = 0, result = 0;
         int[] stack = new int[n];
         for (int i = 0; i < n; i++) {
