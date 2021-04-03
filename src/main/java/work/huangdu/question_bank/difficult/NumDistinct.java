@@ -39,6 +39,7 @@ package work.huangdu.question_bank.difficult;
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/3/17
+ * @see work.huangdu.question_bank.medium.LongestCommonSubsequence
  */
 public class NumDistinct {
     public int numDistinct(String s, String t) {
