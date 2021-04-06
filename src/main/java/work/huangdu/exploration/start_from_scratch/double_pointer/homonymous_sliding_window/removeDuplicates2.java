@@ -47,4 +47,16 @@ public class removeDuplicates2 {
         }
         return i;
     }
+
+    public int removeDuplicates2(int[] nums) {
+        int n = nums.length, slow = 1, fast = 2;
+        while (fast < n) {
+            if (nums[slow] == nums[slow - 1] && nums[fast] == nums[slow]) {
+                fast++;
+            } else {
+                nums[++slow] = nums[fast++];
+            }
+        }
+        return slow + 1;
+    }
 }
