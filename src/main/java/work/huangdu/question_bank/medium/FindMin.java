@@ -28,6 +28,7 @@ package work.huangdu.question_bank.medium;
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/4/8
+ * @see work.huangdu.question_bank.difficult.FindMin
  */
 public class FindMin {
     public int findMin(int[] nums) {
