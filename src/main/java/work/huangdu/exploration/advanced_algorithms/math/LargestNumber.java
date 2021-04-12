@@ -1,17 +1,28 @@
 package work.huangdu.exploration.advanced_algorithms.math;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
- * 最大数
- * 给定一组非负整数，重新排列它们的顺序使之组成一个最大的整数。
- * 示例 1:
- * 输入: [10,2]
- * 输出: 210
- * 示例 2:
- * 输入: [3,30,34,5,9]
- * 输出: 9534330
- * 说明: 输出结果可能非常大，所以你需要返回一个字符串而不是整数。
+ * 179. 最大数
+ * 给定一组非负整数 nums，重新排列每个数的顺序（每个数不可拆分）使之组成一个最大的整数。
+ * 注意：输出结果可能非常大，所以你需要返回一个字符串而不是整数。
+ * 示例 1：
+ * 输入：nums = [10,2]
+ * 输出："210"
+ * 示例 2：
+ * 输入：nums = [3,30,34,5,9]
+ * 输出："9534330"
+ * 示例 3：
+ * 输入：nums = [1]
+ * 输出："1"
+ * 示例 4：
+ * 输入：nums = [10]
+ * 输出："10"
+ * 提示：
+ * 1 <= nums.length <= 100
+ * 0 <= nums[i] <= 10^9
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/6 16:28
@@ -65,7 +76,7 @@ public class LargestNumber {
 
         StringBuilder sb = new StringBuilder();
         for (
-                String numString : numStrings) {
+            String numString : numStrings) {
             sb.append(numString);
         }
         return sb.toString();
@@ -89,24 +100,39 @@ public class LargestNumber {
     }*/
     public static void main(String[] args) {
         LargestNumber largestNumber = new LargestNumber();
-        int[] nums = {9051, 5526, 2264, 5041, 1630, 5906, 6787, 8382, 4662, 4532, 6804, 4710, 4542, 2116, 7219, 8701, 8308, 957, 8775, 4822, 396, 8995, 8597, 2304, 8902, 830, 8591, 5828, 9642, 7100, 3976, 5565, 5490, 1613, 5731, 8052, 8985, 2623, 6325, 3723, 5224, 8274, 4787, 6310, 3393, 78, 3288, 7584, 7440, 5752, 351, 4555, 7265, 9959, 3866, 9854, 2709, 5817, 7272, 43, 1014, 7527, 3946, 4289, 1272, 5213, 710, 1603, 2436, 8823, 5228, 2581, 771, 3700, 2109, 5638, 3402, 3910, 871, 5441, 6861, 9556, 1089, 4088, 2788, 9632, 6822, 6145, 5137, 236, 683, 2869, 9525, 8161, 8374, 2439, 6028, 7813, 6406, 7519};
+        int[] nums = {9051, 5526, 2264, 5041, 1630, 5906, 6787, 8382, 4662, 4532, 6804, 4710, 4542, 2116, 7219, 8701, 8308, 957, 8775, 4822, 396, 8995, 8597, 2304, 8902, 830, 8591, 5828, 9642, 7100,
+            3976, 5565, 5490, 1613, 5731, 8052, 8985, 2623, 6325, 3723, 5224, 8274, 4787, 6310, 3393, 78, 3288, 7584, 7440, 5752, 351, 4555, 7265, 9959, 3866, 9854, 2709, 5817, 7272, 43, 1014, 7527,
+            3946, 4289, 1272, 5213, 710, 1603, 2436, 8823, 5228, 2581, 771, 3700, 2109, 5638, 3402, 3910, 871, 5441, 6861, 9556, 1089, 4088, 2788, 9632, 6822, 6145, 5137, 236, 683, 2869, 9525, 8161,
+            8374, 2439, 6028, 7813, 6406, 7519};
         String res = largestNumber.largestNumber(nums);
         System.out.println(res);
     }
 
     public String largestNumber2(int[] nums) {
         int n = nums.length;
-        if (n == 0) return "";
-        if (n == 1) return Integer.toString(nums[0]);
+        if (n == 0) { return ""; }
+        if (n == 1) { return Integer.toString(nums[0]); }
         String[] strings = new String[n];
         for (int i = 0; i < n; i++) {
             strings[i] = Integer.toString(nums[i]);
         }
         Arrays.sort(strings, (o1, o2) -> (o2 + o1).compareTo(o1 + o2));
-        if ("0".equals(strings[0])) return "0";
+        if ("0".equals(strings[0])) { return "0"; }
         StringBuilder sb = new StringBuilder();
         for (String s : strings) {
             sb.append(s);
+        }
+        return sb.toString();
+    }
+
+    public String largestNumber3(int[] nums) {
+        List<Integer> numList = new ArrayList<>(nums.length);
+        for (int num : nums) { numList.add(num); }
+        numList.sort((o1, o2) -> ("" + o2 + o1).compareTo("" + o1 + o2));
+        if (numList.get(0) == 0) {return "0";}
+        StringBuilder sb = new StringBuilder();
+        for (int num : numList) {
+            sb.append(num);
         }
         return sb.toString();
     }
