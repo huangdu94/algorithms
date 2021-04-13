@@ -2,6 +2,8 @@ package work.huangdu.temp;
 
 import java.util.Arrays;
 
+import work.huangdu.data_structure.TreeNode;
+
 /**
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/3/12
@@ -78,6 +80,24 @@ public class Solution {
             }
         }
         return true;
+    }
+
+    private int min = Integer.MAX_VALUE;
+    private int pre = -1;
+
+    public int minDiffInBST(TreeNode root) {
+        inorder(root);
+        return min;
+    }
+
+    private void inorder(TreeNode root) {
+        if (root == null) {return;}
+        inorder(root.left);
+        if (pre != -1) {
+            min = Math.min(min, root.val - pre);
+        }
+        pre = root.val;
+        inorder(root.right);
     }
 
     public static void main(String[] args) {
