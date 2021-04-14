@@ -109,3 +109,63 @@ public class Solution {
         System.out.println("Done!");
     }
 }
+
+class Trie {
+    private final TrieNode root = new TrieNode();
+
+    /**
+     * Initialize your data structure here.
+     */
+    public Trie() {
+
+    }
+
+    /**
+     * Inserts a word into the trie.
+     */
+    public void insert(String word) {
+        int n = word.length();
+        TrieNode cur = root;
+        for (int i = 0; i < n; i++) {
+            char c = word.charAt(i);
+            if (cur.children[c - 'a'] == null) {
+                cur.children[c - 'a'] = new TrieNode();
+            }
+            cur = cur.children[c - 'a'];
+        }
+        cur.flag = true;
+    }
+
+    /**
+     * Returns if the word is in the trie.
+     */
+    public boolean search(String word) {
+        int n = word.length();
+        TrieNode cur = root;
+        for (int i = 0; i < n; i++) {
+            char c = word.charAt(i);
+            if (cur.children[c - 'a'] == null) { return false;}
+            cur = cur.children[c - 'a'];
+        }
+        return cur.flag;
+    }
+
+    /**
+     * Returns if there is any word in the trie that starts with the given prefix.
+     */
+    public boolean startsWith(String prefix) {
+        int n = prefix.length();
+        TrieNode cur = root;
+        for (int i = 0; i < n; i++) {
+            char c = prefix.charAt(i);
+            if (cur.children[c - 'a'] == null) { return false;}
+            cur = cur.children[c - 'a'];
+        }
+        return true;
+    }
+
+    static class TrieNode {
+        boolean flag;
+        TrieNode[] children = new TrieNode[26];
+    }
+}
