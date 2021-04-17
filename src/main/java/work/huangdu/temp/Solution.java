@@ -31,8 +31,12 @@ public class Solution {
 
     public boolean backtrack(int idx) {
         // 跳过中间一个数，它是确定的
-        if (idx == mid - 1) { idx++;}
-        if (idx == max) { return true; }
+        if (idx == mid - 1) {
+            idx++;
+        }
+        if (idx == max) {
+            return true;
+        }
         int row = idx / n, coj = idx % n;
         for (int num = 1; num <= max; num++) {
             if (!used[num] && check(row, coj, num)) {
@@ -55,7 +59,9 @@ public class Solution {
             for (int j = 0; j < n - 1; j++) {
                 sum += ans[row][j];
             }
-            if (sum != standard) {return false;}
+            if (sum != standard) {
+                return false;
+            }
         }
         // 检查列
         if (row == n - 1) {
@@ -63,17 +69,23 @@ public class Solution {
             for (int i = 0; i < n - 1; i++) {
                 sum += ans[i][coj];
             }
-            if (sum != standard) {return false;}
+            if (sum != standard) {
+                return false;
+            }
         }
         // 检查对角线 或 反对角线
         if (row == n - 1) {
             if (coj == n - 1) {
                 sum = num;
-                for (int i = 0; i < n - 1; i++) { sum += ans[i][i]; }
+                for (int i = 0; i < n - 1; i++) {
+                    sum += ans[i][i];
+                }
                 return sum == standard;
             } else if (coj == 0) {
                 sum = num;
-                for (int i = 0; i < n - 1; i++) { sum += ans[i][n - i - 1]; }
+                for (int i = 0; i < n - 1; i++) {
+                    sum += ans[i][n - i - 1];
+                }
                 return sum == standard;
             }
         }
@@ -89,7 +101,9 @@ public class Solution {
     }
 
     private void inorder(TreeNode root) {
-        if (root == null) {return;}
+        if (root == null) {
+            return;
+        }
         inorder(root.left);
         if (pre != -1) {
             min = Math.min(min, root.val - pre);
@@ -105,7 +119,6 @@ public class Solution {
         System.out.println("耗时：" + (end - start) / 1000.0 + "秒.");
         System.out.println("Done!");
     }
-
 }
 
 class Trie {
@@ -142,7 +155,9 @@ class Trie {
         TrieNode cur = root;
         for (int i = 0; i < n; i++) {
             char c = word.charAt(i);
-            if (cur.children[c - 'a'] == null) { return false;}
+            if (cur.children[c - 'a'] == null) {
+                return false;
+            }
             cur = cur.children[c - 'a'];
         }
         return cur.flag;
@@ -156,7 +171,9 @@ class Trie {
         TrieNode cur = root;
         for (int i = 0; i < n; i++) {
             char c = prefix.charAt(i);
-            if (cur.children[c - 'a'] == null) { return false;}
+            if (cur.children[c - 'a'] == null) {
+                return false;
+            }
             cur = cur.children[c - 'a'];
         }
         return true;

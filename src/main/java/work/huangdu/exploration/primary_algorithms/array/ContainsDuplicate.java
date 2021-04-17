@@ -24,14 +24,12 @@ import java.util.Set;
  */
 public class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
-        if (nums.length <= 1)
-            return false;
-        Set<Integer> intSet = new HashSet<>(nums.length);
-        for (int i : nums) {
-            if (intSet.contains(i)) {
+        int n = nums.length;
+        Set<Integer> set = new HashSet<>(n);
+        for(int num:nums){
+            if(!set.add(num)){
                 return true;
             }
-            intSet.add(i);
         }
         return false;
     }
