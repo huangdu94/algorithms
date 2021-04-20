@@ -1,6 +1,6 @@
 package work.huangdu.exploration.start_from_scratch.hashmap.index;
 
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * 220. 存在重复元素 III
@@ -22,31 +22,75 @@ import java.util.TreeSet;
  * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyAlmostDuplicate
  */
 public class ContainsNearbyAlmostDuplicate {
-    // 暴力解超时
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+        if (k == 0) {
+            return false;
+        }
+        if (t == 0) {
+            Set<Integer> set = new HashSet<>(k + 1);
+            for (int i = 0, n = nums.length; i < n; i++) {
+                if (set.size() > k) {
+                    set.remove(nums[i - k - 1]);
+                }
+                if (!set.add(nums[i])) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        long w = (long) t + 1;
+        Map<Integer, Integer> buckets = new HashMap<>(k + 1);
+        for (int i = 0, n = nums.length; i < n; i++) {
+            int num = nums[i];
+            int bucketId = getId(num, w);
+            if (buckets.containsKey(bucketId)
+                    || buckets.containsKey(bucketId - 1) && (long) num - buckets.get(bucketId - 1) <= t
+                    || buckets.containsKey(bucketId + 1) && (long) buckets.get(bucketId + 1) - num <= t) {
+                return true;
+            }
+            buckets.put(bucketId, num);
+            if (buckets.size() > k) {
+                buckets.remove(getId(nums[i - k], w));
+            }
+        }
+        return false;
+    }
+
+    private int getId(int num, long w) {
+        return (int) (num < 0 ? (num + 1) / w - 1 : num / w);
+    }
+
     public boolean containsNearbyAlmostDuplicate2(int[] nums, int k, int t) {
-        if (t < 0) return false;
+        int n = nums.length;
+        TreeSet<Integer> set = new TreeSet<>();
+        for (int i = 0; i < n; i++) {
+            Integer large = set.ceiling(nums[i]);
+            if (large != null && (long) large - nums[i] <= t) {
+                return true;
+            }
+            Integer small = set.floor(nums[i]);
+            if (small != null && (long) nums[i] - small <= t) {
+                return true;
+            }
+            set.add(nums[i]);
+            if (set.size() > k) {
+                set.remove(nums[i - k]);
+            }
+        }
+        return false;
+    }
+
+    // 暴力解超时
+    public boolean containsNearbyAlmostDuplicate3(int[] nums, int k, int t) {
+        if (t < 0) {
+            return false;
+        }
         int n = nums.length;
         for (int i = 0; i < n; i++) {
             for (int j = Math.max(0, i - k); j < i; j++) {
                 if (Math.abs((long) nums[i] - nums[j]) <= t) {
                     return true;
                 }
-            }
-        }
-        return false;
-    }
-
-    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
-        int n = nums.length;
-        TreeSet<Integer> set = new TreeSet<>();
-        for (int i = 0; i < n; i++) {
-            Integer large = set.ceiling(nums[i]);
-            if (large != null && (long) large - nums[i] <= t) return true;
-            Integer small = set.floor(nums[i]);
-            if (small != null && (long) nums[i] - small <= t) return true;
-            set.add(nums[i]);
-            if (set.size() > k) {
-                set.remove(nums[i - k]);
             }
         }
         return false;

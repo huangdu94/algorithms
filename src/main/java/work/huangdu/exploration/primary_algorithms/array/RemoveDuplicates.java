@@ -50,4 +50,18 @@ public class RemoveDuplicates {
         }
         return i;
     }
+
+    public int removeDuplicates3(int[] nums) {
+        int n = nums.length;
+        if (n <= 1) {
+            return n;
+        }
+        int point = 0;
+        for (int i = 1; i < n; i++) {
+            if (nums[i] != nums[point]) {
+                nums[++point] = nums[i];
+            }
+        }
+        return point + 1;
+    }
 }

@@ -24,20 +24,38 @@ import java.util.Set;
  * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyAlmostDuplicate
  */
 public class ContainsNearbyDuplicate {
+
     public boolean containsNearbyDuplicate(int[] nums, int k) {
-        if (k <= 0 || nums == null || nums.length <= 1) return false;
-        Map<Integer, Integer> map = new HashMap<>(nums.length);
-        for (int i = 0; i < nums.length; i++) {
-            Integer index = map.get(nums[i]);
-            if (index == null) {
-                map.put(nums[i], i);
-            } else {
-                if (i - index <= k) {
-                    return true;
-                } else {
-                    map.put(nums[i], i);
-                }
+        if (k == 0) {
+            return false;
+        }
+        Set<Integer> set = new HashSet<>(k + 1);
+        for (int i = 0, n = nums.length; i < n; i++) {
+            if (set.size() > k) {
+                set.remove(nums[i - k - 1]);
             }
+            if (!set.add(nums[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // 维护长度为k的set，时间复杂度o(n)，空间复杂度o(k)
+    public boolean containsNearbyDuplicate2(int[] nums, int k) {
+        if (k == 0) {
+            return false;
+        }
+        int n = nums.length;
+        Set<Integer> numSet = new HashSet<>(k);
+        for (int i = 0; i < n; i++) {
+            if (numSet.contains(nums[i])) {
+                return true;
+            }
+            if (numSet.size() >= k) {
+                numSet.remove(nums[i - k]);
+            }
+            numSet.add(nums[i]);
         }
         return false;
     }
@@ -55,19 +73,22 @@ public class ContainsNearbyDuplicate {
         return false;
     }
 
-    // 维护长度为k的set，时间复杂度o(n)，空间复杂度o(k)
-    public boolean containsNearbyDuplicate2(int[] nums, int k) {
-        if (k == 0) return false;
-        int n = nums.length;
-        Set<Integer> numSet = new HashSet<>(k);
-        for (int i = 0; i < n; i++) {
-            if (numSet.contains(nums[i])) {
-                return true;
+    public boolean containsNearbyDuplicate4(int[] nums, int k) {
+        if (k <= 0 || nums == null || nums.length <= 1) {
+            return false;
+        }
+        Map<Integer, Integer> map = new HashMap<>(nums.length);
+        for (int i = 0; i < nums.length; i++) {
+            Integer index = map.get(nums[i]);
+            if (index == null) {
+                map.put(nums[i], i);
+            } else {
+                if (i - index <= k) {
+                    return true;
+                } else {
+                    map.put(nums[i], i);
+                }
             }
-            if (numSet.size() >= k) {
-                numSet.remove(nums[i - k]);
-            }
-            numSet.add(nums[i]);
         }
         return false;
     }
