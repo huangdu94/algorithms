@@ -66,8 +66,7 @@ public class StrStr {
     public int strStr2(String haystack, String needle) {
         // 不会为null
         int needleLen = needle.length();
-        if (needleLen == 0)
-            return 0;
+        if (needleLen == 0) { return 0; }
         int haystackLen = haystack.length();
         int pos = 0;
         while (pos < haystackLen - needleLen + 1) {
@@ -84,8 +83,7 @@ public class StrStr {
                     break;
                 }
             }
-            if (j == needleLen)
-                return pos;
+            if (j == needleLen) { return pos; }
         }
         return -1;
     }
@@ -104,9 +102,9 @@ public class StrStr {
         return -1;
     }
 
-    // KMP算法
+    // KMP算法 TODO 复习KMP算法
     public int strStr(String haystack, String needle) {
-        if (needle.length() == 0) return 0;
+        if (needle.length() == 0) { return 0; }
         int h = haystack.length(), n = needle.length(), i = 0, j = 0;
         int[] next = getNext(needle);
         while (i < h && j < n) {
@@ -137,5 +135,21 @@ public class StrStr {
             }
         }
         return next;
+    }
+
+    public int strStr4(String haystack, String needle) {
+        int nh = haystack.length(), nn = needle.length();
+        if (nn == 0) {return 0;}
+        for (int p = 0; p < nh - nn + 1; p++) {
+            if (haystack.charAt(p) == needle.charAt(0)) {
+                int i = p + 1, j = 1;
+                while (j < nn && haystack.charAt(i) == needle.charAt(j)) {
+                    i++;
+                    j++;
+                }
+                if (j == nn) {return p;}
+            }
+        }
+        return -1;
     }
 }
