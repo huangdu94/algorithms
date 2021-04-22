@@ -45,7 +45,46 @@ import java.util.Queue;
  */
 public class NumDecodings {
     public int numDecodings(String s) {
-        int n = s.length(), count = 0;
+        int n = s.length();
+        int[] dp = new int[n + 1];
+        dp[0] = 1;
+        for (int i = 0; i < n; i++) {
+            if (s.charAt(i) != '0') {
+                dp[i + 1] += dp[i];
+                if (i + 1 < n && (s.charAt(i) < '2' || s.charAt(i) == '2' && s.charAt(i + 1) <= '6')) {
+                    dp[i + 2] += dp[i];
+                }
+            }
+        }
+        return dp[n];
+    }
+
+    public int numDecodings2(String s) {
+        int n = s.length();
+        Queue<Integer> queue = new ArrayDeque<>();
+        int[] dp = new int[n + 1];
+        dp[0] = 1;
+        queue.offer(0);
+        while (!queue.isEmpty()) {
+            int cur = queue.poll();
+            if (cur != n && s.charAt(cur) != '0') {
+                if (dp[cur + 1] == 0) {
+                    queue.offer(cur + 1);
+                }
+                dp[cur + 1] += dp[cur];
+                if (cur + 1 < n && (s.charAt(cur) < '2' || s.charAt(cur) == '2' && s.charAt(cur + 1) <= '6')) {
+                    if (dp[cur + 2] == 0) {
+                        queue.offer(cur + 2);
+                    }
+                    dp[cur + 2] += dp[cur];
+                }
+            }
+        }
+        return dp[n];
+    }
+
+    public int numDecodings3(String s) {
+        int n = s.length();
         Queue<Integer> queue = new ArrayDeque<>();
         Map<Integer, Integer> visited = new HashMap<>();
         queue.offer(0);
@@ -70,6 +109,7 @@ public class NumDecodings {
 
     public static void main(String[] args) {
         NumDecodings nd = new NumDecodings();
-        System.out.println(nd.numDecodings("0"));
+        System.out.println(nd.numDecodings("3123124247982348792347"));
+        System.out.println(nd.numDecodings2("3123124247982348792347"));
     }
 }
