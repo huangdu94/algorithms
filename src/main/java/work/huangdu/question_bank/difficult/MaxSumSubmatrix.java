@@ -1,5 +1,7 @@
 package work.huangdu.question_bank.difficult;
 
+import java.util.TreeSet;
+
 /**
  * 363. 矩形区域不超过 K 的最大数值和
  * 给你一个 m x n 的矩阵 matrix 和一个整数 k ，找出并返回矩阵内部矩形区域的不超过 k 的最大数值和。
@@ -64,5 +66,29 @@ public class MaxSumSubmatrix {
         int[][] matrix = {{2, 2, -1}};
         int k = 0;
         System.out.println(mss.maxSumSubmatrix(matrix, k));
+    }
+
+    public int maxSumSubmatrix2(int[][] matrix, int k) {
+        int m = matrix.length, n = matrix[0].length, result = Integer.MIN_VALUE;
+        for (int i = 0; i < m; ++i) { // 枚举上边界
+            int[] nums = new int[n];
+            for (int j = i; j < m; ++j) { // 枚举下边界
+                for (int c = 0; c < n; ++c) {
+                    nums[c] += matrix[j][c]; // 更新每列的元素和
+                }
+                TreeSet<Integer> sumSet = new TreeSet<>();
+                sumSet.add(0);
+                int sum = 0;
+                for (int v : nums) {
+                    sum += v;
+                    Integer ceil = sumSet.ceiling(sum - k);
+                    if (ceil != null) {
+                        result = Math.max(result, sum - ceil);
+                    }
+                    sumSet.add(sum);
+                }
+            }
+        }
+        return result;
     }
 }
