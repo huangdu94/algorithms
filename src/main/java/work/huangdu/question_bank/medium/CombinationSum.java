@@ -35,6 +35,8 @@ import java.util.List;
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/9 12:46
  * @see CombinationSum2
+ * @see CombinationSum3
+ * @see CombinationSum4
  */
 public class CombinationSum {
     private int len;
@@ -60,7 +62,9 @@ public class CombinationSum {
             return;
         }
         for (int i = index; i < len; i++) {
-            if (sum + candidates[i] > target) break;
+            if (sum + candidates[i] > target) {
+                break;
+            }
             res.add(candidates[i]);
             helper(sum + candidates[i], i);
             res.remove(res.size() - 1);

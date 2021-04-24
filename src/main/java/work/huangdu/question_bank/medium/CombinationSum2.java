@@ -29,6 +29,8 @@ import java.util.*;
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/10 9:44
  * @see CombinationSum
+ * @see CombinationSum3
+ * @see CombinationSum4
  */
 public class CombinationSum2 {
     /*    private int len;
@@ -90,7 +92,9 @@ public class CombinationSum2 {
             resList.add(new ArrayList<>(res));
             return;
         }
-        if (index >= len) return;
+        if (index >= len) {
+            return;
+        }
         // 要 1 2 3 ... 该数的最大个数
         int[] count = countMap.get(index);
         int candidate = count[0], most = Math.min(count[1], (target - sum) / candidate);

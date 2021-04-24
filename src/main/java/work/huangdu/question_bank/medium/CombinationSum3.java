@@ -18,6 +18,9 @@ import java.util.List;
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/11 9:19
+ * @see CombinationSum
+ * @see CombinationSum2
+ * @see CombinationSum4
  */
 public class CombinationSum3 {
     private int n;
@@ -36,10 +39,14 @@ public class CombinationSum3 {
 
     private void helper(int count, int num, int sum) {
         if (count == k) {
-            if (sum == n) resList.add(new ArrayList<>(res));
+            if (sum == n) {
+                resList.add(new ArrayList<>(res));
+            }
             return;
         }
-        if (num > 9 || sum + num > n) return;
+        if (num > 9 || sum + num > n) {
+            return;
+        }
         helper(count, num + 1, sum);
         res.add(num);
         helper(count + 1, num + 1, sum + num);
