@@ -113,12 +113,15 @@ public class Solution {
     }
 
     public static void main(String[] args) {
+        int[] stones = {0, 1, 3, 5, 6, 8, 12, 17};
         Solution solution = new Solution();
         long start = System.currentTimeMillis();
         long end = System.currentTimeMillis();
         System.out.println("耗时：" + (end - start) / 1000.0 + "秒.");
         System.out.println("Done!");
     }
+
+
 }
 
 class Trie {

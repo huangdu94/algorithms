@@ -1,8 +1,6 @@
 package work.huangdu.question_bank.difficult;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * 403. 青蛙过河
@@ -27,7 +25,7 @@ import java.util.Set;
  * @date 2021/4/29
  */
 public class CanCross {
-    private int n;
+/*    private int n;
     private int[] stones;
     private Set<int[]> memo;
 
@@ -55,7 +53,7 @@ public class CanCross {
             }
         }
         return false;
-    }
+    }*/
 
     public static void main(String[] args) {
         CanCross cc = new CanCross();
@@ -63,30 +61,31 @@ public class CanCross {
         System.out.println(cc.canCross(stones));
     }
 
-    private Boolean[][] rec;
+    private int n;
+    private int[] stones;
+    private Boolean[][] memo;
 
     public boolean canCross(int[] stones) {
-        int n = stones.length;
-        rec = new Boolean[n][n];
-        return dfs(stones, 0, 0);
+        if (stones[1] > 1) {return false;}
+        this.n = stones.length;
+        this.stones = stones;
+        this.memo = new Boolean[stones.length - 1][stones.length];
+        return go(1, 1);
     }
 
-    private boolean dfs(int[] stones, int i, int lastDis) {
-        if (i == stones.length - 1) {
-            return true;
+    private boolean go(int k, int location) {
+        if (location == n - 1) {return true;}
+        if (memo[k][location] != null) {
+            return memo[k][location];
         }
-        if (rec[i][lastDis] != null) {
-            return rec[i][lastDis];
-        }
-
-        for (int curDis = lastDis - 1; curDis <= lastDis + 1; curDis++) {
-            if (curDis > 0) {
-                int j = Arrays.binarySearch(stones, i + 1, stones.length, curDis + stones[i]);
-                if (j >= 0 && dfs(stones, j, curDis)) {
-                    return rec[i][lastDis] = true;
+        for (int step = k - 1; step <= k + 1; step++) {
+            if (step > 0) {
+                int next = Arrays.binarySearch(stones, location + 1, n, stones[location] + step);
+                if (next > 0 && go(step, next)) {
+                    return memo[k][location] = true;
                 }
             }
         }
-        return rec[i][lastDis] = false;
+        return memo[k][location] = false;
     }
 }
