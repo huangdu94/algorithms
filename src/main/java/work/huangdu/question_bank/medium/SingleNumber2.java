@@ -20,13 +20,14 @@ import java.util.Map;
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/4/30
+ * @see work.huangdu.exploration.primary_algorithms.array.SingleNumber
+ * @see work.huangdu.question_bank.medium.SingleNumber3
  */
-public class SingleNumber {
+public class SingleNumber2 {
     // TODO
-    // 方法二：依次确定每一个二进制位
     // 方法三：数字电路设计
     // 方法四：数字电路设计优化
-    public int singleNumber(int[] nums) {
+    public int singleNumber2(int[] nums) {
         Map<Integer, Integer> count = new HashMap<>();
         for (int num : nums) {
             count.merge(num, 1, Integer::sum);
@@ -37,5 +38,25 @@ public class SingleNumber {
             }
         }
         return -1;
+    }
+
+    public int singleNumber(int[] nums) {
+        int result = 0;
+        for (int i = 0; i < 32; i++) {
+            int mask = (1 << i), sum = 0;
+            for (int num : nums) {
+                sum += (num & mask) != 0 ? 1 : 0;
+            }
+            if (sum % 3 != 0) {
+                result |= mask;
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        SingleNumber2 sn = new SingleNumber2();
+        int[] nums = {-2, -2, 1, 1, 4, 1, 4, 4, -4, -2};
+        System.out.println(sn.singleNumber(nums));
     }
 }

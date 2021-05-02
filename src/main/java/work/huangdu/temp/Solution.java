@@ -120,8 +120,6 @@ public class Solution {
         System.out.println("耗时：" + (end - start) / 1000.0 + "秒.");
         System.out.println("Done!");
     }
-
-
 }
 
 class Trie {
