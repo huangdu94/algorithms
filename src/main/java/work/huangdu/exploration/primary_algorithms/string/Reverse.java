@@ -20,8 +20,7 @@ package work.huangdu.exploration.primary_algorithms.string;
  */
 public class Reverse {
     public int reverse(int x) {
-        if (-10 < x && x < 10)
-            return x;
+        if (-10 < x && x < 10) { return x; }
         int symbol = 1;
         if (x < 0) {
             x = -x;
@@ -40,24 +39,35 @@ public class Reverse {
             times *= 10;
         }
         result *= symbol;
-        if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE)
-            return 0;
-        return (int) result;
+        if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE) { return 0; }
+        return (int)result;
     }
 
     public int reverse2(int x) {
         int sign = x < 0 ? -1 : 1;
-        if (x < 0) x *= -1;
+        if (x < 0) { x *= -1; }
         int reverse = 0;
         while (x > 0) {
             if (reverse > Integer.MAX_VALUE / 10
-                    || reverse == Integer.MAX_VALUE / 10 && (sign == -1 && x % 10 > 8 || sign == 1 && x % 10 > 7)) {
+                || reverse == Integer.MAX_VALUE / 10 && (sign == -1 && x % 10 > 8 || sign == 1 && x % 10 > 7)) {
                 return 0;
             }
             reverse = reverse * 10 + (x % 10);
             x /= 10;
         }
         return sign * reverse;
+    }
+
+    public int reverse3(int x) {
+        long res = 0;
+        while (x != 0) {
+            int bit = x % 10;
+            x /= 10;
+            res *= 10;
+            res += bit;
+        }
+        if (res > Integer.MAX_VALUE || res < Integer.MIN_VALUE) { res = 0; }
+        return (int)res;
     }
 
     public static void main(String[] args) {
