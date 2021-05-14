@@ -34,6 +34,8 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 输入: 1994
  * 输出: "MCMXCIV"
  * 解释: M = 1000, CM = 900, XC = 90, IV = 4.
+ * 提示：
+ * 1 <= num <= 3999
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/28 18:54
@@ -145,5 +147,65 @@ public class IntToRoman {
             default:
                 return "MMM";
         }
+    }
+
+
+    public String intToRoman2(int num) {
+        StringBuilder result = new StringBuilder();
+        if (num >= 1000) {
+            int count = num / 1000;
+            for (int i = 0; i < count; i++) {
+                result.append("M");
+            }
+            num %= 1000;
+        }
+        if (num >= 900) {
+            result.append("CM");
+            num -= 900;
+        } else if (num >= 500) {
+            result.append("D");
+            num -= 500;
+        } else if (num >= 400) {
+            result.append("CD");
+            num -= 400;
+        }
+        if (num >= 100) {
+            int count = num / 100;
+            for (int i = 0; i < count; i++) {
+                result.append("C");
+            }
+            num %= 100;
+        }
+        if (num >= 90) {
+            result.append("XC");
+            num -= 90;
+        } else if (num >= 50) {
+            result.append("L");
+            num -= 50;
+        } else if (num >= 40) {
+            result.append("XL");
+            num -= 40;
+        }
+        if (num >= 10) {
+            int count = num / 10;
+            for (int i = 0; i < count; i++) {
+                result.append("X");
+            }
+            num %= 10;
+        }
+        if (num == 9) {
+            result.append("IX");
+            num -= 9;
+        } else if (num >= 5) {
+            result.append("V");
+            num -= 5;
+        } else if (num == 4) {
+            result.append("IV");
+            num -= 4;
+        }
+        for (int i = 0; i < num; i++) {
+            result.append("I");
+        }
+        return result.toString();
     }
 }
