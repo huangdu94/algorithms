@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 罗马数字转整数
+ * 13. 罗马数字转整数
  * 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
  * 字符          数值
  * I             1
@@ -37,6 +37,13 @@ import java.util.Map;
  * 输入: "MCMXCIV"
  * 输出: 1994
  * 解释: M = 1000, CM = 900, XC = 90, IV = 4.
+ * 提示：
+ * 1 <= s.length <= 15
+ * s 仅含字符 ('I', 'V', 'X', 'L', 'C', 'D', 'M')
+ * 题目数据保证 s 是一个有效的罗马数字，且表示整数在范围 [1, 3999] 内
+ * 题目所给测试用例皆符合罗马数字书写规则，不会出现跨位等情况。
+ * IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。
+ * 关于罗马数字的详尽书写规则，可以参考 罗马数字 - Mathematics 。
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/1 16:21
@@ -92,5 +99,36 @@ public class RomanToInt {
             }
         }
         return res;
+    }
+
+    private static final Map<Character, Integer> romanIntMap = new HashMap<>();
+
+    static {
+
+        romanIntMap.put('I', 1);
+        romanIntMap.put('V', 5);
+        romanIntMap.put('X', 10);
+        romanIntMap.put('L', 50);
+        romanIntMap.put('C', 100);
+        romanIntMap.put('D', 500);
+        romanIntMap.put('M', 1000);
+    }
+
+    public int romanToInt3(String s) {
+        int n = s.length(), i = 0, result = 0;
+        char[] arr = s.toCharArray();
+        while (i < n) {
+            int cur = romanIntMap.get(arr[i]);
+            if (i + 1 < n) {
+                int next = romanIntMap.get(arr[i + 1]);
+                if (next > cur) {
+                    cur = next - cur;
+                    i++;
+                }
+            }
+            result += cur;
+            i++;
+        }
+        return result;
     }
 }

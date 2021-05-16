@@ -1,6 +1,10 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * 1482. 制作 m 束花所需的最少天数
@@ -43,11 +47,10 @@ import java.util.*;
  * 1 <= m <= 10^6
  * 1 <= k <= n
  *
- * @author huangdu.hd@alibaba-inc.com
- * @date 2021/5/9
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @date 2021/5/10
  */
 public class MinDays {
-    // TODO 高耗时通过 需要优化
     private int[] parent;
     private int[] rank;
     private int[] count;
@@ -136,13 +139,5 @@ public class MinDays {
             m -= count[newRoot] / k;
             count[newRoot] %= k;
         }
-    }
-
-    public static void main(String[] args) {
-        int[] bloomDay = {1, 10, 3, 10, 2};
-        int m = 3;
-        int k = 1;
-        MinDays md = new MinDays();
-        System.out.println(md.minDays(bloomDay, m, k));
     }
 }
