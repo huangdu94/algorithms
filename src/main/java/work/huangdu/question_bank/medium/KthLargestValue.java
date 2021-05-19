@@ -2,6 +2,7 @@ package work.huangdu.question_bank.medium;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * 1738. 找出第 K 大的异或坐标值
@@ -36,6 +37,24 @@ import java.util.List;
  */
 public class KthLargestValue {
     public int kthLargestValue(int[][] matrix, int k) {
+        int n = matrix[0].length, rowXor;
+        int[] xorPrefix = new int[n];
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(k);
+        for (int[] row : matrix) {
+            rowXor = 0;
+            for (int j = 0; j < n; j++) {
+                rowXor ^= row[j];
+                xorPrefix[j] ^= rowXor;
+                priorityQueue.add(xorPrefix[j]);
+                if (priorityQueue.size() > k) {
+                    priorityQueue.remove();
+                }
+            }
+        }
+        return priorityQueue.remove();
+    }
+
+    public int kthLargestValue2(int[][] matrix, int k) {
         int m = matrix.length, n = matrix[0].length, rowXor = 0;
         int[][] xorPrefix = new int[m][n];
         for (int j = 0; j < n; j++) {
