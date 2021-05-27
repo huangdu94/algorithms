@@ -20,6 +20,16 @@ package work.huangdu.exploration.primary_algorithms.other;
  */
 public class HammingDistance {
     public int hammingDistance(int x, int y) {
+        int distance = 0;
+        x = x ^ y;
+        while (x != 0) {
+            x &= (x - 1);
+            distance++;
+        }
+        return distance;
+    }
+
+    public int hammingDistance2(int x, int y) {
         int count = 0;
         int xor = x ^ y;
         while (xor != 0) {
