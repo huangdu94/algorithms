@@ -114,6 +114,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
+        int[] nums = {4, 14, 2};
         long start = System.currentTimeMillis();
         long end = System.currentTimeMillis();
         System.out.println("耗时：" + (end - start) / 1000.0 + "秒.");
