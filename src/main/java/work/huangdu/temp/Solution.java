@@ -120,6 +120,11 @@ public class Solution {
         System.out.println("耗时：" + (end - start) / 1000.0 + "秒.");
         System.out.println("Done!");
     }
+
+    public boolean isPowerOfTwo(int n) {
+        if (n <= 0) { return false;}
+        return (n & n - 1) == 0;
+    }
 }
 
 class Trie {

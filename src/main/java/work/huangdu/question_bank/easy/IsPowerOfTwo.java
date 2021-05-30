@@ -1,9 +1,9 @@
 package work.huangdu.question_bank.easy;
 
-import work.huangdu.exploration.primary_algorithms.math.IsPowerOfThree;
-
 import java.util.HashSet;
 import java.util.Set;
+
+import work.huangdu.exploration.primary_algorithms.math.IsPowerOfThree;
 
 /**
  * 231. 2的幂
@@ -26,8 +26,13 @@ import java.util.Set;
  * @see IsPowerOfFour
  */
 public class IsPowerOfTwo {
+    public boolean isPowerOfTwo(int n) {
+        if (n <= 0) { return false;}
+        return (n & n - 1) == 0;
+    }
+
     public boolean isPowerOfTwo2(int n) {
-        if (n <= 0) return false;
+        if (n <= 0) { return false; }
         return (n & (-n)) == n;
     }
 
@@ -67,7 +72,7 @@ public class IsPowerOfTwo {
         powerOfTwoSet.add(0X40000000);
     }
 
-    public boolean isPowerOfTwo(int n) {
+    public boolean isPowerOfTwo3(int n) {
         return powerOfTwoSet.contains(n);
     }
 }
