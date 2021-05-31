@@ -38,11 +38,21 @@ public class IsPowerOfFour {
         return num == 1;
     }
 
+    public boolean isPowerOfFour4(int num) {
+        if (num <= 0) {
+            return false;
+        }
+        if ((num & num - 1) != 0) {
+            return false;
+        }
+        return (num & 0X55555555) != 0;
+    }
+
     public static void main(String[] args) {
         int num = 1073741824;
         System.out.println(new IsPowerOfFour().isPowerOfFour2(num));
         for (int i = 0; i < 16; i++) {
-            System.out.println((int) Math.pow(4, i));
+            System.out.println((int)Math.pow(4, i));
         }
         System.out.println(Math.log(-1) <= 0);
     }
