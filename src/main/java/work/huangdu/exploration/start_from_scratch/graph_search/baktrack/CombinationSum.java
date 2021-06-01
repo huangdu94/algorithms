@@ -1,8 +1,11 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.graph_search.baktrack;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import work.huangdu.question_bank.medium.CombinationSum3;
+import work.huangdu.question_bank.medium.CombinationSum4;
 
 /**
  * 39. 组合总和
@@ -76,5 +79,39 @@ public class CombinationSum {
         int[] candidates = {2, 3, 6, 7};
         int target = 7;
         System.out.println(sum.combinationSum(candidates, target));
+    }
+
+    static class Solution {
+        private int n;
+        private int[] candidates;
+        private List<List<Integer>> combinations;
+        private List<Integer> combination;
+
+        public List<List<Integer>> combinationSum(int[] candidates, int target) {
+            Arrays.sort(candidates);
+            this.n = candidates.length;
+            this.candidates = candidates;
+            this.combinations = new ArrayList<>();
+            this.combination = new ArrayList<>();
+            backtrack(0, target);
+            return combinations;
+        }
+
+        private void backtrack(int index, int target) {
+            if (target == 0) {
+                combinations.add(new ArrayList<>(combination));
+                return;
+            }
+            if (index == n) { return; }
+            int candidate = candidates[index], max = target / candidate;
+            for (int count = 1; count <= max; count++) {
+                combination.add(candidate);
+                backtrack(index + 1, target - candidate * count);
+            }
+            for (int i = 0; i < max; i++) {
+                combination.remove(combination.size() - 1);
+            }
+            backtrack(index + 1, target);
+        }
     }
 }

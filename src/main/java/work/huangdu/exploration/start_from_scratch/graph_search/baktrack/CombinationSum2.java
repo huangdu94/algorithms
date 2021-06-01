@@ -1,6 +1,13 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.graph_search.baktrack;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import work.huangdu.question_bank.medium.CombinationSum3;
+import work.huangdu.question_bank.medium.CombinationSum4;
 
 /**
  * 40. 组合总和 II
@@ -79,7 +86,7 @@ public class CombinationSum2 {
             if (!countMap.isEmpty() && n == countMap.get(index)[0]) {
                 countMap.get(index)[1]++;
             } else {
-                countMap.put(index + 1, new int[]{n, 1});
+                countMap.put(index + 1, new int[] {n, 1});
             }
         }
         this.len = countMap.size();
@@ -108,5 +115,49 @@ public class CombinationSum2 {
         }
         // 不要这个数
         helper(sum, index + 1);
+    }
+
+    static class Solution {
+        private int n;
+        private int[] candidates;
+        private List<List<Integer>> combinations;
+        private List<Integer> combination;
+
+        public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+            Arrays.sort(candidates);
+            this.n = candidates.length;
+            this.candidates = candidates;
+            this.combinations = new ArrayList<>();
+            this.combination = new ArrayList<>();
+            backtrack(0, target);
+            return combinations;
+        }
+
+        private void backtrack(int index, int target) {
+            if (target == 0) {
+                combinations.add(new ArrayList<>(combination));
+                return;
+            }
+            if (index == n) { return; }
+            backtrack(index + 1, target);
+            int candidate = candidates[index], count = 0;
+            while (index + count < n && candidates[index + count] == candidate) {
+                combination.add(candidate);
+                count++;
+            }
+            if (target - count * candidate >= 0) {
+                backtrack(index + count, target - count * candidate);
+            }
+            for (int i = 0; i < count; i++) {
+                combination.remove(combination.size() - 1);
+            }
+        }
+
+        public static void main(String[] args) {
+            CombinationSum2 combinationSum2 = new CombinationSum2();
+            int[] candidates = {10, 1, 2, 7, 6, 1, 5};
+            int target = 8;
+            System.out.println(combinationSum2.combinationSum2(candidates, target));
+        }
     }
 }
