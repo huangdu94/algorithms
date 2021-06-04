@@ -102,11 +102,11 @@ public class GetIntersectionNode {
     }
 
     public ListNode getIntersectionNode3(ListNode headA, ListNode headB) {
-        ListNode pa = headA, pb = headB;
-        while (pa != pb) {
-            pa = pa == null ? headB : pa.next;
-            pb = pb == null ? headA : pb.next;
+        ListNode pointA = headA, pointB = headB;
+        while (pointA != pointB) {
+            pointA = pointA == null ? headB : pointA.next;
+            pointB = pointB == null ? headA : pointB.next;
         }
-        return pa;
+        return pointA;
     }
 }
