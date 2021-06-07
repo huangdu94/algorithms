@@ -33,7 +33,7 @@ public class FindTargetSumWays {
     private int target;
     private int count;
 
-    public int findTargetSumWays(int[] nums, int target) {
+    public int findTargetSumWays2(int[] nums, int target) {
         this.n = nums.length;
         this.nums = nums;
         this.target = target;
@@ -65,5 +65,26 @@ public class FindTargetSumWays {
         int target = 1;
         FindTargetSumWays ftsw = new FindTargetSumWays();
         System.out.println(ftsw.findTargetSumWays(nums, target));
+    }
+
+    // TODO 需要复习 动态规划.
+    public int findTargetSumWays(int[] nums, int target) {
+        int sum = 0;
+        for (int num : nums) {
+            sum += num;
+        }
+        int diff = sum - target;
+        if (diff < 0 || (diff & 1) == 1) {
+            return 0;
+        }
+        int neg = (sum - target) / 2;
+        int[] dp = new int[neg + 1];
+        dp[0] = 1;
+        for (int num : nums) {
+            for (int i = neg; i >= num; i--) {
+                dp[i] += dp[i - num];
+            }
+        }
+        return dp[neg];
     }
 }
