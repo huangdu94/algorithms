@@ -1,8 +1,5 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
 /**
  * 474. 一和零
  * 给你一个二进制字符串数组 strs 和两个整数 m 和 n 。
@@ -27,19 +24,55 @@ import java.util.Comparator;
  * @date 2021/6/7
  */
 public class FindMaxForm {
-    public int findMaxForm(String[] strs, int m, int n) {
-        Arrays.sort(strs, Comparator.comparingInt(o -> getCount(o, '0')));
-        // TODO
-        return -1;
+    // TODO 需要复习
+    public int findMaxForm2(String[] strs, int m, int n) {
+        int size = strs.length;
+        int[][][] dp = new int[size + 1][m + 1][n + 1];
+        for (int i = 1; i <= size; i++) {
+            String str = strs[i - 1];
+            int zeroCount = getZeroCount(str), oneCount = str.length() - zeroCount;
+            for (int j = 0; j <= m; j++) {
+                for (int k = 0; k <= n; k++) {
+                    if (j >= zeroCount && k >= oneCount) {
+                        dp[i][j][k] = Math.max(dp[i - 1][j][k], dp[i - 1][j - zeroCount][k - oneCount] + 1);
+                    } else {
+                        dp[i][j][k] = dp[i - 1][j][k];
+                    }
+                }
+            }
+        }
+        return dp[size][m][n];
     }
 
-    private int getCount(String str, char c) {
+    public int findMaxForm(String[] strs, int m, int n) {
+        int size = strs.length;
+        int[][] dp = new int[m + 1][n + 1];
+        for (String str : strs) {
+            int zeroCount = getZeroCount(str), oneCount = str.length() - zeroCount;
+            for (int j = m; j >= zeroCount; j--) {
+                for (int k = n; k >= oneCount; k--) {
+                    dp[j][k] = Math.max(dp[j][k], dp[j - zeroCount][k - oneCount] + 1);
+                }
+            }
+        }
+        return dp[m][n];
+    }
+
+    private int getZeroCount(String str) {
         int count = 0;
-        for (int i = 0, size = str.length(); i < size; i++) {
-            if (str.charAt(i) == c) {
+        for (char c : str.toCharArray()) {
+            if (c == '0') {
                 count++;
             }
         }
         return count;
+    }
+
+    public static void main(String[] args) {
+        String[] strs = {"10", "0001", "111001", "1", "0"};
+        int m = 5;
+        int n = 3;
+        FindMaxForm fmf = new FindMaxForm();
+        System.out.println(fmf.findMaxForm(strs, m, n));
     }
 }
