@@ -5,28 +5,71 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 全排列
- * 给定一个 没有重复 数字的序列，返回其所有可能的全排列。
- * 示例:
- * 输入: [1,2,3]
- * 输出:
- * [
- * [1,2,3],
- * [1,3,2],
- * [2,1,3],
- * [2,3,1],
- * [3,1,2],
- * [3,2,1]
- * ]
+ * 46. 全排列
+ * 给定一个不含重复数字的数组 nums ，返回其 所有可能的全排列 。你可以 按任意顺序 返回答案。
+ * 示例 1：
+ * 输入：nums = [1,2,3]
+ * 输出：[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+ * 示例 2：
+ * 输入：nums = [0,1]
+ * 输出：[[0,1],[1,0]]
+ * 示例 3：
+ * 输入：nums = [1]
+ * 输出：[[1]]
+ * 提示：
+ * 1 <= nums.length <= 6
+ * -10 <= nums[i] <= 10
+ * nums 中的所有整数 互不相同
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/9 0:21
  */
 public class Permute {
+    static class Solution {
+        private int n;
+        private List<List<Integer>> permutations;
+        private List<Integer> permutation;
+
+        public List<List<Integer>> permute(int[] nums) {
+            this.n = nums.length;
+            this.permutations = new ArrayList<>();
+            this.permutation = new ArrayList<>();
+            for (int num : nums) {
+                permutation.add(num);
+            }
+            backtrack(0);
+            return this.permutations;
+        }
+
+        private void backtrack(int i) {
+            if (i == n) {
+                permutations.add(new ArrayList<>(permutation));
+                return;
+            }
+            backtrack(i + 1);
+            for (int j = i + 1; j < n; j++) {
+                swap(i, j);
+                backtrack(i + 1);
+                swap(i, j);
+            }
+        }
+
+        private void swap(int i, int j) {
+            int temp = permutation.get(i);
+            permutation.set(i, permutation.get(j));
+            permutation.set(j, temp);
+        }
+
+        public static void main(String[] args) {
+            int[] nums = {1, 2, 3};
+            Solution permute = new Solution();
+            System.out.println(permute.permute(nums));
+        }
+    }
+
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        if (nums == null || nums.length < 1)
-            return result;
+        if (nums == null || nums.length < 1) { return result; }
         this.backtrack(nums, 0, result, new ArrayList<>());
         //this.backtrack1(nums, new boolean[nums.length], result, new ArrayList<>());
         //this.backtrack2(nums, new boolean[nums.length], result, new ArrayList<>());
