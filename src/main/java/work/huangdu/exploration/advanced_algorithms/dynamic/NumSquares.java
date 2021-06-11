@@ -5,16 +5,20 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * 完全平方数
- * 给定正整数n，找到若干个完全平方数（比如1, 4, 9, 16, ...）使得它们的和等于 n。你需要让组成和的完全平方数的个数最少。
- * 示例1:
- * 输入: n = 12
- * 输出: 3
- * 解释: 12 = 4 + 4 + 4.
- * 示例 2:
- * 输入: n = 13
- * 输出: 2
- * 解释: 13 = 4 + 9.
+ * 279. 完全平方数
+ * 给定正整数 n，找到若干个完全平方数（比如 1, 4, 9, 16, ...）使得它们的和等于 n。你需要让组成和的完全平方数的个数最少。
+ * 给你一个整数 n ，返回和为 n 的完全平方数的 最少数量 。
+ * 完全平方数 是一个整数，其值等于另一个整数的平方；换句话说，其值等于一个整数自乘的积。例如，1、4、9 和 16 都是完全平方数，而 3 和 11 不是。
+ * 示例 1：
+ * 输入：n = 12
+ * 输出：3
+ * 解释：12 = 4 + 4 + 4
+ * 示例 2：
+ * 输入：n = 13
+ * 输出：2
+ * 解释：13 = 4 + 9
+ * 提示：
+ * 1 <= n <= 10^4
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/28 12:37
@@ -42,7 +46,7 @@ public class NumSquares {
     private void initSquareSet(int n) {
         // squareSet = new HashSet<>();
         squareSet = new LinkedHashSet<>();
-        int i = 1, max = (int) Math.sqrt(n) + 1;
+        int i = 1, max = (int)Math.sqrt(n) + 1;
         while (i <= max) {
             squareSet.add(i * i);
             i++;
@@ -58,11 +62,11 @@ public class NumSquares {
      */
     private int math(int n) {
         // 1. 如果n本身就是完全平方数，则返回1
-        if (squareSet.contains(n)) return 1;
+        if (squareSet.contains(n)) { return 1; }
         // 2. 查看n是否为4^a*(8k+7) (a≥0, k≥0)的形式，如果是的话则返回4
         int i = n;
-        while (i % 4 == 0) i /= 4;
-        if (i % 8 == 7) return 4;
+        while (i % 4 == 0) { i /= 4; }
+        if (i % 8 == 7) { return 4; }
         // 3. 查看n是否为两个完全平方数的和，如果是的话返回2，否则返回3
         for (int square : squareSet) {
             if (squareSet.contains(n - square)) {
@@ -76,12 +80,12 @@ public class NumSquares {
      * 暴力求解(超出时间限制)
      */
     private int violence(int n) {
-        if (squareSet.contains(n)) return 1;
+        if (squareSet.contains(n)) { return 1; }
         int min = Integer.MAX_VALUE;
         for (int square : squareSet) {
-            if (square > n) break;
+            if (square > n) { break; }
             int res = violence(n - square) + 1;
-            if (min > res) min = res;
+            if (min > res) { min = res; }
         }
         return min;
     }
@@ -90,13 +94,13 @@ public class NumSquares {
      * 暴力求解(带备忘录的版本)通过
      */
     private int violence(int n, int[] memo) {
-        if (squareSet.contains(n)) return 1;
-        if (memo[n] != 0) return memo[n];
+        if (squareSet.contains(n)) { return 1; }
+        if (memo[n] != 0) { return memo[n]; }
         int min = Integer.MAX_VALUE;
         for (int square : squareSet) {
-            if (square > n) break;
+            if (square > n) { break; }
             int res = violence(n - square, memo) + 1;
-            if (min > res) min = res;
+            if (min > res) { min = res; }
         }
         memo[n] = min;
         return min;
@@ -108,12 +112,12 @@ public class NumSquares {
      * 空间复杂度 o(n)
      */
     private int dynamic(int n) {
-        if (n == Integer.MAX_VALUE) return 4;
+        if (n == Integer.MAX_VALUE) { return 4; }
         int[] dp = new int[n + 1];
         for (int i = 1; i <= n; i++) {
             int min = Integer.MAX_VALUE;
             for (int square : squareSet) {
-                if (square > i) break;
+                if (square > i) { break; }
                 if (min > dp[i - square]) {
                     min = dp[i - square];
                 }
@@ -139,10 +143,10 @@ public class NumSquares {
      * 贪心 递归 备忘录
      */
     private boolean recursion(int n, int count, int[][] memo) {
-        if (count == 1) return squareSet.contains(n);
-        if (memo[n][count] != 0) return memo[n][count] == 1;
+        if (count == 1) { return squareSet.contains(n); }
+        if (memo[n][count] != 0) { return memo[n][count] == 1; }
         for (int square : squareSet) {
-            if (square > n) break;
+            if (square > n) { break; }
             if (recursion(n - square, count - 1, memo)) {
                 memo[n][count] = 1;
                 return true;
@@ -167,7 +171,7 @@ public class NumSquares {
                     return count;
                 }
                 for (int square : squareSet) {
-                    if (square > i) break;
+                    if (square > i) { break; }
                     nextSet.add(i - square);
                 }
             }
