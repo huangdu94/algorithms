@@ -67,8 +67,8 @@ public class OpenLock {
             visited.add(Integer.parseInt(deadend));
         }
         if (visited.contains(0)) {return -1;}
-        // return bfs(visited, Integer.parseInt(target));
-        return dfs(0, visited, 0, Integer.parseInt(target));
+        return bfs(visited, Integer.parseInt(target));
+        // return dfs(0, visited, 0, Integer.parseInt(target));
     }
 
     private int bfs(Set<Integer> visited, Integer target) {
@@ -96,7 +96,7 @@ public class OpenLock {
         int res = -1;
         for (int next : GRAPH.get(cur)) {
             if (visited.add(next)) {
-                int d = dfs(cur, visited, depth + 1, target);
+                int d = dfs(next, visited, depth + 1, target);
                 if (d != -1) {
                     if (res == -1) {
                         res = d;
@@ -132,8 +132,8 @@ public class OpenLock {
 
     public static void main(String[] args) {
         OpenLock openLock = new OpenLock();
-        String[] deadends = {"8887", "8889", "8878", "8898", "8788", "8988", "7888", "9888"};
-        String target = "8888";
+        String[] deadends = {"0201", "0101", "0102", "1212", "2002"};
+        String target = "0202";
         System.out.println(openLock.openLock(deadends, target));
     }
 }
