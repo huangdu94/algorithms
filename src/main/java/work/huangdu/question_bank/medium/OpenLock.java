@@ -91,6 +91,7 @@ public class OpenLock {
         return -1;
     }
 
+    // 传统DFS方法不行 应该用启发式搜索
     private int dfs(int cur, Set<Integer> visited, int depth, int target) {
         if (cur == target) {return depth;}
         int res = -1;
