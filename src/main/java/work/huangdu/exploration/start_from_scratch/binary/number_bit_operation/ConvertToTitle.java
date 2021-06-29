@@ -36,10 +36,20 @@ public class ConvertToTitle {
                 temp = 26;
                 n -= temp;
             }
-            res[start--] = (char) (temp + 64);
+            res[start--] = (char)(temp + 64);
             n /= 26;
         }
         return new String(res, start + 1, 6 - start);
+    }
+
+    public String convertToTitle2(int columnNumber) {
+        StringBuilder sb = new StringBuilder();
+        do {
+            int bit = (columnNumber - 1) % 26;
+            columnNumber = (columnNumber - 1) / 26;
+            sb.insert(0, (char)(bit + 'A'));
+        } while (columnNumber != 0);
+        return sb.toString();
     }
 
     public static void main(String[] args) {
