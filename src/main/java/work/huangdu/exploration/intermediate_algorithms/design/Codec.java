@@ -1,8 +1,12 @@
 package work.huangdu.exploration.intermediate_algorithms.design;
 
-import work.huangdu.data_structure.TreeNode;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
-import java.util.*;
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 297. 二叉树的序列化与反序列化
@@ -61,8 +65,7 @@ public class Codec {
             }
             // 遍历清除末尾的null
             for (int i = treeList.size() - 1; ; i--) {
-                if (treeList.get(i) != null)
-                    break;
+                if (treeList.get(i) != null) { break; }
                 treeList.remove(i);
             }
         }
@@ -74,8 +77,7 @@ public class Codec {
         // 本方法不进行验证，如果输入数据有问题则会报错
         data = data.substring(1, data.length() - 1);
         String[] arr = data.split(", ");
-        if ("".equals(arr[0]))
-            return null;
+        if ("".equals(arr[0])) { return null; }
         TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
@@ -142,8 +144,7 @@ class Codec2 {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if ("".equals(data))
-            return null;
+        if ("".equals(data)) { return null; }
         String[] arr = data.split(",");
         TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
         Queue<TreeNode> queue = new LinkedList<>();
@@ -177,7 +178,7 @@ class Codec3 {
 
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        if (root == null) return "";
+        if (root == null) { return ""; }
         StringBuilder sb = new StringBuilder();
         preorder(root, sb);
         return sb.substring(1);
@@ -196,7 +197,7 @@ class Codec3 {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if (data.isEmpty()) return null;
+        if (data.isEmpty()) { return null; }
         String[] arr = data.split(",");
         Queue<Integer> preorder = new LinkedList<>();
         for (String s : arr) {
@@ -219,5 +220,26 @@ class Codec3 {
             root.right = preorder(new TreeNode(next), preorder);
         }
         return root;
+    }
+}
+
+class Codec4 {
+
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        if (root == null) {return null;}
+        Queue<TreeNode> queue=new ArrayDeque<>();
+        return null;
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        if (data == null) {return null;}
+        return null;
+    }
+
+    public static void main(String[] args) {
+        Codec4 codec = new Codec4();
+        System.out.println(codec.serialize(new TreeNode()));
     }
 }
