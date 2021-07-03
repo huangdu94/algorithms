@@ -80,6 +80,29 @@ public class FrequencySort {
         return new String(chars);
     }
 
+    public String frequencySort3(String s) {
+        char[] chars = s.toCharArray();
+        int[] count = new int[128];
+        for (char c : chars) {
+            count[c]++;
+        }
+        Queue<int[]> queue = new PriorityQueue<>((o1, o2) -> Integer.compare(o2[1], o1[1]));
+        for (int i = 0; i < 128; i++) {
+            if (count[i] > 0) {
+                queue.offer(new int[] {i, count[i]});
+            }
+        }
+        int index = 0;
+        while (!queue.isEmpty()) {
+            int[] element = queue.poll();
+            char c = (char)element[0];
+            for (int i = 0; i < element[1]; i++) {
+                chars[index++] = c;
+            }
+        }
+        return new String(chars);
+    }
+
     public static void main(String[] args) {
         FrequencySort sort = new FrequencySort();
         String s = "raaeaedere";
