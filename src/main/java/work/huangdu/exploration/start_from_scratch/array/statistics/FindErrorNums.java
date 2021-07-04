@@ -33,4 +33,25 @@ public class FindErrorNums {
         }
         return res;
     }
+
+    public int[] findErrorNums2(int[] nums) {
+        int n = nums.length;
+        int[] result = new int[2];
+        for (int i = 0; i < n; i++) {
+            int num = nums[i];
+            num = num > 0 ? num : -num;
+            if (nums[num - 1] < 0) {
+                result[0] = num;
+            } else {
+                nums[num - 1] *= -1;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            if (nums[i] > 0) {
+                result[1] = i + 1;
+                break;
+            }
+        }
+        return result;
+    }
 }
