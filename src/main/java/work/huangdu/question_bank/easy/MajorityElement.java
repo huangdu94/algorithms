@@ -21,6 +21,27 @@ import java.util.Map;
  */
 public class MajorityElement {
     public int majorityElement(int[] nums) {
+        int count = 0, cur = -1;
+        for (int num : nums) {
+            if (count == 0) {
+                cur = num;
+            }
+            if (cur == num) {
+                count++;
+            } else {
+                count--;
+            }
+        }
+        count = 0;
+        for (int num : nums) {
+            if (num == cur) {
+                count++;
+            }
+        }
+        return count > nums.length / 2 ? cur : -1;
+    }
+
+    public int majorityElement2(int[] nums) {
         int n = nums.length;
         Map<Integer, Integer> map = new HashMap<>();
         for (int num : nums) {
@@ -30,5 +51,11 @@ public class MajorityElement {
             }
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        MajorityElement me = new MajorityElement();
+        int[] nums = {1, 2, 3};
+        System.out.println(me.majorityElement(nums));
     }
 }
