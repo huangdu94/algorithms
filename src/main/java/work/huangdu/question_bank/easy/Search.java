@@ -14,15 +14,18 @@ package work.huangdu.question_bank.easy;
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/7/16
+ * @see work.huangdu.exploration.intermediate_algorithms.sort_search.SearchRange
  */
 public class Search {
-    public int search(int[] nums, int target) {
+    public int search2(int[] nums, int target) {
         int count = 0;
         for (int num : nums) {
             if (num == target) {
                 count++;
             }
-            if (num > target) {break;}
+            if (num > target) {
+                break;
+            }
         }
         return count;
     }
