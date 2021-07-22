@@ -4,6 +4,7 @@ import work.huangdu.data_structure.ListNode;
 
 /**
  * 160. 相交链表
+ * 剑指 Offer 52. 两个链表的第一个公共节点
  * 编写一个程序，找到两个单链表相交的起始节点。
  * 如下面的两个链表：
  * 在节点 c1 开始相交。
@@ -31,8 +32,7 @@ import work.huangdu.data_structure.ListNode;
  */
 public class GetIntersectionNode {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        if (headA == null || headB == null)
-            return null;
+        if (headA == null || headB == null) { return null; }
         int lenA = 1;
         int lenB = 1;
         ListNode tail = new ListNode(0);
@@ -62,17 +62,14 @@ public class GetIntersectionNode {
         // 根据长度差值移动指针到同一起跑线
         int diff = lenA - lenB;
         if (diff > 0) {
-            while (diff-- > 0)
-                pA = pA.next;
+            while (diff-- > 0) { pA = pA.next; }
         } else if (diff < 0) {
             diff = -diff;
-            while (diff-- > 0)
-                pB = pB.next;
+            while (diff-- > 0) { pB = pB.next; }
         }
         // 输出相交点值
         while (true) {
-            if (pA == pB)
-                return pA;
+            if (pA == pB) { return pA; }
             pA = pA.next;
             pB = pB.next;
         }
@@ -84,7 +81,6 @@ public class GetIntersectionNode {
         node1.next = node2;
         System.out.println(new GetIntersectionNode().getIntersectionNode(node1, node2).val);
     }
-
 
     public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
         ListNode pa = headA, pb = headB;
