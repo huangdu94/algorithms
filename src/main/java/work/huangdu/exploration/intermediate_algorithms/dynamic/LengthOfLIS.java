@@ -40,7 +40,7 @@ public class LengthOfLIS {
     }
 
     /**
-     * 二分法找到k的位置(k的位置保证 dp[k] < cur < dp[k+1])
+     * 二分法找到k的位置(k的位置保证 dp[k-1] < cur < dp[k])
      */
     private int findK(int[] dp, int l, int r, int cur) {
         if (l == r) { return l; }
