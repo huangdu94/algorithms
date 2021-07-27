@@ -1,9 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 671. 二叉树中第二小的节点
@@ -52,5 +52,27 @@ public class FindSecondMinimumValue {
             }
         }
         return secondMin;
+    }
+
+    private int min;
+    private int secondMin;
+
+    public int findSecondMinimumValue2(TreeNode root) {
+        this.min = root.val;
+        this.secondMin = -1;
+        dfs(root);
+        return this.secondMin;
+    }
+
+    private void dfs(TreeNode node) {
+        if (node == null) {return;}
+        if (secondMin != -1 && node.val >= secondMin) {
+            return;
+        }
+        if (node.val > min) {
+            secondMin = node.val;
+        }
+        dfs(node.left);
+        dfs(node.right);
     }
 }
