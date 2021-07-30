@@ -2,7 +2,7 @@ package work.huangdu.exploration.intermediate_algorithms.math;
 
 /**
  * 171. Excel表列序号
- * 给定一个Excel表格中的列名称，返回其相应的列序号。
+ * 给你一个字符串 columnTitle ，表示 Excel 表格中的列名称。返回该列名称对应的列序号。
  * 例如，
  * A -> 1
  * B -> 2
@@ -13,16 +13,21 @@ package work.huangdu.exploration.intermediate_algorithms.math;
  * AB -> 28
  * ...
  * 示例 1:
- * 输入: "A"
+ * 输入: columnTitle = "A"
  * 输出: 1
  * 示例 2:
- * 输入: "AB"
+ * 输入: columnTitle = "AB"
  * 输出: 28
  * 示例 3:
- * 输入: "ZY"
+ * 输入: columnTitle = "ZY"
  * 输出: 701
- * 致谢：
- * 特别感谢 @ts 添加此问题并创建所有测试用例。
+ * 示例 4:
+ * 输入: columnTitle = "FXSHRXW"
+ * 输出: 2147483647
+ * 提示：
+ * 1 <= columnTitle.length <= 7
+ * columnTitle 仅由大写英文组成
+ * columnTitle 在范围 ["A", "FXSHRXW"] 内
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/22 0:16
@@ -36,8 +41,16 @@ public class TitleToNumber {
         }
         return sum;
     }
+    public int titleToNumber2(String columnTitle) {
+        int result = 0;
+        for (char c : columnTitle.toCharArray()) {
+            result = result * 26 + (c - '@');
+        }
+        return result;
+    }
 
     public static void main(String[] args) {
-        System.out.println((char) 64);
+        TitleToNumber ttn = new TitleToNumber();
+        System.out.println(ttn.titleToNumber("FXSHRXW"));
     }
 }
