@@ -2,10 +2,8 @@ package work.huangdu.question_bank.medium;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Set;
 
@@ -38,25 +36,27 @@ import java.util.Set;
 public class NetworkDelayTime {
     public int networkDelayTime(int[][] times, int n, int k) {
         if (times.length == 0) { return 0;}
-        Map<Integer, List<int[]>> edgeMap = new HashMap<>();
-        for (int[] time : times) {
-            List<int[]> edgeList = edgeMap.computeIfAbsent(time[0], k1 -> new ArrayList<>());
-            edgeList.add(time);
+        List<int[]>[] edgeMap = new List[n + 1];
+        for (int i = 1; i <= n; i++) {
+            edgeMap[i] = new ArrayList<>();
         }
-        Map<Integer, Integer> timeMap = new HashMap<>();
+        for (int[] time : times) {
+            edgeMap[time[0]].add(time);
+        }
+        int[] timeMap = new int[n + 1];
         Set<Integer> visited = new HashSet<>();
-        PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(o -> o[2] + timeMap.get(o[0])));
-        timeMap.put(k, 0);
+        PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(o -> o[2] + timeMap[o[0]]));
+        timeMap[k] = 0;
         visited.add(k);
-        priorityQueue.addAll(edgeMap.getOrDefault(k, new ArrayList<>()));
+        priorityQueue.addAll(edgeMap[k]);
         int max = 0;
         while (visited.size() < n && !priorityQueue.isEmpty()) {
             int[] time = priorityQueue.poll();
             if (visited.add(time[1])) {
-                int sum = timeMap.get(time[0]) + time[2];
-                timeMap.put(time[1], sum);
+                int sum = timeMap[time[0]] + time[2];
+                timeMap[time[1]] = sum;
                 max = Math.max(max, sum);
-                List<int[]> nextEdge = edgeMap.getOrDefault(time[1], new ArrayList<>());
+                List<int[]> nextEdge = edgeMap[time[1]];
                 priorityQueue.addAll(nextEdge);
             }
         }
