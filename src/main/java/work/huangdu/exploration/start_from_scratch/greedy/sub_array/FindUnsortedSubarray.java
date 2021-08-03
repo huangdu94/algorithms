@@ -16,6 +16,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.sub_array;
  * @date 2020/11/18 13:12
  */
 public class FindUnsortedSubarray {
+    // TODO 需要复习
     public int findUnsortedSubarray(int[] nums) {
         int n = nums.length;
         // 下标[0,i]之间最大的数;下标[i,n-1]之间最小的数
