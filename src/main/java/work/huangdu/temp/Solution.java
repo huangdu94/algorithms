@@ -1,5 +1,7 @@
 package work.huangdu.temp;
 
+import java.util.Arrays;
+
 import work.huangdu.data_structure.TreeNode;
 
 /**
@@ -117,6 +119,7 @@ public class Solution {
         //int[] nums = {4, 14, 2};
         long start = System.currentTimeMillis();
         //System.out.println(solution.numSquares(104));
+        System.out.println(solution.triangleNumber(new int[] {2, 2, 3, 4}));
         long end = System.currentTimeMillis();
         System.out.println("耗时：" + (end - start) / 1000.0 + "秒.");
         System.out.println("Done!");
@@ -130,6 +133,24 @@ public class Solution {
     public int findMaxLength(int[] nums) {
         return -1;
     }
+
+    public int triangleNumber(int[] nums) {
+        int n = nums.length;
+        if (n < 3) {return 0;}
+        Arrays.sort(nums);
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            int a = nums[i];
+            for (int j = i + 1; j < n; j++) {
+                int ab = a + nums[j];
+                for (int k = j + 1; k < n && ab > nums[k]; k++) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
 }
 
 class Trie {

@@ -25,7 +25,7 @@ public class TriangleNumber {
         Arrays.sort(nums);
         int n = nums.length, count = 0;
         for (int first = 0; first < n; first++) {
-            if (nums[first] == 0) continue;
+            if (nums[first] == 0) { continue; }
             int firstLen = nums[first], second = first + 1, third = second + 1;
             while (second + 1 < n) {
                 int secondLen = nums[second];
@@ -34,6 +34,24 @@ public class TriangleNumber {
                 }
                 count += (third - second - 1);
                 second++;
+            }
+        }
+        return count;
+    }
+
+    public int triangleNumber2(int[] nums) {
+        int n = nums.length;
+        if (n < 3) {return 0;}
+        Arrays.sort(nums);
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (nums[i] == 0) {continue;}
+            int a = nums[i];
+            for (int j = i + 1; j < n; j++) {
+                int ab = a + nums[j];
+                for (int k = j + 1; k < n && ab > nums[k]; k++) {
+                    count++;
+                }
             }
         }
         return count;
