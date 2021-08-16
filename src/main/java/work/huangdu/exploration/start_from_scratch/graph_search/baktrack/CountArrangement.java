@@ -52,3 +52,38 @@ public class CountArrangement {
         System.out.println(ca.countArrangement(15));
     }
 }
+class CountArrangement2 {
+    private int count;
+    private int n;
+    private int[] arrangement;
+
+    public int countArrangement(int n) {
+        this.count = 0;
+        this.n = n;
+        this.arrangement = new int[n + 1];
+        for (int i = 1; i <= n; i++) {
+            this.arrangement[i] = i;
+        }
+        backtrack(1);
+        return this.count;
+    }
+
+    private void backtrack(int index) {
+        if (index > n) {
+            this.count++;
+            return;
+        }
+        for (int next = index; next <= n; next++) {
+            if (arrangement[next] % index != 0 && index % arrangement[next] != 0) { continue; }
+            swap(index, next);
+            backtrack(index + 1);
+            swap(index, next);
+        }
+    }
+
+    private void swap(int a, int b) {
+        int temp = arrangement[a];
+        arrangement[a] = arrangement[b];
+        arrangement[b] = temp;
+    }
+}
