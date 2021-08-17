@@ -37,4 +37,22 @@ public class CheckRecord {
         }
         return true;
     }
+
+    public boolean checkRecord2(String s) {
+        int n = s.length(), a = 0, l = 0;
+        for (int i = 0; i < n; i++) {
+            switch (s.charAt(i)) {
+                case 'L':
+                    if (l == 2) {return false;}
+                    l++;
+                    break;
+                case 'A':
+                    if (a == 1) { return false; }
+                    a++;
+                default:
+                    l = 0;
+            }
+        }
+        return true;
+    }
 }
