@@ -22,6 +22,7 @@ package work.huangdu.question_bank.medium;
  * @date 2021/8/13
  */
 public class NumberOfArithmeticSlices {
+    // TODO 代码可以优化 写的不够简洁
     public int numberOfArithmeticSlices(int[] nums) {
         int n = nums.length;
         if (n < 3) {return 0;}
