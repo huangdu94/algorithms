@@ -1,6 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.double_pointer.head_tail;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -42,7 +45,7 @@ public class ReverseVowels {
 
     private boolean isVowel(char c) {
         return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
-                || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U';
+            || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U';
     }
 
     public static void main(String[] args) {
@@ -82,4 +85,39 @@ public class ReverseVowels {
         }
         return new String(chars);
     }
+
+    private static final Set<Character> vowelSet = new HashSet<>();
+
+    static {
+        vowelSet.add('a');
+        vowelSet.add('e');
+        vowelSet.add('i');
+        vowelSet.add('o');
+        vowelSet.add('u');
+        vowelSet.add('A');
+        vowelSet.add('E');
+        vowelSet.add('I');
+        vowelSet.add('O');
+        vowelSet.add('U');
+    }
+
+    public String reverseVowels3(String s) {
+        int n = s.length();
+        char[] chars = s.toCharArray();
+        List<Character> charList = new ArrayList<>();
+        List<Integer> indexList = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            char c = chars[i];
+            if (vowelSet.contains(c)) {
+                charList.add(c);
+                indexList.add(i);
+            }
+        }
+        Collections.reverse(charList);
+        for (int i = 0, size = charList.size(); i < size; i++) {
+            chars[indexList.get(i)] = charList.get(i);
+        }
+        return new String(chars);
+    }
+
 }
