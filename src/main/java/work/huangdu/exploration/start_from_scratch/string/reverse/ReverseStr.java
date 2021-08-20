@@ -32,4 +32,27 @@ public class ReverseStr {
         }
         return new String(chars);
     }
+
+    public String reverseStr2(String s, int k) {
+        int n = s.length();
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < n; i += 2 * k) {
+            reverseChars(chars, i, Math.min(i + k, n));
+        }
+        return new String(chars);
+    }
+
+    public void reverseChars(char[] chars, int i, int j) {
+        j--;
+        while (i < j) {
+            char temp = chars[i];
+            chars[i++] = chars[j];
+            chars[j--] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        ReverseStr rs = new ReverseStr();
+        System.out.println(rs.reverseStr("abcdefg", 2));
+    }
 }
