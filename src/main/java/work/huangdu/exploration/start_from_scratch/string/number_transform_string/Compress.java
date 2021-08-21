@@ -64,4 +64,34 @@ public class Compress {
         }
         return index;
     }
+
+    // TODO 向后比，避免for循环结束时还要再执行一次重复的逻辑，代码会很难看
+    public int compress2(char[] chars) {
+        int n = chars.length;
+        if (n == 1) {return 1;}
+        char pre = chars[0];
+        int len = 0, count = 1;
+        for (int i = 1; i < n; i++) {
+            char cur = chars[i];
+            if (cur == pre) {
+                count++;
+                continue;
+            }
+            chars[len++] = pre;
+            if (count > 1) {
+                char[] countArr = Integer.toString(count).toCharArray();
+                System.arraycopy(countArr, 0, chars, len, countArr.length);
+                len += countArr.length;
+            }
+            pre = cur;
+            count = 1;
+        }
+        chars[len++] = pre;
+        if (count > 1) {
+            char[] countArr = Integer.toString(count).toCharArray();
+            System.arraycopy(countArr, 0, chars, len, countArr.length);
+            len += countArr.length;
+        }
+        return len;
+    }
 }
