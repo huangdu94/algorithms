@@ -34,6 +34,22 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  */
 public class CompareVersion {
 
+    public int compareVersion3(String version1, String version2) {
+        String[] arr1 = version1.split("\\."), arr2 = version2.split("\\.");
+        int n1 = arr1.length, n2 = arr2.length, n = Math.max(n1, n2);
+        for (int i = 0; i < n; i++) {
+            int number1 = i < n1 ? Integer.parseInt(arr1[i]) : 0,
+                number2 = i < n2 ? Integer.parseInt(arr2[i]) : 0;
+            if (number1 > number2) {
+                return 1;
+            }
+            if (number1 < number2) {
+                return -1;
+            }
+        }
+        return 0;
+    }
+
     public int compareVersion2(String version1, String version2) {
         String[] numStrArr1 = version1.split("\\.");
         String[] numStrArr2 = version2.split("\\.");
