@@ -23,6 +23,19 @@ package work.huangdu.exploration.intermediate_algorithms.sort_search;
  */
 public class FindPeakElement {
     public int findPeakElement(int[] nums) {
+        int n = nums.length, i = 0, j = n - 1;
+        while (i < j) {
+            int mid = i + ((j - i) >> 1);
+            if (mid < n - 1 && nums[mid] < nums[mid + 1]) {
+                i = mid + 1;
+            } else {
+                j = mid;
+            }
+        }
+        return i;
+    }
+
+    public int findPeakElement3(int[] nums) {
         if (nums == null || nums.length < 1)
             return -1;
         int l = 0, r = nums.length - 1;
