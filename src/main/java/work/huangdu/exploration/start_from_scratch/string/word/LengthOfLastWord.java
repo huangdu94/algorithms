@@ -14,6 +14,18 @@ package work.huangdu.exploration.start_from_scratch.string.word;
  */
 public class LengthOfLastWord {
     public int lengthOfLastWord(String s) {
+        int n = s.length(), len = 0;
+        for (int i = n - 1; i >= 0; i--) {
+            if (s.charAt(i) == ' ') {
+                if (len > 0) {return len;}
+                continue;
+            }
+            len++;
+        }
+        return len;
+    }
+
+    public int lengthOfLastWord2(String s) {
         int len = s.length(), i = len - 1, res = 0;
         while (i >= 0 && s.charAt(i) == ' ') {
             i--;
@@ -25,7 +37,7 @@ public class LengthOfLastWord {
         return res;
     }
 
-    public int lengthOfLastWord2(String s) {
+    public int lengthOfLastWord3(String s) {
         int index = s.length() - 1;
         // 跳过末尾空格
         while (index >= 0 && s.charAt(index) == ' ') index--;
