@@ -1,5 +1,8 @@
 package work.huangdu.question_bank.medium;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 673. 最长递增子序列的个数
  * 给定一个未排序的整数数组，找到最长递增子序列的个数。
@@ -17,8 +20,66 @@ package work.huangdu.question_bank.medium;
  * @date 2021/9/20
  */
 public class FindNumberOfLIS {
-    // 复制粘贴需要复习。
     public int findNumberOfLIS(int[] nums) {
+        List<List<Integer>> dps = new ArrayList<>(), counts = new ArrayList<>();
+        for (int num : nums) {
+            List<Integer> dp, count;
+            int insertDps = binarySearchDps(dps, num);
+            int amount = 1;
+            if (insertDps > 0) {
+                dp = dps.get(insertDps - 1);
+                count = counts.get(insertDps - 1);
+                int countIndex = binarySearchDp(dp, num);
+                amount = count.get(count.size() - 1) - count.get(countIndex);
+            }
+            if (insertDps == dps.size()) {
+                dp = new ArrayList<>();
+                count = new ArrayList<>();
+                dps.add(dp);
+                counts.add(count);
+                dp.add(num);
+                count.add(0);
+                count.add(amount);
+            } else {
+                dp = dps.get(insertDps);
+                dp.add(num);
+                List<Integer> currentCount = counts.get(insertDps);
+                currentCount.add(amount + currentCount.get(currentCount.size() - 1));
+            }
+        }
+        List<Integer> last = counts.get(counts.size() - 1);
+        return last.get(last.size() - 1);
+    }
+
+    private int binarySearchDps(List<List<Integer>> dps, int num) {
+        int i = 0, j = dps.size();
+        while (i < j) {
+            int mid = i + ((j - i) >> 1);
+            List<Integer> dp = dps.get(mid);
+            if (dp.get(dp.size() - 1) < num) {
+                i = mid + 1;
+            } else {
+                j = mid;
+            }
+        }
+        return i;
+    }
+
+    private int binarySearchDp(List<Integer> dp, int num) {
+        int i = 0, j = dp.size();
+        while (i < j) {
+            int mid = i + ((j - i) >> 1);
+            if (dp.get(mid) < num) {
+                j = mid;
+            } else {
+                i = mid + 1;
+            }
+        }
+        return i;
+    }
+
+    // 复制粘贴需要复习。
+    public int findNumberOfLIS2(int[] nums) {
         int n = nums.length, maxLen = 0, ans = 0;
         int[] dp = new int[n];
         int[] cnt = new int[n];

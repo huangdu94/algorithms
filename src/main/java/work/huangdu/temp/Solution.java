@@ -116,10 +116,8 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        //int[] nums = {4, 14, 2};
+        int[] nums = {2, 2, 2, 2, 2};
         long start = System.currentTimeMillis();
-        //System.out.println(solution.numSquares(104));
-        System.out.println(solution.triangleNumber(new int[] {2, 2, 3, 4}));
         long end = System.currentTimeMillis();
         System.out.println("耗时：" + (end - start) / 1000.0 + "秒.");
         System.out.println("Done!");
