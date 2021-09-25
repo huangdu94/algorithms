@@ -50,6 +50,32 @@ import java.util.Deque;
  */
 public class Flatten {
     public Node flatten(Node head) {
+        if (head == null) {return null;}
+        Node node = head;
+        ArrayDeque<Node> stack = new ArrayDeque<>();
+        while (node.next != null || node.child != null || !stack.isEmpty()) {
+            if (node.child == null && node.next != null) {
+                node = node.next;
+                continue;
+            }
+            Node next;
+            if (node.child != null) {
+                next = node.child;
+                if (node.next != null) {
+                    stack.push(node.next);
+                }
+            } else {
+                next = stack.poll();
+            }
+            node.next = next;
+            node.child = null;
+            next.prev = node;
+            node = next;
+        }
+        return head;
+    }
+
+    public Node flatten2(Node head) {
         Deque<Node> stack = new ArrayDeque<>();
         Node cur = head;
         while (cur != null) {
