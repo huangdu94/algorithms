@@ -1,9 +1,9 @@
 package work.huangdu.question_bank.medium;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 437. 路径总和 III
@@ -31,43 +31,43 @@ import java.util.Map;
  * @see work.huangdu.exploration.start_from_scratch.tree.level_order.PathSum2
  */
 public class PathSum3 {
-//    private int count = 0;
-//    private int sum;
-//
-//    public int pathSum(TreeNode root, int sum) {
-//        this.sum = sum;
-//        preorder(root);
-//        return count;
-//    }
-//
-//    private void preorder(TreeNode root) {
-//        if (root == null) return;
-//        getPath(root);
-//        preorder(root.left);
-//        preorder(root.right);
-//    }
-//
-//    private void getPath(TreeNode node) {
-//        Queue<TreeNode> treeNodeQueue = new ArrayDeque<>();
-//        Queue<Integer> sumQueue = new ArrayDeque<>();
-//        treeNodeQueue.offer(node);
-//        sumQueue.offer(0);
-//        while (!treeNodeQueue.isEmpty()) {
-//            TreeNode cur = treeNodeQueue.remove();
-//            int s = sumQueue.remove() + cur.val;
-//            if (s == sum) {
-//                count++;
-//            }
-//            if (cur.left != null) {
-//                treeNodeQueue.offer(cur.left);
-//                sumQueue.offer(s);
-//            }
-//            if (cur.right != null) {
-//                treeNodeQueue.offer(cur.right);
-//                sumQueue.offer(s);
-//            }
-//        }
-//    }
+    //    private int count = 0;
+    //    private int sum;
+    //
+    //    public int pathSum(TreeNode root, int sum) {
+    //        this.sum = sum;
+    //        preorder(root);
+    //        return count;
+    //    }
+    //
+    //    private void preorder(TreeNode root) {
+    //        if (root == null) return;
+    //        getPath(root);
+    //        preorder(root.left);
+    //        preorder(root.right);
+    //    }
+    //
+    //    private void getPath(TreeNode node) {
+    //        Queue<TreeNode> treeNodeQueue = new ArrayDeque<>();
+    //        Queue<Integer> sumQueue = new ArrayDeque<>();
+    //        treeNodeQueue.offer(node);
+    //        sumQueue.offer(0);
+    //        while (!treeNodeQueue.isEmpty()) {
+    //            TreeNode cur = treeNodeQueue.remove();
+    //            int s = sumQueue.remove() + cur.val;
+    //            if (s == sum) {
+    //                count++;
+    //            }
+    //            if (cur.left != null) {
+    //                treeNodeQueue.offer(cur.left);
+    //                sumQueue.offer(s);
+    //            }
+    //            if (cur.right != null) {
+    //                treeNodeQueue.offer(cur.right);
+    //                sumQueue.offer(s);
+    //            }
+    //        }
+    //    }
 
     private Map<Integer, Integer> sumMap;
     private int count;
@@ -83,7 +83,7 @@ public class PathSum3 {
     }
 
     private void dfs(TreeNode node, int sum, int target) {
-        if (node == null) return;
+        if (node == null) {return;}
         sum += node.val;
         count += sumMap.getOrDefault(sum - target, 0);
         sumMap.merge(sum, 1, Integer::sum);
@@ -91,5 +91,30 @@ public class PathSum3 {
         dfs(node.right, sum, target);
         // 回溯
         sumMap.merge(sum, -1, Integer::sum);
+    }
+
+    class Solution {
+        private int count;
+        private int targetSum;
+        private Map<Integer, Integer> prefixMap;
+
+        public int pathSum(TreeNode root, int targetSum) {
+            this.count = 0;
+            this.targetSum = targetSum;
+            this.prefixMap = new HashMap<>();
+            prefixMap.put(0, 1);
+            dfs(root, 0);
+            return count;
+        }
+
+        private void dfs(TreeNode root, int prefixSum) {
+            if (root == null) {return;}
+            prefixSum += root.val;
+            count += prefixMap.getOrDefault(prefixSum - targetSum, 0);
+            prefixMap.merge(prefixSum, 1, Integer::sum);
+            dfs(root.left, prefixSum);
+            dfs(root.right, prefixSum);
+            prefixMap.merge(prefixSum, -1, Integer::sum);
+        }
     }
 }
