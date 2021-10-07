@@ -1,5 +1,8 @@
 package work.huangdu.exploration.start_from_scratch.string.conversion;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 482. 密钥格式化
  * 有一个密钥字符串 S ，只包含字母，数字以及 '-'（破折号）。其中， N 个 '-' 将字符串分成了 N+1 组。
@@ -63,5 +66,35 @@ public class LicenseKeyFormatting {
             res.deleteCharAt(res.length() - 1);
         }
         return res.reverse().toString();
+    }
+
+    public String licenseKeyFormatting3(String s, int k) {
+        int n = s.length();
+        List<Character> list = new ArrayList<>(n);
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            if (c == '-') {
+                continue;
+            }
+            if (Character.isLowerCase(c)) {
+                c -= 32;
+            }
+            list.add(c);
+        }
+        int size = list.size(), remain = size % k;
+        if (remain == 0) {
+            remain = k;
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < remain && i < size; i++) {
+            sb.append(list.get(i));
+        }
+        for (int i = remain; i < size; i++) {
+            if ((i - remain) % k == 0) {
+                sb.append('-');
+            }
+            sb.append(list.get(i));
+        }
+        return sb.toString();
     }
 }

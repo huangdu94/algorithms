@@ -22,18 +22,16 @@ import java.util.Map;
  */
 public class FractionToDecimal {
     public String fractionToDecimal(int numerator, int denominator) {
-        if (numerator == Integer.MIN_VALUE && denominator == -1)
-            return "2147483648";
+        if (numerator == Integer.MIN_VALUE && denominator == -1) {return "2147483648";}
         StringBuilder sb = new StringBuilder();
         // 处理小数点前的部分
         int pre = numerator / denominator;
-        if (pre == 0 && (numerator < 0 && denominator > 0 || numerator > 0 && denominator < 0))
-            sb.append('-');
+        if (pre == 0 && (numerator < 0 && denominator > 0 || numerator > 0 && denominator < 0)) {sb.append('-');}
         sb.append(pre);
         if ((numerator = (numerator % denominator) * 10) != 0) {
             // numerator和denominator转化为正数,防止Integer.MIN_VALUE溢出所以用long
-            long numeratorLong = Math.abs((long) numerator);
-            long denominatorLong = Math.abs((long) denominator);
+            long numeratorLong = Math.abs((long)numerator);
+            long denominatorLong = Math.abs((long)denominator);
             sb.append('.');
             // 用来记录循环小数括号的插入位置
             int index = sb.length();
@@ -56,18 +54,18 @@ public class FractionToDecimal {
         FractionToDecimal fractionToDecimal = new FractionToDecimal();
         String result = fractionToDecimal.fractionToDecimal(100000, 3);
         System.out.println(result);
-        System.out.println(-(long) Integer.MIN_VALUE);
+        System.out.println(-(long)Integer.MIN_VALUE);
     }
 
     public String fractionToDecimal2(int n, int d) {
         // 1. 特殊情况处理
-        if (n == 0) return "0";
+        if (n == 0) {return "0";}
         // 2. 处理非特殊情况(int转long避免处理溢出繁琐)
         StringBuilder sb = new StringBuilder();
         // 2.1 处理符号
-        if (n < 0 ^ d < 0) sb.append('-');
-        long numerator = Math.abs((long) n);
-        long denominator = Math.abs((long) d);
+        if (n < 0 ^ d < 0) {sb.append('-');}
+        long numerator = Math.abs((long)n);
+        long denominator = Math.abs((long)d);
         // 2.2 处理整数部分
         sb.append(numerator / denominator);
         // 2.3 处理小数部分
@@ -88,5 +86,32 @@ public class FractionToDecimal {
             }
         }
         return sb.toString();
+    }
+
+    public String fractionToDecimal3(int n, int d) {
+        long numerator = n, denominator = d, integer = numerator / denominator, remain = numerator % denominator;
+        if (remain == 0) {
+            return String.valueOf(integer);
+        }
+        StringBuilder decimal = new StringBuilder();
+        if (integer == 0 && (numerator < 0 ^ denominator < 0)) {
+            decimal.append('-');
+        }
+        denominator = Math.abs(denominator);
+        remain = Math.abs(remain) * 10;
+        decimal.append(integer).append('.');
+        StringBuilder circulation = new StringBuilder();
+        Map<Long, Integer> used = new HashMap<>();
+        int index = 0;
+        while (remain != 0 && !used.containsKey(remain)) {
+            used.put(remain, index++);
+            circulation.append(remain / denominator);
+            remain = (remain % denominator) * 10;
+        }
+        if (remain != 0) {
+            circulation.insert((int)used.get(remain), '(').append(')');
+        }
+        decimal.append(circulation);
+        return decimal.toString();
     }
 }
