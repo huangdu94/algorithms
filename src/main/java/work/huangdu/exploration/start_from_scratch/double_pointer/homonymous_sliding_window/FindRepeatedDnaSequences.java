@@ -1,6 +1,11 @@
 package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sliding_window;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * 187. 重复的DNA序列
@@ -31,7 +36,7 @@ public class FindRepeatedDnaSequences {
 
     public List<String> findRepeatedDnaSequences(String s) {
         int n = s.length();
-        if (n < 10) return new ArrayList<>();
+        if (n < 10) {return new ArrayList<>();}
         Set<Integer> hashSet = new HashSet<>(n - 9);
         Set<Integer> exist = new HashSet<>(n / 2);
         List<String> result = new ArrayList<>();
@@ -61,5 +66,50 @@ public class FindRepeatedDnaSequences {
             base *= 4;
         }
         return hash;
+    }
+
+    public List<String> findRepeatedDnaSequences2(String s) {
+        int n = s.length();
+        if (n < 10) {return new ArrayList<>();}
+        char[] chars = s.toCharArray();
+        int preHash = hash(chars);
+        List<String> ans = new ArrayList<>();
+        Set<Integer> hashSet = new HashSet<>(n - 9);
+        Set<Integer> exist = new HashSet<>(n / 2);
+        hashSet.add(preHash);
+        for (int i = 1; i < n - 9; i++) {
+            if (!hashSet.add(preHash = hash(preHash, chars[i - 1], chars[i + 9])) && exist.add(preHash)) {
+                ans.add(new String(chars, i, 10));
+            }
+        }
+        return ans;
+    }
+
+    private int hash(int preHash, char head, char tail) {
+        return (preHash - index(head)) / 4 + index(tail) * (int)Math.pow(4, 9);
+    }
+
+    private int hash(char[] chars) {
+        int hash = 0, base = 1;
+        for (int i = 0; i < 10; i++) {
+            hash += index(chars[i]) * base;
+            base *= 4;
+        }
+        return hash;
+    }
+
+    private int index(char c) {
+        switch (c) {
+            case 'A':
+                return 0;
+            case 'C':
+                return 1;
+            case 'G':
+                return 2;
+            case 'T':
+                return 3;
+            default:
+                return -1;
+        }
     }
 }
