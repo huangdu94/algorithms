@@ -28,4 +28,9 @@ public class CountSegments {
         }
         return count;
     }
+
+    public int countSegments2(String s) {
+        s = s.trim();
+        return s.length() == 0 ? 0 : s.split("\\s+").length;
+    }
 }

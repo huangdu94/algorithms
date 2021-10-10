@@ -1,10 +1,12 @@
 package work.huangdu.exploration.advanced_algorithms.backtrack;
 
-import work.huangdu.data_structure.Trie;
-import work.huangdu.data_structure.TrieNode;
-
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+
+import work.huangdu.data_structure.Trie;
+import work.huangdu.data_structure.TrieNode;
 
 /**
  * 单词搜索 II
@@ -43,7 +45,7 @@ public class FindWords {
     public List<String> findWords(char[][] board, String[] words) {
         // 1. 构建前缀树,得到前缀树的根
         Trie trie = new Trie();
-        for (String word : words) trie.insert(word);
+        for (String word : words) {trie.insert(word);}
         TrieNode root = trie.getRoot();
         // 2. 遍历board,回溯得到答案
         m = board.length;
@@ -93,15 +95,67 @@ public class FindWords {
     public static void main(String[] args) {
         FindWords findWords = new FindWords();
         char[][] board = {
-                {'b', 'a', 'a', 'b', 'a', 'b'},
-                {'a', 'b', 'a', 'a', 'a', 'a'},
-                {'a', 'b', 'a', 'a', 'a', 'b'},
-                {'a', 'b', 'a', 'b', 'b', 'a'},
-                {'a', 'a', 'b', 'b', 'a', 'b'},
-                {'a', 'a', 'b', 'b', 'b', 'a'},
-                {'a', 'a', 'b', 'a', 'a', 'b'}};
-        String[] words = {"bbaabaabaaaaabaababaaaaababb", "aabbaaabaaabaabaaaaaabbaaaba", "babaababbbbbbbaabaababaabaaa", "bbbaaabaabbaaababababbbbbaaa", "babbabbbbaabbabaaaaaabbbaaab", "bbbababbbbbbbababbabbbbbabaa", "babababbababaabbbbabbbbabbba", "abbbbbbaabaaabaaababaabbabba", "aabaabababbbbbbababbbababbaa", "aabbbbabbaababaaaabababbaaba", "ababaababaaabbabbaabbaabbaba", "abaabbbaaaaababbbaaaaabbbaab", "aabbabaabaabbabababaaabbbaab", "baaabaaaabbabaaabaabababaaaa", "aaabbabaaaababbabbaabbaabbaa", "aaabaaaaabaabbabaabbbbaabaaa", "abbaabbaaaabbaababababbaabbb", "baabaababbbbaaaabaaabbababbb", "aabaababbaababbaaabaabababab", "abbaaabbaabaabaabbbbaabbbbbb", "aaababaabbaaabbbaaabbabbabab", "bbababbbabbbbabbbbabbbbbabaa", "abbbaabbbaaababbbababbababba", "bbbbbbbabbbababbabaabababaab", "aaaababaabbbbabaaaaabaaaaabb", "bbaaabbbbabbaaabbaabbabbaaba", "aabaabbbbaabaabbabaabababaaa", "abbababbbaababaabbababababbb", "aabbbabbaaaababbbbabbababbbb", "babbbaabababbbbbbbbbaabbabaa"};
+            {'b', 'a', 'a', 'b', 'a', 'b'},
+            {'a', 'b', 'a', 'a', 'a', 'a'},
+            {'a', 'b', 'a', 'a', 'a', 'b'},
+            {'a', 'b', 'a', 'b', 'b', 'a'},
+            {'a', 'a', 'b', 'b', 'a', 'b'},
+            {'a', 'a', 'b', 'b', 'b', 'a'},
+            {'a', 'a', 'b', 'a', 'a', 'b'}};
+        String[] words = {"bbaabaabaaaaabaababaaaaababb", "aabbaaabaaabaabaaaaaabbaaaba", "babaababbbbbbbaabaababaabaaa", "bbbaaabaabbaaababababbbbbaaa", "babbabbbbaabbabaaaaaabbbaaab",
+            "bbbababbbbbbbababbabbbbbabaa", "babababbababaabbbbabbbbabbba", "abbbbbbaabaaabaaababaabbabba", "aabaabababbbbbbababbbababbaa", "aabbbbabbaababaaaabababbaaba",
+            "ababaababaaabbabbaabbaabbaba", "abaabbbaaaaababbbaaaaabbbaab", "aabbabaabaabbabababaaabbbaab", "baaabaaaabbabaaabaabababaaaa", "aaabbabaaaababbabbaabbaabbaa",
+            "aaabaaaaabaabbabaabbbbaabaaa", "abbaabbaaaabbaababababbaabbb", "baabaababbbbaaaabaaabbababbb", "aabaababbaababbaaabaabababab", "abbaaabbaabaabaabbbbaabbbbbb",
+            "aaababaabbaaabbbaaabbabbabab", "bbababbbabbbbabbbbabbbbbabaa", "abbbaabbbaaababbbababbababba", "bbbbbbbabbbababbabaabababaab", "aaaababaabbbbabaaaaabaaaaabb",
+            "bbaaabbbbabbaaabbaabbabbaaba", "aabaabbbbaabaabbabaabababaaa", "abbababbbaababaabbababababbb", "aabbbabbaaaababbbbabbababbbb", "babbbaabababbbbbbbbbaabbabaa"};
         List<String> res = findWords.findWords(board, words);
         System.out.println(res);
     }
+
+    class Solution2 {
+        private List<String> ans;
+        private int m;
+        private int n;
+        private char[][] board;
+        private StringBuilder prefix;
+
+        public List<String> findWords(char[][] board, String[] words) {
+            this.ans = new ArrayList<>();
+            this.m = board.length;
+            this.n = board[0].length;
+            this.board = board;
+            this.prefix = new StringBuilder();
+            Trie root = new Trie(Arrays.asList(words));
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    dfs(i, j, root.getRoot());
+                }
+            }
+            return ans;
+        }
+
+        private void dfs(int i, int j, TrieNode cur) {
+            if (i < 0 || i >= m || j < 0 || j >= n) {return;}
+            char c = board[i][j];
+            if (c == '*' || cur.notContainsKey(c)) {return;}
+            prefix.append(c);
+            board[i][j] = '*';
+            TrieNode nextNode = cur.get(c);
+            if (nextNode.isEnd()) {
+                ans.add(prefix.toString());
+                nextNode.setEnd(false);
+            }
+            dfs(i - 1, j, nextNode);
+            dfs(i + 1, j, nextNode);
+            dfs(i, j - 1, nextNode);
+            dfs(i, j + 1, nextNode);
+            prefix.deleteCharAt(prefix.length() - 1);
+            board[i][j] = c;
+            // 删掉没用的trie分支(如果其子节点都为空,且代码执行到这里了,如果满足它已经被加到结果,所以可以被删掉了)
+            if (nextNode.isEmpty()) {
+                cur.put(c, null);
+            }
+        }
+    }
+
 }

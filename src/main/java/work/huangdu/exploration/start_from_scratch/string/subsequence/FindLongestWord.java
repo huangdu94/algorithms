@@ -24,7 +24,27 @@ import java.util.List;
  * @date 2020/9/30 13:07
  */
 public class FindLongestWord {
-    public String findLongestWord(String s, List<String> d) {
+    public String findLongestWord(String s, List<String> dictionary) {
+        int n = s.length();
+        String ans = "";
+        for (String word : dictionary) {
+            int m = word.length();
+            if (m > n || m < ans.length() || m == ans.length() && word.compareTo(ans) >= 0) {continue;}
+            int shouldDelete = n - m, delete = 0, j = 0;
+            for (int i = 0; i < m && shouldDelete >= delete; i++) {
+                char c = word.charAt(i);
+                while (j < n && s.charAt(j++) != c) {
+                    if (shouldDelete < ++delete) {break;}
+                }
+            }
+            if (shouldDelete >= delete) {
+                ans = word;
+            }
+        }
+        return ans;
+    }
+
+    public String findLongestWord2(String s, List<String> d) {
         int n = s.length();
         int[][] dp = new int[n + 1][26];
         for (int i = 0; i < 26; i++) {
@@ -41,8 +61,7 @@ public class FindLongestWord {
             }
         }
         d.sort((o1, o2) -> {
-            if (o1.length() == o2.length())
-                return o1.compareTo(o2);
+            if (o1.length() == o2.length()) {return o1.compareTo(o2);}
             return o2.length() - o1.length();
         });
         for (String t : d) {
@@ -50,7 +69,7 @@ public class FindLongestWord {
             while (i < len) {
                 int c = t.charAt(i) - 'a';
                 add = dp[add][c] + 1;
-                if (add > n) break;
+                if (add > n) {break;}
                 i++;
             }
             if (i == len) {

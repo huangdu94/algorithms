@@ -116,17 +116,14 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        //int[] nums = {4, 14, 2};
         long start = System.currentTimeMillis();
-        //System.out.println(solution.numSquares(104));
-        System.out.println(solution.triangleNumber(new int[] {2, 2, 3, 4}));
         long end = System.currentTimeMillis();
         System.out.println("耗时：" + (end - start) / 1000.0 + "秒.");
         System.out.println("Done!");
     }
 
     public boolean isPowerOfTwo(int n) {
-        if (n <= 0) { return false;}
+        if (n <= 0) {return false;}
         return (n & n - 1) == 0;
     }
 
@@ -150,16 +147,15 @@ public class Solution {
         }
         return count;
     }
-
 }
 
-class Trie {
-    private final TrieNode root = new TrieNode();
+class Trie2 {
+    private final TrieNode2 root = new TrieNode2();
 
     /**
      * Initialize your data structure here.
      */
-    public Trie() {
+    public Trie2() {
 
     }
 
@@ -168,11 +164,11 @@ class Trie {
      */
     public void insert(String word) {
         int n = word.length();
-        TrieNode cur = root;
+        TrieNode2 cur = root;
         for (int i = 0; i < n; i++) {
             char c = word.charAt(i);
             if (cur.children[c - 'a'] == null) {
-                cur.children[c - 'a'] = new TrieNode();
+                cur.children[c - 'a'] = new TrieNode2();
             }
             cur = cur.children[c - 'a'];
         }
@@ -184,7 +180,7 @@ class Trie {
      */
     public boolean search(String word) {
         int n = word.length();
-        TrieNode cur = root;
+        TrieNode2 cur = root;
         for (int i = 0; i < n; i++) {
             char c = word.charAt(i);
             if (cur.children[c - 'a'] == null) {
@@ -200,7 +196,7 @@ class Trie {
      */
     public boolean startsWith(String prefix) {
         int n = prefix.length();
-        TrieNode cur = root;
+        TrieNode2 cur = root;
         for (int i = 0; i < n; i++) {
             char c = prefix.charAt(i);
             if (cur.children[c - 'a'] == null) {
@@ -211,8 +207,8 @@ class Trie {
         return true;
     }
 
-    static class TrieNode {
+    static class TrieNode2 {
         boolean flag;
-        TrieNode[] children = new TrieNode[26];
+        TrieNode2[] children = new TrieNode2[26];
     }
 }

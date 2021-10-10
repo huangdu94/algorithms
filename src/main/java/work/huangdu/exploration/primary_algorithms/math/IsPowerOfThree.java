@@ -56,17 +56,21 @@ public class IsPowerOfThree {
 
     public boolean isPowerOfThree(int n) {
         for (int i = 1; i <= n; i *= 3) {
-            if (i == n)
-                return true;
+            if (i == n) {return true;}
         }
         return false;
     }
 
     public boolean isPowerOfThree3(int n) {
-        if (n == 0) return false;
+        if (n == 0) {return false;}
         while (n % 3 == 0) {
             n /= 3;
         }
         return n == 1;
+    }
+
+    public boolean isPowerOfThree4(int n) {
+        double pow = Math.log(n) / Math.log(3);
+        return Math.abs(pow - Math.rint(pow)) < 1e-12;
     }
 }

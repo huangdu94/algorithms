@@ -52,7 +52,7 @@ import java.util.List;
  * ]
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/3 9:56
+ * @date 2021/9/9
  */
 public class FullJustify {
     public List<String> fullJustify(String[] words, int maxWidth) {
@@ -99,6 +99,55 @@ public class FullJustify {
             i++;
         }
         return res;
+    }
+
+    public List<String> fullJustify2(String[] words, int maxWidth) {
+        List<String> ans = new ArrayList<>();
+        int n = words.length, end = 0;
+        while (end < n) {
+            int start = end, width = 0, blankCount = 0;
+            while (end < n && width + blankCount + words[end].length() <= maxWidth) {
+                width += words[end++].length();
+                blankCount++;
+            }
+            blankCount--;
+            StringBuilder line = new StringBuilder();
+            if (end < n) {
+                int remain = maxWidth - width;
+                if (blankCount == 0) {
+                    line.append(words[start]);
+                    for (int k = 0; k < remain; k++) {
+                        line.append(' ');
+                    }
+                } else {
+                    int minBlankWidth = remain / blankCount, bigBlankCount = remain % blankCount;
+                    for (int i = start; i < end; i++) {
+                        line.append(words[i]);
+                        if (i < end - 1) {
+                            for (int k = 0; k < minBlankWidth; k++) {
+                                line.append(' ');
+                            }
+                            if (bigBlankCount-- > 0) {
+                                line.append(' ');
+                            }
+                        }
+                    }
+                }
+            } else {
+                for (int i = start; i < end; i++) {
+                    line.append(words[i]);
+                    if (i < end - 1) {
+                        line.append(' ');
+                    }
+                }
+                int remain = maxWidth - width - blankCount;
+                for (int k = 0; k < remain; k++) {
+                    line.append(' ');
+                }
+            }
+            ans.add(line.toString());
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
