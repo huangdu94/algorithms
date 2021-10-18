@@ -1,10 +1,12 @@
 package work.huangdu.exploration.intermediate_algorithms.tree_graph;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+import java.util.function.Consumer;
+
+import work.huangdu.data_structure.TreeNode;
+import work.huangdu.specific.traversal.Recursion;
 
 /**
  * 230. 二叉搜索树中第K小的元素
@@ -84,8 +86,7 @@ public class KthSmallest {
     }
 
     private void inorder(TreeNode node, List<Integer> inorder) {
-        if (node == null)
-            return;
+        if (node == null) {return;}
         this.inorder(node.left, inorder);
         inorder.add(node.val);
         this.inorder(node.right, inorder);
@@ -99,13 +100,27 @@ public class KthSmallest {
     }
 
     private Integer inorder(TreeNode node) {
-        if (node == null)
-            return null;
+        if (node == null) {return null;}
         Integer left = this.inorder(node.left);
-        if (left != null)
-            return left;
-        if (--k == 0)
-            return node.val;
+        if (left != null) {return left;}
+        if (--k == 0) {return node.val;}
         return this.inorder(node.right);
+    }
+
+    public int kthSmallest5(TreeNode root, int k) {
+        Recursion recursion = new Recursion();
+        List<TreeNode> nodes = new ArrayList<>(1);
+        recursion.setOperation(new Consumer<TreeNode>() {
+            private int i = k;
+
+            @Override
+            public void accept(TreeNode treeNode) {
+                while (--i == 0) {
+                    nodes.add(treeNode);
+                }
+            }
+        });
+        recursion.inorder(root);
+        return nodes.get(0).val;
     }
 }
