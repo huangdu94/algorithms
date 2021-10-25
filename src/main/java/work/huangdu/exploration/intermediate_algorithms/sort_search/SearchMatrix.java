@@ -22,39 +22,39 @@ package work.huangdu.exploration.intermediate_algorithms.sort_search;
  */
 public class SearchMatrix {
     public boolean searchMatrix(int[][] matrix, int target) {
-        if (matrix == null || matrix.length == 0)
-            return false;
+        int m = matrix.length, n = matrix[0].length, i = m - 1, j = 0;
+        while (i >= 0 && j < n) {
+            int val = matrix[i][j];
+            if (val == target) {return true;}
+            if (val > target) {
+                i--;
+            } else {
+                j++;
+            }
+        }
+        return false;
+    }
+
+    public boolean searchMatrix5(int[][] matrix, int target) {
+        if (matrix == null || matrix.length == 0) {return false;}
         int i = matrix.length - 1;
         int j = 0;
-        while (i >= 0 && j <= matrix[0].length - 1)
-            if (matrix[i][j] < target)
-                j++;
-            else if (matrix[i][j] > target)
-                i--;
-            else
-                return true;
+        while (i >= 0 && j <= matrix[0].length - 1) {if (matrix[i][j] < target) {j++;} else if (matrix[i][j] > target) {i--;} else {return true;}}
         return false;
     }
 
     public boolean searchMatrix4(int[][] matrix, int target) {
-        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0)
-            return false;
+        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {return false;}
         int i = 0;
         int j = matrix[0].length - 1;
         while (i <= matrix.length - 1 && j >= 0) {
-            if (matrix[i][j] < target)
-                i++;
-            else if (matrix[i][j] > target)
-                j--;
-            else
-                return true;
+            if (matrix[i][j] < target) {i++;} else if (matrix[i][j] > target) {j--;} else {return true;}
         }
         return false;
     }
 
     public boolean searchMatrix3(int[][] matrix, int target) {
-        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0)
-            return false;
+        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {return false;}
         int m = matrix.length;
         int n = matrix[0].length;
         boolean[][] haveStep = new boolean[m][n];
@@ -64,30 +64,23 @@ public class SearchMatrix {
     private boolean backtrack(int[][] matrix, boolean[][] haveStep, int i, int j, int m, int n, int target) {
         int cur = matrix[i][j];
         haveStep[i][j] = true;
-        if (cur == target)
-            return true;
+        if (cur == target) {return true;}
         boolean flag = false;
         if (cur < target) {
-            if (i + 1 <= m && !haveStep[i + 1][j])
-                flag = backtrack(matrix, haveStep, i + 1, j, m, n, target);
-            if (!flag && j + 1 <= n && !haveStep[i][j + 1])
-                flag = backtrack(matrix, haveStep, i, j + 1, m, n, target);
+            if (i + 1 <= m && !haveStep[i + 1][j]) {flag = backtrack(matrix, haveStep, i + 1, j, m, n, target);}
+            if (!flag && j + 1 <= n && !haveStep[i][j + 1]) {flag = backtrack(matrix, haveStep, i, j + 1, m, n, target);}
         }
         return flag;
     }
 
     public boolean searchMatrix2(int[][] matrix, int target) {
-        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0)
-            return false;
+        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {return false;}
         outloop:
         for (int[] row : matrix) {
-            if (row[0] > target)
-                break;
+            if (row[0] > target) {break;}
             for (int number : row) {
-                if (number > target)
-                    continue outloop;
-                if (number == target)
-                    return true;
+                if (number > target) {continue outloop;}
+                if (number == target) {return true;}
             }
         }
         return false;
@@ -95,11 +88,11 @@ public class SearchMatrix {
 
     public static void main(String[] args) {
         int[][] matrix = {
-                {1, 4, 7, 11, 15},
-                {2, 5, 8, 12, 19},
-                {3, 6, 9, 16, 22},
-                {10, 13, 14, 17, 24},
-                {18, 21, 23, 26, 30}
+            {1, 4, 7, 11, 15},
+            {2, 5, 8, 12, 19},
+            {3, 6, 9, 16, 22},
+            {10, 13, 14, 17, 24},
+            {18, 21, 23, 26, 30}
         };
         int[][] matrix2 = {{-1, 3}};
         int target = 3;
