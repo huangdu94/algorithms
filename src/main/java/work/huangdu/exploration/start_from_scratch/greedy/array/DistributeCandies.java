@@ -30,4 +30,14 @@ public class DistributeCandies {
         }
         return Math.min(candyKind.size(), candies.length / 2);
     }
+
+    public int distributeCandies2(int[] candyType) {
+        int n = candyType.length, half = n / 2;
+        Set<Integer> set = new HashSet<>();
+        for (int i : candyType) {
+            set.add(i);
+            if (set.size() == half) {break;}
+        }
+        return set.size();
+    }
 }
