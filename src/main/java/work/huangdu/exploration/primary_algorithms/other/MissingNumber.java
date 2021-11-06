@@ -29,6 +29,25 @@ public class MissingNumber {
         return 0;
     }
 
+    public int missingNumber2(int[] nums) {
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            int index = nums[i];
+            if (index < 0) {
+                index = -index - 1;
+            }
+            if (index < n) {
+                nums[index] = -nums[index] - 1;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            if (nums[i] >= 0) {
+                return i;
+            }
+        }
+        return n;
+    }
+
     public static void main(String[] args) {
         System.out.println(new MissingNumber().missingNumber(new int[]{9, 6, 4, 2, 3, 5, 7, 0, 1}));
     }
