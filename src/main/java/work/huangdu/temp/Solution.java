@@ -1,8 +1,8 @@
 package work.huangdu.temp;
 
-import java.util.Arrays;
-
 import work.huangdu.data_structure.TreeNode;
+
+import java.util.Arrays;
 
 /**
  * @author yiyun (huangdu.hd@alibaba-inc.com)
@@ -123,7 +123,9 @@ public class Solution {
     }
 
     public boolean isPowerOfTwo(int n) {
-        if (n <= 0) {return false;}
+        if (n <= 0) {
+            return false;
+        }
         return (n & n - 1) == 0;
     }
 
@@ -133,7 +135,9 @@ public class Solution {
 
     public int triangleNumber(int[] nums) {
         int n = nums.length;
-        if (n < 3) {return 0;}
+        if (n < 3) {
+            return 0;
+        }
         Arrays.sort(nums);
         int count = 0;
         for (int i = 0; i < n; i++) {
