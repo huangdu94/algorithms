@@ -1,8 +1,8 @@
 package work.huangdu.temp;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.Arrays;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * @author yiyun (huangdu.hd@alibaba-inc.com)
