@@ -1,5 +1,8 @@
 package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * 559. N 叉树的最大深度
  * 给定一个 N 叉树，找到其最大深度。
@@ -19,10 +22,44 @@ package work.huangdu.exploration.start_from_scratch.tree.level_order;
  * @date 2021/1/23
  */
 public class MaxDepthN {
+    public int maxDepth(Node root) {
+        return dfs(root);
+    }
+
+    private int dfs(Node root) {
+        if (root == null) {return 0;}
+        if (root.children == null) {return 1;}
+        int max = 0;
+        for (Node child : root.children) {
+            max = Math.max(max, dfs(child));
+        }
+        return 1 + max;
+    }
+
+    public int bfs(Node root) {
+        if (root == null) {return 0;}
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+        int depth = 0;
+        while (!queue.isEmpty()) {
+            depth++;
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                Node node = queue.poll();
+                if (node.children != null) {
+                    for (Node child : node.children) {
+                        queue.offer(child);
+                    }
+                }
+            }
+        }
+        return depth;
+    }
+
     private int maxDepth = 0;
 
-    public int maxDepth(Node root) {
-        if (root == null) return 0;
+    public int maxDepth2(Node root) {
+        if (root == null) { return 0; }
         maxDepth(root, 1);
         return maxDepth;
     }
