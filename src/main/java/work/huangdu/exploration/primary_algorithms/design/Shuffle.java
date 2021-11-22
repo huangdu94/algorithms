@@ -1,9 +1,13 @@
 package work.huangdu.exploration.primary_algorithms.design;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 /**
+ * 384. 打乱数组
  * 打乱一个没有重复元素的数组。
  * 示例:
  * // 以数字集合 1, 2 和 3 初始化数组。
@@ -23,10 +27,7 @@ public class Shuffle {
     private final int[] nums;
 
     public Shuffle(int[] nums) {
-        if (nums == null)
-            this.nums = new int[0];
-        else
-            this.nums = nums;
+        if (nums == null) { this.nums = new int[0]; } else { this.nums = nums; }
     }
 
     /**
@@ -47,7 +48,7 @@ public class Shuffle {
         for (int i = 0; i < len; i++) {
             int index;
             do {
-                index = (int) (Math.random() * len);
+                index = (int)(Math.random() * len);
             } while (flagArr[index]);
             flagArr[index] = true;
             result[i] = nums[index];
@@ -56,7 +57,7 @@ public class Shuffle {
     }
 
     public static void main(String[] args) {
-        Shuffle shuffle = new Shuffle(new int[]{1, 2, 3});
+        Shuffle shuffle = new Shuffle(new int[] {1, 2, 3});
         System.out.println(Arrays.toString(shuffle.shuffle()));
         System.out.println(Arrays.toString(shuffle.reset()));
         System.out.println(Arrays.toString(shuffle.shuffle()));
@@ -69,3 +70,29 @@ public class Shuffle {
  * int[] param_1 = obj.reset();
  * int[] param_2 = obj.shuffle();
  */
+
+class Solution {
+    private final int[] origin;
+
+    public Solution(int[] nums) {
+        this.origin = nums;
+    }
+
+    public int[] reset() {
+        return origin;
+    }
+
+    public int[] shuffle() {
+        List<Integer> list = new ArrayList<>(origin.length);
+        for (int num : origin) {
+            list.add(num);
+        }
+        Collections.shuffle(list);
+        int i = 0;
+        int[] result = new int[origin.length];
+        for (int num : list) {
+            result[i++] = num;
+        }
+        return result;
+    }
+}
