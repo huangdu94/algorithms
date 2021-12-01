@@ -151,6 +151,10 @@ public class Solution {
         }
         return count;
     }
+
+    public int poorPigs(int buckets, int minutesToDie, int minutesToTest) {
+        return -1;
+    }
 }
 
 class Trie2 {
