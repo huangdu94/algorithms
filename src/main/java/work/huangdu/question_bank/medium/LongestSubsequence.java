@@ -34,6 +34,20 @@ public class LongestSubsequence {
         int n = arr.length, max = 0;
         Map<Integer, Integer> record = new HashMap<>(n);
         for (int num : arr) {
+            int len = record.getOrDefault(num - difference, 0) + 1;
+            record.put(num, len);
+            max = Math.max(max, len);
+        }
+        return max;
+    }
+
+    public int longestSubsequence3(int[] arr, int difference) {
+        int n = arr.length, max = 0;
+        Map<Integer, Integer> record = new HashMap<>(n);
+        for (int num : arr) {
+            /* record.getOrDefault(num - difference, 0) + 1 >= record.get(num)
+               因为如果 左 < 右， 那我一定能用计算右时候的那个数+1得到与之相同的结果，所以 左 >= 右
+               所以以下代码存在冗余 */
             int len = Math.max(record.getOrDefault(num, 0), record.getOrDefault(num - difference, 0) + 1);
             record.put(num, len);
             max = Math.max(max, len);
