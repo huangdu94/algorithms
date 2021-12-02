@@ -31,6 +31,17 @@ import java.util.Map;
  */
 public class LongestSubsequence {
     public int longestSubsequence(int[] arr, int difference) {
+        int n = arr.length, max = 0;
+        Map<Integer, Integer> record = new HashMap<>(n);
+        for (int num : arr) {
+            int len = Math.max(record.getOrDefault(num, 0), record.getOrDefault(num - difference, 0) + 1);
+            record.put(num, len);
+            max = Math.max(max, len);
+        }
+        return max;
+    }
+
+    public int longestSubsequence2(int[] arr, int difference) {
         int n = arr.length;
         int[] ans = new int[n];
         Arrays.fill(ans, 1);
