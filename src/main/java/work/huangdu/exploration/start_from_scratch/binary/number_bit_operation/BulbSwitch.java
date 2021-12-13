@@ -38,7 +38,7 @@ public class BulbSwitch {
         return count;
     }
 
-    // 数学推导
+    // 数学推导 思路，约数的个数，一个数约数的个数为偶数，则最后的状态为关。 只有完平方数的约数的个数为奇数，最后状态为开。
     public int bulbSwitch(int n) {
         int i = 1;
         while (i * i <= n) {
