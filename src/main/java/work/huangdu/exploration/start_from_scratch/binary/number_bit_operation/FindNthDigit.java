@@ -42,6 +42,24 @@ public class FindNthDigit {
 
     public static void main(String[] args) {
         FindNthDigit findNthDigit = new FindNthDigit();
-        System.out.println(findNthDigit.findNthDigit(1000000000));
+        System.out.println(findNthDigit.findNthDigit2(1000000000));
+    }
+
+    public int findNthDigit2(int n) {
+        int digits = 0;
+        long count = 0, base = 9;
+        while (count <= n) {
+            count += base * ++digits;
+            base *= 10;
+        }
+        count -= base / 10 * digits;
+        int remain = (int)(n - count);
+        int number = (int)Math.pow(10, digits - 1) + (remain - 1) / digits;
+        int bit = remain % digits;
+        if (remain == 0) {
+            number--;
+            digits--;
+        }
+        return number / (int)Math.pow(10, bit == 0 ? 0 : digits - bit) % 10;
     }
 }
