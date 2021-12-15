@@ -98,4 +98,6 @@ public class LoudAndRich {
         // [0,0,0]
         System.out.println(Arrays.toString(lar.loudAndRich(new int[][] {{0, 1}, {1, 2}}, new int[] {0, 1, 2})));
     }
+
+    // TODO 使用图的知识解这一题
 }
