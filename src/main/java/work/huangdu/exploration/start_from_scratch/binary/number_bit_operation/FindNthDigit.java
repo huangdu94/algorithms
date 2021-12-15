@@ -48,4 +48,19 @@ public class FindNthDigit {
         }
         return number / (int)Math.pow(10, bit == 0 ? 0 : digits - bit) % 10;
     }
+
+    public int findNthDigit2(int n) {
+        int count = 9, bits = 1;
+        while (count != 900000000 && n > count * bits) {
+            n -= (count * bits);
+            count *= 10;
+            bits++;
+        }
+        int targetNum = count / 9 + --n / bits, targetBit = n % bits + 1;
+        while (targetBit < bits) {
+            targetNum /= 10;
+            targetBit++;
+        }
+        return targetNum % 10;
+    }
 }
