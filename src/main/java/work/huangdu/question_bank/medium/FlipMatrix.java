@@ -1,6 +1,10 @@
 package work.huangdu.question_bank.medium;
 
+import java.util.Arrays;
 import java.util.BitSet;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
 
 /**
  * 519. 随机翻转矩阵
@@ -32,6 +36,39 @@ import java.util.BitSet;
  * @date 2021/11/27
  */
 public class FlipMatrix {
+    public static class Solution3 {
+        private final int n;
+        private final int total;
+        private int remain;
+        private final Map<Integer, Integer> indexMap;
+
+        public Solution3(int m, int n) {
+            this.n = n;
+            this.total = m * n;
+            this.remain = total;
+            this.indexMap = new HashMap<>();
+        }
+
+        public int[] flip() {
+            int random = new Random().nextInt(remain--), value = indexMap.getOrDefault(random, random);
+            indexMap.put(random, indexMap.getOrDefault(remain, remain));
+            return new int[] {value / n, value % n};
+        }
+
+        public void reset() {
+            remain = total;
+            indexMap.clear();
+        }
+
+        public static void main(String[] args) {
+            Solution3 solution = new Solution3(2, 2);
+            System.out.println(Arrays.toString(solution.flip()));
+            System.out.println(Arrays.toString(solution.flip()));
+            System.out.println(Arrays.toString(solution.flip()));
+            System.out.println(Arrays.toString(solution.flip()));
+        }
+    }
+
     /**
      * 超出空间限制
      */
@@ -80,7 +117,7 @@ public class FlipMatrix {
 
         public int[] flip() {
             int randomIndex;
-            while (bitSet.get(randomIndex = randomIndex())) ;
+            while (bitSet.get(randomIndex = randomIndex())) { ; }
             bitSet.set(randomIndex);
             return new int[] {randomIndex / n, randomIndex % n};
         }
