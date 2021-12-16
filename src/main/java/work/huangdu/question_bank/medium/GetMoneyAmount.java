@@ -48,6 +48,7 @@ package work.huangdu.question_bank.medium;
  * @date 2021/11/18
  */
 public class GetMoneyAmount {
+    // TODO 动态规划需要复习
     public int getMoneyAmount(int n) {
         if (n == 1) {return 0;}
         int[][] dp = new int[n + 1][n + 1];
