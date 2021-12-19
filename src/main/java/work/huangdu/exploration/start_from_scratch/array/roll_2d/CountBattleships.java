@@ -23,13 +23,40 @@ package work.huangdu.exploration.start_from_scratch.array.roll_2d;
  * @date 2020/9/16 1:02
  */
 public class CountBattleships {
+    public int countBattleships2(char[][] board) {
+        int m = board.length, n = board[0].length, count = 0;
+        int[] direction = {1, 0, -1, 0, 1};
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (board[i][j] == 'X') {
+                    count++;
+                    board[i][j] = '.';
+                    for (int k = 0; k < 4; k++) {
+                        int nextI = i + direction[k], nextJ = j + direction[k + 1];
+                        boolean flag = false;
+                        while (nextI >= 0 && nextI < m && nextJ >= 0 && nextJ < n && board[nextI][nextJ] == 'X') {
+                            flag = true;
+                            board[nextI][nextJ] = '.';
+                            nextI += direction[k];
+                            nextJ += direction[k + 1];
+                        }
+                        if (flag) {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return count;
+    }
+
     public int countBattleships(char[][] board) {
         int m = board.length, n = board[0].length, count = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (board[i][j] == 'X' &&
-                        (i == m - 1 || board[i + 1][j] == '.') &&
-                        (j == n - 1 || board[i][j + 1] == '.')) {
+                    (i == m - 1 || board[i + 1][j] == '.') &&
+                    (j == n - 1 || board[i][j + 1] == '.')) {
                     count++;
                 }
             }
