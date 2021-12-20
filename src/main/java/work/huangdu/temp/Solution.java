@@ -155,10 +155,6 @@ public class Solution {
     public int poorPigs(int buckets, int minutesToDie, int minutesToTest) {
         return -1;
     }
-
-    public int findRadius(int[] houses, int[] heaters) {
-        return -1;
-    }
 }
 
 class Trie2 {
