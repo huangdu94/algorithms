@@ -32,15 +32,15 @@ public class RepeatedStringMatch {
         if (nb % na != 0) {
             count++;
         }
-        StringBuilder sb = new StringBuilder((count + 1) * nb);
+        StringBuilder sb = new StringBuilder((count + 1) * na);
         for (int k = 0; k < count; k++) {
             sb.append(a);
         }
-        if (sb.toString().lastIndexOf(b) != -1) {
+        if (sb.lastIndexOf(b) != -1) {
             return count;
         }
         sb.append(a);
-        if (sb.toString().lastIndexOf(b) != -1) {
+        if (sb.lastIndexOf(b) != -1) {
             return count + 1;
         }
         return -1;
