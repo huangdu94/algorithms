@@ -27,7 +27,7 @@ public class FindOcurrences {
     public String[] findOcurrences(String text, String first, String second) {
         String[] words = text.split(" ");
         List<String> ansList = new ArrayList<>();
-        int n = words.length, status = 0;
+        int n = words.length;
         for (int i = 2; i < n; i++) {
             if (first.equals(words[i - 2]) && second.equals(words[i - 1])) {
                 ansList.add(words[i]);
