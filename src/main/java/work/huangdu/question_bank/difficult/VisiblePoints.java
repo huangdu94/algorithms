@@ -1,5 +1,7 @@
 package work.huangdu.question_bank.difficult;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,6 +35,54 @@ import java.util.List;
  */
 public class VisiblePoints {
     public int visiblePoints(List<List<Integer>> points, int angle, List<Integer> location) {
-        return -1;
+        double range = angle / 180.0 * Math.PI;
+        int alwaysVisible = 0;
+        int x0 = location.get(0), y0 = location.get(1);
+        List<Double> angles = new ArrayList<>(points.size());
+        for (List<Integer> point : points) {
+            int x1 = point.get(0), y1 = point.get(1);
+            if (x1 == x0 && y1 == y0) {
+                alwaysVisible++;
+                continue;
+            }
+            angles.add(Math.atan2(y1 - y0, x1 - x0));
+        }
+        angles.sort(Double::compare);
+        int max = 0, end = 0;
+        boolean nextRing = false;
+        for (int start = 0, n = angles.size(); start < n; start++) {
+            while ((nextRing ? 2 * Math.PI + angles.get(end) - angles.get(start) : angles.get(end) - angles.get(start)) <= range) {
+                if (++end >= n) {
+                    end %= n;
+                    nextRing = true;
+                }
+            }
+            int count = nextRing ? n + end - start : end - start;
+            if (count > max) {
+                max = count;
+            }
+        }
+        return max + alwaysVisible;
     }
+
+    public static void main(String[] args) {
+        VisiblePoints vp = new VisiblePoints();
+        List<List<Integer>> points = convert(
+            "[[68,61],[63,4],[20,64],[13,6],[47,77],[11,23],[73,40],[34,45],[24,89],[85,68],[18,4],[87,41],[1,12],[87,72],[7,84],[75,64],[76,59],[62,36],[78,18],[37,71],[47,49],[9,21],[62,31],[12,33],[91,39],[45,67],[73,95],[36,75],[54,25],[32,2],[51,"
+                + "38],[71,29],[50,87],[3,64],[92,47],[10,26],[7,56],[81,56]]");
+        int angle = 42;
+        List<Integer> location = Arrays.asList(9, 61);
+        System.out.println(vp.visiblePoints(points, angle, location));
+    }
+
+    private static List<List<Integer>> convert(String value) {
+        String[] pairs = value.substring(2, value.length() - 2).split("],\\[");
+        List<List<Integer>> points = new ArrayList<>(pairs.length);
+        for (String pair : pairs) {
+            String[] temp = pair.split(",");
+            points.add(Arrays.asList(Integer.parseInt(temp[0]), Integer.parseInt(temp[1])));
+        }
+        return points;
+    }
+
 }
