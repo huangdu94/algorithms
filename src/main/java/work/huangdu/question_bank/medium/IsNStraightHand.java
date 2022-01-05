@@ -26,6 +26,7 @@ import java.util.TreeMap;
  */
 public class IsNStraightHand {
     public boolean isNStraightHand(int[] hand, int groupSize) {
+        if (groupSize == 1) {return true;}
         int n = hand.length;
         if (n % groupSize != 0) { return false; }
         TreeMap<Integer, Integer> count = new TreeMap<>();
