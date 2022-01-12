@@ -19,8 +19,7 @@ package work.huangdu.exploration.intermediate_algorithms.array_string;
  */
 public class IncreasingTriplet {
     public boolean increasingTriplet(int[] nums) {
-        if (nums == null || nums.length < 3)
-            return false;
+        if (nums == null || nums.length < 3) { return false; }
         int first = nums[0];
         int second = 0; // 不会使用到的初始化值(保证程序可编译)
         int index = 1;
@@ -37,12 +36,7 @@ public class IncreasingTriplet {
         // 2.继续判断
         while (index < nums.length) {
             int cur = nums[index++];
-            if (cur > second)
-                return true;
-            else if (cur < first)
-                first = cur;
-            else if (first < cur && cur < second)
-                second = cur;
+            if (cur > second) { return true; } else if (cur < first) { first = cur; } else if (first < cur && cur < second) { second = cur; }
         }
         return false;
     }
@@ -56,6 +50,21 @@ public class IncreasingTriplet {
                 second = num;
             } else if (num > second) {
                 return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean increasingTriplet3(int[] nums) {
+        int first = Integer.MAX_VALUE, second = Integer.MAX_VALUE;
+        for (int num : nums) {
+            if (num > second) {
+                return true;
+            }
+            if (first < num && num < second) {
+                second = num;
+            } else if (first > num) {
+                first = num;
             }
         }
         return false;
