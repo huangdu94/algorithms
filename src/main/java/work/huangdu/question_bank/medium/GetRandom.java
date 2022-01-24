@@ -62,4 +62,28 @@ public class GetRandom {
             return arrayList.get(randIndex);
         }
     }
+
+    // 鱼塘抽样法
+    static class Solution2 {
+        private final ListNode head;
+        private final Random rand;
+
+        public Solution2(ListNode head) {
+            this.head = head;
+            this.rand = new Random();
+        }
+
+        public int getRandom() {
+            int i = 1, ans = 0;
+            ListNode node = head;
+            while (node != null) {
+                if (rand.nextInt(i) == 0) {
+                    ans = node.val;
+                }
+                node = node.next;
+                i++;
+            }
+            return ans;
+        }
+    }
 }
