@@ -87,7 +87,7 @@ public class StockPrice {
         return smallHeap.peek().val;
     }
 
-    private class Record {
+    private static class Record {
         private final int val;
         private boolean delete = false;
 
