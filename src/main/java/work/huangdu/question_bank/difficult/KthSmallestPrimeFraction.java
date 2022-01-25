@@ -1,5 +1,8 @@
 package work.huangdu.question_bank.difficult;
 
+import java.util.Arrays;
+import java.util.PriorityQueue;
+
 /**
  * 786. 第 K 个最小的素数分数
  * 给你一个按递增顺序排序的数组 arr 和一个整数 k 。数组 arr 由 1 和若干 素数  组成，且其中所有整数互不相同。
@@ -27,6 +30,28 @@ package work.huangdu.question_bank.difficult;
  */
 public class KthSmallestPrimeFraction {
     public int[] kthSmallestPrimeFraction(int[] arr, int k) {
-        return null;
+        int n = arr.length;
+        PriorityQueue<int[]> pq = new PriorityQueue<>(k, (o1, o2) -> o2[0] * o1[1] - o1[0] * o2[1]);
+        for (int i = 0; i < n; i++) {
+            for (int j = n - 1; j > i; j--) {
+                pq.offer(new int[] {arr[i], arr[j]});
+                if (pq.size() > k) { pq.poll(); }
+            }
+        }
+        return pq.peek();
+    }
+
+    // 优化
+    /*
+    private int compareArray(int[] o1, int[] o2) {
+        return Double.compare(1.0 * o1[0] / o1[1], 1.0 * o2[0] / o2[1]);
+    }*/
+    private int compareArray(int[] o1, int[] o2) {
+        return o1[0] * o2[1] - o2[0] * o1[1];
+    }
+
+    public static void main(String[] args) {
+        KthSmallestPrimeFraction kspf = new KthSmallestPrimeFraction();
+        System.out.println(Arrays.toString(kspf.kthSmallestPrimeFraction(new int[] {1, 2, 3, 5}, 3)));
     }
 }
