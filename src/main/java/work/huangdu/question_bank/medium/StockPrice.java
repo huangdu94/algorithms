@@ -88,7 +88,7 @@ public class StockPrice {
     }
 
     private class Record {
-        private int val;
+        private final int val;
         private boolean delete = false;
 
         public Record(int val) {
