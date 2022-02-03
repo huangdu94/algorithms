@@ -44,6 +44,19 @@ public class LongestNiceSubstring {
     }
 
     private boolean check(char[] chars, int start, int end) {
+        int lowerCase = 0, upperCase = 0;
+        for (int i = start; i < end; i++) {
+            char c = chars[i];
+            if (c < 'a') {
+                lowerCase |= 1 << (c - 'A');
+            } else {
+                upperCase |= 1 << (c - 'a');
+            }
+        }
+        return lowerCase == upperCase;
+    }
+
+    private boolean check2(char[] chars, int start, int end) {
         boolean[] exist = new boolean[128];
         for (int i = start; i < end; i++) {
             char c = chars[i];
