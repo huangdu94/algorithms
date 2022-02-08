@@ -28,7 +28,6 @@ package work.huangdu.question_bank.easy;
  * @date 2022/1/24
  */
 public class RemovePalindromeSub {
-    // TODO 未提交
     public int removePalindromeSub(String s) {
         int l = 0, r = s.length() - 1;
         while (l < r) { if (s.charAt(l++) != s.charAt(r--)) { return 2; } }

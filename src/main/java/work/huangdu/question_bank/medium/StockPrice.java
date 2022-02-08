@@ -57,7 +57,6 @@ public class StockPrice {
     private final PriorityQueue<Record> bigHeap;
     private int lastTimestamp = 0;
 
-    // TODO 未提交
     public StockPrice() {
         recordMap = new HashMap<>();
         smallHeap = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));

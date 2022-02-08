@@ -41,7 +41,6 @@ import work.huangdu.data_structure.ListNode;
  * @date 2022/1/24
  */
 public class GetRandom {
-    // TODO 未提交
     static class Solution {
         private final int n;
         private final List<Integer> arrayList;
