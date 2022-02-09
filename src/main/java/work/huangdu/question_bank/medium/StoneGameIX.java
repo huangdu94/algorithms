@@ -42,7 +42,7 @@ import java.util.Map;
  */
 public class StoneGameIX {
     private final Map<Integer, Boolean> memo = new HashMap<>();
-    // 本题也可以直接分析得到结果，不需要用回溯
+    // TODO 本题也可以直接分析得到结果，不需要用回溯
     /*
     石头的数值大于3对于本题没有任何意义，所以石头的数值可以转化为3的余数，即问题简化为三种数值的石头，0、1、2
     Alice开局只能拿 1 或 2
