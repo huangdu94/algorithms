@@ -39,4 +39,17 @@ public class OptimalDivision {
         }
         return res.append(')').toString();
     }
+
+    public String optimalDivision2(int[] nums) {
+        int n = nums.length;
+        if (n == 1) {return Integer.toString(nums[0]);}
+        StringBuilder sb = new StringBuilder();
+        sb.append(nums[0]).append("/");
+        if (n == 2) { return sb.append(nums[1]).toString(); }
+        sb.append("(");
+        for (int i = 1; i < n; i++) { sb.append(nums[i]).append("/"); }
+        sb.deleteCharAt(sb.length() - 1);
+        sb.append(")");
+        return sb.toString();
+    }
 }
