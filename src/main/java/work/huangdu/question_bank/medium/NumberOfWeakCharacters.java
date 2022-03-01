@@ -26,7 +26,6 @@ package work.huangdu.question_bank.medium;
  * @date 2022/2/8
  */
 public class NumberOfWeakCharacters {
-    // TODO 未提交
     public int numberOfWeakCharacters(int[][] properties) {
         // index: 攻击 value: 防御 （该攻击力中防御力最大值）
         // dp中记录 大于该攻击力的最大的防御力
