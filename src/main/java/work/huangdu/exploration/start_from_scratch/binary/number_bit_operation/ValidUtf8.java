@@ -47,7 +47,7 @@ public class ValidUtf8 {
         if (len == -1) {
             return -1;
         }
-        if (n - p < len) return -1;
+        if (n - p < len) { return -1; }
         for (int i = 0; i < len; i++) {
             if (!checkBody(data[p++])) {
                 return -1;
@@ -91,5 +91,32 @@ public class ValidUtf8 {
             System.out.println(sb.toString());
         }
         System.out.println(validUtf8.validUtf8(data));
+    }
+
+    public boolean validUtf82(int[] data) {
+        int n = data.length;
+        for (int i = 0; i < n; i++) {
+            int dataByte = data[i];
+            if ((dataByte & 0X80) == 0) { continue; }
+            if ((dataByte & 0X40) == 0) { return false; }
+            if ((dataByte & 0X20) == 0) {
+                if (i + 1 >= n || notValid(data[i + 1])) { return false; }
+                i += 1;
+                continue;
+            }
+            if ((dataByte & 0X10) == 0) {
+                if (i + 2 >= n || notValid(data[i + 1]) || notValid(data[i + 2])) { return false; }
+                i += 2;
+                continue;
+            }
+            if ((dataByte & 0X08) != 0) { return false; }
+            if (i + 3 >= n || notValid(data[i + 1]) || notValid(data[i + 2]) || notValid(data[i + 3])) { return false; }
+            i += 3;
+        }
+        return true;
+    }
+
+    private boolean notValid(int byteData) {
+        return (byteData & 0X80) == 0 || (byteData & 0X40) != 0;
     }
 }
