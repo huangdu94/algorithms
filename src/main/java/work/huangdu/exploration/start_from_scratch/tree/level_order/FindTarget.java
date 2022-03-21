@@ -51,7 +51,7 @@ public class FindTarget {
     }
 
     private void inorder(TreeNode root) {
-        if (root == null) return;
+        if (root == null) { return; }
         inorder(root.left);
         inorderList.add(root.val);
         inorder(root.right);
