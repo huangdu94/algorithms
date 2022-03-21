@@ -1,9 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 653. 两数之和 IV - 输入 BST
