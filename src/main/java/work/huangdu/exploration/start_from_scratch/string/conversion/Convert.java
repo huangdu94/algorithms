@@ -43,4 +43,35 @@ public class Convert {
         }
         return res.toString();
     }
+
+    public String convert2(String s, int numRows) {
+        int n = s.length();
+        if (numRows == 1) {return s;}
+        int i = 0, p = 0;
+        char[] chars = new char[n];
+        // 输出第一行
+        int interval = numRows * 2 - 2, interval2 = 0;
+        while (p < n) {
+            chars[i++] = s.charAt(p);
+            p += interval;
+        }
+        for (int row = 1; row < numRows - 1; row++) {
+            interval -= 2;
+            interval2 = numRows * 2 - 2 - interval;
+            boolean flag = true;
+            p = row;
+            while (p < n) {
+                chars[i++] = s.charAt(p);
+                p += flag ? interval : interval2;
+                flag = !flag;
+            }
+        }
+        p = numRows - 1;
+        interval += interval2;
+        while (p < n && i < n) {
+            chars[i++] = s.charAt(p);
+            p += interval;
+        }
+        return new String(chars);
+    }
 }
