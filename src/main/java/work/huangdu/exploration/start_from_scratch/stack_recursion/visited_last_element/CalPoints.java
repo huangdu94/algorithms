@@ -73,4 +73,30 @@ public class CalPoints {
         }
         return sum;
     }
+
+    public int calPoints2(String[] ops) {
+        int n = ops.length, top = 0, ans = 0;
+        int[] stack = new int[n];
+        for (String op : ops) {
+            switch (op) {
+                case "+":
+                    int sum = stack[top - 1] + stack[top - 2];
+                    stack[top++] = sum;
+                    break;
+                case "D":
+                    int result = 2 * stack[top - 1];
+                    stack[top++] = result;
+                    break;
+                case "C":
+                    top--;
+                    break;
+                default:
+                    stack[top++] = Integer.parseInt(op);
+            }
+        }
+        for (int i = 0; i < top; i++) {
+            ans += stack[i];
+        }
+        return ans;
+    }
 }
