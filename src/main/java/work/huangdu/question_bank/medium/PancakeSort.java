@@ -60,10 +60,8 @@ public class PancakeSort {
         int i = 0, j = bound;
         while (i < j) {
             int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-            i++;
-            j--;
+            arr[i++] = arr[j];
+            arr[j--] = temp;
         }
     }
 
