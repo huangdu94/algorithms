@@ -42,29 +42,28 @@ public class PreorderN {
     }
 
     private void preorder(List<Integer> result, Node node) {
-        if (node == null) return;
+        if (node == null) { return; }
         result.add(node.val);
-        if (node.children == null) return;
+        if (node.children == null) { return; }
         for (Node child : node.children) {
             preorder(result, child);
         }
     }
 
     public List<Integer> preorder2(Node root) {
-        LinkedList<Node> stack = new LinkedList<>();
-        LinkedList<Integer> output = new LinkedList<>();
-        if (root == null) {
-            return output;
-        }
-        stack.add(root);
+        List<Integer> ans = new ArrayList<>();
+        if (root == null) {return ans;}
+        Deque<Node> stack = new ArrayDeque<>();
+        stack.push(root);
         while (!stack.isEmpty()) {
-            Node node = stack.pollLast();
-            output.add(node.val);
-            for (int i = node.children.size() - 1; i >= 0; i--) {
-                stack.addLast(node.children.get(i));
+            Node cur = stack.pop();
+            ans.add(cur.val);
+            int n = cur.children.size();
+            for (int i = n - 1; i >= 0; i--) {
+                stack.push(cur.children.get(i));
             }
         }
-        return output;
+        return ans;
     }
 }
 
