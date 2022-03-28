@@ -30,19 +30,19 @@ public class postorderN {
     }
 
     public List<Integer> postorder2(Node root) {
-        LinkedList<Integer> result = new LinkedList<>();
-        if (root == null) return result;
-        Deque<Node> stack = new ArrayDeque<>();
+        LinkedList<Integer> ans = new LinkedList<>();
+        if(root==null){return ans;}
+        Deque<Node> stack=new ArrayDeque<>();
         stack.push(root);
-        while (!stack.isEmpty()) {
-            Node node = stack.pop();
-            result.addFirst(node.val);
-            for (int i = 0, size = node.children.size() - 1; i < size; i++) {
+        while (!stack.isEmpty()){
+            Node cur=stack.pop();
+            ans.addFirst(cur.val);
+            for(Node child : cur.children){
                 // 放和拿的方法一定要配对使用
-                stack.push(node.children.get(i));
+                stack.push(child);
             }
         }
-        return result;
+        return ans;
     }
 }
 
