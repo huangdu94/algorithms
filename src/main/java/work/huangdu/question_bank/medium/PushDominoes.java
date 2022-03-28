@@ -31,7 +31,6 @@ import java.util.Queue;
  * @date 2022/2/21
  */
 public class PushDominoes {
-    // TODO 未提交 每日一题
     public String pushDominoes(String dominoes) {
         int n = dominoes.length(), p = 0;
         Queue<Integer> lQueue = new ArrayDeque<>(), rQueue = new ArrayDeque<>();
