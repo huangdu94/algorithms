@@ -27,6 +27,7 @@ package work.huangdu.question_bank.medium;
 public class KnightProbability {
     private static final int[][] MOVE = {{-2, -1}, {-2, 1}, {-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}};
 
+    // TODO 我的思维跟答案是反着的。
     public double knightProbability(int n, int k, int row, int column) {
         // 还没移动就在棋盘外
         if (row == n || column == n) {return 0;}
