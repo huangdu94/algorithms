@@ -34,7 +34,7 @@ public class KInversePairs {
      * ->
      * dp[i][j] = dp[i][j-1] + dp[i-1][j] - dp[i-1][j-i];
      * 边界
-     * dp[*][0] = 1;
+     * dp[*][0] = 1;K
      * dp[0][*(*!=0)] = 0;
      * dp[*][负数] = 0;
      */
