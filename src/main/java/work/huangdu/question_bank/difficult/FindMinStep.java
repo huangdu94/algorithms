@@ -1,5 +1,13 @@
 package work.huangdu.question_bank.difficult;
 
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
+
 /**
  * 488. 祖玛游戏
  * 你正在参与祖玛游戏的一个变种。
@@ -50,7 +58,133 @@ package work.huangdu.question_bank.difficult;
  * @date 2021/11/18
  */
 public class FindMinStep {
+    private static final int COLOR_KIND = 5;
+    private static final Map<Character, Integer> COLOR_ID_MAP = new HashMap<>();
+    private static final Map<Integer, Character> ID_COLOR_MAP = new HashMap<>();
+
+    static {
+        COLOR_ID_MAP.put('R', 0);
+        COLOR_ID_MAP.put('Y', 1);
+        COLOR_ID_MAP.put('B', 2);
+        COLOR_ID_MAP.put('G', 3);
+        COLOR_ID_MAP.put('W', 4);
+        ID_COLOR_MAP.put(0, 'R');
+        ID_COLOR_MAP.put(1, 'Y');
+        ID_COLOR_MAP.put(2, 'B');
+        ID_COLOR_MAP.put(3, 'G');
+        ID_COLOR_MAP.put(4, 'W');
+    }
+
     public int findMinStep(String board, String hand) {
+        int ans = 0;
+        Set<Integer> visited = new HashSet<>();
+        Queue<Status> queue = new ArrayDeque<>();
+        Status initStatus = new Status(board, hand);
+        queue.offer(initStatus);
+        visited.add(initStatus.hash());
+        while (!queue.isEmpty()) {
+            ans++;
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                Status status = queue.poll();
+                char[] curBoard = status.board;
+                int[] curHand = status.hand;
+                int n = curBoard.length;
+                for (int j = 0; j < COLOR_KIND; j++) {
+                    if (curHand[j] > 0) {
+                        curHand[j]--;
+                        char c = ID_COLOR_MAP.get(j);
+                        for (int k = 0; k <= n; k++) {
+                            if (k > 0 && curBoard[k - 1] == c) {continue;}
+                            if (k > 0 && k < n && curBoard[k - 1] != curBoard[k] && curBoard[k - 1] != c && curBoard[k] != c) {continue;}
+                            char[] newBoard = clear(curBoard, c, k);
+                            if (newBoard.length == 0) {return ans;}
+                            if (status.handSum() > 0) {
+                                Status newStatus = new Status(newBoard, curHand);
+                                if (visited.add(newStatus.hash())) {
+                                    queue.offer(newStatus);
+                                }
+                            }
+                        }
+                        curHand[j]++;
+                    }
+                }
+            }
+        }
         return -1;
+    }
+
+    class Status {
+        char[] board;
+        int[] hand;
+
+        Status(String board, String hand) {
+            this.board = board.toCharArray();
+            this.hand = new int[COLOR_KIND];
+            for (int i = 0, n = hand.length(); i < n; i++) {
+                this.hand[COLOR_ID_MAP.get(hand.charAt(i))]++;
+            }
+        }
+
+        Status(char[] board, int[] hand) {
+            this.board = board;
+            this.hand = Arrays.copyOf(hand, COLOR_KIND);
+        }
+
+        int handSum() {
+            int handSum = 0;
+            for (int num : hand) {
+                handSum += num;
+            }
+            return handSum;
+        }
+
+        int hash() {
+            return 31 * Arrays.hashCode(board) + Arrays.hashCode(hand);
+        }
+    }
+
+    private char[] clear(char[] board, char insertChar, int insertIndex) {
+        int n = board.length, index = 0;
+        char[] charStack = new char[n + 1];
+        int[] countStack = new int[n + 1];
+        int top = 0;
+        while (index <= n) {
+            char c = index == insertIndex ? insertChar : (index < insertIndex ? board[index] : board[index - 1]);
+            if (top == 0) {
+                charStack[top] = c;
+                countStack[top++] = 1;
+                index++;
+            } else {
+                if (charStack[top - 1] == c) {
+                    countStack[top - 1]++;
+                    index++;
+                } else {
+                    if (countStack[top - 1] >= 3) {top--;} else {
+                        charStack[top] = c;
+                        countStack[top++] = 1;
+                        index++;
+                    }
+                }
+            }
+        }
+        if (countStack[top - 1] >= 3) {top--;}
+        n = 0;
+        index = 0;
+        for (int i = 0; i < top; i++) {n += countStack[i];}
+        char[] newBoard = new char[n];
+        for (int i = 0; i < top; i++) {
+            char c = charStack[i];
+            int count = countStack[i];
+            for (int k = 0; k < count; k++) {
+                newBoard[index++] = c;
+            }
+        }
+        return newBoard;
+    }
+
+    public static void main(String[] args) {
+        FindMinStep fms = new FindMinStep();
+        System.out.println(fms.findMinStep("RRWWRRBBRR", "WB"));
     }
 }
