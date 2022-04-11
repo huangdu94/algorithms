@@ -13,14 +13,32 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  */
 public class CountNumbersWithUniqueDigits {
     public int countNumbersWithUniqueDigits(int n) {
-        if (n == 0) return 1;
-        if (n == 1) return 10;
-        if (n > 10) return 0;
+        if (n == 0) {return 1;}
+        if (n == 1) {return 10;}
+        if (n > 10) {return 0;}
         int res = 9, i = 9, count = 1;
         while (count < n) {
             res *= i--;
             count++;
         }
         return res + countNumbersWithUniqueDigits(n - 1);
+    }
+
+    public int countNumbersWithUniqueDigits2(int n) {
+        int[] dp = new int[n + 1];
+        dp[0] = 1;
+        for (int i = 1; i <= n; i++) {
+            int res = 9, option = 9;
+            for (int k = 0; k < i - 1; k++) {
+                res *= option--;
+            }
+            dp[i] = dp[i - 1] + res;
+        }
+        return dp[n];
+    }
+
+    public static void main(String[] args) {
+        CountNumbersWithUniqueDigits cnwud = new CountNumbersWithUniqueDigits();
+        System.out.println(cnwud.countNumbersWithUniqueDigits2(2));
     }
 }
