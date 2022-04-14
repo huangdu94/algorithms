@@ -35,8 +35,46 @@ public class BestRotation {
     设每个数为x，则可以让其得分的下标为 [x,n-1] 共有n-x个，不能得分的下标有[0,x-1]，共有x个
     x <= (i+n-k) % n
     k <= (i+n-x) % n
+    i<x      k <= i+n-x
+    i>=x     k <= i-x
+    因为可以得分的下标为n-x个
+    i<x      k ->  [i+1,i+n-x]
+    i==n-1   k ->  [0,i-x]
+    i>=x     k ->  [0,i-x] U [i+1,n-1]
      */
     public int bestRotation(int[] nums) {
-        return -1;
+        int n = nums.length;
+        int[] diff = new int[n + 1];
+        for (int i = 0; i < n; i++) {
+            int x = nums[i];
+            if (x >= n) {continue;}
+            if (i < x) {
+                diff[i + 1]++;
+                diff[i + n - x + 1]--;
+            } else if (i == n - 1) {
+                diff[0]++;
+                diff[i - x + 1]--;
+            } else {
+                diff[0]++;
+                diff[i - x + 1]--;
+                diff[i + 1]++;
+                diff[n]--;
+            }
+        }
+        int ans = 0, cnt = 0, max = 0;
+        for (int i = 0; i < n; i++) {
+            cnt += diff[i];
+            if (cnt > max) {
+                max = cnt;
+                ans = i;
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {2, 3, 1, 4, 0};
+        BestRotation br = new BestRotation();
+        System.out.println(br.bestRotation(nums));
     }
 }
