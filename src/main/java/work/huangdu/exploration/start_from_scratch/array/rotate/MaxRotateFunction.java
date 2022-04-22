@@ -20,7 +20,39 @@ package work.huangdu.exploration.start_from_scratch.array.rotate;
  * @date 2020/9/16 13:29
  */
 public class MaxRotateFunction {
-    public int maxRotateFunction(int[] A) {
+    public int maxRotateFunction(int[] nums) {
+        int n = nums.length, f = 0;
+        if (n == 1) {return f;}
+        int sum = nums[0];
+        for (int i = 1; i < n; i++) {
+            sum += nums[i];
+            f += i * nums[i];
+        }
+        int ans = f;
+        for (int i = 1; i < n; i++) {
+            f += sum - n * nums[n - i];
+            ans = Math.max(ans, f);
+        }
+        return ans;
+    }
+
+    public int maxRotateFunction2(int[] nums) {
+        int n = nums.length, f = 0;
+        if (n == 1) {return f;}
+        int sum = nums[0];
+        for (int i = 1; i < n; i++) {
+            sum += nums[i];
+            f += i * nums[i];
+        }
+        int ans = f;
+        for (int i = 1; i < n; i++) {
+            f = f - (n - 1) * nums[n - i] + sum - nums[n - i];
+            ans = Math.max(ans, f);
+        }
+        return ans;
+    }
+
+    public int maxRotateFunction3(int[] A) {
         int n = A.length, sum = 0, f = 0;
         for (int i = 0; i < n; i++) {
             sum += A[i];
@@ -30,7 +62,7 @@ public class MaxRotateFunction {
         for (int i = 1; i < n; i++) {
             // f = f - (n - 1) * A[n - i] + sum - A[n - i];
             f += sum - n * A[n - i];
-            if (f > maxF) maxF = f;
+            if (f > maxF) {maxF = f;}
         }
         return maxF;
     }
