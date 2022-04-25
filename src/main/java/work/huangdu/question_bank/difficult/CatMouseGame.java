@@ -33,7 +33,50 @@ package work.huangdu.question_bank.difficult;
  * @date 2022/1/4
  */
 public class CatMouseGame {
+    private static final int DRAW = 0;
+    private static final int MOUSE_WIN = 1;
+    private static final int CAT_WIN = 2;
+    private static final int MOUSE_TURN = 0;
+    private int[][] graph;
+    private int drawTurn;
+    private int[][][] memo;
+
     public int catMouseGame(int[][] graph) {
-        return 0;
+        int n = graph.length;
+        this.graph = graph;
+        this.drawTurn = 2 * n * (n - 1);
+        this.memo = new int[n][n][drawTurn];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int k = 0; k < drawTurn; k++) {
+                    memo[i][j][k] = -1;
+                }
+            }
+        }
+        return dfs(1, 2, 0);
+    }
+
+    private int dfs(int mouse, int cat, int turn) {
+        if (turn >= drawTurn) {return DRAW;}
+        if (mouse == 0) {return MOUSE_WIN;}
+        if (mouse == cat) {return CAT_WIN;}
+        if (memo[mouse][cat][turn] != -1) {return memo[mouse][cat][turn];}
+        boolean lose = true;
+        if ((turn & 1) == MOUSE_TURN) {
+            for (int next : graph[mouse]) {
+                int nextResult = dfs(next, cat, turn + 1);
+                if (nextResult == MOUSE_WIN) {return memo[mouse][cat][turn] = MOUSE_WIN;}
+                if (lose && nextResult == DRAW) {lose = false;}
+            }
+            return memo[mouse][cat][turn] = lose ? CAT_WIN : DRAW;
+        } else {
+            for (int next : graph[cat]) {
+                if (next == 0) {continue;}
+                int nextResult = dfs(mouse, next, turn + 1);
+                if (nextResult == CAT_WIN) {return memo[mouse][cat][turn] = CAT_WIN;}
+                if (lose && nextResult == DRAW) {lose = false;}
+            }
+            return memo[mouse][cat][turn] = lose ? MOUSE_WIN : DRAW;
+        }
     }
 }
