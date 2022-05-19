@@ -21,41 +21,41 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  */
 public class FindComplement {
     private static final int[] mask = {
-            0X00000001,
-            0X00000003,
-            0X00000007,
-            0X0000000F,
-            0X0000001F,
-            0X0000003F,
-            0X0000007F,
-            0X000000FF,
-            0X000001FF,
-            0X000003FF,
-            0X000007FF,
-            0X00000FFF,
-            0X00001FFF,
-            0X00003FFF,
-            0X00007FFF,
-            0X0000FFFF,
-            0X0001FFFF,
-            0X0003FFFF,
-            0X0007FFFF,
-            0X000FFFFF,
-            0X001FFFFF,
-            0X003FFFFF,
-            0X007FFFFF,
-            0X00FFFFFF,
-            0X01FFFFFF,
-            0X03FFFFFF,
-            0X07FFFFFF,
-            0X0FFFFFFF,
-            0X1FFFFFFF,
-            0X3FFFFFFF,
-            0X7FFFFFFF
+        0X00000001,
+        0X00000003,
+        0X00000007,
+        0X0000000F,
+        0X0000001F,
+        0X0000003F,
+        0X0000007F,
+        0X000000FF,
+        0X000001FF,
+        0X000003FF,
+        0X000007FF,
+        0X00000FFF,
+        0X00001FFF,
+        0X00003FFF,
+        0X00007FFF,
+        0X0000FFFF,
+        0X0001FFFF,
+        0X0003FFFF,
+        0X0007FFFF,
+        0X000FFFFF,
+        0X001FFFFF,
+        0X003FFFFF,
+        0X007FFFFF,
+        0X00FFFFFF,
+        0X01FFFFFF,
+        0X03FFFFFF,
+        0X07FFFFFF,
+        0X0FFFFFFF,
+        0X1FFFFFFF,
+        0X3FFFFFFF,
+        0X7FFFFFFF
     };
 
     public int findComplement(int num) {
-        if (num == 0) return 1;
+        if (num == 0) {return 1;}
         int i = 0;
         for (int m : mask) {
             if (num > m) {
@@ -68,7 +68,7 @@ public class FindComplement {
     }
 
     public int findComplement2(int num) {
-        if (num == 0) return 1;
+        if (num == 0) {return 1;}
         int i = 0;
         for (int m : mask) {
             if (num > m) {
@@ -86,5 +86,11 @@ public class FindComplement {
         System.out.println(Integer.toBinaryString(511));
         FindComplement complement = new FindComplement();
         System.out.println(complement.findComplement(134));
+    }
+
+    public int findComplement3(int num) {
+        int mask = 0x7FFFFFFF;
+        while ((mask >> 1) >= num) {mask >>= 1;}
+        return ~num & mask;
     }
 }

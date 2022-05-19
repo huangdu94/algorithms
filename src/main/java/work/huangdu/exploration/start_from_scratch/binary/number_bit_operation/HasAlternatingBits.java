@@ -60,4 +60,13 @@ public class HasAlternatingBits {
         int n = 5;
         System.out.println(bits.hasAlternatingBits2(n));
     }
+
+    public boolean hasAlternatingBits3(int n) {
+        int bit = n & 1;
+        do {
+            if (bit == ((n >>>= 1) & 1)) { return false; }
+            bit = (n & 1);
+        } while (n > 0);
+        return true;
+    }
 }

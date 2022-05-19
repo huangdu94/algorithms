@@ -23,6 +23,20 @@ public class FindLHS {
             counts.merge(num, 1, Integer::sum);
         }
         int max = 0;
+        for (int key : counts.keySet()) {
+            if (counts.containsKey(key - 1)) {
+                max = Math.max(max, counts.get(key - 1) + counts.get(key));
+            }
+        }
+        return max;
+    }
+
+    public int findLHS2(int[] nums) {
+        Map<Integer, Integer> counts = new HashMap<>();
+        for (int num : nums) {
+            counts.merge(num, 1, Integer::sum);
+        }
+        int max = 0;
         for (Map.Entry<Integer, Integer> entry : counts.entrySet()) {
             int num = entry.getKey();
             int len = Math.max(counts.getOrDefault(num - 1, Integer.MIN_VALUE),
@@ -35,7 +49,7 @@ public class FindLHS {
         return max;
     }
 
-    public int findLHS2(int[] nums) {
+    public int findLHS3(int[] nums) {
         Map<Integer, Integer> counts = new HashMap<>();
         for (int num : nums) {
             counts.merge(num, 1, Integer::sum);

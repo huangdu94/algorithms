@@ -33,6 +33,29 @@ import java.util.LinkedList;
  * @date 2020/10/22 13:25
  */
 public class SimplifyPath {
+    public String simplifyPath2(String path) {
+        String[] names = path.split("/");
+        int top = 0;
+        for (String name : names) {
+            switch (name) {
+                case "":
+                case ".":
+                    continue;
+                case "..":
+                    if (top > 0) {top--;}
+                    break;
+                default:
+                    names[top++] = name;
+            }
+        }
+        if (top == 0) {return "/";}
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < top; i++) {
+            sb.append("/").append(names[i]);
+        }
+        return sb.toString();
+    }
+
     public String simplifyPath(String path) {
         String[] paths = path.split("/");
         LinkedList<String> stack = new LinkedList<>();
@@ -45,7 +68,7 @@ public class SimplifyPath {
                 stack.addLast(p);
             }
         }
-        if (stack.isEmpty()) return "/";
+        if (stack.isEmpty()) { return "/"; }
         StringBuilder sb = new StringBuilder();
         for (String p : stack) {
             sb.append("/").append(p);

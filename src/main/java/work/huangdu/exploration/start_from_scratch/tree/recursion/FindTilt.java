@@ -40,13 +40,13 @@ public class FindTilt {
     private int slopeSum = 0;
 
     public int findTilt(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null) { return 0; }
         dfs(root);
         return slopeSum;
     }
 
     private int dfs(TreeNode node) {
-        if (node == null) return 0;
+        if (node == null) { return 0; }
         int left = dfs(node.left);
         int right = dfs(node.right);
         slopeSum += (Math.abs(left - right));
@@ -59,5 +59,25 @@ public class FindTilt {
         root.right = new TreeNode(3);
         FindTilt ft = new FindTilt();
         System.out.println(ft.findTilt(root));
+    }
+
+    static class Solution {
+        private int tilt;
+
+        public int findTilt(TreeNode root) {
+            this.tilt = 0;
+            dfs(root);
+            return tilt;
+        }
+
+        private int dfs(TreeNode root) {
+            if (root == null) {
+                return 0;
+            }
+            int leftSum = dfs(root.left);
+            int rightSum = dfs(root.right);
+            this.tilt += Math.abs(leftSum - rightSum);
+            return leftSum + rightSum + root.val;
+        }
     }
 }

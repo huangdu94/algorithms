@@ -46,4 +46,29 @@ public class FindMinDifference {
         }
         return min;
     }
+
+    public int findMinDifference2(List<String> timePoints) {
+        boolean[] points = new boolean[1440];
+        for (String timePoint : timePoints) {
+            String[] temp = timePoint.split(":");
+            int index = Integer.parseInt(temp[0]) * 60 + Integer.parseInt(temp[1]);
+            if (points[index]) { return 0; }
+            points[index] = true;
+        }
+        int min = 1440, left = 0, right = 0;
+        while (!points[left]) { left++; }
+        int first = left;
+        while (right < 1440) {
+            right = left + 1;
+            while (right < 1440 && !points[right]) {
+                right++;
+            }
+            if (right < 1440) {
+                min = Math.min(min, right - left);
+                if (min == 1) {return min;}
+                left = right;
+            }
+        }
+        return Math.min(min, 1440 - left + first);
+    }
 }

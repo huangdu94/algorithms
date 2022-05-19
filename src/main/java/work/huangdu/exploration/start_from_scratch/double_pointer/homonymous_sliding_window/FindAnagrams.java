@@ -84,4 +84,26 @@ public class FindAnagrams {
         FindAnagrams fa = new FindAnagrams();
         System.out.println(fa.findAnagrams2("cbaebabacd", "abc"));
     }
+
+    public List<Integer> findAnagrams3(String s, String p) {
+        int n = s.length(), m = p.length();
+        if (n < m) {return new ArrayList<>(0); }
+        List<Integer> ans = new ArrayList<>();
+        int[] countS = init(s, m), countP = init(p, m);
+        if (Arrays.equals(countS, countP)) {ans.add(0);}
+        for (int i = 1; i <= n - m; i++) {
+            countS[s.charAt(i - 1) - 'a']--;
+            countS[s.charAt(i + m - 1) - 'a']++;
+            if (Arrays.equals(countS, countP)) {ans.add(i);}
+        }
+        return ans;
+    }
+
+    private int[] init(String str, int end) {
+        int[] count = new int[26];
+        for (int i = 0; i < end; i++) {
+            count[str.charAt(i) - 'a']++;
+        }
+        return count;
+    }
 }

@@ -16,8 +16,24 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  */
 public class LargestPalindrome {
     public int largestPalindrome(int n) {
-        if (n == 1) return 9;
-        int max = (int) Math.pow(10, n) - 1;
+        if (n == 1) {return 9;}
+        int upper = (int)Math.pow(10, n) - 1;
+        for (int left = upper; ; left--) {
+            long palindrome = left;
+            for (int x = left; x > 0; x /= 10) {
+                palindrome = palindrome * 10 + x % 10;
+            }
+            for (int i = upper; (long)i * i >= palindrome; i--) {
+                if (palindrome % i == 0) {
+                    return (int)(palindrome % 1337);
+                }
+            }
+        }
+    }
+
+    public int largestPalindrome2(int n) {
+        if (n == 1) {return 9;}
+        int max = (int)Math.pow(10, n) - 1;
         int min = max / 10;
         for (int i = max - 1; i >= min; i--) {
             // 核心思想，构造回文串看看有没有可以相乘得到它的
@@ -28,7 +44,7 @@ public class LargestPalindrome {
             // 则palindrome=j(小)*j(大)，如果存在的话肯定已经返回结果了
             for (long j = max; j * j >= palindrome; j--) {
                 if (palindrome % j == 0) {
-                    return (int) (palindrome % 1337);
+                    return (int)(palindrome % 1337);
                 }
             }
         }
@@ -37,6 +53,6 @@ public class LargestPalindrome {
 
     public static void main(String[] args) {
         LargestPalindrome largest = new LargestPalindrome();
-        System.out.println(largest.largestPalindrome(1));
+        System.out.println(largest.largestPalindrome(2));
     }
 }

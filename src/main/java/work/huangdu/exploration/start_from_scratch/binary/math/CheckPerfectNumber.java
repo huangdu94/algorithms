@@ -28,8 +28,8 @@ package work.huangdu.exploration.start_from_scratch.binary.math;
  * @date 2020/10/20 16:46
  */
 public class CheckPerfectNumber {
-    public boolean checkPerfectNumber(int num) {
-        if (num == 1) return false;
+    public boolean checkPerfectNumber2(int num) {
+        if (num == 1) { return false; }
         int i = 2, sum = 1;
         while (true) {
             while (num % i != 0 && i < num / i) {
@@ -46,6 +46,21 @@ public class CheckPerfectNumber {
             i++;
         }
         return sum == num;
+    }
+
+    public boolean checkPerfectNumber(int num) {
+        if (num == 1) {return false;}
+        int limit = (int)Math.sqrt(num), sum = 1;
+        for (int i = 2; i <= limit; i++) {
+            if (num % i == 0) {
+                if (num / i != i) {
+                    sum += (num / i + i);
+                } else {
+                    sum += i;
+                }
+            }
+        }
+        return num == sum;
     }
 
     public static void main(String[] args) {

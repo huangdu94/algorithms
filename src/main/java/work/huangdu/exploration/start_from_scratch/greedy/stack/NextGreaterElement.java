@@ -51,7 +51,7 @@ public class NextGreaterElement {
 
     // 单调栈
     public int[] nextGreaterElement2(int[] nums1, int[] nums2) {
-        if (nums1.length == 0) return new int[0];
+        if (nums1.length == 0) {return new int[0];}
         // key value: nums2中key右边第一个比key大的数
         int n = nums1.length, index = 0, top = 0;
         Map<Integer, Integer> map = new HashMap<>(n);
@@ -69,5 +69,25 @@ public class NextGreaterElement {
             res[index++] = map.get(num);
         }
         return res;
+    }
+
+    public int[] nextGreaterElement3(int[] nums1, int[] nums2) {
+        int m = nums1.length;
+        int[] ans = new int[m];
+        for (int i = 0; i < m; i++) {
+            boolean flag = false;
+            int num1 = nums1[i], val = -1;
+            for (int num2 : nums2) {
+                if (num1 == num2) {
+                    flag = true;
+                }
+                if (flag && num2 > num1) {
+                    val = num2;
+                    break;
+                }
+            }
+            ans[i] = val;
+        }
+        return ans;
     }
 }

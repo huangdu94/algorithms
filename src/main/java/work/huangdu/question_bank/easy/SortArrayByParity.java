@@ -16,11 +16,27 @@ package work.huangdu.question_bank.easy;
  * @date 2020/11/12 15:41
  */
 public class SortArrayByParity {
+    public int[] sortArrayByParity(int[] nums) {
+        int i = 0, j = nums.length - 1;
+        while (i < j) {
+            while (i < j && (nums[i] & 1) == 0) {i++;}
+            while (i < j && (nums[j] & 1) == 1) {j--;}
+            if (i < j) {
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+                i++;
+                j--;
+            }
+        }
+        return nums;
+    }
+
     // 双指针法
     // 1. i找到第一个奇数
     // 2. j从i开始找第一个偶数，如果找到进入3，否则结束
     // 3. i与j交换位置
-    public int[] sortArrayByParity(int[] A) {
+    public int[] sortArrayByParity2(int[] A) {
         int n = A.length, i = 0, j = 0;
         while (j < n) {
             // 1. i找到第一个奇数

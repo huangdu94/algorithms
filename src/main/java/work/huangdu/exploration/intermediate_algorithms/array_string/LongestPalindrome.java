@@ -99,7 +99,7 @@ public class LongestPalindrome {
                 // 超过了r的部分是不可以算的
                 p[i] = Math.min(p[i_mirror], r - i);
             } else {
-                // 如果i就超过了或者等于r的话，则p[i]赋值为0
+                // 如果i超过了或者等于r的话，则p[i]赋值为0
                 // i只有在初始时才有可能小于r，其它时候只有可能等于r
                 p[i] = 0;
             }

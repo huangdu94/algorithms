@@ -1,9 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 653. 两数之和 IV - 输入 BST
@@ -51,7 +51,7 @@ public class FindTarget {
     }
 
     private void inorder(TreeNode root) {
-        if (root == null) return;
+        if (root == null) { return; }
         inorder(root.left);
         inorderList.add(root.val);
         inorder(root.right);

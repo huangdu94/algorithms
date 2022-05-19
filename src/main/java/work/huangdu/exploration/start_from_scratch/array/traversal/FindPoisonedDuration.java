@@ -26,7 +26,7 @@ package work.huangdu.exploration.start_from_scratch.array.traversal;
  */
 public class FindPoisonedDuration {
     public int findPoisonedDuration1(int[] timeSeries, int duration) {
-        if (timeSeries.length == 0) return 0;
+        if (timeSeries.length == 0) {return 0;}
         int recoverTime = timeSeries[0], sum = 0;
         for (int time : timeSeries) {
             int nextRecoverTime = time + duration;
@@ -40,10 +40,17 @@ public class FindPoisonedDuration {
 
     public int findPoisonedDuration(int[] timeSeries, int duration) {
         int n = timeSeries.length;
-        if (n == 0) return 0;
+        if (n == 0) {return 0;}
         int total = 0;
-        for (int i = 0; i < n - 1; i++)
-            total += Math.min(timeSeries[i + 1] - timeSeries[i], duration);
+        for (int i = 0; i < n - 1; i++) {total += Math.min(timeSeries[i + 1] - timeSeries[i], duration);}
         return total + duration;
+    }
+
+    public int findPoisonedDuration2(int[] timeSeries, int duration) {
+        int n = timeSeries.length, amount = 0;
+        for (int i = 0; i < n - 1; i++) {
+            amount += Math.min(timeSeries[i + 1] - timeSeries[i], duration);
+        }
+        return amount + duration;
     }
 }

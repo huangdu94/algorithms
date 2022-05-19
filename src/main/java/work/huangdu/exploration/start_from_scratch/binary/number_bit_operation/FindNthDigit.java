@@ -22,10 +22,34 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * @date 2020/10/19 15:45
  */
 public class FindNthDigit {
+    public static void main(String[] args) {
+        FindNthDigit findNthDigit = new FindNthDigit();
+        System.out.println(findNthDigit.findNthDigit(1000000000));
+    }
+
     // 1位的数9个
     // 2位的数90个
     // 3位的数900个...
+    // TODO 代码可优化的地方很多
     public int findNthDigit(int n) {
+        int digits = 0;
+        long count = 0, base = 9;
+        while (count <= n) {
+            count += base * ++digits;
+            base *= 10;
+        }
+        count -= base / 10 * digits;
+        int remain = (int)(n - count);
+        int number = (int)Math.pow(10, digits - 1) + (remain - 1) / digits;
+        int bit = remain % digits;
+        if (remain == 0) {
+            number--;
+            digits--;
+        }
+        return number / (int)Math.pow(10, bit == 0 ? 0 : digits - bit) % 10;
+    }
+
+    public int findNthDigit2(int n) {
         int count = 9, bits = 1;
         while (count != 900000000 && n > count * bits) {
             n -= (count * bits);
@@ -38,10 +62,5 @@ public class FindNthDigit {
             targetBit++;
         }
         return targetNum % 10;
-    }
-
-    public static void main(String[] args) {
-        FindNthDigit findNthDigit = new FindNthDigit();
-        System.out.println(findNthDigit.findNthDigit(1000000000));
     }
 }

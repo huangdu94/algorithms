@@ -1,5 +1,7 @@
 package work.huangdu.exploration.start_from_scratch.double_pointer.segment;
 
+import java.util.Arrays;
+
 /**
  * 475. 供暖器
  * 冬季已经来临。 你的任务是设计一个有固定加热半径的供暖器向所有房屋供暖。
@@ -25,14 +27,47 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.segment;
  * @date 2020/12/20 13:15
  */
 public class FindRadius {
-    // 暴力法
     public int findRadius(int[] houses, int[] heaters) {
+        Arrays.sort(heaters);
+        int max = 0;
+        for (int house : houses) {
+            int nearestIndex = findNearestHeater(heaters, house);
+            int heater = heaters[nearestIndex];
+            if (heater == house) { continue; }
+            int val;
+            if (heater < house) {
+                val = house - heater;
+            } else if (nearestIndex > 0) {
+                val = Math.min(heater - house, house - heaters[nearestIndex - 1]);
+            } else {
+                val = heater - house;
+            }
+            max = Math.max(max, val);
+        }
+        return max;
+    }
+
+    private int findNearestHeater(int[] heaters, int house) {
+        int i = 0, j = heaters.length - 1;
+        while (i < j) {
+            int mid = i + ((j - i) >> 1);
+            if (heaters[mid] < house) {
+                i = mid + 1;
+            } else {
+                j = mid;
+            }
+        }
+        return i;
+    }
+
+    // 暴力法
+    public int findRadius2(int[] houses, int[] heaters) {
         int radius = 0;
         for (int house : houses) {
             int min = Integer.MAX_VALUE;
             for (int heater : heaters) {
                 min = Math.min(min, Math.abs(heater - house));
-                if (min < radius) break;
+                if (min < radius) { break; }
             }
             radius = Math.max(radius, min);
         }

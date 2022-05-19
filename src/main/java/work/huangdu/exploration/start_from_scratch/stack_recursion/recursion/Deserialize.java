@@ -1,6 +1,8 @@
 package work.huangdu.exploration.start_from_scratch.stack_recursion.recursion;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 /**
@@ -27,11 +29,37 @@ import java.util.List;
  * @date 2020/10/26 14:11
  */
 public class Deserialize {
+    public NestedInteger deserialize(String s) {
+        int n = s.length(), sign = 0, sum = 0;
+        Deque<NestedInteger> stack = new ArrayDeque<>();
+        for (int i = 0; i < n; i++) {
+            char ch = s.charAt(i);
+            if (ch == '[') {
+                stack.push(new NestedInteger());
+            } else if (ch == '-') {
+                sign = -1;
+            } else if ('0' <= ch && ch <= '9') {
+                if (sign == 0) {sign = 1;}
+                sum = 10 * sum + (ch - '0');
+            } else {
+                if (sign != 0) {
+                    stack.peek().add(new NestedInteger(sum * sign));
+                    sign = 0;
+                    sum = 0;
+                } else if (s.charAt(i - 1) != '[') {
+                    NestedInteger top = stack.pop();
+                    stack.peek().add(top);
+                }
+            }
+        }
+        return stack.isEmpty() ? new NestedInteger(sum * sign) : stack.peek();
+    }
+
     private int i = 0;
     private char[] chars;
     private int n;
 
-    public NestedInteger deserialize(String s) {
+    public NestedInteger deserialize2(String s) {
         chars = s.toCharArray();
         n = s.length();
         if (chars[i] != '[') {

@@ -61,4 +61,24 @@ public class ImageSmoother {
         M = smoother.imageSmoother(M);
         System.out.println(Arrays.deepToString(M));
     }
+
+    public int[][] imageSmoother2(int[][] img) {
+        int m = img.length, n = img[0].length;
+        int[][] ans = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                int avg = 0, count = 0;
+                for (int i0 = i - 1; i0 <= i + 1; i0++) {
+                    for (int j0 = j - 1; j0 <= j + 1; j0++) {
+                        if (i0 >= 0 & i0 < m & j0 >= 0 & j0 < n) {
+                            avg += img[i0][j0];
+                            count++;
+                        }
+                    }
+                }
+                ans[i][j] = avg / count;
+            }
+        }
+        return ans;
+    }
 }

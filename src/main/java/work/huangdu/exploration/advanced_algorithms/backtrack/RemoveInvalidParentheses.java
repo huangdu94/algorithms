@@ -53,8 +53,7 @@ public class RemoveInvalidParentheses {
             if (c == ')' && left == 0) {
                 right++;
             } else {
-                if (c == '(') left++;
-                else if (c == ')' && left > 0) left--;
+                if (c == '(') {left++;} else if (c == ')' && left > 0) {left--;}
             }
         }
         backtrack(s, 0, 0, left, right);
@@ -95,12 +94,12 @@ public class RemoveInvalidParentheses {
      */
     private void backtrack(String s, int index, int l, int left, int right) {
         if (index == len || len - index < left + right) {
-            if (l == 0) set.add(sb.toString());
+            if (l == 0) {set.add(sb.toString());}
             return;
         }
         char c = s.charAt(index);
         if (c == '(') {
-            if (left > 0) backtrack(s, index + 1, l, left - 1, right);
+            if (left > 0) {backtrack(s, index + 1, l, left - 1, right);}
             sb.append(c);
             backtrack(s, index + 1, l + 1, left, right);
             sb.deleteCharAt(sb.length() - 1);
@@ -125,5 +124,68 @@ public class RemoveInvalidParentheses {
         String s = "()())()";
         List<String> res = removeInvalidParentheses.removeInvalidParentheses(s);
         System.out.println(res);
+    }
+
+    static class Solution {
+        private int n;
+        private Set<String> ansSet;
+        private StringBuilder ans;
+        private char[] chars;
+        private final char LEFT = '(';
+        private final char RIGHT = ')';
+
+        public List<String> removeInvalidParentheses(String s) {
+            this.n = s.length();
+            this.ansSet = new HashSet<>();
+            this.ans = new StringBuilder();
+            this.chars = s.toCharArray();
+            int left = 0, right = 0;
+            for (int i = 0; i < n; i++) {
+                char c = chars[i];
+                if (c == RIGHT) {
+                    if (left == 0) {
+                        right++;
+                    } else {
+                        left--;
+                    }
+                } else if (c == LEFT) {
+                    left++;
+                }
+            }
+            backtrack(0, 0, left, right);
+            return new ArrayList<>(ansSet);
+        }
+
+        private void backtrack(int index, int l, int left, int right) {
+            if (n - index < left + right) {
+                return;
+            }
+            if (index == n) {
+                ansSet.add(ans.toString());
+                return;
+            }
+            char c = chars[index];
+            if (c == LEFT) {
+                if (left > 0) {
+                    backtrack(index + 1, l, left - 1, right);
+                }
+                ans.append(c);
+                backtrack(index + 1, l + 1, left, right);
+                ans.deleteCharAt(ans.length() - 1);
+            } else if (c == RIGHT) {
+                if (right > 0) {
+                    backtrack(index + 1, l, left, right - 1);
+                }
+                if (l > 0) {
+                    ans.append(c);
+                    backtrack(index + 1, l - 1, left, right);
+                    ans.deleteCharAt(ans.length() - 1);
+                }
+            } else {
+                ans.append(c);
+                backtrack(index + 1, l, left, right);
+                ans.deleteCharAt(ans.length() - 1);
+            }
+        }
     }
 }

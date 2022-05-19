@@ -19,14 +19,12 @@ package work.huangdu.exploration.intermediate_algorithms.math;
 public class TrailingZeroes {
     public int trailingZeroes(int n) {
         int result = 0;
-        while (n >= 5)
-            result += (n /= 5);
+        while (n >= 5) { result += (n /= 5); }
         return result;
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i <= 20; i++)
-            System.out.printf("%s的阶乘是\t%s%n", i, factorial(i));
+        for (int i = 0; i <= 20; i++) { System.out.printf("%s的阶乘是\t%s%n", i, factorial(i)); }
     }
 
     /**
@@ -34,8 +32,15 @@ public class TrailingZeroes {
      */
     private static long factorial(int n) {
         long result = 1;
-        while (n > 1)
-            result *= n--;
+        while (n > 1) { result *= n--; }
         return result;
+    }
+
+    public int trailingZeroes2(int n) {
+        int ans = 0;
+        while (n > 0) {
+            ans += (n /= 5);
+        }
+        return ans;
     }
 }

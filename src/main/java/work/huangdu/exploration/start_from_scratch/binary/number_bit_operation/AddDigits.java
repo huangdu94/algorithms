@@ -26,4 +26,17 @@ public class AddDigits {
         }
         return num;
     }
+
+    public int addDigits2(int num) {
+        int cur = num;
+        while (cur > 9) {
+            int next = 0;
+            while (cur > 0) {
+                next += cur % 10;
+                cur /= 10;
+            }
+            cur = next;
+        }
+        return cur;
+    }
 }

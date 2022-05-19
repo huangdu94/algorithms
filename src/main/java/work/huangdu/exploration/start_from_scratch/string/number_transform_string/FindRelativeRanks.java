@@ -46,4 +46,32 @@ public class FindRelativeRanks {
         if (rank == 2) return "Silver Medal";
         return "Bronze Medal";
     }
+
+    private static final String GOLD_MEDAL = "Gold Medal";
+    private static final String SILVER_MEDAL = "Silver Medal";
+    private static final String BRONZE_MEDAL = "Bronze Medal";
+
+    public String[] findRelativeRanks2(int[] score) {
+        int n = score.length;
+        if (n == 1) {return new String[] {GOLD_MEDAL};}
+        if (n == 2) {return score[0] > score[1] ? new String[] {GOLD_MEDAL, SILVER_MEDAL} : new String[] {SILVER_MEDAL, GOLD_MEDAL};}
+        String[] answer = new String[n];
+        int[][] scoreIndex = new int[n][2];
+        for (int i = 0; i < n; i++) {
+            scoreIndex[i][0] = score[i];
+            scoreIndex[i][1] = i;
+        }
+        Arrays.sort(scoreIndex, (o1, o2) -> Integer.compare(o2[0], o1[0]));
+        answer[scoreIndex[0][1]] = GOLD_MEDAL;
+        answer[scoreIndex[1][1]] = SILVER_MEDAL;
+        answer[scoreIndex[2][1]] = BRONZE_MEDAL;
+        for (int i = 3; i < n; i++) {
+            answer[scoreIndex[i][1]] = Integer.toString(i + 1);
+        }
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(new FindRelativeRanks().findRelativeRanks2(new int[] {10, 3, 8, 9, 4})));
+    }
 }

@@ -32,16 +32,36 @@ public class RepeatedStringMatch {
         if (nb % na != 0) {
             count++;
         }
-        StringBuilder sb = new StringBuilder((count + 1) * nb);
+        StringBuilder sb = new StringBuilder((count + 1) * na);
         for (int k = 0; k < count; k++) {
             sb.append(a);
         }
-        if (sb.toString().lastIndexOf(b) != -1) {
+        if (sb.lastIndexOf(b) != -1) {
             return count;
         }
         sb.append(a);
-        if (sb.toString().lastIndexOf(b) != -1) {
+        if (sb.lastIndexOf(b) != -1) {
             return count + 1;
+        }
+        return -1;
+    }
+
+    public int repeatedStringMatch2(String a, String b) {
+        int aLen = a.length(), bLen = b.length();
+        if (aLen >= bLen && a.contains(b)) {return 1;}
+        int n = 0, index = -aLen, nextIndex;
+        while ((nextIndex = b.indexOf(a, index + aLen)) != -1) {
+            n++;
+            if (n > 1 && nextIndex != index + aLen) { return -1; }
+            index = nextIndex;
+        }
+        b = b.replaceAll(a, "");
+        if (b.length() == 0) {return n;}
+        if (a.startsWith(b) || a.endsWith(b)) {return n + 1;}
+        for (int i = 1, len = b.length(); i < len; i++) {
+            if (a.endsWith(b.substring(0, i)) && a.startsWith(b.substring(i, len))) {
+                return n + 2;
+            }
         }
         return -1;
     }

@@ -56,4 +56,26 @@ public class GetHint {
         }
         return a + "A" + (b - a) + "B";
     }
+
+    public String getHint3(String secret, String guess) {
+        int[] counts = new int[10];
+        int n = secret.length(), a = 0, b = 0;
+        for (int i = 0; i < n; i++) {
+            char s = secret.charAt(i), g = guess.charAt(i);
+            if (s == g) {
+                a++;
+            } else {
+                counts[s - '0']++;
+                counts[g - '0']--;
+            }
+        }
+        for (int count : counts) {b += Math.abs(count);}
+        b = n - a - b / 2;
+        StringBuilder sb = new StringBuilder();
+        sb.append(a);
+        sb.append('A');
+        sb.append(b);
+        sb.append('B');
+        return sb.toString();
+    }
 }
