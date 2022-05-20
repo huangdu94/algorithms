@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Set;
 
-import com.sun.tools.javac.util.Assert;
-
 /**
  * 313. 超级丑数
  * 超级丑数 是一个正整数，并满足其所有质因数都出现在质数数组 primes 中。
@@ -37,7 +35,9 @@ public class NthSuperUglyNumber {
     // TODO 需要复习
     // 最小堆 mn*log(mn) 超时
     public int nthSuperUglyNumber(int n, int[] primes) {
-        if (n == 1) {return 1;}
+        if (n == 1) {
+            return 1;
+        }
         PriorityQueue<Integer> minHeap = new PriorityQueue<>(Comparator.comparingInt(o -> o));
         Set<Integer> seen = new HashSet<>();
         for (int prime : primes) {
@@ -45,12 +45,14 @@ public class NthSuperUglyNumber {
         }
         while (true) {
             int min = minHeap.remove();
-            if (--n == 1) {return min;}
+            if (--n == 1) {
+                return min;
+            }
             for (int prime : primes) {
-                long num = (long)prime * min;
+                long num = (long) prime * min;
                 if (num <= Integer.MAX_VALUE) {
-                    if (seen.add((int)num)) {
-                        minHeap.offer((int)num);
+                    if (seen.add((int) num)) {
+                        minHeap.offer((int) num);
                     }
                 }
             }
@@ -59,7 +61,9 @@ public class NthSuperUglyNumber {
 
     // 动态规划
     public int nthSuperUglyNumber2(int n, int[] primes) {
-        if (n == 1) {return 1;}
+        if (n == 1) {
+            return 1;
+        }
         int k = 1, len = primes.length;
         int[] dp = new int[n + 1];
         dp[k] = 1;
@@ -69,7 +73,7 @@ public class NthSuperUglyNumber {
             long min = Integer.MAX_VALUE;
             List<Integer> list = new ArrayList<>();
             for (int i = 0; i < len; i++) {
-                long next = (long)dp[pointers[i]] * primes[i];
+                long next = (long) dp[pointers[i]] * primes[i];
                 if (min > next) {
                     min = next;
                     list.clear();
@@ -81,15 +85,13 @@ public class NthSuperUglyNumber {
             for (int index : list) {
                 pointers[index]++;
             }
-            dp[k] = (int)min;
+            dp[k] = (int) min;
         }
         return dp[n];
     }
 
     public static void main(String[] args) {
         NthSuperUglyNumber nsun = new NthSuperUglyNumber();
-        Assert.check(
-            nsun.nthSuperUglyNumber2(100000, new int[] {7, 19, 29, 37, 41, 47, 53, 59, 61, 79, 83, 89, 101, 103, 109, 127, 131, 137, 139, 157, 167, 179, 181, 199, 211, 229, 233, 239, 241, 251})
-                == 1092889481);
+        System.out.println(nsun.nthSuperUglyNumber2(100000, new int[]{7, 19, 29, 37, 41, 47, 53, 59, 61, 79, 83, 89, 101, 103, 109, 127, 131, 137, 139, 157, 167, 179, 181, 199, 211, 229, 233, 239, 241, 251}) == 1092889481);
     }
 }
