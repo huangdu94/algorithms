@@ -59,7 +59,7 @@ public class CanMouseWin {
     private int cols;
     private int catJump;
     private int mouseJump;
-    private Boolean[][][][][] memo;
+    private Boolean[][][] memo;
     private String[] grid;
 
     public boolean canMouseWin(String[] grid, int catJump, int mouseJump) {
@@ -67,7 +67,7 @@ public class CanMouseWin {
         this.cols = grid[0].length();
         this.catJump = catJump;
         this.mouseJump = mouseJump;
-        this.memo = new Boolean[rows][cols][rows][cols][TURN];
+        this.memo = new Boolean[rows * cols][rows * cols][TURN];
         this.grid = grid;
         int cx, cy, mx, my;
         cx = cy = mx = my = -1;
@@ -89,7 +89,7 @@ public class CanMouseWin {
 
     private boolean mouseMove(int cx, int cy, int mx, int my, int turn) {
         if (turn >= TURN) {return false;}
-        if (memo[cx][cy][mx][my][turn] != null) {return memo[cx][cy][mx][my][turn];}
+        if (memo[cx * cols + cy][mx * cols + my][turn] != null) {return memo[cx * cols + cy][mx * cols + my][turn];}
         boolean result = false;
         for (int k = 0; k < 4; k++) {
             int xUnit = directions[k], yUnit = directions[k + 1];
@@ -108,12 +108,12 @@ public class CanMouseWin {
             }
             if (result) {break;}
         }
-        return memo[cx][cy][mx][my][turn] = result;
+        return memo[cx * cols + cy][mx * cols + my][turn] = result;
     }
 
     private boolean catMove(int cx, int cy, int mx, int my, int turn) {
         if (turn >= TURN) {return false;}
-        if (memo[cx][cy][mx][my][turn] != null) {return memo[cx][cy][mx][my][turn];}
+        if (memo[cx * cols + cy][mx * cols + my][turn] != null) {return memo[cx * cols + cy][mx * cols + my][turn];}
         boolean result = true;
         for (int k = 0; k < 4; k++) {
             int xUnit = directions[k], yUnit = directions[k + 1];
@@ -134,7 +134,7 @@ public class CanMouseWin {
         if (result) {
             result = mouseMove(cx, cy, mx, my, turn + 1);
         }
-        return memo[cx][cy][mx][my][turn] = result;
+        return memo[cx * cols + cy][mx * cols + my][turn] = result;
     }
 
     public static void main(String[] args) {
