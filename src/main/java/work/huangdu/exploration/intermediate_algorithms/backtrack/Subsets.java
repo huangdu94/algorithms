@@ -24,15 +24,34 @@ import java.util.*;
  * @date 2020/7/9 0:22
  */
 public class Subsets {
+    class Solution {
+        public List<List<Integer>> subsets(int[] nums) {
+            int n = nums.length;
+            List<List<Integer>> ans = new ArrayList<>(1 << n);
+            backtrack(ans, new ArrayList<>(n), 0, n, nums);
+            return ans;
+        }
+
+        private void backtrack(List<List<Integer>> ans, List<Integer> subset, int i, int n, int[] nums) {
+            if (i == n) {
+                ans.add(new ArrayList<>(subset));
+                return;
+            }
+            backtrack(ans, subset, i + 1, n, nums);
+            subset.add(nums[i]);
+            backtrack(ans, subset, i + 1, n, nums);
+            subset.remove(subset.size() - 1);
+        }
+    }
+
     public List<List<Integer>> subsets2(int[] nums) {
-        if (nums == null)
-            return null;
-//        Set<List<Integer>> resultSet = new HashSet<>();
-//        List<Integer> numList = new ArrayList<>();
-//        for (int n : nums)
-//            numList.add(n);
-//        this.backtrack(numList, resultSet);
-//        return new ArrayList<>(resultSet);
+        if (nums == null) {return null;}
+        //        Set<List<Integer>> resultSet = new HashSet<>();
+        //        List<Integer> numList = new ArrayList<>();
+        //        for (int n : nums)
+        //            numList.add(n);
+        //        this.backtrack(numList, resultSet);
+        //        return new ArrayList<>(resultSet);
         List<List<Integer>> resultList = new ArrayList<>();
         this.backtrack2(nums, 0, new ArrayList<>(), resultList);
         return resultList;
@@ -46,8 +65,7 @@ public class Subsets {
      */
     private void backtrack(List<Integer> numList, Set<List<Integer>> resultSet) {
         resultSet.add(new ArrayList<>(numList));
-        if (numList.isEmpty())
-            return;
+        if (numList.isEmpty()) {return;}
         for (int i = 0; i < numList.size(); i++) {
             Integer element = numList.remove(i);
             this.backtrack(numList, resultSet);
