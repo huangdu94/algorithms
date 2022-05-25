@@ -30,6 +30,43 @@ import java.util.List;
  * @date 2020/9/3 9:52
  */
 public class SolveNQueens {
+    class Solution {
+        public List<List<String>> solveNQueens(int n) {
+            // 列编号 j
+            // 对角线编号    n-1-i+j
+            // 反对角线编号  i+j
+            // 行编号不需要，因为每行放一个Q
+            List<List<String>> ans = new ArrayList<>();
+            backtrack(ans, n, 0, 0, 0, 0, new int[n]);
+            return ans;
+        }
+
+        private void backtrack(List<List<String>> ans, int n, int i, int col, int diagonal, int backDiagonal, int[] record) {
+            if (i == n) {
+                ans.add(buildResult(n, record));
+                return;
+            }
+            for (int j = 0; j < n; j++) {
+                int colMask = 1 << j, diagonalMask = 1 << (n - 1 - i + j), backDiagonalMask = 1 << (i + j);
+                if ((colMask & col) == 0 && (diagonalMask & diagonal) == 0 && (backDiagonalMask & backDiagonal) == 0) {
+                    record[i] = j;
+                    backtrack(ans, n, i + 1, col | colMask, diagonal | diagonalMask, backDiagonal | backDiagonalMask, record);
+                }
+            }
+        }
+
+        private List<String> buildResult(int n, int[] record) {
+            List<String> res = new ArrayList<>(n);
+            for (int index : record) {
+                char[] row = new char[n];
+                Arrays.fill(row, '.');
+                row[index] = 'Q';
+                res.add(new String(row));
+            }
+            return res;
+        }
+    }
+
     private int n;
     private List<List<String>> resList;
     private List<String> res;

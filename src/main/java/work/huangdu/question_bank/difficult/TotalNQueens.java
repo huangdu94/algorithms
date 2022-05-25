@@ -26,6 +26,28 @@ package work.huangdu.question_bank.difficult;
  * @date 2020/10/17 9:38
  */
 public class TotalNQueens {
+    class Solution {
+        public int totalNQueens(int n) {
+            // 列编号 j
+            // 对角线编号    n-1-i+j
+            // 反对角线编号  i+j
+            // 行编号不需要，因为每行放一个Q
+            return backtrack(n, 0, 0, 0, 0);
+        }
+
+        private int backtrack(int n, int i, int col, int diagonal, int backDiagonal) {
+            if (i == n) {return 1;}
+            int ans = 0;
+            for (int j = 0; j < n; j++) {
+                int colMask = 1 << j, diagonalMask = 1 << (n - 1 - i + j), backDiagonalMask = 1 << (i + j);
+                if ((colMask & col) == 0 && (diagonalMask & diagonal) == 0 && (backDiagonalMask & backDiagonal) == 0) {
+                    ans += backtrack(n, i + 1, col | colMask, diagonal | diagonalMask, backDiagonal | backDiagonalMask);
+                }
+            }
+            return ans;
+        }
+    }
+
     private int n;
     private int total;
 
