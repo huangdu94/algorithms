@@ -1,5 +1,8 @@
 package work.huangdu.question_bank.medium;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 60. 第k个排列
  * 给出集合 [1,2,3,…,n]，其所有元素共有 n! 种排列。
@@ -25,16 +28,39 @@ package work.huangdu.question_bank.medium;
  * @date 2020/9/5 10:15
  */
 public class GetPermutation {
+    class Solution {
+        public String getPermutation(int n, int k) {
+            int[] factorials = new int[n + 1];
+            factorials[0] = 1;
+            List<Integer> remainList = new ArrayList<>(n);
+            for (int i = 1; i <= n; i++) {
+                factorials[i] = factorials[i - 1] * i;
+                remainList.add(i);
+            }
+            StringBuilder ans = new StringBuilder();
+            k--;
+            while (k > 0) {
+                int count = factorials[n - 1 - ans.length()];
+                ans.append(remainList.remove(k / count));
+                k %= count;
+            }
+            for (int num : remainList) {
+                ans.append(num);
+            }
+            return ans.toString();
+        }
+    }
+
     private static final int[] factorial = {1, 2, 6, 24, 120, 720, 5040, 40320};
 
     public String getPermutation(int n, int k) {
-        if (n == 1) return "1";
+        if (n == 1) {return "1";}
         char[] chars = new char[n];
         boolean[] visited = new boolean[n];
         int i = 0, j = n - 2;
         k--;
         while (k != 0) {
-            chars[i++] = (char) (getNumber(visited, k / factorial[j]) + '1');
+            chars[i++] = (char)(getNumber(visited, k / factorial[j]) + '1');
             k = k % factorial[j--];
         }
         j = 0;
@@ -43,7 +69,7 @@ public class GetPermutation {
                 j++;
             }
             visited[j] = true;
-            chars[i++] = (char) (j + '1');
+            chars[i++] = (char)(j + '1');
         }
         return new String(chars);
     }
