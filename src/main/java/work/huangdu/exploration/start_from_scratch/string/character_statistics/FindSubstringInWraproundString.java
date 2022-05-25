@@ -22,9 +22,25 @@ package work.huangdu.exploration.start_from_scratch.string.character_statistics;
  * @date 2020/9/25 10:50
  */
 public class FindSubstringInWraproundString {
-    // len表示以当前字符结尾的最长递增子串的长度，map数组里存的是当前状态以a-z字母结尾的最长子串长度。每访问一个字符，则首先更新len值，连续的则len+1， 否则len等于1。然后将len值与map里对应的值比较，大于的话说明有新的以当前字母结尾的子串，更新sum的值。
     public int findSubstringInWraproundString(String p) {
-        if (p.length() == 0) return 0;
+        // p中以某字母结尾的子串最长的长度
+        int[] dp = new int[26];
+        int n = p.length(), len = 0, ans = 0;
+        for (int i = 0; i < n; i++) {
+            int index = p.charAt(i) - 'a';
+            if (len > 0 && index != (p.charAt(i - 1) - 'a' + 1) % 26) {
+                len = 0;
+            }
+            len++;
+            dp[index] = Math.max(dp[index], len);
+        }
+        for (int cnt : dp) {ans += cnt;}
+        return ans;
+    }
+
+    // len表示以当前字符结尾的最长递增子串的长度，map数组里存的是当前状态以a-z字母结尾的最长子串长度。每访问一个字符，则首先更新len值，连续的则len+1， 否则len等于1。然后将len值与map里对应的值比较，大于的话说明有新的以当前字母结尾的子串，更新sum的值。
+    public int findSubstringInWraproundString3(String p) {
+        if (p.length() == 0) {return 0;}
         char[] chars = p.toCharArray();
         int len = 0, sum = 0;
         int[] counts = new int[128];
@@ -43,7 +59,7 @@ public class FindSubstringInWraproundString {
     }
 
     public int findSubstringInWraproundString2(String p) {
-        if (p.length() == 0) return 0;
+        if (p.length() == 0) {return 0;}
         char[] chars = p.toCharArray();
         char start = chars[0];
         int len = 1;
@@ -69,9 +85,9 @@ public class FindSubstringInWraproundString {
                     if (length > res[cc]) {
                         res[cc] = length;
                     }
-                    cc = cc == 'z' ? 'a' : (char) (cc + 1);
+                    cc = cc == 'z' ? 'a' : (char)(cc + 1);
                     length--;
-                    if (cc == i) break;
+                    if (cc == i) {break;}
                 }
             }
         }
