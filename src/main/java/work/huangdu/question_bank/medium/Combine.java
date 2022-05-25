@@ -22,6 +22,29 @@ import java.util.List;
  * @date 2020/9/8 10:51
  */
 public class Combine {
+    class Solution {
+        public List<List<Integer>> combine(int n, int k) {
+            List<List<Integer>> ans = new ArrayList<>();
+            List<Integer> combine = new ArrayList<>(k);
+            for (int i = 0; i < k; i++) {combine.add(0);}
+            backtrack(ans, n, k, combine, 0, 0);
+            return ans;
+        }
+
+        private void backtrack(List<List<Integer>> ans, int n, int k, List<Integer> combine, int i, int pre) {
+            if (i == k) {
+                ans.add(new ArrayList<>(combine));
+                return;
+            }
+            // 剩余数的数量小于还需要找的数量提前剪枝（剪枝和不剪枝差别很大）
+            if (n - pre < k - i) {return;}
+            for (int num = pre + 1; num <= n; num++) {
+                combine.set(i, num);
+                backtrack(ans, n, k, combine, i + 1, num);
+            }
+        }
+    }
+
     private int n;
     private int k;
     private List<List<Integer>> resList;
@@ -46,7 +69,7 @@ public class Combine {
             return;
         }
         // 剩余数的数量小于还需要找的数量提前剪枝
-        if (n - prev < k - index) return;
+        if (n - prev < k - index) {return;}
         for (int i = prev + 1; i <= n; i++) {
             res.add(i);
             helper(index + 1, i);
