@@ -1,4 +1,4 @@
-package work.huangdu.exploration.start_from_scratch.graph_search.baktrack;
+package work.huangdu.exploration.start_from_scratch.graph_search.backtrack;
 
 /**
  * 526. 优美的排列

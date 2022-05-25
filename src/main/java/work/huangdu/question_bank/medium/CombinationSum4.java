@@ -2,8 +2,8 @@ package work.huangdu.question_bank.medium;
 
 import java.util.*;
 
-import work.huangdu.exploration.start_from_scratch.graph_search.baktrack.CombinationSum;
-import work.huangdu.exploration.start_from_scratch.graph_search.baktrack.CombinationSum2;
+import work.huangdu.exploration.start_from_scratch.graph_search.backtrack.CombinationSum;
+import work.huangdu.exploration.start_from_scratch.graph_search.backtrack.CombinationSum2;
 
 /**
  * 377. 组合总和 Ⅳ
