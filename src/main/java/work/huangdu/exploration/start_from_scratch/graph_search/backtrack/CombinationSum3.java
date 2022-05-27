@@ -1,10 +1,9 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.graph_search.backtrack;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import work.huangdu.exploration.start_from_scratch.graph_search.backtrack.CombinationSum;
-import work.huangdu.exploration.start_from_scratch.graph_search.backtrack.CombinationSum2;
+import work.huangdu.question_bank.medium.CombinationSum4;
 
 /**
  * 216. 组合总和 III
@@ -26,6 +25,26 @@ import work.huangdu.exploration.start_from_scratch.graph_search.backtrack.Combin
  * @see CombinationSum4
  */
 public class CombinationSum3 {
+    class Solution {
+        public List<List<Integer>> combinationSum3(int k, int n) {
+            List<List<Integer>> ans = new ArrayList<>();
+            backtrack(ans, 1, 0, k, 0, n, new ArrayList<>(k));
+            return ans;
+        }
+
+        private void backtrack(List<List<Integer>> ans, int num, int i, int k, int sum, int n, List<Integer> combination) {
+            if (i == k) {
+                if (sum == n) {ans.add(new ArrayList<>(combination));}
+                return;
+            }
+            if (num > 9 || sum + (k - i) * 9 < sum || sum >= n) {return;}
+            backtrack(ans, num + 1, i, k, sum, n, combination);
+            combination.add(num);
+            backtrack(ans, num + 1, i + 1, k, sum + num, n, combination);
+            combination.remove(i);
+        }
+    }
+
     private int n;
     private int k;
     private List<List<Integer>> resList;
