@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.graph_search.backtrack;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,6 +22,30 @@ import java.util.List;
  * @date 2021/3/31
  */
 public class SubsetsWithDup {
+    class Solution {
+        public List<List<Integer>> subsetsWithDup(int[] nums) {
+            int n = nums.length;
+            Arrays.sort(nums);
+            List<List<Integer>> ans = new ArrayList<>(1 << n);
+            backtrack(ans, new ArrayList<>(n), 0, n, nums);
+            return ans;
+        }
+
+        private void backtrack(List<List<Integer>> ans, List<Integer> subset, int i, int n, int[] nums) {
+            if (i == n) {
+                ans.add(new ArrayList<>(subset));
+                return;
+            }
+            int num = nums[i];
+            subset.add(num);
+            backtrack(ans, subset, i + 1, n, nums);
+            subset.remove(subset.size() - 1);
+            if (i == 0 || nums[i - 1] != num || subset.isEmpty() || subset.get(subset.size() - 1) != num) {
+                backtrack(ans, subset, i + 1, n, nums);
+            }
+        }
+    }
+
     private int[] nums;
     private int n;
     private List<List<Integer>> subsets;
