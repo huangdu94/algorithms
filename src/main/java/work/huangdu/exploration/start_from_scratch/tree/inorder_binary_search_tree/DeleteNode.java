@@ -55,4 +55,40 @@ public class DeleteNode {
         }
         return root;
     }
+
+    public TreeNode deleteNode2(TreeNode root, int key) {
+        TreeNode pre = null, cur = root;
+        while (cur != null) {
+            if (cur.val == key) {
+                if (pre == null) {return deleteRoot(root);}
+                if (pre.left == cur) {
+                    pre.left = deleteRoot(pre.left);
+                    break;
+                }
+                pre.right = deleteRoot(pre.right);
+                break;
+            }
+            pre = cur;
+            if (cur.val > key) {
+                cur = cur.left;
+            } else {
+                cur = cur.right;
+            }
+        }
+        return root;
+    }
+
+    private TreeNode deleteRoot(TreeNode root) {
+        if (root.left != null) {
+            if (root.right != null) {
+                TreeNode pointer = root.left;
+                while (pointer.right != null) {
+                    pointer = pointer.right;
+                }
+                pointer.right = root.right;
+            }
+            return root.left;
+        }
+        return root.right;
+    }
 }
