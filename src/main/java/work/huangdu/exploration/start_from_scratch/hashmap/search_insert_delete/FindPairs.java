@@ -63,4 +63,31 @@ public class FindPairs {
         }
         return res;
     }
+
+    public int findPairs2(int[] nums, int k) {
+        if (k == 0) {
+            Map<Integer, Integer> countMap = new HashMap<>();
+            for (int num : nums) {
+                countMap.merge(num, 1, Integer::sum);
+            }
+            int ans = 0;
+            for (int count : countMap.values()) {
+                if (count >= 2) {
+                    ans++;
+                }
+            }
+            return ans;
+        }
+        Set<Integer> numSet = new HashSet<>(nums.length);
+        for (int num : nums) {
+            numSet.add(num);
+        }
+        int ans = 0;
+        for (Integer num : numSet) {
+            if (numSet.contains(num + k)) {
+                ans++;
+            }
+        }
+        return ans;
+    }
 }
