@@ -1,9 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 513. 找树左下角的值
@@ -33,7 +33,7 @@ import java.util.Queue;
  * @date 2021/1/23
  */
 public class FindBottomLeftValue {
-    public int findBottomLeftValue(TreeNode root) {
+    public int findBottomLeftValue2(TreeNode root) {
         int bottomLeftValue = root.val;
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
@@ -51,5 +51,33 @@ public class FindBottomLeftValue {
             }
         }
         return bottomLeftValue;
+    }
+
+    public int findBottomLeftValue(TreeNode root) {
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        int ans = root.val;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            boolean flag = false;
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                if (node.left != null) {
+                    queue.offer(node.left);
+                    if (!flag) {
+                        ans = node.left.val;
+                        flag = true;
+                    }
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                    if (!flag) {
+                        ans = node.right.val;
+                        flag = true;
+                    }
+                }
+            }
+        }
+        return ans;
     }
 }
