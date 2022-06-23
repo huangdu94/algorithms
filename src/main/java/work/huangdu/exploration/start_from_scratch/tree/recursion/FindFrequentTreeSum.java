@@ -1,11 +1,11 @@
 package work.huangdu.exploration.start_from_scratch.tree.recursion;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 508. 出现次数最多的子树元素和
@@ -63,5 +63,37 @@ public class FindFrequentTreeSum {
         int count = sumCountMap.merge(sum, 1, Integer::sum);
         if (max < count) max = count;
         return sum;
+    }
+
+    class Solution{
+        public int[] findFrequentTreeSum(TreeNode root) {
+            Map<Integer, Integer> map = new HashMap<>();
+            dfs(root, map);
+            int max = 0;
+            List<Integer> memo = new ArrayList<>();
+            for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+                if (max < entry.getValue()) {
+                    max = entry.getValue();
+                    memo.clear();
+                }
+                if (max == entry.getValue()) {
+                    memo.add(entry.getKey());
+                }
+            }
+            int[] ans = new int[memo.size()];
+            for (int i = 0; i < memo.size(); i++) {
+                ans[i] = memo.get(i);
+            }
+            return ans;
+        }
+
+        private int dfs(TreeNode root, Map<Integer, Integer> map) {
+            if (root == null) {
+                return 0;
+            }
+            int sum = root.val + dfs(root.left, map) + dfs(root.right, map);
+            map.merge(sum, 1, Integer::sum);
+            return sum;
+        }
     }
 }
