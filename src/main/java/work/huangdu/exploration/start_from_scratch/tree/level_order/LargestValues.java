@@ -1,11 +1,11 @@
 package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 515. 在每个树行中找最大值
@@ -24,7 +24,29 @@ import java.util.Queue;
  */
 public class LargestValues {
     public List<Integer> largestValues(TreeNode root) {
-        if (root == null) return new ArrayList<>();
+        List<Integer> ans = new ArrayList<>();
+        if (root == null) {return ans;}
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int size = queue.size(), max = Integer.MIN_VALUE;
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                max = Math.max(max, node.val);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+            ans.add(max);
+        }
+        return ans;
+    }
+
+    public List<Integer> largestValues2(TreeNode root) {
+        if (root == null) {return new ArrayList<>();}
         List<Integer> result = new ArrayList<>();
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
