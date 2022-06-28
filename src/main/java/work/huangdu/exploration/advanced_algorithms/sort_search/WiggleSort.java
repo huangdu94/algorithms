@@ -20,6 +20,23 @@ import java.util.Arrays;
  * @date 2020/8/21 11:37
  */
 public class WiggleSort {
+    public void wiggleSort(int[] nums) {
+        int n = nums.length;
+        int[] counts = new int[5001];
+        for (int num : nums) {counts[num]++;}
+        int num = 5000;
+        for (int i = 1; i < n; i += 2) {
+            while (counts[num] == 0) {num--;}
+            nums[i] = num;
+            counts[num]--;
+        }
+        for (int i = 0; i < n; i += 2) {
+            while (counts[num] == 0) {num--;}
+            nums[i] = num;
+            counts[num]--;
+        }
+    }
+
     /*
         如果把nums分成两半，小的一半放在index为偶数位置，大的一半放在index为奇数位置则肯定满足题目要求
         1. 分析后转换问题为，求第nums.length/2+1个最大元素记为mid（小于等于它的数放在index为偶数位置即可）
@@ -28,7 +45,7 @@ public class WiggleSort {
         找到nums[i]>mid的位置，找到nums[j]<=mid的位置，交换它们，直到i或j到达末尾
         时间复杂度o(n) 空间复杂度o(1)
      */
-    public void wiggleSort(int[] nums) {
+    public void wiggleSort2(int[] nums) {
         if (nums == null || nums.length <= 1) return;
         int len = nums.length, i = 0, j = 1;
         // 1. 求第nums.length/2+1个最大元素，采用改版的快速排序(每次只排目标区域)，时间复杂度o(n)
