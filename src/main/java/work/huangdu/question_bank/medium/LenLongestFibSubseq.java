@@ -1,5 +1,8 @@
 package work.huangdu.question_bank.medium;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 873. 最长的斐波那契子序列的长度
  * 如果序列 X_1, X_2, ..., X_n 满足下列条件，就说它是 斐波那契式 的：
@@ -24,7 +27,22 @@ package work.huangdu.question_bank.medium;
  */
 public class LenLongestFibSubseq {
     public int lenLongestFibSubseq(int[] arr) {
-        // TODO
-        return -1;
+        int n = arr.length, ans = 0;
+        Map<Integer, Integer> map = new HashMap<>(n);
+        int[][] dp = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            int numi = arr[i];
+            map.put(numi, i);
+            for (int j = i - 1; j > 0; j--) {
+                int numj = arr[j], numk = numi - numj;
+                if (numj <= numk) {break;}
+                if (map.containsKey(numk)) {
+                    int k = map.get(numk);
+                    dp[i][j] = Math.max(dp[j][k] + 1, 3);
+                    ans = Math.max(ans, dp[i][j]);
+                }
+            }
+        }
+        return ans;
     }
 }
