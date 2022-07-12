@@ -1,5 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.graph_search.backtrack;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * 556. 下一个更大元素 III
  * 给你一个正整数 n ，请你找出符合条件的最小整数，其由重新排列 n 中存在的每位数字组成，并且其值大于 n 。如果不存在这样的正整数，则返回 -1 。
@@ -17,6 +21,37 @@ package work.huangdu.exploration.start_from_scratch.graph_search.backtrack;
  * @date 2021/4/2
  */
 public class NextGreaterElement {
+    public int nextGreaterElement2(int n) {
+        // 低位在前
+        List<Integer> numList = new ArrayList<>(9);
+        while (n > 0) {
+            numList.add(n % 10);
+            n /= 10;
+        }
+        // 从低位开始找第一个低位比高位大的地方，如果找完了都没有直接返回-1
+        for (int i = 1; i < numList.size(); i++) {
+            if (numList.get(i) < numList.get(i - 1)) {
+                int cur = numList.get(i);
+                for (int j = 0; j < i; j++) {
+                    if (numList.get(j) > cur) {
+                        Collections.swap(numList, i, j);
+                        int left = 0, right = i - 1;
+                        while (left < right) {
+                            Collections.swap(numList, left++, right--);
+                        }
+                        long ans = 0;
+                        for (int k = numList.size() - 1; k >= 0; k--) {
+                            ans = ans * 10 + numList.get(k);
+                            if (ans > Integer.MAX_VALUE) {return -1;}
+                        }
+                        return (int)ans;
+                    }
+                }
+            }
+        }
+        return -1;
+    }
+
     private int ans;
     private int n;
     private int size;
