@@ -61,21 +61,16 @@ package work.huangdu.exploration.start_from_scratch.tree.quadtree;
 public class Intersect {
     public Node intersect(Node quadTree1, Node quadTree2) {
         if (quadTree1.isLeaf) {
-            if (quadTree1.val) { return quadTree1; }
+            if (quadTree1.val) {return quadTree1;}
             return quadTree2;
         }
         if (quadTree2.isLeaf) {
             if (quadTree2.val) {return quadTree2;}
             return quadTree1;
         }
-        Node topLeft = intersect(quadTree1.topLeft, quadTree2.topLeft),
-            topRight = intersect(quadTree1.topRight, quadTree2.topRight),
-            bottomLeft = intersect(quadTree1.bottomLeft, quadTree2.bottomLeft),
-            bottomRight = intersect(quadTree1.bottomRight, quadTree2.bottomRight);
-        if (topLeft.isLeaf && topRight.isLeaf && bottomLeft.isLeaf && bottomRight.isLeaf
-            && topLeft.val == topRight.val
-            && topLeft.val == bottomLeft.val
-            && topLeft.val == bottomRight.val) {
+        Node topLeft = intersect(quadTree1.topLeft, quadTree2.topLeft), topRight = intersect(quadTree1.topRight, quadTree2.topRight), bottomLeft = intersect(quadTree1.bottomLeft, quadTree2.bottomLeft), bottomRight = intersect(
+            quadTree1.bottomRight, quadTree2.bottomRight);
+        if (topLeft.isLeaf && topRight.isLeaf && bottomLeft.isLeaf && bottomRight.isLeaf && topLeft.val == topRight.val && topLeft.val == bottomLeft.val && topLeft.val == bottomRight.val) {
             quadTree1.val = topLeft.val;
             quadTree1.isLeaf = true;
             quadTree1.topLeft = null;
@@ -89,5 +84,29 @@ public class Intersect {
             quadTree1.bottomRight = bottomRight;
         }
         return quadTree1;
+    }
+    public Node intersect2(Node quadTree1, Node quadTree2) {
+        if (quadTree1.isLeaf && quadTree2.isLeaf) {return new Node(quadTree1.val | quadTree2.val, true);}
+        Node topLeftNode, topRightNode, bottomLeftNode, bottomRightNode;
+        if (quadTree1.isLeaf) {
+            topLeftNode = intersect(quadTree1, quadTree2.topLeft);
+            topRightNode = intersect(quadTree1, quadTree2.topRight);
+            bottomLeftNode = intersect(quadTree1, quadTree2.bottomLeft);
+            bottomRightNode = intersect(quadTree1, quadTree2.bottomRight);
+        } else if (quadTree2.isLeaf) {
+            topLeftNode = intersect(quadTree1.topLeft, quadTree2);
+            topRightNode = intersect(quadTree1.topRight, quadTree2);
+            bottomLeftNode = intersect(quadTree1.bottomLeft, quadTree2);
+            bottomRightNode = intersect(quadTree1.bottomRight, quadTree2);
+        } else {
+            topLeftNode = intersect(quadTree1.topLeft, quadTree2.topLeft);
+            topRightNode = intersect(quadTree1.topRight, quadTree2.topRight);
+            bottomLeftNode = intersect(quadTree1.bottomLeft, quadTree2.bottomLeft);
+            bottomRightNode = intersect(quadTree1.bottomRight, quadTree2.bottomRight);
+        }
+        if (topLeftNode.isLeaf && topRightNode.isLeaf && bottomLeftNode.isLeaf && bottomRightNode.isLeaf && topLeftNode.val == topRightNode.val && topLeftNode.val == bottomLeftNode.val && topLeftNode.val == bottomRightNode.val) {
+            return topLeftNode;
+        }
+        return new Node(false, false, topLeftNode, topRightNode, bottomLeftNode, bottomRightNode);
     }
 }
