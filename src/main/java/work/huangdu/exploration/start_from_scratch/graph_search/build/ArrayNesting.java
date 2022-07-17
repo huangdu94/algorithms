@@ -24,6 +24,24 @@ import java.util.Set;
  * @date 2021/3/16
  */
 public class ArrayNesting {
+    public int arrayNesting5(int[] nums) {
+        int n = nums.length, ans = 0;
+        boolean[] memo = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            if (memo[i]) { continue; }
+            Set<Integer> visited = new HashSet<>();
+            int cur = i;
+            while (visited.add(cur)) {
+                cur = nums[cur];
+            }
+            for (int idx : visited) {
+                memo[idx] = true;
+            }
+            ans = Math.max(ans, visited.size());
+        }
+        return ans;
+    }
+
     public int arrayNesting(int[] nums) {
         int n = nums.length, max = 1;
         for (int i = 0; i < n; i++) {
