@@ -1,7 +1,9 @@
 package work.huangdu.question_bank.medium;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * 729. 我的日程安排表 I
@@ -30,21 +32,63 @@ import java.util.List;
  * @date 2022/7/5
  */
 public class MyCalendar {
-    // TODO 好好理解线段树
-    private List<int[]> books;
+    private final Set<Integer> tree;
+    private final Set<Integer> lazy;
+
+    private final int left = 0;
+    private final int right = 1000000000;
 
     public MyCalendar() {
-        this.books = new ArrayList<>();
+        this.tree = new HashSet<>();
+        this.lazy = new HashSet<>();
     }
 
     public boolean book(int start, int end) {
-        for (int[] book : books) {
-            // end <= book[0] || start >= book[1] 取反
-            if (end > book[0] && start < book[1]) {
-                return false;
-            }
-        }
-        books.add(new int[] {start, end});
+        if (query(left, right, start, end - 1, 1)) {return false;}
+        update(left, right, start, end - 1, 1);
         return true;
+    }
+
+    private void update(int l, int r, int start, int end, int idx) {
+        if (start <= l && r <= end) {
+            tree.add(idx);
+            lazy.add(idx);
+            return;
+        }
+        int mid = l + ((r - l) >> 1);
+        if (start <= mid) {update(l, mid, start, end, idx << 1);}
+        if (mid < end) {update(mid + 1, r, start, end, (idx << 1) + 1);}
+        tree.add(idx);
+    }
+
+    private boolean query(int l, int r, int start, int end, int idx) {
+        if (start <= l && r <= end) {
+            return tree.contains(idx);
+        }
+        if (lazy.contains(idx)) {return true;}
+        int mid = l + ((r - l) >> 1);
+        boolean result = false;
+        if (start <= mid) {result = query(l, mid, start, end, idx << 1);}
+        if (mid < end) {result |= query(mid + 1, r, start, end, (idx << 1) + 1);}
+        return result;
+    }
+
+    class Solution {
+        private List<int[]> books;
+
+        public Solution() {
+            this.books = new ArrayList<>();
+        }
+
+        public boolean book(int start, int end) {
+            for (int[] book : books) {
+                // end <= book[0] || start >= book[1] 取反
+                if (end > book[0] && start < book[1]) {
+                    return false;
+                }
+            }
+            books.add(new int[] {start, end});
+            return true;
+        }
     }
 }
