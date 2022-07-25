@@ -43,7 +43,6 @@ import work.huangdu.data_structure.TreeNode;
 public class CBTInserter {
     private List<TreeNode> cur;
     private List<TreeNode> next;
-
     private final TreeNode root;
 
     public CBTInserter(TreeNode root) {
