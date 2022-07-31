@@ -30,7 +30,7 @@ public class FindLUSlength2 {
         Set<String> longStrSet = new HashSet<>(strs.length);
         // 2. 从长的字符串开始找最长特殊子序列
         for (int len = 10; len > 0; len--) {
-            if (!lenStrMap.containsKey(len)) continue;
+            if (!lenStrMap.containsKey(len)) {continue;}
             List<String> sameLenStrList = lenStrMap.get(len);
             // 3. 统计sameLenStrList中各字符串的数量，找到仅有一个的字符串进行下一步判断
             Map<String, Integer> countMap = new HashMap<>(sameLenStrList.size());
@@ -87,7 +87,7 @@ public class FindLUSlength2 {
             boolean flag = true;
             for (int j = 0; j < n; j++) {
                 String t = strs[j];
-                if (i == j || s.length() > t.length()) continue;
+                if (i == j || s.length() > t.length()) {continue;}
                 if (isSubsequence(s, t)) {
                     flag = false;
                     break;
