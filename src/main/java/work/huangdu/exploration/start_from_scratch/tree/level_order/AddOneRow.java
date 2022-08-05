@@ -1,9 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 623. 在二叉树中增加一行
@@ -55,7 +55,31 @@ import java.util.Queue;
  * @date 2021/1/23
  */
 public class AddOneRow {
-    public TreeNode addOneRow(TreeNode root, int v, int d) {
+    public TreeNode addOneRow(TreeNode root, int val, int depth) {
+        if (depth == 1) {
+            TreeNode newRoot = new TreeNode(val);
+            newRoot.left = root;
+            return newRoot;
+        }
+        dfs(root, val, depth, 1);
+        return root;
+    }
+
+    private void dfs(TreeNode cur, int val, int depth, int layer) {
+        if (layer == depth - 1) {
+            cur.left = new TreeNode(val, cur.left, null);
+            cur.right = new TreeNode(val, null, cur.right);
+            return;
+        }
+        if (cur.left != null) {
+            dfs(cur.left, val, depth, layer + 1);
+        }
+        if (cur.right != null) {
+            dfs(cur.right, val, depth, layer + 1);
+        }
+    }
+
+    public TreeNode addOneRow2(TreeNode root, int v, int d) {
         if (d == 1) {
             TreeNode newRoot = new TreeNode(v);
             newRoot.left = root;
