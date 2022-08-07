@@ -36,6 +36,26 @@ import java.util.List;
  */
 public class ExclusiveTime {
     public int[] exclusiveTime(int n, List<String> logs) {
+        int[] ans = new int[n];
+        Deque<Integer> stack = new ArrayDeque<>(logs.size() / 2);
+        int current = -1;
+        for (String log : logs) {
+            String[] data = log.split(":");
+            int id = Integer.parseInt(data[0]), timestamp = Integer.parseInt(data[2]);
+            if ("start".equals(data[1])) {
+                if (!stack.isEmpty()) {
+                    ans[stack.peek()] += timestamp - current;
+                }
+                stack.push(id);
+            } else {
+                ans[stack.pop()] += ++timestamp - current;
+            }
+            current = timestamp;
+        }
+        return ans;
+    }
+
+    public int[] exclusiveTime2(int n, List<String> logs) {
         int last = 0;
         int[] times = new int[n];
         // id time
