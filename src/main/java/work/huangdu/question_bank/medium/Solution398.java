@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * 398. 随机数索引
@@ -23,6 +24,29 @@ import java.util.Map;
  */
 public class Solution398 {
     // 水塘抽样算法 时间换空间很有意思。
+    class Solution {
+        private final int[] nums;
+        private final Random random;
+
+        public Solution(int[] nums) {
+            this.nums = nums;
+            this.random = new Random();
+        }
+
+        public int pick(int target) {
+            int ans = 0, cnt = 0, idx = 0;
+            for (int num : nums) {
+                if (num == target) {
+                    if (random.nextInt(++cnt) == 0) {
+                        ans = idx;
+                    }
+                }
+                idx++;
+            }
+            return ans;
+        }
+    }
+
     private final Map<Integer, List<Integer>> numIndexListMap;
 
     public Solution398(int[] nums) {
