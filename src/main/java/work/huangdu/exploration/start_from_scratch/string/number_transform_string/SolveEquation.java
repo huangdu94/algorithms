@@ -26,6 +26,42 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * @date 2020/9/27 12:57
  */
 public class SolveEquation {
+    class Solution {
+        private static final String NO_SOLUTION = "No solution";
+        private static final String INFINITE_SOLUTIONS = "Infinite solutions";
+        private static final String X_EQUAL = "x=";
+
+        public String solveEquation(String equation) {
+            int equalSignIndex = equation.indexOf('=');
+            int[] left = handle(equation.substring(0, equalSignIndex)), right = handle(equation.substring(equalSignIndex + 1));
+            if (left[0] == right[0]) {return left[1] == right[1] ? INFINITE_SOLUTIONS : NO_SOLUTION;}
+            return X_EQUAL.concat(Integer.toString((right[1] - left[1]) / (left[0] - right[0])));
+        }
+
+        private int[] handle(String expression) {
+            int xCoefficient = 0, constant = 0, symbol = 1, current = 0;
+            boolean flag = false;
+            for (int i = 0, n = expression.length(); i < n; i++) {
+                char ch = expression.charAt(i);
+                if ('0' <= ch && ch <= '9') {
+                    current = current * 10 + (ch - '0');
+                    flag = true;
+                    continue;
+                }
+                if (ch == 'x') {
+                    xCoefficient += symbol * (flag ? current : 1);
+                } else {
+                    constant += symbol * current;
+                    symbol = ch == '-' ? -1 : 1;
+                }
+                current = 0;
+                flag = false;
+            }
+            constant += symbol * current;
+            return new int[] {xCoefficient, constant};
+        }
+    }
+
     public String solveEquation(String equation) {
         int equalSignIndex = equation.indexOf('=');
         int[] left = compute(equation.substring(0, equalSignIndex));
@@ -33,7 +69,7 @@ public class SolveEquation {
         int x = left[0] - right[0];
         int num = right[1] - left[1];
         if (x == 0) {
-            if (num == 0) return "Infinite solutions";
+            if (num == 0) {return "Infinite solutions";}
             return "No solution";
         }
         return "x=".concat(Integer.toString(num / x));
@@ -50,7 +86,7 @@ public class SolveEquation {
                 numFlag = true;
             }
             if (c == 'x') {
-                if (!numFlag) num = 1;
+                if (!numFlag) {num = 1;}
                 switch (sign) {
                     case '+':
                         xSum += num;
@@ -78,7 +114,7 @@ public class SolveEquation {
                 numFlag = false;
             }
         }
-        return new int[]{xSum, numSum};
+        return new int[] {xSum, numSum};
     }
 
     public static void main(String[] args) {
