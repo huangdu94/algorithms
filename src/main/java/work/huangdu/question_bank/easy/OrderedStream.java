@@ -38,13 +38,13 @@ import java.util.List;
  */
 public class OrderedStream {
     private final String[] array;
+    private final int n;
     private int ptr;
-    private int n;
 
     public OrderedStream(int n) {
         this.array = new String[n + 1];
-        this.ptr = 1;
         this.n = n;
+        this.ptr = 1;
     }
 
     public List<String> insert(int idKey, String value) {
