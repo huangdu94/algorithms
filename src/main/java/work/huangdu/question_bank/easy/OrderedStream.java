@@ -32,6 +32,9 @@ import java.util.List;
  * value 仅由小写字母组成
  * 每次调用 insert 都会使用一个唯一的 id
  * 恰好调用 n 次 insert
+ * Your OrderedStream object will be instantiated and called as such:
+ * OrderedStream obj = new OrderedStream(n);
+ * List<String> param_1 = obj.insert(idKey,value);
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2022/8/17
