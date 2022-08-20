@@ -31,7 +31,7 @@ public class ConstructMaximumBinaryTree {
     }
 
     private TreeNode constructMaximumBinaryTree(int[] nums, int left, int right) {
-        if (left > right) return null;
+        if (left > right) {return null;}
         int index = left;
         for (int i = left + 1; i <= right; i++) {
             if (nums[i] > nums[index]) {
@@ -39,7 +39,27 @@ public class ConstructMaximumBinaryTree {
             }
         }
         return new TreeNode(nums[index],
-                constructMaximumBinaryTree(nums, left, index - 1),
-                constructMaximumBinaryTree(nums, index + 1, right));
+            constructMaximumBinaryTree(nums, left, index - 1),
+            constructMaximumBinaryTree(nums, index + 1, right));
+    }
+
+    class Solution {
+        public TreeNode constructMaximumBinaryTree(int[] nums) {
+            return dfs(nums, 0, nums.length);
+        }
+
+        private TreeNode dfs(int[] nums, int left, int right) {
+            if (left >= right) {return null;}
+            int target = left;
+            for (int i = left + 1; i < right; i++) {
+                if (nums[i] > nums[target]) {
+                    target = i;
+                }
+            }
+            TreeNode root = new TreeNode(nums[target]);
+            root.left = dfs(nums, left, target);
+            root.right = dfs(nums, target + 1, right);
+            return root;
+        }
     }
 }
