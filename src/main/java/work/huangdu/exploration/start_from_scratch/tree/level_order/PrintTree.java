@@ -1,8 +1,11 @@
 package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
-import work.huangdu.data_structure.TreeNode;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
 
-import java.util.*;
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 655. 输出二叉树
@@ -51,6 +54,56 @@ import java.util.*;
  * @date 2021/1/28
  */
 public class PrintTree {
+    public List<List<String>> printTree2(TreeNode root) {
+        int height = -1;
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode cur = queue.poll();
+                if (cur.left != null) {
+                    queue.offer(cur.left);
+                }
+                if (cur.right != null) {
+                    queue.offer(cur.right);
+                }
+            }
+            height++;
+        }
+        int m = height + 1, n = (1 << height + 1) - 1;
+        List<List<String>> ans = new ArrayList<>(m);
+        for (int i = 0; i < m; i++) {
+            List<String> row = new ArrayList<>(n);
+            for (int j = 0; j < n; j++) {
+                row.add("");
+            }
+            ans.add(row);
+        }
+        int r = 0;
+        queue.offer(root);
+        Queue<Integer> idxQueue = new ArrayDeque<>();
+        idxQueue.offer(n - 1 >> 1);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode cur = queue.poll();
+                int c = idxQueue.poll();
+                if (cur.left != null) {
+                    queue.offer(cur.left);
+                    idxQueue.offer(c - (1 << height - r - 1));
+                }
+                if (cur.right != null) {
+                    queue.offer(cur.right);
+                    idxQueue.offer(c + (1 << height - r - 1));
+                }
+                ans.get(r).set(c, Integer.toString(cur.val));
+            }
+            r++;
+        }
+        return ans;
+    }
+
     public List<List<String>> printTree(TreeNode root) {
         int depth = depth(root), len = (1 << depth) - 1, level = 0;
         List<List<String>> result = generate(depth, len);
