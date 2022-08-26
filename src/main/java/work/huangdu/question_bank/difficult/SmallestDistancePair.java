@@ -1,5 +1,7 @@
 package work.huangdu.question_bank.difficult;
 
+import java.util.Arrays;
+
 /**
  * 719. 找出第 K 小的数对距离
  * 数对 (a,b) 由整数 a 和 b 组成，其数对距离定义为 a 和 b 的绝对差值。
@@ -29,6 +31,29 @@ package work.huangdu.question_bank.difficult;
  */
 public class SmallestDistancePair {
     public int smallestDistancePair(int[] nums, int k) {
-        return -1;
+        int n = nums.length;
+        Arrays.sort(nums);
+        int l = 0, r = nums[n - 1] - nums[0];
+        while (l < r) {
+            int mid = l + (r - l >> 1), cnt = 0, i = n - 2, j = n - 1;
+            while (j >= 1) {
+                while (i >= 0 && nums[j] - nums[i] <= mid) {i--;}
+                cnt += j - i - 1;
+                j--;
+            }
+            if (cnt < k) {
+                l = mid + 1;
+            } else {
+                r = mid;
+            }
+        }
+        return l;
+    }
+
+    public static void main(String[] args) {
+        SmallestDistancePair sdp = new SmallestDistancePair();
+        int[] nums = {9, 10, 7, 10, 6, 1, 5, 4, 9, 8};
+        int k = 18;
+        System.out.println(sdp.smallestDistancePair(nums, k));
     }
 }
