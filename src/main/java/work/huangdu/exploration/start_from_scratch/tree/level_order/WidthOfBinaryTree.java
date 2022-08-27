@@ -1,9 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 662. 二叉树最大宽度
@@ -53,6 +53,7 @@ import java.util.Queue;
  * @date 2021/1/28
  */
 public class WidthOfBinaryTree {
+    // 用int溢出了但不影响结果
     public int widthOfBinaryTree(TreeNode root) {
         if (root == null) return 0;
         int maxWidth = -1;
@@ -85,5 +86,34 @@ public class WidthOfBinaryTree {
             }
         }
         return maxWidth;
+    }
+
+    // 用int溢出了会影响结果
+    public int widthOfBinaryTree2(TreeNode root) {
+        int ans = 1;
+        Queue<TreeNode> nodeQueue = new ArrayDeque<>();
+        Queue<Long> indexQueue = new ArrayDeque<>();
+        nodeQueue.offer(root);
+        indexQueue.offer(1L);
+        while (!nodeQueue.isEmpty()) {
+            int size = nodeQueue.size();
+            long left = Long.MAX_VALUE, right = Long.MIN_VALUE;
+            for (int i = 0; i < size; i++) {
+                TreeNode node = nodeQueue.poll();
+                Long index = indexQueue.poll();
+                left = Math.min(left, index);
+                right = Math.max(right, index);
+                if (node.left != null) {
+                    nodeQueue.offer(node.left);
+                    indexQueue.offer(index << 1);
+                }
+                if (node.right != null) {
+                    nodeQueue.offer(node.right);
+                    indexQueue.offer((index << 1) + 1);
+                }
+            }
+            ans = Math.max(ans, (int)(right - left + 1));
+        }
+        return ans;
     }
 }
