@@ -38,7 +38,7 @@ public class LongestUnivaluePath {
     }
 
     private int dfs(TreeNode node) {
-        if (node == null) return 0;
+        if (node == null) {return 0;}
         int left = dfs(node.left);
         int right = dfs(node.right);
         int sum = 0, max = 0;
@@ -52,5 +52,35 @@ public class LongestUnivaluePath {
         }
         maxPath = Math.max(maxPath, sum);
         return max + 1;
+    }
+
+    class Solution {
+        private int ans = 1;
+
+        public int longestUnivaluePath(TreeNode root) {
+            if (root == null) {return 0;}
+            dfs(root);
+            return ans - 1;
+        }
+
+        private int[] dfs(TreeNode node) {
+            int len = 1, max = 0;
+            if (node.left != null) {
+                int[] left = dfs(node.left);
+                if (left[0] == node.val) {
+                    len += left[1];
+                    max = Math.max(max, left[1]);
+                }
+            }
+            if (node.right != null) {
+                int[] right = dfs(node.right);
+                if (right[0] == node.val) {
+                    len += right[1];
+                    max = Math.max(max, right[1]);
+                }
+            }
+            ans = Math.max(ans, len);
+            return new int[] {node.val, max + 1};
+        }
     }
 }
