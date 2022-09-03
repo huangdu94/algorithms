@@ -34,4 +34,25 @@ public class FindLongestChain {
         }
         return count;
     }
+
+    public int findLongestChain2(int[][] pairs) {
+        int n = pairs.length, cur = Integer.MAX_VALUE, ans = 1;
+        for (int[] pair : pairs) {
+            cur = Math.min(cur, pair[1]);
+        }
+        for (int i = 0; i < n; i++) {
+            boolean flag = false;
+            int min = Integer.MAX_VALUE;
+            for (int[] pair : pairs) {
+                if (pair[0] > cur) {
+                    min = Math.min(min, pair[1]);
+                    flag = true;
+                }
+            }
+            if (!flag) {break;}
+            cur = min;
+            ans++;
+        }
+        return ans;
+    }
 }
