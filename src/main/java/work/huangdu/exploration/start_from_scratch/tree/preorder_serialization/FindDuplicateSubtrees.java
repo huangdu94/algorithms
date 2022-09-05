@@ -1,11 +1,11 @@
 package work.huangdu.exploration.start_from_scratch.tree.preorder_serialization;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 652. 寻找重复的子树
