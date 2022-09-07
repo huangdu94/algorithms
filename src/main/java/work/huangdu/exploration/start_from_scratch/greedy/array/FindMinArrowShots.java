@@ -34,22 +34,55 @@ import java.util.Comparator;
  */
 public class FindMinArrowShots {
     public int findMinArrowShots(int[][] points) {
+        Arrays.sort(points, Comparator.comparingInt(p -> p[1]));
+        int ans = 1, right = points[0][1];
+        for (int[] point : points) {
+            if (point[0] > right) {
+                ans++;
+                right = point[1];
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        int[][] points = {{10, 16}, {2, 8}, {1, 6}, {7, 12}};
+        FindMinArrowShots fmas = new FindMinArrowShots();
+        System.out.println(fmas.findMinArrowShots(points));
+    }
+
+    public int findMinArrowShots4(int[][] points) {
+        Arrays.sort(points, Comparator.comparingInt(p -> p[0]));
+        int ans = 0;
+        long right = (long)Integer.MIN_VALUE - 1;
+        for (int[] point : points) {
+            if (point[0] > right) {
+                ans++;
+                right = point[1];
+            } else {
+                right = Math.min(right, point[1]);
+            }
+        }
+        return ans;
+    }
+
+    public int findMinArrowShots3(int[][] points) {
         int n = points.length;
-        if (n <= 1) return n;
+        if (n <= 1) {return n;}
         int count = 1;
         // 按照end位置从小到大排序
         Arrays.sort(points, Comparator.comparingInt(o -> o[1]));
         //quickSort(points, 0, n - 1);
-//        int[] cur = points[0];
-//        for (int i = 1; i < n; i++) {
-//            int[] res = intersection(cur, points[i]);
-//            if (res == null) {
-//                count++;
-//                cur = points[i];
-//            } else {
-//                cur = res;
-//            }
-//        }
+        //        int[] cur = points[0];
+        //        for (int i = 1; i < n; i++) {
+        //            int[] res = intersection(cur, points[i]);
+        //            if (res == null) {
+        //                count++;
+        //                cur = points[i];
+        //            } else {
+        //                cur = res;
+        //            }
+        //        }
         int end = points[0][1];
         for (int i = 1; i < n; i++) {
             if (points[i][0] > end) {
@@ -68,19 +101,17 @@ public class FindMinArrowShots {
      * @return p1和p2的交集
      */
     private int[] intersection(int[] p1, int[] p2) {
-        if (p1[1] < p2[0]) return null;
-        return new int[]{Math.max(p1[0], p2[0]), Math.min(p1[1], p2[1])};
+        if (p1[1] < p2[0]) {return null;}
+        return new int[] {Math.max(p1[0], p2[0]), Math.min(p1[1], p2[1])};
     }
 
     private void quickSort(int[][] points, int l, int r) {
-        if (l >= r) return;
+        if (l >= r) {return;}
         int[] pivot = points[l];
         int i = l, j = r;
         while (i < j) {
-            while (i < j && points[j][1] >= pivot[1])
-                j--;
-            while (i < j && points[i][1] <= pivot[1])
-                i++;
+            while (i < j && points[j][1] >= pivot[1]) {j--;}
+            while (i < j && points[i][1] <= pivot[1]) {i++;}
             if (i < j) {
                 int[] temp = points[j];
                 points[j] = points[i];
@@ -95,7 +126,7 @@ public class FindMinArrowShots {
 
     public int findMinArrowShots2(int[][] points) {
         int n = points.length;
-        if (n <= 1) return n;
+        if (n <= 1) {return n;}
         Arrays.sort(points, Comparator.comparingInt(ints -> ints[1]));
         int i = 0, count = 0;
         while (i < n) {
