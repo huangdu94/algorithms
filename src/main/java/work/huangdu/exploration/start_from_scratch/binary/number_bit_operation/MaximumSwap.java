@@ -21,7 +21,40 @@ import java.util.Arrays;
  */
 public class MaximumSwap {
     public int maximumSwap(int num) {
-        if (num < 10) return num;
+        if (num < 10) {return num;}
+        int len = 0, _num = num, ans = 0;
+        while (_num > 0) {
+            _num /= 10;
+            len++;
+        }
+        _num = num;
+        int[] digits = new int[len];
+        for (int i = len - 1; i >= 0; i--) {
+            digits[i] = _num % 10;
+            _num /= 10;
+        }
+        for (int i = 0; i < len; i++) {
+            int first = digits[i], maxJ = i;
+            for (int j = i + 1; j < len; j++) {
+                if (first < digits[j] && digits[j] >= digits[maxJ]) {
+                    maxJ = j;
+                }
+            }
+            if (i != maxJ && first != digits[maxJ]) {
+                int temp = digits[i];
+                digits[i] = digits[maxJ];
+                digits[maxJ] = temp;
+                break;
+            }
+        }
+        for (int i = 0; i < len; i++) {
+            ans = ans * 10 + digits[i];
+        }
+        return ans;
+    }
+
+    public int maximumSwap2(int num) {
+        if (num < 10) {return num;}
         int[] numBits = getNumBits(num);
         int[] sortedNumBits = Arrays.copyOf(numBits, numBits.length);
         Arrays.sort(sortedNumBits);
@@ -29,7 +62,7 @@ public class MaximumSwap {
         while (j > 0 && numBits[j] == sortedNumBits[j]) {
             j--;
         }
-        if (j == 0) return num;
+        if (j == 0) {return num;}
         int i = 0;
         while (numBits[i] != sortedNumBits[j]) {
             i++;
