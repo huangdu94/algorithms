@@ -37,27 +37,26 @@ public class Decrypt {
         int n = code.length;
         int[] ans = new int[n];
         if (k == 0) {
-            Arrays.fill(ans, 0);
+            return ans;
+        }
+        int start, end, sum = 0;
+        if (k < 0) {
+            k = -k;
+            start = (n - k) % n;
+            end = 0;
         } else {
-            int start, end, sum = 0;
-            if (k < 0) {
-                k = -k;
-                start = (n - k) % n;
-                end = 0;
-            } else {
-                start = 1;
-                end = (k + 1) % n;
-            }
-            for (int i = start; i != end; i = (i + 1) % n) {
-                sum += code[i];
-            }
-            ans[0] = sum;
-            for (int i = 1; i < n; i++) {
-                sum += code[end] - code[start];
-                start = (start + 1) % n;
-                end = (end + 1) % n;
-                ans[i] = sum;
-            }
+            start = 1;
+            end = (k + 1) % n;
+        }
+        for (int i = start; i != end; i = (i + 1) % n) {
+            sum += code[i];
+        }
+        ans[0] = sum;
+        for (int i = 1; i < n; i++) {
+            sum += code[end] - code[start];
+            start = (start + 1) % n;
+            end = (end + 1) % n;
+            ans[i] = sum;
         }
         return ans;
     }
