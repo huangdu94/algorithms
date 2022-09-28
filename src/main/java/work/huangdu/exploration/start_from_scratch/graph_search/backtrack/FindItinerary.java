@@ -1,27 +1,78 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.graph_search.backtrack;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.TreeMap;
 
 /**
  * 332. 重新安排行程
- * 给定一个机票的字符串二维数组 [from, to]，子数组中的两个成员分别表示飞机出发和降落的机场地点，对该行程进行重新规划排序。所有这些机票都属于一个从 JFK（肯尼迪国际机场）出发的先生，所以该行程必须从 JFK 开始。
- * 说明:
- * 如果存在多种有效的行程，你可以按字符自然排序返回最小的行程组合。例如，行程 ["JFK", "LGA"] 与 ["JFK", "LGB"] 相比就更小，排序更靠前
- * 所有的机场都用三个大写字母表示（机场代码）。
- * 假定所有机票至少存在一种合理的行程。
- * 示例 1:
- * 输入: [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]]
- * 输出: ["JFK", "MUC", "LHR", "SFO", "SJC"]
- * 示例 2:
- * 输入: [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
- * 输出: ["JFK","ATL","JFK","SFO","ATL","SFO"]
- * 解释: 另一种有效的行程是 ["JFK","SFO","ATL","JFK","ATL","SFO"]。但是它自然排序更大更靠后。
+ * 给你一份航线列表 tickets ，其中 tickets[i] = [fromi, toi] 表示飞机出发和降落的机场地点。请你对该行程进行重新规划排序。
+ * 所有这些机票都属于一个从 JFK（肯尼迪国际机场）出发的先生，所以该行程必须从 JFK 开始。如果存在多种有效的行程，请你按字典排序返回最小的行程组合。
+ * 例如，行程 ["JFK", "LGA"] 与 ["JFK", "LGB"] 相比就更小，排序更靠前。
+ * 假定所有机票至少存在一种合理的行程。且所有的机票 必须都用一次 且 只能用一次。
+ * 示例 1：
+ * 输入：tickets = [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
+ * 输出：["JFK","MUC","LHR","SFO","SJC"]
+ * 示例 2：
+ * 输入：tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+ * 输出：["JFK","ATL","JFK","SFO","ATL","SFO"]
+ * 解释：另一种有效的行程是 ["JFK","SFO","ATL","JFK","ATL","SFO"] ，但是它字典排序更大更靠后。
+ * 提示：
+ * 1 <= tickets.length <= 300
+ * tickets[i].length == 2
+ * from_i.length == 3
+ * to_i.length == 3
+ * from_i 和 to_i 由大写英文字母组成
+ * from_i != to_i
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/27 0:37
+ * @date 2022/9/27
  */
 public class FindItinerary {
+    private int total;
+    private int used;
+    private Map<String, TreeMap<String, Integer>> edges;
+    private List<String> ans;
+
     public List<String> findItinerary(List<List<String>> tickets) {
+        this.total = tickets.size();
+        this.used = 0;
+        this.edges = new HashMap<>();
+        this.ans = new ArrayList<>(tickets.size() + 1);
+        for (List<String> ticket : tickets) {
+            String from = ticket.get(0), to = ticket.get(1);
+            TreeMap<String, Integer> nextMap = edges.computeIfAbsent(from, k -> new TreeMap<>());
+            nextMap.merge(to, 1, Integer::sum);
+        }
+        dfs("JFK");
+        return ans;
+    }
+
+    private boolean dfs(String cur) {
+        ans.add(cur);
+        if (used == total) {return true;}
+        if (edges.containsKey(cur)) {
+            TreeMap<String, Integer> nextMap = edges.get(cur);
+            for (String next : nextMap.keySet()) {
+                if (nextMap.get(next) == 0) {continue;}
+                nextMap.merge(next, -1, Integer::sum);
+                used++;
+                if (dfs(next)) {return true;}
+                nextMap.merge(next, 1, Integer::sum);
+                used--;
+            }
+        }
+        ans.remove(ans.size() - 1);
+        return false;
+    }
+
+    public List<String> findItinerary2(List<List<String>> tickets) {
         Map<String, Queue<String>> startDesMap = new HashMap<>();
         for (List<String> ticket : tickets) {
             //Queue<String> desQueue = startDesMap.computeIfAbsent(ticket.get(0), k -> new PriorityQueue<>());
