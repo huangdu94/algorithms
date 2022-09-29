@@ -90,4 +90,62 @@ public class FindSubsequences {
         }
         return hashValue;
     }*/
+
+    static class Solution {
+        public List<List<Integer>> findSubsequences(int[] nums) {
+            List<List<Integer>> ans = new ArrayList<>();
+            Queue<List<Integer>> queue = new ArrayDeque<>();
+            queue.offer(new ArrayList<>());
+            Set<Integer> visited = new HashSet<>();
+            for (int num : nums) {
+                int size = queue.size();
+                for (int i = 0; i < size; i++) {
+                    List<Integer> curList = queue.poll();
+                    queue.offer(curList);
+                    if (curList.isEmpty() || curList.get(curList.size() - 1) <= num) {
+                        List<Integer> nextList = new ArrayList<>(curList);
+                        nextList.add(num);
+                        int hash = hashCode(nextList);
+                        if (visited.add(hash)) {
+                            if (nextList.size() >= 2) {
+                                ans.add(nextList);
+                            }
+                            queue.offer(nextList);
+                        }
+                    }
+                }
+            }
+            return ans;
+        }
+
+        public int hashCode(List<Integer> list) {
+            if (list.isEmpty()) {return 0;}
+            int result = 0;
+            for (int element : list) {
+                element += 101;
+                result = result * 202 + element;
+            }
+            return result;
+        }
+
+        public static void main(String[] args) {
+            int[][] arr1 = {{-48, -33}, {-48, -34}, {-52, 72}, {-33, 72}, {-48, 72}, {-48, -34, 72}, {-48, -33, 72}, {72, 75}, {-52, 75}, {-52, 72, 75}, {-34, 75}, {-33, 75}, {-33, 72, 75}, {-48, 75}, {-48, 72, 75}, {-48, -34, 75},
+                {-48, -34, 72, 75}, {-48, -33, 75}, {-48, -33, 72, 75}, {-52, -12}, {-34, -12}, {-33, -12}, {-48, -12}, {-48, -34, -12}, {-48, -33, -12}, {-12, 72}, {72, 72}, {-52, -12, 72}, {-52, 72, 72}, {-34, -12, 72}, {-33, -12, 72},
+                {-33, 72, 72}, {-48, -12, 72}, {-48, 72, 72}, {-48, -34, -12, 72}, {-48, -34, 72, 72}, {-48, -33, -12, 72}, {-48, -33, 72, 72}, {-52, -45}, {-48, -45}};
+            int[][] arr2 = {{-48, -33}, {-48, -33, 72}, {-48, -33, 72, 75}, {-48, -33, 72, 72}, {-48, -33, 75}, {-48, -33, -12}, {-48, -33, -12, 72}, {-48, -34}, {-48, -34, 72}, {-48, -34, 72, 75}, {-48, -34, 72, 72}, {-48, -34, 75},
+                {-48, -34, -12}, {-48, -34, -12, 72}, {-48, 72}, {-48, 72, 75}, {-48, 72, 72}, {-48, 75}, {-48, -12}, {-48, -12, 72}, {-48, -45}, {-33, 72}, {-33, 72, 75}, {-33, 72, 72}, {-33, 75}, {-33, -12}, {-33, -12, 72}, {-34, 72},
+                {-34, 72, 75}, {-34, 72, 72}, {-34, 75}, {-34, -12}, {-34, -12, 72}, {-52, 72}, {-52, 72, 75}, {-52, 72, 72}, {-52, 75}, {-52, -12}, {-52, -12, 72}, {-52, -45}, {72, 75}, {72, 72}, {-12, 72}};
+            Comparator<int[]> comparator = (o1, o2) -> {
+                for (int i = 0; i < Math.min(o1.length, o2.length); i++) {
+                    if (o1[i] == o2[i]) {continue;}
+                    return Integer.compare(o1[i], o2[i]);
+                }
+                return Integer.compare(o1.length, o2.length);
+            };
+            Arrays.sort(arr1, comparator);
+            Arrays.sort(arr2, comparator);
+            System.out.println(Arrays.deepToString(arr1));
+            System.out.println(Arrays.deepToString(arr2));
+        }
+    }
 }
