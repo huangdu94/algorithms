@@ -27,15 +27,29 @@ import java.util.Arrays;
  * @date 2021/7/23
  */
 public class IsCovered {
-    // TODO 差分数组 思想
-    public boolean isCovered(int[][] ranges, int left, int right) {
+    public boolean isCovered2(int[][] ranges, int left, int right) {
         boolean[] uncover = new boolean[51];
         Arrays.fill(uncover, left, right + 1, true);
         for (int[] range : ranges) {
             Arrays.fill(uncover, range[0], range[1] + 1, false);
         }
         for (boolean flag : uncover) {
-            if (flag) { return false; }
+            if (flag) {return false;}
+        }
+        return true;
+    }
+
+    public boolean isCovered(int[][] ranges, int left, int right) {
+        int[] diff = new int[52];
+        for (int[] range : ranges) {
+            diff[range[0]]++;
+            diff[range[1] + 1]--;
+        }
+        int sum = 0;
+        for (int i = 1; i < left; i++) {sum += diff[i];}
+        for (int i = left; i <= right; i++) {
+            sum += diff[i];
+            if (sum < 1) {return false;}
         }
         return true;
     }
