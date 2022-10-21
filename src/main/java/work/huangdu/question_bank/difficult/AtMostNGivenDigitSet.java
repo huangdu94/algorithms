@@ -1,9 +1,5 @@
 package work.huangdu.question_bank.difficult;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * 902. 最大为 N 的数字组合
  * 给定一个按 非递减顺序 排列的数字数组 digits 。你可以用任意次数 digits[i] 来写的数字。例如，如果 digits = ['1','3','5']，我们可以写数字，如 '13', '551', 和 '1351315'。
@@ -39,39 +35,30 @@ import java.util.List;
 public class AtMostNGivenDigitSet {
     public int atMostNGivenDigitSet(String[] digits, int n) {
         // 1. 看看n是几位数，并存下n的每一位数字
-        List<Integer> numList = new ArrayList<>(10);
-        List<Integer> digitList = new ArrayList<>(digits.length);
-        while (n > 0) {
-            numList.add(n % 10);
-            n /= 10;
-        }
-        Collections.reverse(numList);
-        for (String digit : digits) {
-            digitList.add(digit.charAt(0) - '0');
-        }
+        String nStr = Integer.toString(n);
         // 2. 小于n位数的话，随便生成
-        int numBit = numList.size(), digitListSize = digitList.size(), ans = 0;
-        for (int i = 1; i < numBit; i++) {
-            ans += Math.pow(digitListSize, i);
+        int nBit = nStr.length(), digitLen = digits.length, ans = 0;
+        for (int i = 1; i < nBit; i++) {
+            ans = ans * digitLen + digitLen;
         }
         // 3. 等于n位的话需要注意：
         // 3.1 从高位开始，如果高位小于n该位数字，则后面随便生成
         // 3.2 如果高位等于n该位数字，则后面再继续讨论
-        for (int i = 0; i < numBit; i++) {
+        for (int i = 0; i < nBit; i++) {
             // 找到有多少个数字小于n当前数字
             int cnt = 0;
             boolean contain = false;
-            for (int digit : digitList) {
-                if (digit >= numList.get(i)) {
-                    contain = digit == numList.get(i);
+            for (String digit : digits) {
+                if (digit.charAt(0) >= nStr.charAt(i)) {
+                    contain = digit.charAt(0) == nStr.charAt(i);
                     break;
                 }
                 cnt++;
             }
             if (cnt > 0) {
-                ans += cnt * Math.pow(digitListSize, numBit - i - 1);
+                ans += cnt * Math.pow(digitLen, nBit - i - 1);
             }
-            if (i == numBit - 1 && contain) {ans++;}
+            if (i == nBit - 1 && contain) {ans++;}
             if (!contain) {break;}
         }
         return ans;
