@@ -156,3 +156,22 @@ class StockSpanner2 {
         System.out.println(s.next(85));
     }
 }
+class StockSpanner3 {
+    private static final int N = 10000;
+    private final int[][] stack;
+    private int top;
+
+    public StockSpanner3() {
+        this.stack = new int[N][2];
+        this.top = 0;
+    }
+
+    public int next(int price) {
+        int cnt = 1;
+        while (top > 0 && stack[top - 1][0] <= price) {
+            cnt += stack[--top][1];
+        }
+        stack[top][0] = price;
+        return stack[top++][1] = cnt;
+    }
+}
