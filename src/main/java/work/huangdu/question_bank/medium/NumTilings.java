@@ -18,7 +18,25 @@ package work.huangdu.question_bank.medium;
  */
 public class NumTilings {
     public int numTilings(int n) {
-        // todo 待做。
-        return 0;
+        final int mod = (int)(1e9 + 7);
+        // dp[i][j] 表示第i列为j种状态
+        // j: 0 全空 1 下空 2 上空 3 全满
+        int dp0 = 0, dp1 = 0, dp2 = 0, dp3 = 1;
+        for (int i = 1; i <= n; i++) {
+            int newDp0 = dp3;
+            int newDp1 = (dp0 + dp2) % mod;
+            int newDp2 = (dp0 + dp1) % mod;
+            int newDp3 = (((dp0 + dp1) % mod + dp2) % mod + dp3) % mod;
+            dp0 = newDp0;
+            dp1 = newDp1;
+            dp2 = newDp2;
+            dp3 = newDp3;
+        }
+        return dp3;
+    }
+
+    public static void main(String[] args) {
+        NumTilings nt = new NumTilings();
+        System.out.println(nt.numTilings(3));
     }
 }
