@@ -28,6 +28,46 @@ import java.util.List;
  */
 public class ExpressiveWords {
     public int expressiveWords(String s, String[] words) {
+        List<Integer> list = new ArrayList<>();
+        int n = s.length(), i = 0;
+        while (i < n) {
+            char ch = s.charAt(i);
+            int cnt = 0;
+            while (i < n && s.charAt(i) == ch) {
+                cnt++;
+                i++;
+            }
+            list.add((int)ch);
+            list.add(cnt);
+        }
+        int ans = 0;
+        for (String word : words) {
+            int idx = 0;
+            i = 0;
+            n = word.length();
+            boolean flag = true;
+            while (i < n && idx < list.size()) {
+                char ch = word.charAt(i);
+                int cnt = 0;
+                while (i < n && word.charAt(i) == ch) {
+                    cnt++;
+                    i++;
+                }
+                char c = (char)list.get(idx++).intValue();
+                int amount = list.get(idx++);
+                if (c != ch || amount < cnt || amount > cnt && amount < 3) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag && idx == list.size() && i == n) {
+                ans++;
+            }
+        }
+        return ans;
+    }
+
+    public int expressiveWords2(String s, String[] words) {
         List<Character> charList = new ArrayList<>();
         List<Integer> countList = new ArrayList<>();
         char ch = s.charAt(0);
