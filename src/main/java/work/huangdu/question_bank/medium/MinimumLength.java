@@ -45,6 +45,8 @@ public class MinimumLength {
             while (j - 1 > i && s.charAt(j - 1) == s.charAt(j)) {
                 j--;
             }
+            i++;
+            j--;
         }
         return j - i + 1;
     }
