@@ -32,57 +32,62 @@ import java.util.TreeSet;
  * @date 2022/12/30
  */
 public class ExamRoom {
-    int n;
-    TreeSet<Integer> seats;
-    PriorityQueue<int[]> pq;
+    private int n;
+    private TreeSet<Integer> seatSet;
+    private PriorityQueue<int[]> pq;
 
-    // TODO CP
     public ExamRoom(int n) {
         this.n = n;
-        this.seats = new TreeSet<>();
-        this.pq = new PriorityQueue<>((a, b) -> {
-            int d1 = a[1] - a[0], d2 = b[1] - b[0];
-            return d1 / 2 < d2 / 2 || (d1 / 2 == d2 / 2 && a[0] > b[0]) ? 1 : -1;
+        this.seatSet = new TreeSet<>();
+        this.pq = new PriorityQueue<>((interval1, interval2) -> {
+            int d1 = (interval1[1] - interval1[0]) / 2, d2 = (interval2[1] - interval2[0]) / 2;
+            return d1 > d2 || d1 == d2 && interval1[0] < interval2[0] ? -1 : 1;
         });
     }
 
     public int seat() {
-        if (seats.isEmpty()) {
-            seats.add(0);
+        if (seatSet.isEmpty()) {
+            seatSet.add(0);
             return 0;
         }
-        int left = seats.first(), right = n - 1 - seats.last();
-        while (seats.size() >= 2) {
-            int[] p = pq.peek();
-            if (seats.contains(p[0]) && seats.contains(p[1]) && seats.higher(p[0]) == p[1]) { // 不属于延迟删除的区间
-                int d = p[1] - p[0];
-                if (d / 2 < right || d / 2 <= left) { // 最左或最右的座位更优
-                    break;
-                }
+        int left = seatSet.first(), right = n - 1 - seatSet.last();
+        while (!pq.isEmpty()) {
+            int[] interval = pq.peek();
+            if (seatSet.contains(interval[0]) && seatSet.contains(interval[1]) && seatSet.higher(interval[0]) == interval[1]) {
+                int distance = (interval[1] - interval[0]) / 2;
+                if (distance <= left || distance < right) {break;}
+                int seat = interval[0] + distance;
                 pq.poll();
-                pq.offer(new int[] {p[0], p[0] + d / 2});
-                pq.offer(new int[] {p[0] + d / 2, p[1]});
-                seats.add(p[0] + d / 2);
-                return p[0] + d / 2;
+                pq.offer(new int[] {interval[0], seat});
+                pq.offer(new int[] {seat, interval[1]});
+                seatSet.add(seat);
+                return seat;
             }
-            pq.poll(); // leave 函数中延迟删除的区间在此时删除
+            pq.poll();
         }
-        if (right > left) { // 最右的位置更优
-            pq.offer(new int[] {seats.last(), n - 1});
-            seats.add(n - 1);
-            return n - 1;
-        } else {
-            pq.offer(new int[] {0, seats.first()});
-            seats.add(0);
+        if (left >= right) {
+            pq.offer(new int[] {0, left});
+            seatSet.add(0);
             return 0;
         }
+        pq.offer(new int[] {seatSet.last(), n - 1});
+        seatSet.add(n - 1);
+        return n - 1;
     }
 
     public void leave(int p) {
-        if (p != seats.first() && p != seats.last()) {
-            int prev = seats.lower(p), next = seats.higher(p);
-            pq.offer(new int[] {prev, next});
+        if (seatSet.first() != p && seatSet.last() != p) {
+            pq.offer(new int[] {seatSet.lower(p), seatSet.higher(p)});
         }
-        seats.remove(p);
+        seatSet.remove(p);
+    }
+
+    public static void main(String[] args) {
+        ExamRoom er = new ExamRoom(10);
+        System.out.println(er.seat());
+        System.out.println(er.seat());
+        System.out.println(er.seat());
+        er.leave(0);
+        er.leave(4);
     }
 }
