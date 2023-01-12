@@ -26,6 +26,37 @@ import java.util.Set;
  * @date 2020/8/27 22:25
  */
 public class CrackSafe {
+    class Solution {
+        private int k;
+        private int mask;
+        private char[] ans;
+        private boolean[] visited;
+        private int i;
+
+        public String crackSafe(int n, int k) {
+            int total = (int)Math.pow(k, n);
+            this.k = k;
+            this.mask = total / k;
+            this.ans = new char[total + n - 1];
+            this.visited = new boolean[total];
+            this.i = 0;
+            dfs(0);
+            while (i < ans.length) {ans[i++] = '0';}
+            return new String(ans);
+        }
+
+        private void dfs(int node) {
+            for (int x = 0; x < k; x++) {
+                int next = node * k + x;
+                if (!visited[next]) {
+                    visited[next] = true;
+                    dfs(next % mask);
+                    ans[i++] = (char)(x + '0');
+                }
+            }
+        }
+    }
+
     private char[] res;
     private boolean[] visited;
     private int len;
@@ -35,7 +66,7 @@ public class CrackSafe {
     完全相同的数字组成的节点，出度和入度都为k-1，其它节点出度和入度都为k
      */
     public String crackSafe2(int n, int k) {
-        int count = (int) Math.pow(k, n), i = 0;
+        int count = (int)Math.pow(k, n), i = 0;
         this.k = k;
         len = count + (n - 1);
         res = new char[len];
@@ -58,10 +89,10 @@ public class CrackSafe {
         nodeIndex *= k;
         for (i = 0; i < k; i++) {
             if (!visited[nodeIndex + i]) {
-                res[index] = (char) (i + '0');
+                res[index] = (char)(i + '0');
                 visited[nodeIndex + i] = true;
                 String r = helper(start + 1, index + 1);
-                if (r != null) return r;
+                if (r != null) {return r;}
                 visited[nodeIndex + i] = false;
             }
         }
@@ -79,13 +110,12 @@ public class CrackSafe {
     StringBuilder ans;
 
     public String crackSafe(int n, int k) {
-        if (n == 1 && k == 1) return "0";
+        if (n == 1 && k == 1) {return "0";}
         seen = new HashSet<>();
         ans = new StringBuilder();
 
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < n - 1; ++i)
-            sb.append("0");
+        for (int i = 0; i < n - 1; ++i) {sb.append("0");}
         String start = sb.toString();
 
         dfs(start, k);
