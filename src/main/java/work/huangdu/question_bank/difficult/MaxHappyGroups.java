@@ -27,9 +27,11 @@ public class MaxHappyGroups {
             counts[group % batchSize]++;
         }
         int ans = counts[0];
-        for (int k = 2, n = groups.length; k < n; k++) {
-            while (backtrack(batchSize, counts, 0, k, 0)) {
-                ans++;
+        for (int times = 1, n = groups.length; times < n; times++) {
+            for (int k = 2; k < n; k++) {
+                while (backtrack(batchSize, times, counts, 0, k, 0)) {
+                    ans++;
+                }
             }
         }
         for (int i = 1; i < batchSize; i++) {
@@ -40,19 +42,19 @@ public class MaxHappyGroups {
         return ans;
     }
 
-    private boolean backtrack(int batchSize, int[] counts, int sum, int k, int i) {
+    private boolean backtrack(int batchSize, int times, int[] counts, int sum, int k, int i) {
         if (i == k) {
-            return sum == batchSize;
+            return sum == batchSize * times;
         }
         for (int num = 1; num < batchSize; num++) {
             if (counts[num] == 0) {
                 continue;
             }
-            if (sum + num > batchSize) {
+            if (sum + num > batchSize * times) {
                 break;
             }
             counts[num]--;
-            if (backtrack(batchSize, counts, sum + num, k, i + 1)) {
+            if (backtrack(batchSize, times, counts, sum + num, k, i + 1)) {
                 return true;
             }
             counts[num]++;
