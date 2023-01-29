@@ -1,5 +1,9 @@
 package work.huangdu.question_bank.difficult;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 1815. 得到新鲜甜甜圈的最多组数
  * 有一个甜甜圈商店，每批次都烤 batchSize 个甜甜圈。这个店铺有个规则，就是在烤一批新的甜甜圈时，之前 所有 甜甜圈都必须已经全部销售完毕。给你一个整数 batchSize 和一个整数数组 groups ，数组中的每个整数都代表一批前来购买甜甜圈的顾客，其中 groups[i] 表示这一批顾客的人数。每一位顾客都恰好只要一个甜甜圈。
@@ -26,47 +30,38 @@ public class MaxHappyGroups {
         for (int group : groups) {
             counts[group % batchSize]++;
         }
-        int ans = counts[0];
-        for (int times = 1, n = groups.length; times < n; times++) {
-            for (int k = 2; k < n; k++) {
-                while (backtrack(batchSize, times, counts, 0, k, 0)) {
-                    ans++;
+        Map<Long, Integer> memo = new HashMap<>();
+        memo.put(0L, 0);
+        for (int k = 0, n = groups.length; k < n; k++) {
+            Map<Long, Integer> newMemo = new HashMap<>();
+            for (int num = 0; num < batchSize; num++) {
+                if (counts[num] == 0) {continue;}
+                for (long status : memo.keySet()) {
+                    int sum = sum(status);
+                    long curCount = status >> num * 5 & 31;
+                    if (curCount < counts[num]) {
+                        long newStatus = status & (Long.MAX_VALUE ^ 31L << num * 5) | curCount + 1 << num * 5;
+                        newMemo.put(newStatus, Math.max(newMemo.getOrDefault(newStatus, 0), memo.get(status) + (sum % batchSize == 0 ? 1 : 0)));
+                    }
                 }
             }
+            memo = newMemo;
         }
-        for (int i = 1; i < batchSize; i++) {
-            if (counts[i] > 0) {
-                return ans + 1;
-            }
-        }
-        return ans;
+        return new ArrayList<>(memo.values()).get(0);
     }
 
-    private boolean backtrack(int batchSize, int times, int[] counts, int sum, int k, int i) {
-        if (i == k) {
-            return sum == batchSize * times;
-        }
-        for (int num = 1; num < batchSize; num++) {
-            if (counts[num] == 0) {
-                continue;
-            }
-            if (sum + num > batchSize * times) {
-                break;
-            }
-            counts[num]--;
-            if (backtrack(batchSize, times, counts, sum + num, k, i + 1)) {
-                return true;
-            }
-            counts[num]++;
-        }
-        return false;
+    private int sum(long status) {
+        int sum = 0, num = 1;
+        do {
+            sum += num++ * ((status >>= 5) & 31);
+        } while (status > 0);
+        return sum;
     }
 
     public static void main(String[] args) {
-        // TODO 做失败了
         MaxHappyGroups mhg = new MaxHappyGroups();
-        int batchSize = 7;
-        int[] groups = {2, 7, 5, 2, 3, 2, 6, 5, 3, 6, 2, 3, 7, 2, 2, 5, 4, 6, 6, 4, 7, 5, 6, 1, 6, 2, 6, 6, 2, 5};
+        int batchSize = 4;
+        int[] groups = {1, 3, 2, 5, 2, 2, 1, 6};
         System.out.println(mhg.maxHappyGroups(batchSize, groups));
     }
 }
