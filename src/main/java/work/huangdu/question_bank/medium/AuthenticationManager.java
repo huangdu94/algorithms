@@ -1,9 +1,9 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.Comparator;
+import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * 1797. 设计一个验证系统
@@ -49,12 +49,12 @@ import java.util.PriorityQueue;
 public class AuthenticationManager {
     private final int timeToLive;
     private final Map<String, Integer> map;
-    private final PriorityQueue<Object[]> queue;
+    private final Queue<Object[]> queue;
 
     public AuthenticationManager(int timeToLive) {
         this.timeToLive = timeToLive;
         this.map = new HashMap<>();
-        this.queue = new PriorityQueue<>(Comparator.comparingInt(o -> (Integer)o[1]));
+        this.queue = new ArrayDeque<>();
     }
 
     public void generate(String tokenId, int currentTime) {
