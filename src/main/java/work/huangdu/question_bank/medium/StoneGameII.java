@@ -29,7 +29,8 @@ public class StoneGameII {
         int sum = 0;
         for (int pile : piles) {sum += pile;}
         Map<Integer, Integer> memo = new HashMap<>();
-        return (sum + select(piles, 1, 0, memo)) / 2;
+        int ans = (sum + select(piles, 1, 0, memo)) / 2;
+        return ans;
     }
 
     private int select(int[] piles, int m, int cur, Map<Integer, Integer> memo) {
@@ -47,56 +48,77 @@ public class StoneGameII {
     }
 
     public static void main(String[] args) {
-        int[] piles = {2, 7, 9, 4, 4};
+        int[] piles = {9, 2, 2, 8, 3, 7, 9, 9};
         StoneGameII sg2 = new StoneGameII();
         System.out.println(sg2.stoneGameII(piles));
     }
 
     // 超时
-    class Solution1 {
+    static class Solution1 {
         public int stoneGameII(int[] piles) {
-            int n = piles.length;
-            return select(piles, 1, 0, 0)[0];
+            Map<Integer, int[]> memo = new HashMap<>();
+            int ans = select(piles, 1, 0, 0, memo)[0];
+            return ans;
         }
 
-        private int[] select(int[] piles, int m, int cur, int turn) {
+        private int[] select(int[] piles, int m, int cur, int turn, Map<Integer, int[]> memo) {
             if (cur == piles.length) {return new int[] {0, 0};}
+            int key = m * 200 + cur * 2 + turn;
+            if (memo.containsKey(key)) {return memo.get(key);}
             int max = 0, sum = 0;
-            int[] result = null;
+            int[] result = {0, 0};
             for (int i = cur; i < Math.min(2 * m + cur, piles.length); i++) {
                 sum += piles[i];
-                int[] temp = select(piles, Math.max(m, i - cur + 1), i + 1, turn + 1);
-                if (max < sum + temp[turn & 1]) {
-                    max = sum + temp[turn & 1];
-                    result = temp;
+                int[] temp = select(piles, Math.max(m, i - cur + 1), i + 1, (turn + 1) & 1, memo);
+                if (max < sum + temp[turn]) {
+                    max = sum + temp[turn];
+                    result[turn] = max;
+                    result[turn ^ 1] = temp[turn ^ 1];
                 }
             }
-            result[turn & 1] = max;
+            memo.put(key, result);
             return result;
+        }
+
+        public static void main(String[] args) {
+            int[] piles = {9, 2, 2, 8, 3, 7, 9, 9};
+            StoneGameII.Solution1 sg2 = new StoneGameII.Solution1();
+            System.out.println(sg2.stoneGameII(piles));
         }
     }
 
     // 超时
-    class Solution2 {
+    static class Solution2 {
         public int stoneGameII(int[] piles) {
             int sum = 0;
             for (int pile : piles) {sum += pile;}
-            return (sum + select(piles, 1, 0, 0)) / 2;
+            Map<Integer, Integer> memo = new HashMap<>();
+            int ans = (sum + select(piles, 1, 0, 0, memo)) / 2;
+            return ans;
         }
 
-        private int select(int[] piles, int m, int cur, int turn) {
+        private int select(int[] piles, int m, int cur, int turn, Map<Integer, Integer> memo) {
             if (cur == piles.length) {return 0;}
+            int key = m * 200 + cur * 2 + turn;
+            if (memo.containsKey(key)) {return memo.get(key);}
             int result = turn == 0 ? Integer.MIN_VALUE : Integer.MAX_VALUE, sum = 0;
             for (int i = cur; i < Math.min(2 * m + cur, piles.length); i++) {
                 sum += piles[i];
-                int score = select(piles, Math.max(m, i - cur + 1), i + 1, (turn + 1) % 2);
+                int score = select(piles, Math.max(m, i - cur + 1), i + 1, (turn + 1) % 2, memo);
                 if (turn == 0) {
                     result = Math.max(result, sum + score);
                 } else {
                     result = Math.min(result, score - sum);
                 }
             }
+            memo.put(key, result);
             return result;
+        }
+
+        public static void main(String[] args) {
+            int[] piles = {9, 2, 2, 8, 3, 7, 9, 9};
+            StoneGameII.Solution2 sg2 = new StoneGameII.Solution2();
+            System.out.println(sg2.stoneGameII(piles));
         }
     }
 }
