@@ -31,6 +31,19 @@ package work.huangdu.question_bank.difficult;
  */
 public class MinTaps {
     public int minTaps(int n, int[] ranges) {
-        return -1;
+        int[] mark = new int[n];
+        for (int i = 0; i <= n; i++) {
+            int range = ranges[i], far = Math.min(n, i + range);
+            for (int j = Math.max(0, i - range); j < far; j++) {
+                mark[j] = Math.max(mark[j], far);
+            }
+        }
+        int start = 0, ans = 0;
+        while (start < n) {
+            if (start == mark[start] || mark[start] == 0) {return -1;}
+            start = mark[start];
+            ans++;
+        }
+        return ans;
     }
 }
