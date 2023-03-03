@@ -51,6 +51,26 @@ public class GetFolderNames {
     public String[] getFolderNames(String[] names) {
         int n = names.length;
         String[] ans = new String[n];
+        Map<String, Integer> nameIndexMap = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            String name = names[i];
+            if (nameIndexMap.containsKey(name)) {
+                int index = nameIndexMap.get(name);
+                while (nameIndexMap.containsKey(name + "(" + index + ")")) {index++;}
+                ans[i] = name + "(" + index + ")";
+                nameIndexMap.put(ans[i], 1);
+                nameIndexMap.put(name, index + 1);
+            } else {
+                nameIndexMap.put(name, 1);
+                ans[i] = name;
+            }
+        }
+        return ans;
+    }
+
+    public String[] getFolderNames2(String[] names) {
+        int n = names.length;
+        String[] ans = new String[n];
         Set<String> nameSet = new HashSet<>();
         Map<String, Set<Integer>> prefixSetMap = new HashMap<>();
         for (int i = 0; i < n; i++) {
