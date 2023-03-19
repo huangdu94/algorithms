@@ -3,10 +3,8 @@ package work.huangdu.question_bank.difficult;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Queue;
-import java.util.Set;
 
 /**
  * 1617. 统计子树中城市之间最大距离
@@ -47,42 +45,41 @@ public class CountSubgraphsForEachDiameter {
             edgeList[edge[0] - 1].add(edge[1] - 1);
             edgeList[edge[1] - 1].add(edge[0] - 1);
         }
-        Set<Integer> citySet = new HashSet<>(), visited = new HashSet<>();
         Queue<Integer> queue = new ArrayDeque<>();
         for (int status = 1, limit = 1 << n; status < limit; status++) {
             if ((status & (status - 1)) == 0) {continue;}
             // 1. 枚举可能的子树节点里列表
-            int start = 0, end = 0;
+            int mask = status, start = 0, cur = 0;
             for (int i = 0; i < n; i++) {
                 if ((status & (1 << i)) != 0) {
                     start = i;
-                    citySet.add(i);
+                    break;
                 }
             }
             // 2. 判断是否连通
             queue.offer(start);
-            visited.add(start);
+            mask &= ~(1 << start);
             while (!queue.isEmpty()) {
-                int cur = queue.poll();
-                end = cur;
+                cur = queue.poll();
                 for (int next : edgeList[cur]) {
-                    if (citySet.contains(next) && visited.add(next)) {
+                    if ((mask & (1 << next)) != 0) {
+                        mask &= ~(1 << next);
                         queue.offer(next);
                     }
                 }
             }
-            if (visited.size() == citySet.size()) {
+            if (mask == 0) {
                 // 3. 求最大距离
-                visited.clear();
-                queue.offer(end);
-                visited.add(end);
+                queue.offer(cur);
+                mask = status & ~(1 << cur);
                 int maxLen = -1;
                 while (!queue.isEmpty()) {
                     int size = queue.size();
                     for (int i = 0; i < size; i++) {
-                        int cur = queue.remove();
+                        cur = queue.remove();
                         for (int next : edgeList[cur]) {
-                            if (citySet.contains(next) && visited.add(next)) {
+                            if ((mask & (1 << next)) != 0) {
+                                mask &= ~(1 << next);
                                 queue.offer(next);
                             }
                         }
@@ -91,8 +88,6 @@ public class CountSubgraphsForEachDiameter {
                 }
                 ans[maxLen - 1]++;
             }
-            citySet.clear();
-            visited.clear();
         }
         return ans;
     }
