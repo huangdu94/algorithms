@@ -41,10 +41,66 @@ import java.util.Queue;
  * @date 2023/3/24
  */
 public class StreamChecker {
+    // AC自动机
+    private TrieNode cur;
+
+    public StreamChecker(String[] words) {
+        TrieNode root = new TrieNode();
+        this.cur = root;
+        for (String word : words) {
+            TrieNode cur = root;
+            for (int i = 0, n = word.length(); i < n; i++) {
+                int ch = word.charAt(i) - 'a';
+                if (cur.child[ch] == null) {
+                    cur.child[ch] = new TrieNode();
+                }
+                cur = cur.child[ch];
+            }
+            cur.end = true;
+        }
+        root.fail = root;
+        Queue<TrieNode> queue = new ArrayDeque<>();
+        for (int i = 0; i < 26; i++) {
+            if (root.child[i] == null) {
+                root.child[i] = root;
+            } else {
+                root.child[i].fail = root;
+                queue.offer(root.child[i]);
+            }
+        }
+        while (!queue.isEmpty()) {
+            for (int k = 0, size = queue.size(); k < size; k++) {
+                TrieNode node = queue.remove();
+                node.end |= node.fail.end;
+                for (int i = 0; i < 26; i++) {
+                    if (node.child[i] == null) {
+                        node.child[i] = node.fail.child[i];
+                    } else {
+                        node.child[i].fail = node.fail.child[i];
+                        queue.offer(node.child[i]);
+                    }
+                }
+            }
+        }
+    }
+
+    public boolean query(char letter) {
+        cur = cur.child[letter - 'a'];
+        return cur.end;
+    }
+
+    static class TrieNode {
+        TrieNode[] child = new TrieNode[26];
+        boolean end = false;
+        TrieNode fail;
+    }
+}
+
+class StreamChecker2 {
     private final TrieNode root;
     private final Queue<TrieNode> queue;
 
-    public StreamChecker(String[] words) {
+    public StreamChecker2(String[] words) {
         this.root = new TrieNode();
         this.queue = new ArrayDeque<>();
         for (String word : words) {insert(word);}
