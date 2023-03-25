@@ -30,30 +30,20 @@ package work.huangdu.question_bank.medium;
  */
 public class FindLengthOfShortestSubarray {
     public int findLengthOfShortestSubarray(int[] arr) {
-        int n = arr.length;
-        if (n == 1) {return 0;}
-        int left = 0;
-        while (left + 1 < n && arr[left] <= arr[left + 1]) {left++;}
-        if (left == n - 1) {return 0;}
-        int right = n;
-        while (right > left && arr[right - 1] <= arr(arr, right) && arr[right - 1] >= arr[left]) {right--;}
-        int ans = right - left - 1;
-        for (int i = left - 1; i >= -1; i--) {
-            int leftVal = arr(arr, i);
-            while (right > left && arr[right - 1] <= arr(arr, right) && arr[right - 1] >= leftVal) {right--;}
-            ans = Math.min(ans, right - i - 1);
+        int n = arr.length, i = 0;
+        while (i + 1 < n && arr[i] <= arr[i + 1]) {i++;}
+        if (i == n - 1) {return 0;}
+        int ans = n - i - 1;
+        for (int j = n - 1; j >= 0; j--) {
+            while (i >= 0 && arr[i] > arr[j]) {i--;}
+            ans = Math.min(ans, j - i - 1);
+            if (arr[j - 1] > arr[j]) {break;}
         }
         return ans;
     }
 
-    private int arr(int[] arr, int i) {
-        if (i == -1) {return -1;}
-        if (i == arr.length) {return 1000000001;}
-        return arr[i];
-    }
-
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 10, 4, 2, 3, 5};
+        int[] arr = {5, 4, 3, 2, 1};
         FindLengthOfShortestSubarray floss = new FindLengthOfShortestSubarray();
         System.out.println(floss.findLengthOfShortestSubarray(arr));
     }
