@@ -35,7 +35,7 @@ public class Solution338 {
      * 0 <= k <= numOnes + numZeros + numNegOnes
      */
     public int kItemsWithMaximumSum(int numOnes, int numZeros, int numNegOnes, int k) {
-        if (numOnes >= k) {return k;}
+        if (numOnes > k) {return k;}
         if (numOnes + numZeros >= k) {return numOnes;}
         return numOnes - (k - numOnes - numZeros);
     }
@@ -91,7 +91,7 @@ public class Solution338 {
     }
 
     /**
-     * 6357. 使数组元素全部相等的最少操作次数 显示英文描述
+     * 6357. 使数组元素全部相等的最少操作次数
      * 给你一个正整数数组 nums 。
      * 同时给你一个长度为 m 的整数数组 queries 。第 i 个查询中，你需要将 nums 中所有元素变成 queries[i] 。你可以执行以下操作 任意 次：
      * 将数组里一个元素 增大 或者 减小 1 。
@@ -130,30 +130,29 @@ public class Solution338 {
             prefixSum[i + 1] = prefixSum[i] + nums[i];
         }
         for (long query : queries) {
-            if (query < nums[0]) {
+            if (query <= nums[0]) {
                 ans.add(prefixSum[n] - query * n);
-            } else if (query > nums[n - 1]) {
+            } else if (query >= nums[n - 1]) {
                 ans.add(query * n - prefixSum[n]);
             } else {
                 int result = binarySearch(nums, query);
-                ans.add(query * (result + 1) - (prefixSum[result + 1] - prefixSum[0]) + (prefixSum[n] - prefixSum[result + 1]) - query * (n - result - 1));
+                ans.add(query * result - (prefixSum[result] - prefixSum[0]) + (prefixSum[n] - prefixSum[result]) - query * (n - result));
             }
         }
         return ans;
     }
 
     private int binarySearch(int[] nums, long query) {
-        int left = 0, right = nums.length - 1, result = 0;
-        while (left <= right) {
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
             int mid = left + (right - left >> 1);
             if (nums[mid] > query) {
-                right = mid - 1;
+                right = mid;
             } else {
-                result = mid;
                 left = mid + 1;
             }
         }
-        return result;
+        return left;
     }
 
     /**
@@ -188,6 +187,7 @@ public class Solution338 {
 
     public static void main(String[] args) {
         Solution338 solution338 = new Solution338();
-
+        int[] nums = {47, 50, 97, 58, 87, 72, 41, 63, 41, 51, 17, 21, 7, 100, 69, 66, 79, 92, 84, 9, 57, 26, 26, 28, 83, 38};
+        System.out.println(solution338.minOperations(nums, new int[] {76}));
     }
 }
