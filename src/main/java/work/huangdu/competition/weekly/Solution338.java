@@ -1,8 +1,10 @@
 package work.huangdu.competition.weekly;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * 第338场周赛
@@ -182,7 +184,54 @@ public class Solution338 {
      * edges 表示一棵合法的树。
      */
     public int collectTheCoins(int[] coins, int[][] edges) {
-        return -1;
+        int n = coins.length;
+        List<Integer>[] graph = new List[n];
+        int[] degree = new int[n];
+        Arrays.setAll(graph, (o) -> new ArrayList<>());
+        for (int[] edge : edges) {
+            int x = edge[0], y = edge[1];
+            graph[x].add(y);
+            graph[y].add(x);
+            degree[x]++;
+            degree[y]++;
+        }
+        Queue<Integer> queue = new ArrayDeque<>();
+        for (int i = 0; i < n; i++) {
+            if (degree[i] == 1 && coins[i] == 0) {
+                queue.offer(i);
+            }
+        }
+        while (!queue.isEmpty()) {
+            int cur = queue.poll();
+            for (int next : graph[cur]) {
+                if (--degree[next] == 1 && coins[next] == 0) {
+                    queue.offer(next);
+                }
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            if (degree[i] == 1 && coins[i] == 1) {
+                queue.offer(i);
+            }
+        }
+        if (queue.size() == 1) {return 0;}
+        int[] len = new int[n];
+        while (!queue.isEmpty()) {
+            int cur = queue.poll();
+            for (int next : graph[cur]) {
+                if (--degree[next] == 1) {
+                    queue.offer(next);
+                    len[next] = len[cur] + 1;
+                }
+            }
+        }
+        int ans = 0;
+        for (int[] edge : edges) {
+            if (len[edge[0]] >= 2 && len[edge[1]] >= 2) {
+                ans += 2;
+            }
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
