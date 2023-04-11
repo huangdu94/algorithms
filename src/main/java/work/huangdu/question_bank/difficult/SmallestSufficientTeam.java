@@ -106,4 +106,56 @@ public class SmallestSufficientTeam {
         SmallestSufficientTeam sst = new SmallestSufficientTeam();
         System.out.println(Arrays.toString(sst.smallestSufficientTeam(req_skills, people)));
     }
+
+    static class Solution {
+        private int n;
+        private int allSkill;
+        private int allPeople;
+        private int[] mask;
+        private long[][] memo;
+
+        public int[] smallestSufficientTeam(String[] req_skills, List<List<String>> people) {
+            int m = req_skills.length;
+            this.n = people.size();
+            this.allSkill = (1 << m) - 1;
+            this.allPeople = (1 << n) - 1;
+            Map<String, Integer> map = new HashMap<>(m);
+            for (int i = 0; i < m; i++) {
+                map.put(req_skills[i], i);
+            }
+            this.mask = new int[n];
+            for (int i = 0; i < n; i++) {
+                for (String skill : people.get(i)) {
+                    mask[i] |= 1 << map.get(skill);
+                }
+            }
+            this.memo = new long[n][1 << m];
+            long selected = dfs(0, 0);
+            int len = Long.bitCount(selected);
+            int[] ans = new int[len];
+            for (int i = 0, idx = 0; i < 64 && idx < len; i++) {
+                if ((selected & (1L << i)) != 0) {
+                    ans[idx++] = i;
+                }
+            }
+            return ans;
+        }
+
+        private long dfs(int i, int j) {
+            if (j == allSkill) {return 0;}
+            if (i == n) {return allPeople;}
+            if (memo[i][j] != 0) {return memo[i][j];}
+            long result1 = dfs(i + 1, j);
+            long result2 = dfs(i + 1, j | mask[i]) | (1L << i);
+            memo[i][j] = Long.bitCount(result1) < Long.bitCount(result2) ? result1 : result2;
+            return memo[i][j];
+        }
+
+        public static void main(String[] args) {
+            String[] req_skills = {"java", "nodejs", "reactjs"};
+            List<List<String>> people = Arrays.asList(Arrays.asList("java"), Arrays.asList("nodejs"), Arrays.asList("nodejs", "reactjs"));
+            SmallestSufficientTeam.Solution solution = new SmallestSufficientTeam.Solution();
+            System.out.println(Arrays.toString(solution.smallestSufficientTeam(req_skills, people)));
+        }
+    }
 }
