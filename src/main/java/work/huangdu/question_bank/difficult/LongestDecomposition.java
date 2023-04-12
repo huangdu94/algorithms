@@ -30,9 +30,8 @@ public class LongestDecomposition {
     private String text;
 
     public int longestDecomposition(String text) {
-        int n = text.length();
         this.text = text;
-        return dfs(0, n);
+        return dfs(0, text.length());
     }
 
     private int dfs(int left, int right) {
