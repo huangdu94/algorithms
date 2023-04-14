@@ -53,4 +53,24 @@ public class LargeGroupPositions {
         }
         return result;
     }
+
+    public List<List<Integer>> largeGroupPositions2(String s) {
+        List<List<Integer>> ans = new ArrayList<>();
+        int n = s.length(), start = -1, end = -1;
+        char cur = '\000';
+        for (int i = 0; i < n; i++) {
+            char ch = s.charAt(i);
+            if (ch == cur) {
+                end = i;
+            }
+            if (i == n - 1 || ch != cur) {
+                if (end - start + 1 >= 3) {
+                    ans.add(Arrays.asList(start, end));
+                }
+                start = end = i;
+                cur = ch;
+            }
+        }
+        return ans;
+    }
 }
