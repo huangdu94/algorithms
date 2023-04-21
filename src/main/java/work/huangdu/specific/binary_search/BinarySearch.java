@@ -16,6 +16,8 @@ public class BinarySearch {
     // 如果数组为空，或者所有数都 < target，则返回 nums.length
     // 要求 nums 是非递减的，即 nums[i] <= nums[i + 1]
 
+    // 以下写法都是等价的，选一种就好了
+
     // 闭区间写法
     private int lowerBound(int[] nums, int target) {
         int left = 0, right = nums.length - 1; // 闭区间 [left, right]
