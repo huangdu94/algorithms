@@ -16,20 +16,44 @@ package work.huangdu.exploration.intermediate_algorithms.dynamic;
  * @date 2020/7/20 17:31
  */
 public class LengthOfLIS {
+    public int lengthOfLIS(int[] nums) {
+        int ans = 0, n = nums.length;
+        for (int i = 0; i < n; i++) {
+            int idx = lowBound(nums, ans, nums[i]);
+            nums[idx] = nums[i];
+            if (idx == ans) {
+                ans++;
+            }
+        }
+        return ans;
+    }
+
+    private int lowBound(int[] nums, int len, int target) {
+        int left = 0, right = len - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return left;
+    }
 
     /**
      * 最长上升子序列
      */
-    public int lengthOfLIS(int[] nums) {
-        if (nums == null) { return 0; }
+    public int lengthOfLIS2(int[] nums) {
+        if (nums == null) {return 0;}
         int len = nums.length;
-        if (len < 2) { return len; }
+        if (len < 2) {return len;}
         int[] dp = new int[len];
         dp[0] = nums[0];
         int lis = 1;
         for (int i = 1; i < len; i++) {
             int cur = nums[i];
-            if (cur > dp[lis - 1]) { dp[lis++] = cur; } else if (cur < dp[lis - 1]) {
+            if (cur > dp[lis - 1]) {dp[lis++] = cur;} else if (cur < dp[lis - 1]) {
                 /*int k;
                 for (k = lis - 2; k >= 0 && dp[k] >= cur; k--) ;*/
                 int k = findK(dp, 0, lis - 1, cur);
@@ -43,16 +67,16 @@ public class LengthOfLIS {
      * 二分法找到k的位置(k的位置保证 dp[k-1] < cur < dp[k])
      */
     private int findK(int[] dp, int l, int r, int cur) {
-        if (l == r) { return l; }
+        if (l == r) {return l;}
         int mid = (l + r) / 2;
-        if (dp[mid] < cur) { return findK(dp, mid + 1, r, cur); } else { return findK(dp, l, mid, cur); }
+        if (dp[mid] < cur) {return findK(dp, mid + 1, r, cur);} else {return findK(dp, l, mid, cur);}
     }
 
     /**
      * 最长上升连续子序列
      */
     public int lengthOfLICS(int[] nums) {
-        if (nums == null || nums.length == 0) { return 0; }
+        if (nums == null || nums.length == 0) {return 0;}
         int lisLen = 1;
         int maxLisLen = lisLen;
         for (int i = 1; i < nums.length; i++) {

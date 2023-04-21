@@ -32,6 +32,19 @@ package work.huangdu.question_bank.medium;
  */
 public class FindMin {
     public int findMin(int[] nums) {
+        int n = nums.length, left = 0, right = n - 2;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] > nums[right + 1]) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return nums[left];
+    }
+
+    public int findMin3(int[] nums) {
         int i = 0, j = nums.length - 1;
         while (i < j) {
             if (nums[i] < nums[j]) {break;}
@@ -61,6 +74,6 @@ public class FindMin {
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 3};
-        System.out.println(new FindMin().findMin2(nums));
+        System.out.println(new FindMin().findMin(nums));
     }
 }

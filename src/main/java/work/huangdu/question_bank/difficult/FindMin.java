@@ -40,6 +40,8 @@ public class FindMin {
         return nums[left];
     }
 
+
+
     public int findMin2(int[] nums) {
         int i = 0, j = nums.length - 1;
         while (i < j) {
