@@ -28,6 +28,19 @@ package work.huangdu.question_bank.difficult;
  */
 public class FindMin {
     public int findMin(int[] nums) {
+        int n = nums.length, left = 0, right = n - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] > nums[n - 1]) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return nums[left];
+    }
+
+    public int findMin2(int[] nums) {
         int i = 0, j = nums.length - 1;
         while (i < j) {
             if (nums[i] == nums[j]) {
