@@ -18,7 +18,7 @@ package work.huangdu.question_bank.medium;
  * 题目数据保证 nums 在预先未知的某个下标上进行了旋转
  * -10^4 <= target <= 10^4
  * 进阶：
- * 这是 搜索旋转排序数组 的延伸题目，本题中的 nums  可能包含重复元素。
+ * 这是   搜索旋转排序数组 的延伸题目，本题中的 nums  可能包含重复元素。
  * 这会影响到程序的时间复杂度吗？会有怎样的影响，为什么？
  *
  * @author huangdu.hd@alibaba-inc.com
@@ -26,11 +26,11 @@ package work.huangdu.question_bank.medium;
  */
 public class Search {
     // 二分
-    public boolean search(int[] nums, int target) {
+    public boolean search2(int[] nums, int target) {
         int i = 0, j = nums.length - 1;
         while (i < j) {
             int mid = i + (j - i) / 2;
-            if (nums[mid] == target) { return true; }
+            if (nums[mid] == target) {return true;}
             if (nums[i] == nums[mid] && nums[mid] == nums[j]) {
                 i++;
                 j--;
@@ -54,13 +54,33 @@ public class Search {
     }
 
     // 暴力
-    public boolean search2(int[] nums, int target) {
+    public boolean search3(int[] nums, int target) {
         for (int num : nums) {
             if (num == target) {
                 return true;
             }
         }
         return false;
+    }
+
+    public int search(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (check(nums, target, mid)) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return left == nums.length || nums[left] != target ? -1 : left;
+    }
+
+    private boolean check(int[] nums, int target, int idx) {
+        if (nums[idx] < nums[0] == target < nums[0]) {
+            return nums[idx] < target;
+        }
+        return nums[idx] >= nums[0] && target < nums[0];
     }
 
     public static void main(String[] args) {
