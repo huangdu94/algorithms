@@ -31,6 +31,25 @@ import java.util.Map;
  */
 public class LongestArithSeqLength {
     public int longestArithSeqLength(int[] nums) {
+        int n = nums.length;
+        int ans = 0;
+        Map<Integer, Integer>[] f = new Map[n];
+        f[0] = new HashMap<>(0);
+        for (int i = 1; i < n; i++) {
+            Map<Integer, Integer> result = new HashMap<>();
+            for (int j = i - 1; j >= 0; j--) {
+                int diff = nums[i] - nums[j];
+                if (!result.containsKey(diff)) {
+                    result.put(diff, f[j].getOrDefault(diff, 1) + 1);
+                    ans = Math.max(ans, result.get(diff));
+                }
+            }
+            f[i] = result;
+        }
+        return ans;
+    }
+
+    public int longestArithSeqLength2(int[] nums) {
         int n = nums.length, ans = 0;
         Map<Integer, Map<Integer, Integer>> diffMap = new HashMap<>();
         for (int i = 1; i < n; i++) {
