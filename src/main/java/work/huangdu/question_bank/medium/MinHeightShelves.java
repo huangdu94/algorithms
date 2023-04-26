@@ -27,36 +27,55 @@ package work.huangdu.question_bank.medium;
  * @date 2023/4/23
  */
 public class MinHeightShelves {
-    private int[][] books;
-    private int shelfWidth;
-    private int n;
-    private int[] memo;
+    static class Solution {
+        private int[][] books;
+        private int shelfWidth;
+        private int n;
+        private int[] memo;
+
+        public int minHeightShelves(int[][] books, int shelfWidth) {
+            this.books = books;
+            this.shelfWidth = shelfWidth;
+            this.n = books.length;
+            this.memo = new int[n];
+            return dfs(0);
+        }
+
+        private int dfs(int idx) {
+            if (idx == n) {return 0;}
+            if (memo[idx] != 0) {return memo[idx];}
+            int width = 0, height = 0, ans = Integer.MAX_VALUE, i = idx;
+            while (i < n) {
+                width += books[i][0];
+                height = Math.max(height, books[i][1]);
+                if (width > shelfWidth) {break;}
+                ans = Math.min(ans, height + dfs(++i));
+            }
+            return memo[idx] = ans;
+        }
+
+        public static void main(String[] args) {
+            MinHeightShelves.Solution mhs = new MinHeightShelves.Solution();
+            int[][] books = {{1, 1}, {2, 3}, {2, 3}, {1, 1}, {1, 1}, {1, 1}, {1, 2}};
+            int shelfWidth = 4;
+            System.out.println(mhs.minHeightShelves(books, shelfWidth));
+        }
+    }
 
     public int minHeightShelves(int[][] books, int shelfWidth) {
-        this.books = books;
-        this.shelfWidth = shelfWidth;
-        this.n = books.length;
-        this.memo = new int[n];
-        return dfs(0);
-    }
-
-    private int dfs(int idx) {
-        if (idx == n) {return 0;}
-        if (memo[idx] != 0) {return memo[idx];}
-        int width = 0, height = 0, ans = Integer.MAX_VALUE, i = idx;
-        while (i < n) {
-            width += books[i][0];
-            height = Math.max(height, books[i][1]);
-            if (width > shelfWidth) {break;}
-            ans = Math.min(ans, height + dfs(++i));
+        int n = books.length;
+        int[] f = new int[n + 1];
+        f[n] = 0;
+        for (int i = n - 1; i >= 0; i--) {
+            int width = 0, height = 0, ans = Integer.MAX_VALUE, j = i;
+            while (j < n) {
+                width += books[j][0];
+                height = Math.max(height, books[j][1]);
+                if (width > shelfWidth) {break;}
+                ans = Math.min(ans, height + f[++j]);
+            }
+            f[i] = ans;
         }
-        return memo[idx] = ans;
-    }
-
-    public static void main(String[] args) {
-        MinHeightShelves mhs = new MinHeightShelves();
-        int[][] books = {{1, 1}, {2, 3}, {2, 3}, {1, 1}, {1, 1}, {1, 1}, {1, 2}};
-        int shelfWidth = 4;
-        System.out.println(mhs.minHeightShelves(books, shelfWidth));
+        return f[0];
     }
 }
