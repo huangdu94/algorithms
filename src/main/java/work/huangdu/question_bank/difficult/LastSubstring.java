@@ -18,7 +18,23 @@ package work.huangdu.question_bank.difficult;
  * @date 2023/4/26
  */
 public class LastSubstring {
+    // TODO 没理解
     public String lastSubstring(String s) {
-        return null;
+        int n = s.length(), i = 0, j = 1, k = 0;
+        while (j + k < n) {
+            while (j + k < n && s.charAt(i + k) == s.charAt(j + k)) {
+                k++;
+            }
+            if (j + k < n) {
+                if (s.charAt(i + k) < s.charAt(j + k)) {
+                    i = i + k + 1;
+                    if (i >= j) {j = i + 1;}
+                } else {
+                    j++;
+                }
+                k = 0;
+            }
+        }
+        return s.substring(i);
     }
 }
