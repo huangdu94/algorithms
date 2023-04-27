@@ -18,7 +18,6 @@ package work.huangdu.question_bank.difficult;
  * @date 2023/4/26
  */
 public class LastSubstring {
-    // TODO 没理解
     public String lastSubstring(String s) {
         int n = s.length(), i = 0, j = 1, k = 0;
         while (j + k < n) {
@@ -30,7 +29,7 @@ public class LastSubstring {
                     i = i + k + 1;
                     if (i >= j) {j = i + 1;}
                 } else {
-                    j++;
+                    j = j + k + 1;
                 }
                 k = 0;
             }
