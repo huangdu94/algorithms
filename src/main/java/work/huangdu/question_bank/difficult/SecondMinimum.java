@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
-import work.huangdu.test.DataUtil;
-
 /**
  * 2045. 到达目的地的第二短时间
  * 城市用一个 双向连通 图表示，图中有 n 个节点，从 1 到 n 编号（包含 1 和 n）。图中的边用一个二维整数数组 edges 表示，其中每个 edges[i] = [ui, vi] 表示一条节点 ui 和节点 vi 之间的双向连通边。每组节点对由 最多一条 边连通，顶点不存在连接到自身的边。穿过任意一条边的时间是 time 分钟。
@@ -93,15 +91,5 @@ public class SecondMinimum {
             }
             length++;
         }
-    }
-
-    public static void main(String[] args) {
-        SecondMinimum sm = new SecondMinimum();
-        int n = 520;
-        int[][] edges = DataUtil.twoDimensionalArray("data.txt");
-        int time = 946;
-        int change = 183;
-        // 3142
-        System.out.println(sm.secondMinimum(n, edges, time, change));
     }
 }
