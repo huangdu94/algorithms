@@ -21,7 +21,7 @@ package work.huangdu.question_bank.difficult;
  */
 public class MaxValueAfterReverse {
     // TODO 数学推导
-    public int maxValueAfterReverse(int[] nums) {
+    public int maxValueAfterReverse2(int[] nums) {
         int base = 0, d = 0, n = nums.length;
         int mx = Integer.MIN_VALUE, mn = Integer.MAX_VALUE;
         for (int i = 1; i < n; i++) {
