@@ -32,21 +32,21 @@ public class DelNodes {
         List<TreeNode> ans = new ArrayList<>();
         Set<Integer> deleteSet = new HashSet<>(to_delete.length);
         for (int node : to_delete) {deleteSet.add(node);}
-        if (!deleteSet.contains(root.val)) {ans.add(root);}
-        dfs(ans, root, deleteSet);
+        if (dfs(ans, root, deleteSet) != null) {ans.add(root);}
         return ans;
     }
 
-    private void dfs(List<TreeNode> ans, TreeNode node, Set<Integer> deleteSet) {
-        if (node == null) {return;}
-        dfs(ans, node.left, deleteSet);
-        dfs(ans, node.right, deleteSet);
+    private TreeNode dfs(List<TreeNode> ans, TreeNode node, Set<Integer> deleteSet) {
+        if (node == null) {return null;}
+        TreeNode left = dfs(ans, node.left, deleteSet);
+        TreeNode right = dfs(ans, node.right, deleteSet);
         if (deleteSet.contains(node.val)) {
-            if (node.left != null && !deleteSet.contains(node.left.val)) {ans.add(node.left);}
-            if (node.right != null && !deleteSet.contains(node.right.val)) {ans.add(node.right);}
-        } else {
-            if (node.left != null && deleteSet.contains(node.left.val)) {node.left = null;}
-            if (node.right != null && deleteSet.contains(node.right.val)) {node.right = null;}
+            if (left != null) {ans.add(node.left);}
+            if (right != null) {ans.add(node.right);}
+            return null;
         }
+        node.left = left;
+        node.right = right;
+        return node;
     }
 }
