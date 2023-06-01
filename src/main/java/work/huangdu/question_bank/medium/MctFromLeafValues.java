@@ -24,7 +24,35 @@ package work.huangdu.question_bank.medium;
  * @date 2023/5/31
  */
 public class MctFromLeafValues {
+    private int[][] max;
+    private int[][] memo;
+
     public int mctFromLeafValues(int[] arr) {
-        return -1;
+        int n = arr.length;
+        this.max = new int[n][n];
+        this.memo = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            max[i][i] = arr[i];
+            for (int j = i + 1; j < n; j++) {
+                max[i][j] = Math.max(max[i][j - 1], arr[j]);
+            }
+        }
+        return dfs(0, n - 1);
+    }
+
+    private int dfs(int i, int j) {
+        if (i == j) {return 0;}
+        if (memo[i][j] != 0) {return memo[i][j];}
+        int min = Integer.MAX_VALUE;
+        for (int k = i; k < j; k++) {
+            min = Math.min(min, max[i][k] * max[k + 1][j] + dfs(i, k) + dfs(k + 1, j));
+        }
+        return memo[i][j] = min;
+    }
+
+    public static void main(String[] args) {
+        MctFromLeafValues mflv = new MctFromLeafValues();
+        int[] arr = {6, 2, 4};
+        System.out.println(mflv.mctFromLeafValues(arr));
     }
 }
