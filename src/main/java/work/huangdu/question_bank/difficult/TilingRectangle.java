@@ -28,66 +28,57 @@ package work.huangdu.question_bank.difficult;
 public class TilingRectangle {
     private int n;
     private int m;
-    private int area;
     private boolean[][] fill;
     private int ans;
 
     public int tilingRectangle(int n, int m) {
         this.n = n;
         this.m = m;
-        this.area = n * m;
-        this.ans = area;
+        this.ans = n * m;
         this.fill = new boolean[n][m];
-        backtrack(0, 0);
+        backtrack(0, 0, 0);
         return ans;
     }
 
-    private void backtrack(int total, int cnt) {
+    private void backtrack(int x, int y, int cnt) {
         if (cnt >= ans) {return;}
-        if (total == area) {
+        if (x >= n) {
             ans = cnt;
             return;
         }
-        int[] coords = find();
-        int i0 = coords[0], j0 = coords[1];
-        for (int k = Math.min(n - i0, m - j0); k > 0; k--) {
-            int i1 = i0 + k, j1 = j0 + k;
-            if (check(i0, j0, i1, j1)) {
-                fill(i0, j0, i1, j1, true);
-                backtrack(total + k * k, cnt + 1);
-                fill(i0, j0, i1, j1, false);
-            }
+        if (y >= m) {
+            backtrack(x + 1, 0, cnt);
+            return;
+        }
+        if (fill[x][y]) {
+            backtrack(x, y + 1, cnt);
+            return;
+        }
+        int k = Math.min(n - x, m - y);
+        while (!check(x, y, k)) {k--;}
+        while (k > 0) {
+            fill(x, y, k, true);
+            backtrack(x, y + k, cnt + 1);
+            fill(x, y, k, false);
+            k--;
         }
     }
 
-    private boolean check(int i0, int j0, int i1, int j1) {
-        for (int i = i0; i < i1; i++) {
-            for (int j = j0; j < j1; j++) {
-                if (fill[i][j]) {
-                    return false;
-                }
+    private boolean check(int x, int y, int k) {
+        for (int i = x + k - 1; i >= x; i--) {
+            for (int j = y + k - 1; j >= y; j--) {
+                if (fill[i][j]) {return false;}
             }
         }
         return true;
     }
 
-    private void fill(int i0, int j0, int i1, int j1, boolean value) {
-        for (int i = i0; i < i1; i++) {
-            for (int j = j0; j < j1; j++) {
+    private void fill(int x, int y, int k, boolean value) {
+        for (int i = x + k - 1; i >= x; i--) {
+            for (int j = y + k - 1; j >= y; j--) {
                 fill[i][j] = value;
             }
         }
-    }
-
-    private int[] find() {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (!fill[i][j]) {
-                    return new int[] {i, j};
-                }
-            }
-        }
-        return null;
     }
 
     public static void main(String[] args) {
