@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.difficult;
+package work.huangdu.question_bank.medium;
 
 import java.util.ArrayList;
 import java.util.List;
