@@ -1,9 +1,6 @@
 package work.huangdu.question_bank.difficult;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * 1494. 并行课程 II
@@ -35,84 +32,36 @@ import java.util.List;
  * @date 2023/6/16
  */
 public class MinNumberOfSemesters {
-    private List<Integer>[] graph;
-    private int[] degree;
     private int n;
     private int k;
     private int full;
+    private int[] pre;
     private int[] memo;
 
     public int minNumberOfSemesters(int n, int[][] relations, int k) {
-        this.graph = new List[n];
-        Arrays.setAll(graph, (o) -> new ArrayList<>());
-        this.degree = new int[n];
-        for (int[] relation : relations) {
-            graph[relation[0] - 1].add(relation[1] - 1);
-            degree[relation[1] - 1]++;
-        }
         this.n = n;
         this.k = k;
         this.full = (1 << n) - 1;
+        this.pre = new int[n];
+        for (int[] relation : relations) {pre[relation[1] - 1] |= 1 << relation[0] - 1;}
         this.memo = new int[1 << n];
-        return dfs(0);
+        Arrays.fill(memo, -1);
+        return dfs(full);
     }
 
-    private int dfs(int visited) {
-        if (memo[visited] != 0) {return memo[visited];}
-        if (visited == full) {return 0;}
+    private int dfs(int status) {
+        if (memo[status] != -1) {return memo[status];}
+        if (status == 0) {return 0;}
+        int complete = full ^ status, option = 0;
+        for (int i = 0; i < n; i++) {
+            if ((status >> i & 1) != 0 && (pre[i] | complete) == complete) {option |= 1 << i;}
+        }
+        if (Integer.bitCount(option) <= k) {return dfs(status ^ option) + 1;}
         int min = n;
-        List<Integer> combines = combine(options(visited));
-        for (int combine : combines) {
-            min = Math.min(min, dfs(select(combine, visited)));
-            unSelect(combine);
+        for (int sub = option; sub > 0; sub = sub - 1 & option) {
+            if (Integer.bitCount(sub) == k) {min = Math.min(min, dfs(status ^ sub));}
         }
-        return memo[visited] = min + 1;
-    }
-
-    private int options(int visited) {
-        int options = 0;
-        for (int i = 0; i < n; i++) {
-            if (degree[i] == 0 && (visited & 1 << i) == 0) {options |= 1 << i;}
-        }
-        return options;
-    }
-
-    private int select(int options, int visited) {
-        for (int i = 0; i < n; i++) {
-            if ((options & 1 << i) == 0) {continue;}
-            visited |= 1 << i;
-            for (int next : graph[i]) {
-                degree[next]--;
-            }
-        }
-        return visited;
-    }
-
-    private void unSelect(int options) {
-        for (int i = 0; i < n; i++) {
-            if ((options & 1 << i) == 0) {continue;}
-            for (int next : graph[i]) {
-                degree[next]++;
-            }
-        }
-    }
-
-    private List<Integer> combine(int options) {
-        if (Integer.bitCount(options) <= k) {return Collections.singletonList(options);}
-        List<Integer> paths = new ArrayList<>();
-        dfs(options, 0, 0, paths);
-        return paths;
-    }
-
-    private void dfs(int options, int start, int path, List<Integer> paths) {
-        if (Integer.bitCount(path) == k) {
-            paths.add(path);
-            return;
-        }
-        for (int i = start; i < n; i++) {
-            if ((options & 1 << i) == 0) {continue;}
-            dfs(options, i + 1, path | 1 << i, paths);
-        }
+        return memo[status] = min + 1;
     }
 
     public static void main(String[] args) {
