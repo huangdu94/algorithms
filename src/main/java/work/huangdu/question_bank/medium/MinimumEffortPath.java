@@ -1,6 +1,5 @@
 package work.huangdu.question_bank.medium;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -34,17 +33,17 @@ public class MinimumEffortPath {
 
     public int minimumEffortPath(int[][] heights) {
         int row = heights.length, col = heights[0].length, n = row * col;
-        if (n == 1) return 0;
+        if (n == 1) {return 0;}
         int size = (n << 1) - row - col;
         List<int[]> edges = new ArrayList<>(size);
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 int curId = i * col + j, curHeight = heights[i][j];
                 if (i != row - 1) {
-                    edges.add(new int[]{curId, (i + 1) * col + j, Math.abs(curHeight - heights[i + 1][j])});
+                    edges.add(new int[] {curId, (i + 1) * col + j, Math.abs(curHeight - heights[i + 1][j])});
                 }
                 if (j != col - 1) {
-                    edges.add(new int[]{curId, i * col + j + 1, Math.abs(curHeight - heights[i][j + 1])});
+                    edges.add(new int[] {curId, i * col + j + 1, Math.abs(curHeight - heights[i][j + 1])});
                 }
             }
         }
@@ -71,7 +70,7 @@ public class MinimumEffortPath {
         }
 
         public int find(int x) {
-            if (x == parents[x]) return x;
+            if (x == parents[x]) {return x;}
             return parents[x] = find(parents[x]);
         }
 
@@ -93,5 +92,43 @@ public class MinimumEffortPath {
         int[][] heights = {{1, 2, 2}, {3, 8, 2}, {5, 3, 5}};
         int result = mep.minimumEffortPath(heights);
         System.out.println(result);
+    }
+
+    static class Solution {
+        public int minimumEffortPath(int[][] heights) {
+            int m = heights.length, n = heights[0].length;
+            int[] direction = {0, 1, 0, -1, 0};
+            List<int[]>[] graph = new List[m * n];
+            Arrays.setAll(graph, (o) -> new ArrayList<>());
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    int curIdx = i * n + j, curHeight = heights[i][j];
+                    for (int k = 0; k < 4; k++) {
+                        int nextI = i + direction[k], nextJ = j + direction[k + 1];
+                        if (nextI >= 0 && nextI < m && nextJ >= 0 && nextJ < n) {
+                            graph[curIdx].add(new int[] {nextI * n + nextJ, Math.abs(curHeight - heights[nextI][nextJ])});
+                        }
+                    }
+                }
+            }
+            int[] dp = new int[m * n];
+            Arrays.fill(dp, Integer.MAX_VALUE);
+            dp[0] = 0;
+            PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o[1]));
+            pq.offer(new int[] {0, 0});
+            while (!pq.isEmpty()) {
+                int[] data = pq.poll();
+                int node = data[0], maxPower = data[1];
+                if (maxPower > dp[node]) {continue;}
+                for (int[] next : graph[node]) {
+                    int nextNode = next[0], nextPower = next[1];
+                    if (dp[nextNode] > Math.max(maxPower, nextPower)) {
+                        dp[nextNode] = Math.max(maxPower, nextPower);
+                        pq.offer(new int[] {nextNode, Math.max(maxPower, nextPower)});
+                    }
+                }
+            }
+            return dp[m * n - 1];
+        }
     }
 }
