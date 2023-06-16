@@ -1,11 +1,8 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
 import java.util.PriorityQueue;
-import java.util.Set;
 
 /**
  * 743. 网络延迟时间
@@ -35,40 +32,31 @@ import java.util.Set;
  */
 public class NetworkDelayTime {
     public int networkDelayTime(int[][] times, int n, int k) {
-        if (times.length == 0) { return 0;}
-        List<int[]>[] edgeMap = new List[n + 1];
-        for (int i = 1; i <= n; i++) {
-            edgeMap[i] = new ArrayList<>();
-        }
-        for (int[] time : times) {
-            edgeMap[time[0]].add(time);
-        }
-        int[] timeMap = new int[n + 1];
-        Set<Integer> visited = new HashSet<>();
-        PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(o -> o[2] + timeMap[o[0]]));
-        timeMap[k] = 0;
-        visited.add(k);
-        priorityQueue.addAll(edgeMap[k]);
-        int max = 0;
-        while (visited.size() < n && !priorityQueue.isEmpty()) {
-            int[] time = priorityQueue.poll();
-            if (visited.add(time[1])) {
-                int sum = timeMap[time[0]] + time[2];
-                timeMap[time[1]] = sum;
-                max = Math.max(max, sum);
-                List<int[]> nextEdge = edgeMap[time[1]];
-                priorityQueue.addAll(nextEdge);
+        int[][] graph = new int[n][n];
+        for (int[] row : graph) {Arrays.fill(row, -1);}
+        for (int[] time : times) {graph[time[0] - 1][time[1] - 1] = time[2];}
+        int[] dp = new int[n];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[k - 1] = 0;
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o[1]));
+        pq.offer(new int[] {k - 1, 0});
+        while (!pq.isEmpty()) {
+            int[] data = pq.poll();
+            int cur = data[0], total = data[1];
+            if (dp[cur] < total) {continue;}
+            for (int next = 0; next < n; next++) {
+                if (graph[cur][next] == -1) {continue;}
+                if (dp[next] > total + graph[cur][next]) {
+                    dp[next] = total + graph[cur][next];
+                    pq.offer(new int[] {next, dp[next]});
+                }
             }
         }
-        return visited.size() == n ? max : -1;
-    }
-
-    public static void main(String[] args) {
-        int[][] times = {{3, 5, 78}, {2, 1, 1}, {1, 3, 0}, {4, 3, 59}, {5, 3, 85}, {5, 2, 22}, {2, 4, 23}, {1, 4, 43}, {4, 5, 75}, {5, 1, 15}, {1, 5, 91}, {4, 1, 16}, {3, 2, 98}, {3, 4, 22},
-            {5, 4, 31}, {1, 2, 0}, {2, 5, 4}, {4, 2, 51}, {3, 1, 36}, {2, 3, 59}};
-        int n = 5;
-        int k = 5;
-        NetworkDelayTime ndt = new NetworkDelayTime();
-        System.out.println(ndt.networkDelayTime(times, n, k));
+        int ans = 0;
+        for (int time : dp) {
+            if (time == Integer.MAX_VALUE) {return -1;}
+            ans = Math.max(ans, time);
+        }
+        return ans;
     }
 }
