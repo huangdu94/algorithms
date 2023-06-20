@@ -80,8 +80,40 @@ public class ConnectTwoGroups {
     }
 
     public static void main(String[] args) {
-        ConnectTwoGroups ctg = new ConnectTwoGroups();
+        ConnectTwoGroups.Solution ctg = new ConnectTwoGroups.Solution();
         List<List<Integer>> cost = Arrays.asList(Arrays.asList(1, 3, 5), Arrays.asList(4, 1, 1), Arrays.asList(1, 5, 3));
         System.out.println(ctg.connectTwoGroups(cost));
+    }
+
+    static class Solution {
+        public int connectTwoGroups(List<List<Integer>> cost) {
+            int n = cost.get(0).size(), limit = 1 << n;
+            int[] minCost = new int[n];
+            Arrays.fill(minCost, Integer.MAX_VALUE);
+            for (List<Integer> row : cost) {
+                for (int j = 0; j < n; j++) {
+                    minCost[j] = Math.min(minCost[j], row.get(j));
+                }
+            }
+            int[] f0 = new int[limit], f1 = null;
+            for (int status = 0; status < limit; status++) {
+                for (int j = 0; j < n; j++) {
+                    if ((status >> j & 1) == 1) {
+                        f0[status] += minCost[j];
+                    }
+                }
+            }
+            for (List<Integer> costI : cost) {
+                f1 = new int[limit];
+                Arrays.fill(f1, Integer.MAX_VALUE);
+                for (int status = 0; status < limit; status++) {
+                    for (int j = 0; j < n; j++) {
+                        f1[status] = Math.min(f1[status], f0[status & ~(1 << j)] + costI.get(j));
+                    }
+                }
+                f0 = f1;
+            }
+            return f1[limit - 1];
+        }
     }
 }
