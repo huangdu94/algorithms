@@ -31,7 +31,7 @@ public class CheckOverlap {
             x2d2 = rSquare - (xCenter - x2) * (xCenter - x2),
             y1d2 = rSquare - (yCenter - y1) * (yCenter - y1),
             y2d2 = rSquare - (yCenter - y2) * (yCenter - y2);
-        return xCenter > x1 && xCenter < x2 && yCenter > y1 && yCenter < y2 && x1d2 < 0 && x2d2 < 0 && y1d2 < 0 && y2d2 < 0
+        return xCenter > x1 && xCenter < x2 && yCenter > y1 && yCenter < y2
             || x1d2 >= 0 && y2 >= yCenter - Math.sqrt(x1d2) && yCenter + Math.sqrt(x1d2) >= y1
             || x2d2 >= 0 && y2 >= yCenter - Math.sqrt(x2d2) && yCenter + Math.sqrt(x2d2) >= y1
             || y1d2 >= 0 && x2 >= xCenter - Math.sqrt(y1d2) && xCenter + Math.sqrt(y1d2) >= x1
