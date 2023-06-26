@@ -38,7 +38,81 @@ package work.huangdu.question_bank.difficult;
  * @date 2023/6/25
  */
 public class GetMaxGridHappiness {
+    private int m;
+    private int size;
+    // 行内分数，index对应行的状态（状态为3进制数，0空 1内向 2外向）
+    private int[] inlineScore;
+    // 行与行之间分数
+    private int[][] betweenLineScore;
+    private final int[] table1d = {0, 120, 40};
+    private final int[][] table2d = {{0, 0, 0}, {0, -60, -10}, {0, -10, 40}};
+    private int[][][][] memo;
+
     public int getMaxGridHappiness(int m, int n, int introvertsCount, int extrovertsCount) {
-        return -1;
+        this.m = m;
+        this.size = (int)Math.pow(3, n);
+        this.inlineScore = new int[size];
+        this.betweenLineScore = new int[size][size];
+        for (int i = 0; i < size; i++) {
+            inlineScore[i] = table1d(i);
+            for (int j = 0; j < size; j++) {
+                betweenLineScore[i][j] = i <= j ? table2d(i, j) : betweenLineScore[j][i];
+            }
+        }
+        this.memo = new int[m][size][introvertsCount + 1][extrovertsCount + 1];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < size; j++) {
+                for (int k = 0; k <= introvertsCount; k++) {
+                    for (int p = 0; p <= extrovertsCount; p++) {
+                        memo[i][j][k][p] = -1;
+                    }
+                }
+            }
+        }
+        return dfs(0, 0, introvertsCount, extrovertsCount);
+    }
+
+    private int dfs(int i, int pre, int ic, int ec) {
+        if (i == m || (ic == 0 && ec == 0)) {return 0;}
+        if (memo[i][pre][ic][ec] != -1) {return memo[i][pre][ic][ec];}
+        int max = 0;
+        for (int status = 0; status < size; status++) {
+            int[] count = new int[2];
+            int s = status;
+            while (s > 0) {
+                if (s % 3 > 0) {count[s % 3 - 1]++;}
+                s /= 3;
+            }
+            if (ic >= count[0] && ec >= count[1]) {
+                max = Math.max(max, inlineScore[status] + betweenLineScore[pre][status] + dfs(i + 1, status, ic - count[0], ec - count[1]));
+            }
+        }
+        return memo[i][pre][ic][ec] = max;
+    }
+
+    private int table1d(int status) {
+        int score = 0, pre = 0;
+        while (status > 0) {
+            int cur = status % 3;
+            score += table1d[cur] + table2d[pre][cur];
+            status /= 3;
+            pre = cur;
+        }
+        return score;
+    }
+
+    private int table2d(int statusI, int statusJ) {
+        int score = 0;
+        while (statusI > 0 || statusJ > 0) {
+            score += table2d[statusI % 3][statusJ % 3];
+            statusI /= 3;
+            statusJ /= 3;
+        }
+        return score;
+    }
+
+    public static void main(String[] args) {
+        GetMaxGridHappiness gmgh = new GetMaxGridHappiness();
+        System.out.println(gmgh.getMaxGridHappiness(2, 3, 1, 2));
     }
 }
