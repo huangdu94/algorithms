@@ -1,9 +1,9 @@
 package work.huangdu.exploration.start_from_scratch.linkedlist.high_precision_addition;
 
-import work.huangdu.data_structure.ListNode;
-
 import java.util.Deque;
 import java.util.LinkedList;
+
+import work.huangdu.data_structure.ListNode;
 
 /**
  * 445. 两数相加 II
@@ -20,6 +20,40 @@ import java.util.LinkedList;
  */
 public class AddTwoNumbers2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        l1 = reverse(l1);
+        l2 = reverse(l2);
+        ListNode ans = add(l1, l2);
+        reverse(l1);
+        reverse(l2);
+        return reverse(ans);
+    }
+
+    private ListNode reverse(ListNode cur) {
+        ListNode pre = null;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
+
+    public ListNode add(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(), cur = dummy;
+        int add = 0;
+        while (l1 != null || l2 != null || add != 0) {
+            int sum = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + add;
+            cur.next = new ListNode(sum % 10);
+            add = sum / 10;
+            if (l1 != null) {l1 = l1.next;}
+            if (l2 != null) {l2 = l2.next;}
+            cur = cur.next;
+        }
+        return dummy.next;
+    }
+
+    public ListNode addTwoNumbers3(ListNode l1, ListNode l2) {
         Deque<Integer> stack1 = new LinkedList<>();
         Deque<Integer> stack2 = new LinkedList<>();
         while (l1 != null) {
