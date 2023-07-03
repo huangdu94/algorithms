@@ -165,6 +165,8 @@ public class Solution218 {
      * 1 <= k <= nums.length <= 16
      * nums.length 能被 k 整除。
      * 1 <= nums[i] <= nums.length
+     * （该解法现在已经通过不了了）
+     * @see work.huangdu.question_bank.difficult.MinimumIncompatibility
      */
     // 贪心
     public int minimumIncompatibility(int[] nums, int k) {
