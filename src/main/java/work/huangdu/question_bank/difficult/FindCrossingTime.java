@@ -56,45 +56,38 @@ import java.util.PriorityQueue;
  */
 public class FindCrossingTime {
     public int findCrossingTime(int n, int k, int[][] time) {
-        Comparator<Integer> efficiencyComparator = (i1, i2) -> {
+        Comparator<Integer> comparator = (i1, i2) -> {
             int s1 = time[i1][0] + time[i1][2], s2 = time[i2][0] + time[i2][2];
             if (s1 == s2) {return Integer.compare(i2, i1);}
             return Integer.compare(s2, s1);
         };
-        PriorityQueue<Integer> leftWait = new PriorityQueue<>(efficiencyComparator), rightWait = new PriorityQueue<>(efficiencyComparator);
+        PriorityQueue<Integer> leftWait = new PriorityQueue<>(comparator), rightWait = new PriorityQueue<>(comparator);
         PriorityQueue<int[]> putComplete = new PriorityQueue<>(Comparator.comparingInt(data -> data[0])), pickComplete = new PriorityQueue<>(Comparator.comparingInt(data -> data[0]));
         for (int i = 0; i < k; i++) {leftWait.offer(i);}
-        int ans = 0;
+        int current = 0;
         while (n > 0 || !rightWait.isEmpty()) {
-            while (!putComplete.isEmpty() && putComplete.peek()[0] <= ans) {
+            while (!putComplete.isEmpty() && putComplete.peek()[0] <= current) {
                 leftWait.offer(putComplete.poll()[1]);
             }
-            while (!pickComplete.isEmpty() && pickComplete.peek()[0] <= ans) {
+            while (!pickComplete.isEmpty() && pickComplete.peek()[0] <= current) {
                 rightWait.offer(pickComplete.poll()[1]);
                 n--;
             }
             if (rightWait.isEmpty()) {
                 if (n == pickComplete.size() || leftWait.isEmpty()) {
-                    int min = Integer.MAX_VALUE;
-                    if (!putComplete.isEmpty()) {
-                        min = Math.min(min, putComplete.peek()[0]);
-                    }
-                    if (!pickComplete.isEmpty()) {
-                        min = Math.min(min, pickComplete.peek()[0]);
-                    }
-                    ans = min;
+                    current = Math.min(putComplete.isEmpty() ? Integer.MAX_VALUE : putComplete.peek()[0], pickComplete.isEmpty() ? Integer.MAX_VALUE : pickComplete.peek()[0]);
                     continue;
                 }
                 int idx = leftWait.poll();
-                ans += time[idx][0];
-                pickComplete.offer(new int[] {ans + time[idx][1], idx});
+                current += time[idx][0];
+                pickComplete.offer(new int[] {current + time[idx][1], idx});
             } else {
                 int idx = rightWait.poll();
-                ans += time[idx][2];
-                putComplete.offer(new int[] {ans + time[idx][3], idx});
+                current += time[idx][2];
+                putComplete.offer(new int[] {current + time[idx][3], idx});
             }
         }
-        return ans;
+        return current;
     }
 
     public static void main(String[] args) {
