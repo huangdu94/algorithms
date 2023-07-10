@@ -18,6 +18,33 @@ import java.util.Arrays;
  * @date 2020/12/7 13:11
  */
 public class ThreeSumClosest {
+    public int threeSumClosest5(int[] nums, int target) {
+        int n = nums.length, ans = 30001;
+        Arrays.sort(nums);
+        for (int first = 0; first < n; first++) {
+            if (first > 0 && nums[first - 1] == nums[first]) {continue;}
+            int num1 = nums[first];
+            int second = first + 1, third = n - 1;
+            while (second < third) {
+                while (second < third && second > first + 1 && nums[second - 1] == nums[second]) {second++;}
+                while (second < third && third < n - 1 && nums[third] == nums[third + 1]) {third--;}
+                if (second < third) {
+                    int sum = num1 + nums[second] + nums[third];
+                    if (sum == target) {return sum;}
+                    if (Math.abs(ans - target) > Math.abs(target - sum)) {
+                        ans = sum;
+                    }
+                    if (sum < target) {
+                        second++;
+                    } else {
+                        third--;
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+
     public int threeSumClosest(int[] nums, int target) {
         // 由nums[i]范围可知三个nums[i]之和不可能等于3001，故作为初始值
         int n = nums.length, result = 3001;
