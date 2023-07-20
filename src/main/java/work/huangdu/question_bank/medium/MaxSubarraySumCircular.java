@@ -27,6 +27,18 @@ package work.huangdu.question_bank.medium;
  */
 public class MaxSubarraySumCircular {
     public int maxSubarraySumCircular(int[] nums) {
+        int maxS = Integer.MIN_VALUE, minS = 0, sum = 0, max = 0, min = 0;
+        for (int num : nums) {
+            max = Math.max(max, 0) + num;
+            maxS = Math.max(maxS, max);
+            min = Math.min(min, 0) + num;
+            minS = Math.min(minS, min);
+            sum += num;
+        }
+        return minS == sum ? maxS : Math.max(maxS, sum - minS);
+    }
+
+    public int maxSubarraySumCircular2(int[] nums) {
         int max = Integer.MIN_VALUE;
         for (int num : nums) {max = Math.max(max, num);}
         if (max < 0) {return max;}
