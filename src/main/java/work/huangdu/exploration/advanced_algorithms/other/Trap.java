@@ -99,4 +99,20 @@ public class Trap {
         }
         return result;
     }
+
+    public int trap5(int[] height) {
+        int ans = 0;
+        Deque<int[]> stack = new ArrayDeque<>();
+        for (int curI = 0, n = height.length; curI < n; curI++) {
+            int curH = height[curI];
+            while (!stack.isEmpty() && stack.peek()[0] <= curH) {
+                int floor = stack.pop()[0];
+                if (!stack.isEmpty()) {
+                    ans += (Math.min(stack.peek()[0], curH) - floor) * (curI - stack.peek()[1] - 1);
+                }
+            }
+            stack.push(new int[] {curH, curI});
+        }
+        return ans;
+    }
 }
