@@ -1,5 +1,9 @@
 package work.huangdu.question_bank.difficult;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 1782. 统计点对的数目
  * 给你一个无向图，无向图由整数 n  ，表示图中节点的数目，和 edges 组成，其中 edges[i] = [ui, vi] 表示 ui 和 vi 之间有一条无向边。同时给你一个代表查询的整数数组 queries 。
@@ -29,8 +33,49 @@ package work.huangdu.question_bank.difficult;
 public class Solution1782 {
     public int[] countPairs(int n, int[][] edges, int[] queries) {
         int m = queries.length;
-        int[] ans = new int[m];
-
+        int[] ans = new int[m], degree = new int[n + 1];
+        Map<Integer, Integer> freq = new HashMap<>();
+        for (int[] edge : edges) {
+            int u = edge[0], v = edge[1];
+            if (u > v) {
+                int temp = u;
+                u = v;
+                v = temp;
+            }
+            freq.merge((u << 16) | v, 1, Integer::sum);
+            degree[u]++;
+            degree[v]++;
+        }
+        int[] sortDegree = degree.clone();
+        Arrays.sort(sortDegree);
+        for (int i = 0; i < m; i++) {
+            int query = queries[i], count = 0;
+            int left = 1, right = n;
+            while (left < right) {
+                if (sortDegree[left] + sortDegree[right] <= query) {
+                    left++;
+                } else {
+                    count += right - left;
+                    right--;
+                }
+            }
+            for (Map.Entry<Integer, Integer> entry : freq.entrySet()) {
+                int key = entry.getKey(), value = entry.getValue();
+                int u = key >>> 16, v = key & 0XFFFF;
+                if (degree[u] + degree[v] > query && degree[u] + degree[v] - value <= query) {
+                    count--;
+                }
+            }
+            ans[i] = count;
+        }
         return ans;
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        int[][] edges = {{1, 5}, {1, 5}, {3, 4}, {2, 5}, {1, 3}, {5, 1}, {2, 3}, {2, 5}};
+        int[] queries = {1, 2, 3, 4, 5};
+        Solution1782 solution = new Solution1782();
+        System.out.println(Arrays.toString(solution.countPairs(n, edges, queries)));
     }
 }
