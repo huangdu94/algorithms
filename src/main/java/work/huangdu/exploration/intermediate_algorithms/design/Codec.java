@@ -65,7 +65,7 @@ public class Codec {
             }
             // 遍历清除末尾的null
             for (int i = treeList.size() - 1; ; i--) {
-                if (treeList.get(i) != null) { break; }
+                if (treeList.get(i) != null) {break;}
                 treeList.remove(i);
             }
         }
@@ -77,7 +77,7 @@ public class Codec {
         // 本方法不进行验证，如果输入数据有问题则会报错
         data = data.substring(1, data.length() - 1);
         String[] arr = data.split(", ");
-        if ("".equals(arr[0])) { return null; }
+        if ("".equals(arr[0])) {return null;}
         TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
@@ -144,7 +144,7 @@ class Codec2 {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if ("".equals(data)) { return null; }
+        if ("".equals(data)) {return null;}
         String[] arr = data.split(",");
         TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
         Queue<TreeNode> queue = new LinkedList<>();
@@ -178,7 +178,7 @@ class Codec3 {
 
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        if (root == null) { return ""; }
+        if (root == null) {return "";}
         StringBuilder sb = new StringBuilder();
         preorder(root, sb);
         return sb.substring(1);
@@ -197,7 +197,7 @@ class Codec3 {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if (data.isEmpty()) { return null; }
+        if (data.isEmpty()) {return null;}
         String[] arr = data.split(",");
         Queue<Integer> preorder = new LinkedList<>();
         for (String s : arr) {
@@ -224,22 +224,59 @@ class Codec3 {
 }
 
 class Codec4 {
+    private static final String NULL = "!";
+    private static final String SEPARATOR = ",";
+    private static final String EMPTY_CODE = "";
+    private static final TreeNode NULL_NODE = new TreeNode(-1);
 
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        if (root == null) {return null;}
-        Queue<TreeNode> queue=new ArrayDeque<>();
-        return null;
+        if (root == null) {return EMPTY_CODE;}
+        StringBuilder code = new StringBuilder();
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            for (int i = 0, size = queue.size(); i < size; i++) {
+                TreeNode node = queue.remove();
+                if (node.val == -1) {
+                    code.append(NULL);
+                } else {
+                    code.append(node.val);
+                    queue.offer(node.left != null ? node.left : NULL_NODE);
+                    queue.offer(node.right != null ? node.right : NULL_NODE);
+                }
+                code.append(SEPARATOR);
+            }
+        }
+        int end = code.length() - 1;
+        while (code.charAt(end) == NULL.charAt(0)) {end -= 2;}
+        return code.substring(0, end);
     }
 
+    @SuppressWarnings("all")
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if (data == null) {return null;}
-        return null;
-    }
-
-    public static void main(String[] args) {
-        Codec4 codec = new Codec4();
-        System.out.println(codec.serialize(new TreeNode()));
+        if (EMPTY_CODE.equals(data)) {return null;}
+        String[] nodeCodes = data.split(SEPARATOR);
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        TreeNode root = new TreeNode(Integer.parseInt(nodeCodes[0], 10));
+        int n = nodeCodes.length, i = 1;
+        queue.offer(root);
+        while (i < n) {
+            int count = queue.size() << 1;
+            for (int k = 0, p = 0; i < n && k < count; k++, p = (p + 1) % 2) {
+                String nodeCode = nodeCodes[i++];
+                TreeNode node = NULL.equals(nodeCode) ? null : new TreeNode(Integer.parseInt(nodeCode, 10));
+                if (p == 0) {
+                    queue.peek().left = node;
+                } else {
+                    queue.poll().right = node;
+                }
+                if (node != null) {
+                    queue.offer(node);
+                }
+            }
+        }
+        return root;
     }
 }
