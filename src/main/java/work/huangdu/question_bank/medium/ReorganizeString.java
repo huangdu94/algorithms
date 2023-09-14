@@ -18,7 +18,7 @@ package work.huangdu.question_bank.medium;
  */
 public class ReorganizeString {
     public String reorganizeString(String s) {
-        if (s.length() < 2) return s;
+        if (s.length() < 2) {return s;}
         int n = s.length(), max = 0;
         char[] chars = s.toCharArray();
         int[] counts = new int[128];
@@ -27,7 +27,7 @@ public class ReorganizeString {
                 max = counts[c];
             }
         }
-        if (max > (n + 1) / 2) return "";
+        if (max > (n + 1) / 2) {return "";}
         int even = 0, odd = 1, half = n / 2;
         for (char i = 'a'; i <= 'z'; i++) {
             if (counts[i] != 0) {

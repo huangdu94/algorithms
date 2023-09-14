@@ -1,6 +1,9 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * 462. 最少移动次数使数组元素相等 II
@@ -44,7 +47,7 @@ public class MinMoves2 {
                 break;
             }
         }
-        return (int) count(nums, numList.get(left));
+        return (int)count(nums, numList.get(left));
     }
 
     private long count(int[] nums, int target) {

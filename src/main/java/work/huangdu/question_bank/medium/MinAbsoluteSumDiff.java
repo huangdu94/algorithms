@@ -59,9 +59,9 @@ public class MinAbsoluteSumDiff {
                     ceilAbsDiff = ceil == null ? 0 : abs - (ceil - num2);
                 diff = Math.max(floorAbsDiff, ceilAbsDiff);
             }
-            if (diff > maxDiff) { maxDiff = diff; }
+            if (diff > maxDiff) {maxDiff = diff;}
         }
-        if (sumAbs < maxDiff) { sumAbs += mod; }
+        if (sumAbs < maxDiff) {sumAbs += mod;}
         return sumAbs - maxDiff;
     }
 

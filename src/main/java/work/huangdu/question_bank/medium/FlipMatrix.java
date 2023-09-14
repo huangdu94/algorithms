@@ -81,7 +81,7 @@ public class FlipMatrix {
             this.n = n;
             remain = m * n;
             indexArray = new int[remain];
-            for (int i = 0; i < remain; i++) { indexArray[i] = i; }
+            for (int i = 0; i < remain; i++) {indexArray[i] = i;}
         }
 
         public int[] flip() {
@@ -117,7 +117,7 @@ public class FlipMatrix {
 
         public int[] flip() {
             int randomIndex;
-            while (bitSet.get(randomIndex = randomIndex())) { ; }
+            while (bitSet.get(randomIndex = randomIndex())) {;}
             bitSet.set(randomIndex);
             return new int[] {randomIndex / n, randomIndex % n};
         }

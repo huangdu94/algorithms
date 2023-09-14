@@ -40,7 +40,7 @@ public class MaxTurbulenceSize {
     }
 
     private int getTendency(int pre, int cur) {
-        if (pre == cur) return 0;
+        if (pre == cur) {return 0;}
         return pre > cur ? -1 : 1;
     }
 

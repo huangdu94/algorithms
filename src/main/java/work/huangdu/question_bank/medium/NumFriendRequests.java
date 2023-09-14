@@ -43,7 +43,7 @@ public class NumFriendRequests {
             for (int ageY = 15; ageY <= 120; ageY++) {
                 int countY = counts[ageY];
                 if (countY == 0) {continue;}
-                if (ageY <= 0.5 * ageX + 7 || ageY > ageX) { continue; }
+                if (ageY <= 0.5 * ageX + 7 || ageY > ageX) {continue;}
                 if (ageX == ageY) {
                     request += countX * (countY - 1);
                 } else {

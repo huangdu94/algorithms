@@ -24,7 +24,7 @@ import java.util.List;
 public class MonotoneIncreasingDigits {
     public int monotoneIncreasingDigits(int n) {
         // 如果n为个位数则一定是单调递增的直接返回
-        if (n < 10) return n;
+        if (n < 10) {return n;}
         List<Integer> nums = new ArrayList<>(10);
         while (n != 0) {
             nums.add(n % 10);
@@ -45,7 +45,7 @@ public class MonotoneIncreasingDigits {
         }
         int result = 0;
         for (int i = size - 1; i >= 0; i--) {
-            if (nums.get(i) == 0) continue;
+            if (nums.get(i) == 0) {continue;}
             result = result * 10 + nums.get(i);
         }
         return result;

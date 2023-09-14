@@ -1,6 +1,13 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * 721. 账户合并
@@ -31,7 +38,7 @@ public class AccountsMerge {
         Map<String, List<Set<String>>> nameEmailSetListMap = new HashMap<>();
         for (List<String> account : accounts) {
             int size = account.size();
-            if (size == 1) continue;
+            if (size == 1) {continue;}
             String name = account.get(0);
             Set<String> emailSet = new HashSet<>(account.size() - 1);
             for (int i = 1; i < size; i++) {
@@ -46,13 +53,13 @@ public class AccountsMerge {
             int size = emailSetList.size(), visitedCount = 0;
             boolean[] visited = new boolean[size];
             for (int i = 0; i < size && visitedCount < size; i++) {
-                if (visited[i]) continue;
+                if (visited[i]) {continue;}
                 Set<String> emailSetI = emailSetList.get(i);
                 boolean changeFlag = true;
                 while (changeFlag && visitedCount < size) {
                     changeFlag = false;
                     for (int j = i + 1; j < size && visitedCount < size; j++) {
-                        if (visited[j]) continue;
+                        if (visited[j]) {continue;}
                         Set<String> emailSetJ = emailSetList.get(j);
                         if (haveCommon(emailSetI, emailSetJ)) {
                             emailSetI.addAll(emailSetJ);
@@ -74,7 +81,7 @@ public class AccountsMerge {
     }
 
     private boolean haveCommon(Set<String> set1, Set<String> set2) {
-        if (set1.size() > set2.size()) return haveCommon(set2, set1);
+        if (set1.size() > set2.size()) {return haveCommon(set2, set1);}
         for (String email : set1) {
             if (set2.contains(email)) {
                 return true;
@@ -85,7 +92,8 @@ public class AccountsMerge {
 
     public static void main(String[] args) {
         AccountsMerge am = new AccountsMerge();
-        List<List<String>> accounts = Arrays.asList(Arrays.asList("John", "John12@m.co", "John16@m.co", "John17@m.co", "John6@m.co", "John9@m.co"), Arrays.asList("John", "John11@m.co", "John1@m.co", "John3@m.co", "John7@m.co", "John8@m.co"), Arrays.asList("John", "John0@m.co", "John10@m.co", "John14@m.co", "John20@m.co", "John5@m.co"));
+        List<List<String>> accounts = Arrays.asList(Arrays.asList("John", "John12@m.co", "John16@m.co", "John17@m.co", "John6@m.co", "John9@m.co"),
+            Arrays.asList("John", "John11@m.co", "John1@m.co", "John3@m.co", "John7@m.co", "John8@m.co"), Arrays.asList("John", "John0@m.co", "John10@m.co", "John14@m.co", "John20@m.co", "John5@m.co"));
         //Arrays.asList(Arrays.asList("John", "johnsmith@mail.com", "john_newyork@mail.com"), Arrays.asList("John", "johnsmith@mail.com", "john00@mail.com"), Arrays.asList("Mary", "mary@mail.com"), Arrays.asList("John", "johnnybravo@mail.com"));
         System.out.println(am.accountsMerge(accounts));
     }

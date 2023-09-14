@@ -90,8 +90,8 @@ public class Largest1BorderedSquare {
 
     public static void main(String[] args) {
         int[][] grid = {
-                {0, 1},
-                {1, 1}
+            {0, 1},
+            {1, 1}
         };
         Largest1BorderedSquare lbs = new Largest1BorderedSquare();
         System.out.println(lbs.largest1BorderedSquare(grid));

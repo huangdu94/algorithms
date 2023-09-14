@@ -1,9 +1,9 @@
 package work.huangdu.question_bank.medium;
 
-import work.huangdu.data_structure.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
+
+import work.huangdu.data_structure.TreeNode;
 
 /**
  * 222. 完全二叉树的节点个数
@@ -27,7 +27,7 @@ public class CountNodes {
     // 用二分法，判断对应序号的节点存不存在
     // 判断方法。 根节点为1。2的二进制就是10，就表示从根节点后往左走，就看看root.left存不存在就知道了，以此类推
     public int countNodes2(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null) {return 0;}
         int count = 0;
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
@@ -45,7 +45,7 @@ public class CountNodes {
     }
 
     public int countNodes(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null) {return 0;}
         return countNodes(root.left) + countNodes(root.right) + 1;
     }
 }

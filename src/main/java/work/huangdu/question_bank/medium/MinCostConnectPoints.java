@@ -1,9 +1,9 @@
 package work.huangdu.question_bank.medium;
 
-import javafx.util.Pair;
-
 import java.util.Comparator;
 import java.util.PriorityQueue;
+
+import javafx.util.Pair;
 
 /**
  * 1584. 连接所有点的最小费用
@@ -41,8 +41,8 @@ public class MinCostConnectPoints {
 
     public int minCostConnectPoints(int[][] points) {
         int n = points.length;
-        if (n == 1) return 0;
-        if (n == 2) return getManhattanDistance(points[0], points[1]);
+        if (n == 1) {return 0;}
+        if (n == 2) {return getManhattanDistance(points[0], points[1]);}
         int sum = 0, exist = 0;
         parents = new int[n];
         for (int i = 0; i < n; i++) {
@@ -51,7 +51,7 @@ public class MinCostConnectPoints {
         PriorityQueue<int[]> queue = new PriorityQueue<>(n, Comparator.comparingInt(o -> o[0]));
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
-                queue.offer(new int[]{getManhattanDistance(points[i], points[j]), i, j});
+                queue.offer(new int[] {getManhattanDistance(points[i], points[j]), i, j});
             }
         }
         while (exist < n - 1) {
@@ -69,21 +69,21 @@ public class MinCostConnectPoints {
     }
 
     private int find(int x) {
-        if (x == parents[x]) return x;
+        if (x == parents[x]) {return x;}
         return parents[x] = find(parents[x]);
     }
 
     private boolean union(int x, int y) {
         int rootX = find(x);
         int rootY = find(y);
-        if (rootX == rootY) return false;
+        if (rootX == rootY) {return false;}
         parents[rootX] = rootY;
         return true;
     }
 
     public static void main(String[] args) {
         MinCostConnectPoints2 mccp = new MinCostConnectPoints2();
-        System.out.println(mccp.minCostConnectPoints(new int[][]{{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0}}));
+        System.out.println(mccp.minCostConnectPoints(new int[][] {{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0}}));
     }
 }
 
@@ -92,8 +92,8 @@ class MinCostConnectPoints2 {
 
     public int minCostConnectPoints(int[][] points) {
         int n = points.length;
-        if (n == 1) return 0;
-        if (n == 2) return getManhattanDistance(points[0], points[1]);
+        if (n == 1) {return 0;}
+        if (n == 2) {return getManhattanDistance(points[0], points[1]);}
         int sum = 0, exist = 0;
         parents = new int[n];
         for (int i = 0; i < n; i++) {
@@ -102,7 +102,7 @@ class MinCostConnectPoints2 {
         PriorityQueue<Pair<Integer, int[]>> queue = new PriorityQueue<>(n, Comparator.comparingInt(Pair::getKey));
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
-                queue.offer(new Pair<>(getManhattanDistance(points[i], points[j]), new int[]{i, j}));
+                queue.offer(new Pair<>(getManhattanDistance(points[i], points[j]), new int[] {i, j}));
             }
         }
         while (exist < n - 1) {
@@ -121,20 +121,20 @@ class MinCostConnectPoints2 {
     }
 
     private int find(int x) {
-        if (x == parents[x]) return x;
+        if (x == parents[x]) {return x;}
         return parents[x] = find(parents[x]);
     }
 
     private boolean union(int x, int y) {
         int rootX = find(x);
         int rootY = find(y);
-        if (rootX == rootY) return false;
+        if (rootX == rootY) {return false;}
         parents[rootX] = rootY;
         return true;
     }
 
     public static void main(String[] args) {
         MinCostConnectPoints2 mccp = new MinCostConnectPoints2();
-        System.out.println(mccp.minCostConnectPoints(new int[][]{{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0}}));
+        System.out.println(mccp.minCostConnectPoints(new int[][] {{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0}}));
     }
 }

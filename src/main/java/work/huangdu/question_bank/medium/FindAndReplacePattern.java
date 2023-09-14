@@ -1,6 +1,11 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * 890. 查找和替换模式

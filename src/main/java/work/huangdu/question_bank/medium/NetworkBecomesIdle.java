@@ -101,7 +101,7 @@ public class NetworkBecomesIdle {
                 busyTime = firstReceiveTime;
             } else {
                 int lastSendTime = firstReceiveTime % p;
-                if (lastSendTime == 0) { lastSendTime = p; }
+                if (lastSendTime == 0) {lastSendTime = p;}
                 busyTime = firstReceiveTime * 2 - lastSendTime;
             }
             ans = Math.max(ans, busyTime);
@@ -114,8 +114,8 @@ public class NetworkBecomesIdle {
         List<Integer>[] edgeMap = new List[n];
         for (int[] edge : edges) {
             int u = edge[0], v = edge[1];
-            if (edgeMap[u] == null) { edgeMap[u] = new ArrayList<>(); }
-            if (edgeMap[v] == null) { edgeMap[v] = new ArrayList<>(); }
+            if (edgeMap[u] == null) {edgeMap[u] = new ArrayList<>();}
+            if (edgeMap[v] == null) {edgeMap[v] = new ArrayList<>();}
             edgeMap[u].add(v);
             edgeMap[v].add(u);
         }
@@ -138,7 +138,7 @@ public class NetworkBecomesIdle {
                         busyTime = firstReceiveTime;
                     } else {
                         int lastSendTime = firstReceiveTime % p;
-                        if (lastSendTime == 0) { lastSendTime = p; }
+                        if (lastSendTime == 0) {lastSendTime = p;}
                         busyTime = firstReceiveTime * 2 - lastSendTime;
                     }
                     ans = Math.max(ans, busyTime);

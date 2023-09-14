@@ -1,6 +1,10 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 面试题 10.02. 变位词组

@@ -1,9 +1,9 @@
 package work.huangdu.question_bank.medium;
 
-import work.huangdu.data_structure.ListNode;
-
 import java.util.HashSet;
 import java.util.Set;
+
+import work.huangdu.data_structure.ListNode;
 
 /**
  * 142. 环形链表 II

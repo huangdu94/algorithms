@@ -54,7 +54,7 @@ public class LoudAndRich {
             int richId = compare[0], poorId = compare[1];
             nodes[poorId].richerNodeList.add(nodes[richId]);
         }
-        for (Node node : nodes) { dfs(node); }
+        for (Node node : nodes) {dfs(node);}
         int[][] quietIndexArray = new int[n][];
         for (int i = 0; i < n; i++) {
             quietIndexArray[i] = new int[] {quiet[i], i};
@@ -86,7 +86,7 @@ public class LoudAndRich {
 
     private void dfs(Node node) {
         if (node == null) {return;}
-        if (node.richerIdSet.size() > 1) { return;}
+        if (node.richerIdSet.size() > 1) {return;}
         for (Node richerNode : node.richerNodeList) {
             dfs(richerNode);
             node.richerIdSet.addAll(richerNode.richerIdSet);

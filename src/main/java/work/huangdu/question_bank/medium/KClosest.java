@@ -33,7 +33,7 @@ public class KClosest {
     // 堆，时间复杂度 o(nlog k)
     public int[][] kClosest2(int[][] points, int K) {
         Queue<int[]> closestOrigin =
-                new PriorityQueue<>(K, (o1, o2) -> getDistanceSquare(o2) - getDistanceSquare(o1));
+            new PriorityQueue<>(K, (o1, o2) -> getDistanceSquare(o2) - getDistanceSquare(o1));
         for (int[] point : points) {
             closestOrigin.offer(point);
             if (closestOrigin.size() > K) {
@@ -59,7 +59,7 @@ public class KClosest {
     }
 
     private void specialQuickSort(int[][] points, int l, int r, int k) {
-        if (l >= r) return;
+        if (l >= r) {return;}
         int[] pivot = points[l];
         int pivotValue = getDistanceSquare(pivot);
         int i = l, j = r;
@@ -79,9 +79,6 @@ public class KClosest {
         }
         points[l] = points[i];
         points[i] = pivot;
-        if (i > k)
-            specialQuickSort(points, l, i - 1, k);
-        else if (i < k)
-            specialQuickSort(points, i + 1, r, k);
+        if (i > k) {specialQuickSort(points, l, i - 1, k);} else if (i < k) {specialQuickSort(points, i + 1, r, k);}
     }
 }

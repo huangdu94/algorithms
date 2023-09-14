@@ -1,9 +1,5 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * 395. 至少有 K 个重复字符的最长子串
  * 给你一个字符串 s 和一个整数 k ，请你找出 s 中的最长子串， 要求该子串中的每一字符出现次数都不少于 k 。返回这一子串的长度。
@@ -36,7 +32,7 @@ public class LongestSubstring {
     }
 
     private int longestSubstring(int[] ints, int k, int start, int end) {
-        if (start >= end) { return 0; }
+        if (start >= end) {return 0;}
         int longest = 0;
         int[] counts = new int[LOWERCASE_LETTER_COUNT];
         for (int i = start; i < end; i++) {
@@ -50,7 +46,7 @@ public class LongestSubstring {
                 allMeet = false;
             }
         }
-        if (allMeet) { return end - start; }
+        if (allMeet) {return end - start;}
         return Math.max(longest, longestSubstring(ints, k, start, end));
     }
 

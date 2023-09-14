@@ -25,17 +25,17 @@ public class RangeBitwiseAnd {
 
     // 要考虑int溢出的情况，稍作优化通过但耗时500多毫秒
     public int rangeBitwiseAnd3(int m, int n) {
-        if (m == 0) return 0;
+        if (m == 0) {return 0;}
         int res = 0XFFFFFFFF;
         for (int i = m; i != Integer.MIN_VALUE && i <= n; i++) {
             res &= i;
-            if (res == 0) return 0;
+            if (res == 0) {return 0;}
         }
         return res;
     }
 
     public int rangeBitwiseAnd(int m, int n) {
-        if (m == 0 || m == n) return m;
+        if (m == 0 || m == n) {return m;}
         int res = 0;
         int mask = 0X40000000;
         while ((m & mask) == 0 && (n & mask) == 0) {

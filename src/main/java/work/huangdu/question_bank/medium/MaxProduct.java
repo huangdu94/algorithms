@@ -1,6 +1,9 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 318. 最大单词长度乘积

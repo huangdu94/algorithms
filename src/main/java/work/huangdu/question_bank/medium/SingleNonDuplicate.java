@@ -33,8 +33,8 @@ public class SingleNonDuplicate {
         int n = nums.length, i = 0, j = n - 1;
         while (i < j) {
             int mid = i + ((j - i) >> 1);
-            if ((mid == 0 || nums[mid - 1] != nums[mid]) && (mid == n - 1 || nums[mid] != nums[mid + 1])) { return nums[mid]; }
-            if (mid == n - 1 || mid != 0 && nums[mid - 1] == nums[mid]) { mid--; }
+            if ((mid == 0 || nums[mid - 1] != nums[mid]) && (mid == n - 1 || nums[mid] != nums[mid + 1])) {return nums[mid];}
+            if (mid == n - 1 || mid != 0 && nums[mid - 1] == nums[mid]) {mid--;}
             if ((mid & 1) == 0) {
                 i = mid + 2;
             } else {

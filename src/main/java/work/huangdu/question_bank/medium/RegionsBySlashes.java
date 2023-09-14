@@ -109,7 +109,7 @@ public class RegionsBySlashes {
         }
 
         public int find(int x) {
-            if (x == parents[x]) return x;
+            if (x == parents[x]) {return x;}
             return parents[x] = find(parents[x]);
         }
 

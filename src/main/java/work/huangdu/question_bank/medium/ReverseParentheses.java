@@ -102,7 +102,7 @@ public class ReverseParentheses {
         }
 
         void initList() {
-            if (listIsNull()) { list = new ArrayList<>(); }
+            if (listIsNull()) {list = new ArrayList<>();}
         }
 
         void addSon(int level, char[] sub) {

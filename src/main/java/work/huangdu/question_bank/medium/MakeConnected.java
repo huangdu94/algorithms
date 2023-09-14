@@ -36,7 +36,7 @@ public class MakeConnected {
     public int makeConnected(int n, int[][] connections) {
         int count = connections.length;
         // 至少需要n-1条线才能连接所有的电脑
-        if (count < n - 1) return -1;
+        if (count < n - 1) {return -1;}
         UnionFindSet ufs = new UnionFindSet(n);
         for (int[] connection : connections) {
             ufs.union(connection[0], connection[1]);
@@ -56,19 +56,19 @@ public class MakeConnected {
             }
         }
 
-//        public int find(int x) {
-//            while (parents[x] != parents[parents[x]]) {
-//                parents[x] = parents[parents[x]];
-//            }
-//            return parents[x];
-//        }
+        //        public int find(int x) {
+        //            while (parents[x] != parents[parents[x]]) {
+        //                parents[x] = parents[parents[x]];
+        //            }
+        //            return parents[x];
+        //        }
 
-//        public int find(int x) {
-//            if (x != parents[x]) {
-//                parents[x] = find(parents[x]);
-//            }
-//            return parents[x];
-//        }
+        //        public int find(int x) {
+        //            if (x != parents[x]) {
+        //                parents[x] = find(parents[x]);
+        //            }
+        //            return parents[x];
+        //        }
 
         public int find(int x) {
             if (x == parents[x]) {

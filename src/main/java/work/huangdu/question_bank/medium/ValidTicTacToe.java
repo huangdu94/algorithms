@@ -40,7 +40,7 @@ public class ValidTicTacToe {
 
     public boolean validTicTacToe(String[] b) {
         char[][] board = new char[3][];
-        for (int i = 0; i < 3; i++) { board[i] = b[i].toCharArray(); }
+        for (int i = 0; i < 3; i++) {board[i] = b[i].toCharArray();}
         int countO = 0, countX = 0;
         for (char[] row : board) {
             for (char element : row) {
@@ -51,8 +51,8 @@ public class ValidTicTacToe {
                 }
             }
         }
-        if (countX < countO || countX - countO > 1) { return false; }
-        if (countX < 3 || countX == 3 && countO < 3) { return true;}
+        if (countX < countO || countX - countO > 1) {return false;}
+        if (countX < 3 || countX == 3 && countO < 3) {return true;}
         int rowWinX = 0, rowWinO = 0;
         for (char[] row : board) {
             if (row[0] != blank && row[0] == row[1] && row[1] == row[2]) {
@@ -90,7 +90,7 @@ public class ValidTicTacToe {
             }
         }
         int winX = rowWinX + cojWinX + diagonalWinX + backDiagonalWinX, winO = rowWinO + cojWinO + diagonalWinO + backDiagonalWinO;
-        if (winX != 0 && winO == 0 && countX == countO) { return false; }
+        if (winX != 0 && winO == 0 && countX == countO) {return false;}
         if (winX == 0 && winO != 0 && countX > countO) {return false;}
         return winO == 0 || winX == 0;
     }

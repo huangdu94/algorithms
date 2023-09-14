@@ -18,7 +18,7 @@ import work.huangdu.data_structure.ListNode;
 public class ReorderList {
     public void reorderList(ListNode head) {
         // 0. 空链表，单节点链表，双节点链表直接返回
-        if (head == null || head.next == null || head.next.next == null) return;
+        if (head == null || head.next == null || head.next.next == null) {return;}
         // 1. 快慢指针找到链表中点
         ListNode slow = head, fast = head;
         while (fast != null && fast.next != null) {
@@ -52,7 +52,7 @@ public class ReorderList {
     }
 
     public void reorderList2(ListNode head) {
-        if (head == null || head.next == null) return;
+        if (head == null || head.next == null) {return;}
         // 1. 快慢指针找中点
         ListNode slow = head, fast = head;
         while (fast != null && fast.next != null) {

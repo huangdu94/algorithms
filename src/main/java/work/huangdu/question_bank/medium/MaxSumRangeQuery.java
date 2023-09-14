@@ -52,9 +52,9 @@ public class MaxSumRangeQuery {
         Arrays.sort(counts);
         Arrays.sort(nums);
         for (int i = len - 1; i >= 0 && counts[i + 1] != 0; i--) {
-            res += ((long) nums[i]) * counts[i + 1];
+            res += ((long)nums[i]) * counts[i + 1];
         }
-        return (int) (res % 1000000007);
+        return (int)(res % 1000000007);
     }
 
     public static void main(String[] args) {

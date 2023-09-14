@@ -1,10 +1,10 @@
 package work.huangdu.question_bank.medium;
 
-import work.huangdu.data_structure.ListNode;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+
+import work.huangdu.data_structure.ListNode;
 
 /**
  * 147. 对链表进行插入排序
@@ -27,7 +27,7 @@ import java.util.List;
  */
 public class InsertionSortList {
     public ListNode insertionSortList(ListNode head) {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null) {return head;}
         // 排序完链表的头，从大到小，排序完后需要翻转链表
         ListNode sortedHead = head;
         head = head.next;
@@ -58,7 +58,7 @@ public class InsertionSortList {
     }
 
     public ListNode insertionSortList2(ListNode head) {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null) {return head;}
         // 排序完链表的头，从小到大
         ListNode sortedHead = head;
         head = head.next;
@@ -81,7 +81,7 @@ public class InsertionSortList {
     }
 
     public ListNode insertionSortList3(ListNode head) {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null) {return head;}
         List<ListNode> list = new ArrayList<>();
         while (head != null) {
             list.add(head);

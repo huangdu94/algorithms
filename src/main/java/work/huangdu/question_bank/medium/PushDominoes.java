@@ -44,13 +44,13 @@ public class PushDominoes {
         }
         while (p < n) {
             Integer left = lQueue.peek(), right = rQueue.peek();
-            if (left == null && right == null) { break; }
+            if (left == null && right == null) {break;}
             if (left == null) {
                 Arrays.fill(ans, right, n, 'R');
                 break;
             }
             if (right == null) {
-                while (!lQueue.isEmpty()) { left = lQueue.poll(); }
+                while (!lQueue.isEmpty()) {left = lQueue.poll();}
                 Arrays.fill(ans, p, left + 1, 'L');
                 break;
             }
@@ -66,8 +66,8 @@ public class PushDominoes {
             }
             lQueue.poll();
             p = left + 1;
-            while (!lQueue.isEmpty() && lQueue.peek() < p) { lQueue.poll(); }
-            while (!rQueue.isEmpty() && rQueue.peek() < p) { rQueue.poll(); }
+            while (!lQueue.isEmpty() && lQueue.peek() < p) {lQueue.poll();}
+            while (!rQueue.isEmpty() && rQueue.peek() < p) {rQueue.poll();}
         }
         return new String(ans);
     }

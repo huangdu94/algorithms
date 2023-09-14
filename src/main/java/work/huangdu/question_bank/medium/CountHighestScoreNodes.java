@@ -51,7 +51,7 @@ public class CountHighestScoreNodes {
     public int countHighestScoreNodes(int[] parents) {
         int n = parents.length, ans = 0;
         TreeNode[] nodes = new TreeNode[n];
-        for (int i = 0; i < n; i++) { nodes[i] = new TreeNode(i); }
+        for (int i = 0; i < n; i++) {nodes[i] = new TreeNode(i);}
         for (int i = 1; i < n; i++) {
             TreeNode parentNode = nodes[parents[i]];
             if (parentNode.left == null) {

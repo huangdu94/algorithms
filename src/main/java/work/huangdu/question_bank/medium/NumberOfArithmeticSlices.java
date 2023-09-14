@@ -55,6 +55,6 @@ public class NumberOfArithmeticSlices {
 
     public static void main(String[] args) {
         NumberOfArithmeticSlices noas = new NumberOfArithmeticSlices();
-        System.out.println(noas.numberOfArithmeticSlices(new int[] {1, 2, 3, 4, 5, 6,8}));
+        System.out.println(noas.numberOfArithmeticSlices(new int[] {1, 2, 3, 4, 5, 6, 8}));
     }
 }

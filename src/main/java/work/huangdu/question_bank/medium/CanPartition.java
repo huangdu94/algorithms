@@ -28,10 +28,10 @@ public class CanPartition {
             }
         }
         // 1. 如果nums的元素之和为奇数，则肯定不能分成两个和相等的子集
-        if ((sum & 1) == 1) return false;
+        if ((sum & 1) == 1) {return false;}
         int target = sum / 2;
         // 2. 如果数组中最大的数已经超过了sum/2，这肯定无法分成两个和相等的子集
-        if (max > target) return false;
+        if (max > target) {return false;}
         // 3. 剩下的情况需要动态规划
         boolean[] dp = new boolean[target + 1];
         dp[0] = true;

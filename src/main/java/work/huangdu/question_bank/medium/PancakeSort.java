@@ -45,7 +45,7 @@ public class PancakeSort {
         while (p >= 0) {
             if (sortArr[p] != arr[p]) {
                 int target = sortArr[p], i = p;
-                while (arr[i] != target) { i--; }
+                while (arr[i] != target) {i--;}
                 ans.add(i + 1);
                 ans.add(p + 1);
                 reverse(arr, i);

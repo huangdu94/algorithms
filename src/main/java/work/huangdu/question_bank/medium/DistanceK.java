@@ -40,8 +40,8 @@ public class DistanceK {
         queue.offer(root);
         while (!queue.isEmpty()) {
             TreeNode parent = queue.poll();
-            if (addSon(queue, parentMap, parent, parent.left, target)) { break; }
-            if (addSon(queue, parentMap, parent, parent.right, target)) { break; }
+            if (addSon(queue, parentMap, parent, parent.left, target)) {break;}
+            if (addSon(queue, parentMap, parent, parent.right, target)) {break;}
         }
         TreeNode son = null, cur = target;
         while (cur != null && k > 0) {
@@ -72,7 +72,7 @@ public class DistanceK {
     }
 
     private void dfs(TreeNode node, int distance) {
-        if (node == null) { return; }
+        if (node == null) {return;}
         if (distance == 0) {
             this.nodeList.add(node.val);
             return;

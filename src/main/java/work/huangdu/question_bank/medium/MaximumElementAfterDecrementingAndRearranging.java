@@ -52,7 +52,7 @@ public class MaximumElementAfterDecrementingAndRearranging {
 
     public static void main(String[] args) {
         MaximumElementAfterDecrementingAndRearranging meadar = new MaximumElementAfterDecrementingAndRearranging();
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {1, 2, 3, 4, 5};
         System.out.println(meadar.maximumElementAfterDecrementingAndRearranging(arr));
     }
 }

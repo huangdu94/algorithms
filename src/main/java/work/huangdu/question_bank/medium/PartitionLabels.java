@@ -56,6 +56,6 @@ public class PartitionLabels {
     public static void main(String[] args) {
         PartitionLabels labels = new PartitionLabels();
         System.out.println(labels.partitionLabels(
-                "ababcbacadefegdehijhklij"));
+            "ababcbacadefegdehijhklij"));
     }
 }

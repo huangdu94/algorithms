@@ -26,12 +26,12 @@ public class PathInZigZagTree {
 
     static {
         sums = new int[20];
-        for (int i = 0, sum = 0; i < 20; i++) { sums[i] = (sum += (1 << i)); }
+        for (int i = 0, sum = 0; i < 20; i++) {sums[i] = (sum += (1 << i));}
     }
 
     private int getRow(int label) {
         int row = 0;
-        while (sums[row] < label) { row++;}
+        while (sums[row] < label) {row++;}
         return row;
     }
 

@@ -36,7 +36,7 @@ import java.util.Arrays;
 public class MissingRolls {
     public int[] missingRolls(int[] rolls, int mean, int n) {
         int m = rolls.length, sum = mean * (m + n);
-        for (int roll : rolls) { sum -= roll; }
+        for (int roll : rolls) {sum -= roll;}
         if (n > sum || n * 6 < sum) {return new int[0];}
         int[] ans = new int[n];
         int avg = sum / n, remainder = sum % n;

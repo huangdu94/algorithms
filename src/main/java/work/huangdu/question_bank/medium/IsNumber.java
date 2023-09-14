@@ -22,9 +22,9 @@ public class IsNumber {
     public boolean isNumber(String s) {
         s = s.trim();
         int len = s.length();
-        if (len == 0) return false;
+        if (len == 0) {return false;}
         char first = s.charAt(0);
-        if (len == 1) return isNumber(first);
+        if (len == 1) {return isNumber(first);}
         boolean canAppearDot = true, canAppearE = false, appearE = false, appearNumber = false;
         for (int i = 0; i < len; i++) {
             char c = s.charAt(i);

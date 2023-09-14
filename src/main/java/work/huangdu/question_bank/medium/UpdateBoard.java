@@ -90,7 +90,7 @@ public class UpdateBoard {
         int count = aroundMine(board, m, n, x, y);
         // 2.1 如果雷的数量大于0，则设置其为该数字字符，返回数组
         if (count > 0) {
-            board[x][y] = (char) (count + '0');
+            board[x][y] = (char)(count + '0');
             return;
         }
         // 2.2 如果雷的数量等于0，则设置其为B，然后进一步迭代
@@ -109,13 +109,13 @@ public class UpdateBoard {
      */
     private void bfs(char[][] board, int m, int n, int x, int y) {
         Queue<int[]> queue = new ArrayDeque<>();
-        queue.offer(new int[]{x, y});
+        queue.offer(new int[] {x, y});
         while (!queue.isEmpty()) {
             int[] ij = queue.poll();
             int count = aroundMine(board, m, n, ij[0], ij[1]);
             // 2.1 如果雷的数量大于0，则设置其为该数字字符，继续下一个点
             if (count > 0) {
-                board[ij[0]][ij[1]] = (char) (count + '0');
+                board[ij[0]][ij[1]] = (char)(count + '0');
                 continue;
             }
             // 2.2 如果雷的数量等于0，则设置其为B，然后进一步迭代
@@ -123,7 +123,7 @@ public class UpdateBoard {
             for (int i = ij[0] - 1; i <= ij[0] + 1; i++) {
                 for (int j = ij[1] - 1; j <= ij[1] + 1; j++) {
                     if (i >= 0 && i < m && j >= 0 && j < n && board[i][j] == 'E') {
-                        queue.offer(new int[]{i, j});
+                        queue.offer(new int[] {i, j});
                         board[i][j] = '*';
                     }
                 }

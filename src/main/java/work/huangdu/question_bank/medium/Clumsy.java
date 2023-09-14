@@ -25,7 +25,7 @@ package work.huangdu.question_bank.medium;
 public class Clumsy {
     // 可以用数学推导直接o(1)
     public int clumsy(int n) {
-        if (n == 1) { return 1; }
+        if (n == 1) {return 1;}
         // symbol: 0 *; 1 /; 2 +; 3 -;
         int top = 0, symbol = 0;
         int[] stack = new int[n / 2 + 1];

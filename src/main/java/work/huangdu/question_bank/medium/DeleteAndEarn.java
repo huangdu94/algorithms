@@ -37,12 +37,12 @@ public class DeleteAndEarn {
 
     public int deleteAndEarn(int[] nums) {
         counts = new int[MAX + 1];
-        for (int num : nums) { counts[num]++; }
+        for (int num : nums) {counts[num]++;}
         int earn = 0;
         for (int i = 1; i <= MAX; i++) {
-            if (counts[i] == 0) { continue; }
+            if (counts[i] == 0) {continue;}
             int start = i;
-            while (i <= MAX && counts[i] != 0) { i++; }
+            while (i <= MAX && counts[i] != 0) {i++;}
             memo.clear();
             earn += earn(start, i);
         }
@@ -51,7 +51,7 @@ public class DeleteAndEarn {
 
     private int earn(int i, int end) {
         if (memo.containsKey(i)) {return memo.get(i);}
-        if (i > end || counts[i] == 0) { return 0; }
+        if (i > end || counts[i] == 0) {return 0;}
         int earn = Math.max(earn(i + 1, end), counts[i] * i + earn(i + 2, end));
         memo.put(i, earn);
         return earn;

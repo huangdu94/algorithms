@@ -39,7 +39,7 @@ import work.huangdu.data_structure.TreeNode;
  */
 public class InsertIntoBST {
     public TreeNode insertIntoBST(TreeNode root, int val) {
-        if (root == null) return new TreeNode(val);
+        if (root == null) {return new TreeNode(val);}
         insert(root, val);
         return root;
     }

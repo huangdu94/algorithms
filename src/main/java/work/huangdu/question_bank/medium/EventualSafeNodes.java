@@ -44,7 +44,7 @@ public class EventualSafeNodes {
     }
 
     public boolean safe(int[][] graph, int[] color, int x) {
-        if (color[x] > 0) { return color[x] == 2; }
+        if (color[x] > 0) {return color[x] == 2;}
         color[x] = 1;
         for (int next : graph[x]) {
             if (!safe(graph, color, next)) {

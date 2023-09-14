@@ -49,10 +49,10 @@ public class NthSuperUglyNumber {
                 return min;
             }
             for (int prime : primes) {
-                long num = (long) prime * min;
+                long num = (long)prime * min;
                 if (num <= Integer.MAX_VALUE) {
-                    if (seen.add((int) num)) {
-                        minHeap.offer((int) num);
+                    if (seen.add((int)num)) {
+                        minHeap.offer((int)num);
                     }
                 }
             }
@@ -73,7 +73,7 @@ public class NthSuperUglyNumber {
             long min = Integer.MAX_VALUE;
             List<Integer> list = new ArrayList<>();
             for (int i = 0; i < len; i++) {
-                long next = (long) dp[pointers[i]] * primes[i];
+                long next = (long)dp[pointers[i]] * primes[i];
                 if (min > next) {
                     min = next;
                     list.clear();
@@ -85,13 +85,13 @@ public class NthSuperUglyNumber {
             for (int index : list) {
                 pointers[index]++;
             }
-            dp[k] = (int) min;
+            dp[k] = (int)min;
         }
         return dp[n];
     }
 
     public static void main(String[] args) {
         NthSuperUglyNumber nsun = new NthSuperUglyNumber();
-        System.out.println(nsun.nthSuperUglyNumber2(100000, new int[]{7, 19, 29, 37, 41, 47, 53, 59, 61, 79, 83, 89, 101, 103, 109, 127, 131, 137, 139, 157, 167, 179, 181, 199, 211, 229, 233, 239, 241, 251}) == 1092889481);
+        System.out.println(nsun.nthSuperUglyNumber2(100000, new int[] {7, 19, 29, 37, 41, 47, 53, 59, 61, 79, 83, 89, 101, 103, 109, 127, 131, 137, 139, 157, 167, 179, 181, 199, 211, 229, 233, 239, 241, 251}) == 1092889481);
     }
 }

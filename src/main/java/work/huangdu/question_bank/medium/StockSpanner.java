@@ -140,7 +140,7 @@ class StockSpanner2 {
             stack.pop();
         }
         int start = stack.isEmpty() ? 0 : stack.peek()[1];
-        stack.push(new int[]{price, ++day});
+        stack.push(new int[] {price, ++day});
         return day - start;
     }
 
@@ -156,6 +156,7 @@ class StockSpanner2 {
         System.out.println(s.next(85));
     }
 }
+
 class StockSpanner3 {
     private static final int N = 10000;
     private final int[][] stack;

@@ -51,7 +51,7 @@ public class Calculate2 {
                 op = c;
             }
         }
-        for (int i = 0; i < top; i++) { num += stack[i]; }
+        for (int i = 0; i < top; i++) {num += stack[i];}
         return num;
     }
 }

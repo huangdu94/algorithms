@@ -33,14 +33,14 @@ public class CountPairs {
         Map<Integer, Integer> countMap = new HashMap<>();
         for (int delicious : deliciousness) {
             countMap.merge(delicious, 1, Integer::sum);
-            if (max < delicious) { max = delicious; }
+            if (max < delicious) {max = delicious;}
         }
         max *= 2;
         for (int delicious : deliciousness) {
             countMap.merge(delicious, -1, Integer::sum);
             for (int sum = 1; sum <= max; sum <<= 1) {
                 count += countMap.getOrDefault(sum - delicious, 0);
-                if (count >= BASE) { count -= BASE;}
+                if (count >= BASE) {count -= BASE;}
             }
         }
         return count;
@@ -57,7 +57,7 @@ public class CountPairs {
         for (int delicious : deliciousness) {
             for (int sum = 1; sum <= maxSum; sum <<= 1) {
                 count += countMap.getOrDefault(sum - delicious, 0);
-                if (count >= BASE) { count -= BASE;}
+                if (count >= BASE) {count -= BASE;}
             }
             countMap.put(delicious, countMap.getOrDefault(delicious, 0) + 1);
         }

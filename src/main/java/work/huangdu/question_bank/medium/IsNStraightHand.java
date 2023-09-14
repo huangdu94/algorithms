@@ -28,7 +28,7 @@ public class IsNStraightHand {
     public boolean isNStraightHand(int[] hand, int groupSize) {
         if (groupSize == 1) {return true;}
         int n = hand.length;
-        if (n % groupSize != 0) { return false; }
+        if (n % groupSize != 0) {return false;}
         TreeMap<Integer, Integer> count = new TreeMap<>();
         for (int num : hand) {
             count.merge(num, 1, Integer::sum);
@@ -39,11 +39,11 @@ public class IsNStraightHand {
         Queue<int[]> recordQueue = new ArrayDeque<>();
         for (int num : count.keySet()) {
             // 如果需要的数量大于0 且 当前数和上一个数不连续则直接返回false
-            if (needAmount > 0 && num != pre + 1) { return false; }
+            if (needAmount > 0 && num != pre + 1) {return false;}
             // 当前数的数量
             int amount = count.get(num);
             // 如果当前数的数量小于需要的数量则直接返回false
-            if (amount < needAmount) { return false; }
+            if (amount < needAmount) {return false;}
             // 需要的数量的增加值
             int addNeed = amount - needAmount;
             if (addNeed > 0) {

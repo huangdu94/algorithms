@@ -82,7 +82,7 @@ public class OpenLock {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 int cur = queue.remove();
-                if (cur == target) { return len; }
+                if (cur == target) {return len;}
                 for (Integer next : GRAPH.get(cur)) {
                     if (visited.add(next)) {
                         queue.offer(next);
@@ -148,7 +148,7 @@ public class OpenLock {
                 return 0;
             }
             Set<String> dead = new HashSet<>(Arrays.asList(deadends));
-            if (dead.contains("0000")) { return -1; }
+            if (dead.contains("0000")) {return -1;}
             PriorityQueue<AStar> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.f));
             pq.offer(new AStar("0000", target, 0));
             Set<String> seen = new HashSet<>();

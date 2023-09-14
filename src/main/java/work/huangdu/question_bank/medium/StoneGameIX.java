@@ -42,6 +42,7 @@ import java.util.Map;
  */
 public class StoneGameIX {
     private final Map<Integer, Boolean> memo = new HashMap<>();
+
     // TODO 本题也可以直接分析得到结果，不需要用回溯
     /*
     石头的数值大于3对于本题没有任何意义，所以石头的数值可以转化为3的余数，即问题简化为三种数值的石头，0、1、2
@@ -59,7 +60,7 @@ public class StoneGameIX {
      */
     public boolean stoneGameIX(int[] stones) {
         int[] counts = new int[3];
-        for (int stone : stones) { counts[stone % 3]++; }
+        for (int stone : stones) {counts[stone % 3]++;}
         if ((counts[0] & 1) == 1) {
             counts[0] = counts[0] > 1 ? 3 : 1;
         } else {

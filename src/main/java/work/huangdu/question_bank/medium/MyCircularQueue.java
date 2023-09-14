@@ -38,7 +38,6 @@ public class MyCircularQueue {
     private int tail;
     private int cnt;
 
-
     public MyCircularQueue(int k) {
         this.array = new int[k];
         this.k = k;

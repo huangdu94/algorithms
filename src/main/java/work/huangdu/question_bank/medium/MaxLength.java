@@ -111,7 +111,7 @@ public class MaxLength {
         private void backtrack(int i, int selected, int remain) {
             int selectedCount = Integer.bitCount(selected);
             if (i == n) {
-                if (max < selectedCount) { max = selectedCount; }
+                if (max < selectedCount) {max = selectedCount;}
                 return;
             }
             if (selectedCount + remain < max) {

@@ -53,7 +53,7 @@ public class WinnerOfGame {
         int ans = 0, count = 1;
         for (int i = 1; i < n; i++) {
             char cur = colors.charAt(i);
-            if (cur == pre) { count++; }
+            if (cur == pre) {count++;}
             if (cur != pre || i == n - 1) {
                 if (count >= 3) {
                     ans = (pre == 'A' ? ans + count - 2 : ans - count + 2);

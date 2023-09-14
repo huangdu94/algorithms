@@ -67,7 +67,7 @@ public class StockPrice {
         if (timestamp > lastTimestamp) {lastTimestamp = timestamp;}
         Record newRecord = new Record(price);
         Record oldRecord = recordMap.put(timestamp, newRecord);
-        if (oldRecord != null) { oldRecord.delete = true;}
+        if (oldRecord != null) {oldRecord.delete = true;}
         smallHeap.offer(newRecord);
         bigHeap.offer(newRecord);
     }
@@ -77,12 +77,12 @@ public class StockPrice {
     }
 
     public int maximum() {
-        while (bigHeap.peek().delete) { bigHeap.poll(); }
+        while (bigHeap.peek().delete) {bigHeap.poll();}
         return bigHeap.peek().val;
     }
 
     public int minimum() {
-        while (smallHeap.peek().delete) { smallHeap.poll(); }
+        while (smallHeap.peek().delete) {smallHeap.poll();}
         return smallHeap.peek().val;
     }
 

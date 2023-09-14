@@ -1,6 +1,9 @@
 package work.huangdu.question_bank.medium;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 /**
  * 133. 克隆图
@@ -67,7 +70,7 @@ public class CloneGraph {
     }
 
     public Node cloneGraph(Node node) {
-        if (node == null) return null;
+        if (node == null) {return null;}
         Node[] nodes = new Node[101];
         Queue<Node> queue = new LinkedList<>();
         queue.offer(node);

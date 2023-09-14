@@ -31,7 +31,7 @@ public class PredictTheWinner {
 
     public boolean predictTheWinner(int[] nums) {
         // 偶数先手必胜
-        if (nums.length % 2 == 0) return true;
+        if (nums.length % 2 == 0) {return true;}
         memo = new int[nums.length][nums.length];
         return helper(nums, 0, nums.length - 1) >= 0;
     }
@@ -65,7 +65,7 @@ public class PredictTheWinner {
     // 动态规划
     public boolean predictTheWinner2(int[] nums) {
         int len = nums.length;
-        if (len % 2 == 0) return true;
+        if (len % 2 == 0) {return true;}
         int[][] dp = new int[len][len];
         for (int i = 0; i < len; i++) {
             dp[i][i] = nums[i];
@@ -81,7 +81,7 @@ public class PredictTheWinner {
     // 动态规划 压缩空间
     public boolean predictTheWinner3(int[] nums) {
         int len = nums.length;
-        if (len % 2 == 0) return true;
+        if (len % 2 == 0) {return true;}
         int[] dp = Arrays.copyOf(nums, len);
         for (int i = len - 2; i >= 0; i--) {
             for (int j = i + 1; j < len; j++) {

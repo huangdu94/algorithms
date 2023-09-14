@@ -39,7 +39,7 @@ public class RandPoint {
 
         public double[] randPoint() {
             double theta = Math.random() * 2 * Math.PI, r = Math.sqrt(Math.random()) * radius;
-            return new double[]{x_center + r * Math.cos(theta), y_center + r * Math.sin(theta)};
+            return new double[] {x_center + r * Math.cos(theta), y_center + r * Math.sin(theta)};
         }
     }
 

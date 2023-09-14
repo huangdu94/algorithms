@@ -32,7 +32,7 @@ public class NumSubarraysWithSum {
         prefixMap[0] = 1;
         for (int num : nums) {
             sum += num;
-            if (sum >= goal) { count += prefixMap[sum - goal]; }
+            if (sum >= goal) {count += prefixMap[sum - goal];}
             prefixMap[sum]++;
         }
         return count;

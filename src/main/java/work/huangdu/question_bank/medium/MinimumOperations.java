@@ -60,7 +60,7 @@ public class MinimumOperations {
                     add++;
                     j0--;
                 }
-                if (add >= r) break;
+                if (add >= r) {break;}
                 while (i < j0 && chars[j0] == 'r') {
                     add--;
                     r--;
@@ -91,7 +91,7 @@ public class MinimumOperations {
                     i++;
                 }
             } while (add >= 0);
-            if (!flag) break;
+            if (!flag) {break;}
             addBack = add;
             if (min + add < minvalue) {
                 minvalue = min + add;

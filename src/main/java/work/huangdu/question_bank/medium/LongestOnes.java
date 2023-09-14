@@ -34,7 +34,7 @@ public class LongestOnes {
                 }
             }
             longest = Math.max(longest, right - left);
-            if (right == n) return longest;
+            if (right == n) {return longest;}
             if (left == right) {
                 left++;
                 right++;
