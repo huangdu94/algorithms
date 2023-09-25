@@ -1,7 +1,9 @@
 package work.huangdu.exploration.advanced_algorithms.design;
 
+import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Queue;
 
 /**
  * LRU缓存机制
@@ -111,7 +113,7 @@ public class LRUCache {
 
     public int get(int key) {
         DoublyListNode node = linkedMap.get(key);
-        if (node == null) return -1;
+        if (node == null) {return -1;}
         moveNodeToTail(node);
         return node.value;
     }
@@ -165,6 +167,42 @@ public class LRUCache {
         public DoublyListNode(int key, int value) {
             this.key = key;
             this.value = value;
+        }
+    }
+}
+
+class LRUCache2 {
+    private final int capacity;
+    private final Map<Integer, Integer> map;
+    private final Map<Integer, Integer> freq;
+    private final Queue<Integer> queue;
+
+    public LRUCache2(int capacity) {
+        this.capacity = capacity;
+        this.map = new HashMap<>(capacity);
+        this.freq = new HashMap<>(capacity);
+        this.queue = new ArrayDeque<>(capacity);
+    }
+
+    public int get(int key) {
+        if (!map.containsKey(key)) {return -1;}
+        queue.offer(key);
+        freq.merge(key, 1, Integer::sum);
+        return map.get(key);
+    }
+
+    public void put(int key, int value) {
+        map.put(key, value);
+        queue.offer(key);
+        freq.merge(key, 1, Integer::sum);
+        if (map.size() > capacity) {
+            while (!queue.isEmpty()) {
+                int history = queue.poll();
+                if (freq.merge(history, -1, Integer::sum) == 0) {
+                    map.remove(history);
+                    break;
+                }
+            }
         }
     }
 }
