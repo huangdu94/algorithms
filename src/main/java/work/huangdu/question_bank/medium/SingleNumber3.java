@@ -28,7 +28,24 @@ import java.util.Set;
  * @see work.huangdu.question_bank.medium.SingleNumber2
  */
 public class SingleNumber3 {
-    // TODO 不使用HashSet的写法
+    public int[] singleNumber2(int[] nums) {
+        int axorb = 0, bit = 0;
+        for (int num : nums) {
+            axorb ^= num;
+        }
+        for (int i = 0; i < 32; i++) {
+            if ((axorb >>> i & 1) == 1) {
+                bit = i;
+                break;
+            }
+        }
+        int[] ans = new int[2];
+        for (int num : nums) {
+            ans[num >>> bit & 1] ^= num;
+        }
+        return ans;
+    }
+
     public int[] singleNumber(int[] nums) {
         Set<Integer> set = new HashSet<>(nums.length);
         int result = 0;
