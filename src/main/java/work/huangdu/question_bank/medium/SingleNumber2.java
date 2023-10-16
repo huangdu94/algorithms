@@ -54,6 +54,24 @@ public class SingleNumber2 {
         return result;
     }
 
+    public int singleNumber3(int[] nums) {
+        int[] count = new int[32];
+        for (int num : nums) {
+            for (int i = 0; i < 32; i++) {
+                if ((num >>> i & 1) == 1) {
+                    count[i]++;
+                }
+            }
+        }
+        int ans = 0;
+        for (int i = 0; i < 32; i++) {
+            if (count[i] % 3 != 0) {
+                ans |= 1 << i;
+            }
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
         SingleNumber2 sn = new SingleNumber2();
         int[] nums = {-2, -2, 1, 1, 4, 1, 4, 4, -4, -2};
