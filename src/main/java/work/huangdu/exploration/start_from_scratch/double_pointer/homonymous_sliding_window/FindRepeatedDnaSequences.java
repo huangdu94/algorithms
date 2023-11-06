@@ -112,4 +112,46 @@ public class FindRepeatedDnaSequences {
                 return -1;
         }
     }
+
+    private static class Solution {
+        public List<String> findRepeatedDnaSequences(String s) {
+            int n = s.length();
+            List<String> ans = new ArrayList<>();
+            if (n <= 10) {return ans;}
+            Map<Integer, Integer> map = new HashMap<>();
+            Set<Integer> set = new HashSet<>();
+            int hash = 0;
+            for (int i = 0; i < 10; i++) {
+                hash = hash * 4 + index(s.charAt(i));
+            }
+            map.put(hash, 0);
+            int base = 1 << 20;
+            for (int i = 10; i < n; i++) {
+                hash = hash * 4 - index(s.charAt(i - 10)) * base + index(s.charAt(i));
+                if (map.containsKey(hash)) {
+                    set.add(map.get(hash));
+                } else {
+                    map.put(hash, i - 9);
+                }
+            }
+            for (int start : set) {
+                ans.add(s.substring(start, start + 10));
+            }
+            return ans;
+        }
+
+        private int index(char ch) {
+            switch (ch) {
+                case 'A':
+                    return 0;
+                case 'C':
+                    return 1;
+                case 'G':
+                    return 2;
+                case 'T':
+                default:
+                    return 3;
+            }
+        }
+    }
 }
