@@ -161,4 +161,27 @@ public class MaxProduct {
         MaxProduct mp = new MaxProduct();
         System.out.println(mp.maxProduct(words));
     }
+
+    public int maxProduct2(String[] words) {
+        int n = words.length;
+        int[] preproccess = new int[n];
+        for (int i = 0; i < n; i++) {
+            String word = words[i];
+            int temp = 0;
+            for (int j = 0, len = word.length(); j < len; j++) {
+                int idx = word.charAt(j) - 'a';
+                temp |= 1 << idx;
+            }
+            preproccess[i] = temp;
+        }
+        int ans = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if ((preproccess[i] & preproccess[j]) == 0) {
+                    ans = Math.max(ans, words[i].length() * words[j].length());
+                }
+            }
+        }
+        return ans;
+    }
 }
