@@ -1,5 +1,8 @@
 package work.huangdu.question_bank.medium;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 421. 数组中两个数的最大异或值
  * 给你一个整数数组 nums ，返回 nums[i] XOR nums[j] 的最大运算结果，其中 0 ≤ i ≤ j < n 。
@@ -28,9 +31,36 @@ package work.huangdu.question_bank.medium;
  * @date 2021/5/16
  */
 public class FindMaximumXOR {
-    // TODO 字典树 和 哈希表
+    public int findMaximumXOR(int[] nums) {
+        int max = 0;
+        for (int num : nums) {
+            max = Math.max(max, num);
+        }
+        int n = 0;
+        while (max != 0) {
+            max >>= 1;
+            n++;
+        }
+        int ans = 0;
+        Set<Integer> set = new HashSet<>();
+        for (int i = n - 1, mask = 0, prefix = 0; i >= 0; i--) {
+            mask |= 1 << i;
+            prefix |= 1 << i;
+            set.clear();
+            for (int num : nums) {
+                num = num & mask;
+                if (set.contains(prefix ^ num)) {
+                    ans |= 1 << i;
+                    break;
+                }
+                set.add(num);
+            }
+            prefix = ans;
+        }
+        return ans;
+    }
 
-    // 暴力通过
+    // 超时
     public int findMaximumXOR2(int[] nums) {
         int max = 0, n = nums.length;
         for (int i = 0; i < n; i++) {
