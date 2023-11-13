@@ -96,4 +96,97 @@ public class RangeModule {
         }
         return result;
     }
+
+    static class RangeModule2 {
+        private final Node root;
+
+        public RangeModule2() {
+            this.root = new Node();
+        }
+
+        public void addRange(int left, int right) {
+            update(this.root, 0, 1000000000, left, right - 1, true);
+        }
+
+        public boolean queryRange(int left, int right) {
+            return query(this.root, 0, 1000000000, left, right - 1);
+        }
+
+        public void removeRange(int left, int right) {
+            update(this.root, 0, 1000000000, left, right - 1, false);
+        }
+
+        private void update(Node node, int left, int right, int start, int end, boolean val) {
+            if (start <= left && right <= end) {
+                node.val = val;
+                node.lazy = val ? 1 : -1;
+                return;
+            }
+            pushDown(node);
+            int mid = left + (right - left >> 1);
+            if (start <= mid) {
+                update(node.left, left, mid, start, end, val);
+            }
+            if (mid < end) {
+                update(node.right, mid + 1, right, start, end, val);
+            }
+            pushUp(node);
+        }
+
+        private boolean query(Node node, int left, int right, int start, int end) {
+            if (start <= left && right <= end) {
+                return node.val;
+            }
+            pushDown(node);
+            int mid = left + (right - left >> 1);
+            boolean result = true;
+            if (start <= mid) {
+                result = query(node.left, left, mid, start, end);
+            }
+            if (mid < end) {
+                result &= query(node.right, mid + 1, right, start, end);
+            }
+            return result;
+        }
+
+        private void pushDown(Node node) {
+            if (node.left == null) {
+                node.left = new Node();
+            }
+            if (node.right == null) {
+                node.right = new Node();
+            }
+            if (node.lazy != 0) {
+                node.left.val = node.lazy == 1;
+                node.left.lazy = node.lazy;
+                node.right.val = node.lazy == 1;
+                node.right.lazy = node.lazy;
+                node.lazy = 0;
+            }
+        }
+
+        private void pushUp(Node node) {
+            node.val = node.left.val && node.right.val;
+        }
+
+        static class Node {
+            Node left;
+            Node right;
+            boolean val;
+            int lazy;
+        }
+
+        public static void main(String[] args) {
+            RangeModule2 rm = new RangeModule2();
+            rm.addRange(5, 7);
+            System.out.println(rm.queryRange(2, 7));
+            rm.addRange(6, 9);
+            System.out.println(rm.queryRange(2, 9));
+            rm.addRange(2, 7);
+            rm.removeRange(3, 10);
+            rm.removeRange(1, 8);
+            rm.removeRange(1, 10);
+            System.out.println(rm.queryRange(4, 7));
+        }
+    }
 }
