@@ -1,5 +1,7 @@
 package work.huangdu.question_bank.difficult;
 
+import java.util.Arrays;
+
 /**
  * 2736. 最大和查询
  * 给你两个长度为 n 、下标从 0 开始的整数数组 nums1 和 nums2 ，另给你一个下标从 1 开始的二维数组 queries ，其中 queries[i] = [xi, yi] 。
@@ -36,6 +38,50 @@ package work.huangdu.question_bank.difficult;
  */
 public class MaximumSumQueries {
     public int[] maximumSumQueries(int[] nums1, int[] nums2, int[][] queries) {
-        return null;
+        int n = nums1.length, m = queries.length;
+        int[] ans = new int[m];
+        int[][] pairs = new int[n][2];
+        Integer[] queryIndexs = new Integer[m];
+        for (int i = 0; i < n; i++) {
+            pairs[i][0] = nums1[i];
+            pairs[i][1] = nums2[i];
+        }
+        for (int i = 0; i < m; i++) {queryIndexs[i] = i;}
+        Arrays.sort(pairs, (o1, o2) -> Integer.compare(o2[0], o1[0]));
+        Arrays.sort(queryIndexs, (o1, o2) -> Integer.compare(queries[o2][0], queries[o1][0]));
+        int[][] stack = new int[n][];
+        int top = 0, j = 0;
+        for (int i : queryIndexs) {
+            int x = queries[i][0], y = queries[i][1];
+            while (j < n && pairs[j][0] >= x) {
+                while (top > 0 && stack[top - 1][1] <= pairs[j][0] + pairs[j][1]) {top--;}
+                if (top == 0 || stack[top - 1][0] < pairs[j][1]) {
+                    stack[top++] = new int[] {pairs[j][1], pairs[j][0] + pairs[j][1]};
+                }
+                j++;
+            }
+            if (top == 0) {
+                ans[i] = -1;
+                continue;
+            }
+            int left = -1, right = top;
+            while (left + 1 < right) {
+                int mid = left + (right - left >> 1);
+                if (stack[mid][0] < y) {
+                    left = mid;
+                } else {
+                    right = mid;
+                }
+            }
+            ans[i] = left + 1 < top ? stack[left + 1][1] : -1;
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        int[] nums1 = {13, 67, 90, 92, 47};
+        int[] nums2 = {52, 60, 69, 49, 73};
+        int[][] queries = {{32, 70}};
+        System.out.println(Arrays.toString(new MaximumSumQueries().maximumSumQueries(nums1, nums2, queries)));
     }
 }
