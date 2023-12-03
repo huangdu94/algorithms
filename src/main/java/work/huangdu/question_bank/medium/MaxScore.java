@@ -34,6 +34,18 @@ package work.huangdu.question_bank.medium;
  * @date 2021/2/6
  */
 public class MaxScore {
+    public int maxScore3(int[] cardPoints, int k) {
+        int sum = 0, n = cardPoints.length;
+        for (int i = 0; i < k; i++) { sum += cardPoints[i]; }
+        if (n == k) { return sum; }
+        int ans = sum, left = k - 1, right = n - 1;
+        while (left >= 0) {
+            sum += cardPoints[right--] - cardPoints[left--];
+            ans = Math.max(ans, sum);
+        }
+        return ans;
+    }
+
     public int maxScore2(int[] cardPoints, int k) {
         int n = cardPoints.length;
         if (n == k) {
