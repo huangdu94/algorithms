@@ -33,7 +33,7 @@ public class GetMaxRepetitions {
         //    - 以后的每 (s1cnt - s1cnt') 个 s1 包含了 (s2cnt - s2cnt') 个 s2
         // 那么还会剩下 (n1 - s1cnt') % (s1cnt - s1cnt') 个 s1, 我们对这些与 s2 进行暴力匹配
         // 注意 s2 要从第 index 个字符开始匹配
-        Map<Integer, int[]> recall = new HashMap<Integer, int[]>();
+        Map<Integer, int[]> recall = new HashMap<>();
         int[] preLoop;
         int[] inLoop;
         while (true) {
