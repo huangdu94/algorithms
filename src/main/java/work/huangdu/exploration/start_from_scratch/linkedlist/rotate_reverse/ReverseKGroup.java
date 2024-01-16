@@ -20,9 +20,43 @@ import work.huangdu.data_structure.ListNode;
  */
 public class ReverseKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode dummy = new ListNode(), prev = dummy;
+        while (head != null) {
+            int i = 1;
+            ListNode tail = head;
+            while (i < k && tail != null) {
+                tail = tail.next;
+                i++;
+            }
+            if (i < k || tail == null) {
+                prev.next = head;
+                return dummy.next;
+            }
+            ListNode next = tail.next;
+            tail.next = null;
+            reverse(head);
+            prev.next = tail;
+            prev = head;
+            head = next;
+        }
+        return dummy.next;
+    }
+
+    private void reverse(ListNode head) {
+        ListNode prev = null;
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+    }
+
+    public ListNode reverseKGroup2(ListNode head, int k) {
         ListNode dummy = new ListNode(), cur = dummy;
         dummy.next = head;
-        while ((cur = reverseNextK(cur, k)) != null) ;
+        while ((cur = reverseNextK(cur, k)) != null)
+            ;
         return dummy.next;
     }
 
@@ -40,7 +74,7 @@ public class ReverseKGroup {
             head = head.next;
             i++;
         }
-        if (i < k) return null;
+        if (i < k) {return null;}
         ListNode pre = head.next, tail = cur.next;
         cur.next = head;
         cur = tail;
