@@ -71,6 +71,42 @@ public class MaximumSwap {
         return getNum(numBits);
     }
 
+    public int maximumSwap3(int num) {
+        int digits = 0, idx = 0, n = num;
+        while (n > 0) {
+            n /= 10;
+            digits++;
+        }
+        int[] numArray = new int[digits];
+        n = num;
+        while (n > 0) {
+            numArray[idx++] = n % 10;
+            n /= 10;
+        }
+        int[] sortNumArray = Arrays.copyOf(numArray, digits);
+        Arrays.sort(sortNumArray);
+        int needSwapIdx = digits;
+        for (int i = digits - 1; i >= 0; i--) {
+            if (numArray[i] != sortNumArray[i]) {
+                needSwapIdx = i;
+                break;
+            }
+        }
+        if (needSwapIdx == digits) {return num;}
+        for (int i = 0; i < digits; i++) {
+            if (numArray[i] == sortNumArray[needSwapIdx]) {
+                numArray[i] = numArray[needSwapIdx];
+                numArray[needSwapIdx] = sortNumArray[needSwapIdx];
+                break;
+            }
+        }
+        int ans = 0;
+        for (int i = digits - 1; i >= 0; i--) {
+            ans = ans * 10 + numArray[i];
+        }
+        return ans;
+    }
+
     private int[] getNumBits(int num) {
         int temp = num, i = 0, n = 0;
         while (temp != 0) {
