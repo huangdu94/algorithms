@@ -1,8 +1,7 @@
 package work.huangdu.question_bank.difficult;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -34,28 +33,30 @@ import java.util.List;
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  */
 public class Solution2809 {
-    // TODO 复制粘贴 需要复习
+    /*
+        1. 每个i最多操作一次即可，因为如果你操作两次，就说明前面一次操作没有任何意义可以去掉，反而更好
+        2. 对于一批需要操作的i，我们应该对其按nums2进行升序排序，nums2更大的后操作，收益最大
+        3. 如果一直不操作的话，nums1的和是s1，nums2的和是s2，那第k轮后，和的值就是s1 + s2 * k
+     */
     public int minimumTime(List<Integer> nums1, List<Integer> nums2, int x) {
         int n = nums1.size(), s1 = 0, s2 = 0;
-        int[] dp = new int[n + 1];
-        List<List<Integer>> nums = new ArrayList<>();
+        List<Integer> idxs = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
-            int a = nums1.get(i), b = nums2.get(i);
-            nums.add(Arrays.asList(b, a));
-            s1 += a;
-            s2 += b;
+            s1 += nums1.get(i);
+            s2 += nums2.get(i);
+            idxs.add(i);
         }
-        Collections.sort(nums, (o1, o2) -> Integer.compare(o1.get(0), o2.get(0)));
-
-        for (int j = 1; j <= n; ++j) {
-            int b = nums.get(j - 1).get(0), a = nums.get(j - 1).get(1);
-            for (int i = j; i > 0; --i) {
-                dp[i] = Math.max(dp[i], dp[i - 1] + i * b + a);
+        idxs.sort(Comparator.comparingInt(nums2::get));
+        int[] dp = new int[n + 1];
+        for (int i = 1; i <= n; i++) {
+            int idx = idxs.get(i - 1), num1 = nums1.get(idx), num2 = nums2.get(idx);
+            for (int j = i; j > 0; j--) {
+                dp[j] = Math.max(dp[j], dp[j - 1] + num1 + num2 * j);
             }
         }
-        for (int i = 0; i <= n; i++) {
-            if (s2 * i + s1 - dp[i] <= x) {
-                return i;
+        for (int k = 0; k <= n; k++) {
+            if (s1 + s2 * k - dp[k] <= x) {
+                return k;
             }
         }
         return -1;
