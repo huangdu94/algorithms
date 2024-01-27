@@ -7,6 +7,8 @@ import java.util.Objects;
  * A pair of integers define a range, for example: [1, 5).This range includes integers: 1, 2, 3, and 4.
  * A range list is an aggregate of these ranges: [1, 5), [10, 11), [100, 201)
  *
+ * We can use binary search and modify the original list to implement a more efficient version.
+ *
  * Instances of {@code RangeList} are not safe for use by multiple threads.
  *
  * @author huangdu
