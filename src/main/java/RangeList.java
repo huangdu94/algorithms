@@ -9,7 +9,7 @@ import java.util.Objects;
  *
  * Instances of {@code RangeList} are not safe for use by multiple threads.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class RangeList {
     private List<int[]> ranges;
