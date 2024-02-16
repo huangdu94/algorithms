@@ -32,7 +32,29 @@ import work.huangdu.data_structure.TreeNode;
  * @date 2021/5/17
  */
 public class IsCousins {
+    private static final TreeNode DEFAULT = new TreeNode();
+    private TreeNode parent = DEFAULT;
+    private int depth;
+
     public boolean isCousins(TreeNode root, int x, int y) {
+        dfs(root, null, 0, x);
+        return dfs(root, null, 0, y);
+    }
+
+    private boolean dfs(TreeNode root, TreeNode parent, int depth, int x) {
+        if (root == null) {return false;}
+        if (root.val == x) {
+            if (this.parent != DEFAULT) {
+                return this.parent != parent && this.depth == depth;
+            }
+            this.parent = parent;
+            this.depth = depth;
+            return true;
+        }
+        return dfs(root.left, root, depth + 1, x) || dfs(root.right, root, depth + 1, x);
+    }
+
+    public boolean isCousins2(TreeNode root, int x, int y) {
         if (root.val == x || root.val == y) {return false;}
         Map<Integer, Integer> fatherMap = new HashMap<>();
         Queue<TreeNode> queue = new ArrayDeque<>();
