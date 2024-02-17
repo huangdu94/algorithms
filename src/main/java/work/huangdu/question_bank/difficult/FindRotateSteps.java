@@ -1,8 +1,12 @@
 package work.huangdu.question_bank.difficult;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Queue;
 
 /**
  * 514. 自由之路
@@ -30,118 +34,118 @@ import java.util.List;
  */
 public class FindRotateSteps {
     // 回溯超时
-//    private int step;
-//    private int min = Integer.MAX_VALUE;
-//
-//    public int findRotateSteps(String ring, String key) {
-//        // 统计ring中各字符的数量
-//        int[] counts = statistics(ring);
-//        this.step = key.length();
-//        backtrack(counts, key.toCharArray(), 0, ring);
-//        return this.min;
-//    }
-//
-//    /**
-//     * 统计ring中各字符的数量
-//     *
-//     * @param ring 当前ring
-//     * @return ring中各字符的数量
-//     */
-//    private int[] statistics(String ring) {
-//        int[] counts = new int[128];
-//        for (char r : ring.toCharArray()) {
-//            counts[r]++;
-//        }
-//        return counts;
-//    }
-//
-//    /**
-//     * 回溯算法主体
-//     *
-//     * @param counts  ring中个字母的数量，用于优化
-//     * @param targets 目标字符数组
-//     * @param index   当前进行到的index
-//     * @param ring    当前ring
-//     */
-//    private void backtrack(int[] counts, char[] targets, int index, String ring) {
-//        if (index == targets.length) {
-//            if (this.min > this.step) {
-//                this.min = this.step;
-//            }
-//            return;
-//        }
-//        // 如果当前step已经大于等于min，提前剪枝
-//        if (this.step >= this.min) return;
-//        char target = targets[index];
-//        // 若某一个字符数量只有一个，那么一定是选择逆时针和顺时针中最小的那个值
-//        if (counts[target] == 1) {
-//            int contraRotateStep = ring.indexOf(target);
-//            int clockwiseRotateStep = ring.length() - ring.lastIndexOf(target);
-//            if (contraRotateStep <= clockwiseRotateStep) {
-//                this.step += contraRotateStep;
-//                backtrack(counts, targets, index + 1, contraRotate(ring, contraRotateStep));
-//            } else {
-//                this.step += clockwiseRotateStep;
-//                backtrack(counts, targets, index + 1, clockwiseRotate(ring, clockwiseRotateStep));
-//            }
-//        } else {
-//            int stepRecall = this.step;
-//            // 逆时针
-//            backtrack(counts, targets, index + 1, contraRotate(ring, target));
-//            this.step = stepRecall;
-//            // 顺时针
-//            backtrack(counts, targets, index + 1, clockwiseRotate(ring, target));
-//            this.step = stepRecall;
-//        }
-//    }
-//
-//    /**
-//     * 将ring逆时针旋转到最近的target
-//     *
-//     * @param ring   当前ring
-//     * @param target 目标字符
-//     * @return 旋转后的ring
-//     */
-//    private String contraRotate(String ring, char target) {
-//        int step = ring.indexOf(target);
-//        this.step += step;
-//        return contraRotate(ring, step);
-//    }
-//
-//    /**
-//     * 将ring逆时针旋转step
-//     *
-//     * @param ring 当前ring
-//     * @param step 步数
-//     * @return 旋转后的ring
-//     */
-//    private String contraRotate(String ring, int step) {
-//        return ring.concat(ring).substring(step, step + ring.length());
-//    }
-//
-//    /**
-//     * 将ring顺时针旋转到最近的target
-//     *
-//     * @param ring   当前ring
-//     * @param target 目标字符
-//     * @return 旋转后的ring
-//     */
-//    private String clockwiseRotate(String ring, char target) {
-//        int step = ring.length() - ring.lastIndexOf(target);
-//        this.step += step;
-//        return clockwiseRotate(ring, step);
-//    }
-//
-//    /**
-//     * 将ring顺时针旋转step
-//     *
-//     * @param ring 当前ring
-//     * @param step 步数
-//     * @return 旋转后的ring
-//     */
-//    private String clockwiseRotate(String ring, int step) {
-//        return ring.concat(ring).substring(ring.length() - step, 2 * ring.length() - step);
-//    }
+    //    private int step;
+    //    private int min = Integer.MAX_VALUE;
+    //
+    //    public int findRotateSteps(String ring, String key) {
+    //        // 统计ring中各字符的数量
+    //        int[] counts = statistics(ring);
+    //        this.step = key.length();
+    //        backtrack(counts, key.toCharArray(), 0, ring);
+    //        return this.min;
+    //    }
+    //
+    //    /**
+    //     * 统计ring中各字符的数量
+    //     *
+    //     * @param ring 当前ring
+    //     * @return ring中各字符的数量
+    //     */
+    //    private int[] statistics(String ring) {
+    //        int[] counts = new int[128];
+    //        for (char r : ring.toCharArray()) {
+    //            counts[r]++;
+    //        }
+    //        return counts;
+    //    }
+    //
+    //    /**
+    //     * 回溯算法主体
+    //     *
+    //     * @param counts  ring中个字母的数量，用于优化
+    //     * @param targets 目标字符数组
+    //     * @param index   当前进行到的index
+    //     * @param ring    当前ring
+    //     */
+    //    private void backtrack(int[] counts, char[] targets, int index, String ring) {
+    //        if (index == targets.length) {
+    //            if (this.min > this.step) {
+    //                this.min = this.step;
+    //            }
+    //            return;
+    //        }
+    //        // 如果当前step已经大于等于min，提前剪枝
+    //        if (this.step >= this.min) return;
+    //        char target = targets[index];
+    //        // 若某一个字符数量只有一个，那么一定是选择逆时针和顺时针中最小的那个值
+    //        if (counts[target] == 1) {
+    //            int contraRotateStep = ring.indexOf(target);
+    //            int clockwiseRotateStep = ring.length() - ring.lastIndexOf(target);
+    //            if (contraRotateStep <= clockwiseRotateStep) {
+    //                this.step += contraRotateStep;
+    //                backtrack(counts, targets, index + 1, contraRotate(ring, contraRotateStep));
+    //            } else {
+    //                this.step += clockwiseRotateStep;
+    //                backtrack(counts, targets, index + 1, clockwiseRotate(ring, clockwiseRotateStep));
+    //            }
+    //        } else {
+    //            int stepRecall = this.step;
+    //            // 逆时针
+    //            backtrack(counts, targets, index + 1, contraRotate(ring, target));
+    //            this.step = stepRecall;
+    //            // 顺时针
+    //            backtrack(counts, targets, index + 1, clockwiseRotate(ring, target));
+    //            this.step = stepRecall;
+    //        }
+    //    }
+    //
+    //    /**
+    //     * 将ring逆时针旋转到最近的target
+    //     *
+    //     * @param ring   当前ring
+    //     * @param target 目标字符
+    //     * @return 旋转后的ring
+    //     */
+    //    private String contraRotate(String ring, char target) {
+    //        int step = ring.indexOf(target);
+    //        this.step += step;
+    //        return contraRotate(ring, step);
+    //    }
+    //
+    //    /**
+    //     * 将ring逆时针旋转step
+    //     *
+    //     * @param ring 当前ring
+    //     * @param step 步数
+    //     * @return 旋转后的ring
+    //     */
+    //    private String contraRotate(String ring, int step) {
+    //        return ring.concat(ring).substring(step, step + ring.length());
+    //    }
+    //
+    //    /**
+    //     * 将ring顺时针旋转到最近的target
+    //     *
+    //     * @param ring   当前ring
+    //     * @param target 目标字符
+    //     * @return 旋转后的ring
+    //     */
+    //    private String clockwiseRotate(String ring, char target) {
+    //        int step = ring.length() - ring.lastIndexOf(target);
+    //        this.step += step;
+    //        return clockwiseRotate(ring, step);
+    //    }
+    //
+    //    /**
+    //     * 将ring顺时针旋转step
+    //     *
+    //     * @param ring 当前ring
+    //     * @param step 步数
+    //     * @return 旋转后的ring
+    //     */
+    //    private String clockwiseRotate(String ring, int step) {
+    //        return ring.concat(ring).substring(ring.length() - step, 2 * ring.length() - step);
+    //    }
 
     @SuppressWarnings("unchecked")
     public int findRotateSteps(String _ring, String _key) {
@@ -177,7 +181,37 @@ public class FindRotateSteps {
         }
         return min;
     }
-    
+
+    public int findRotateSteps2(String ring, String key) {
+        int m = ring.length(), n = key.length();
+        Map<Character, List<Integer>> idxMap = new HashMap<>();
+        for (int i = 0; i < m; i++) {
+            char ch = ring.charAt(i);
+            List<Integer> idxs = idxMap.computeIfAbsent(ch, k -> new ArrayList<>());
+            idxs.add(i);
+        }
+        int[] dp = new int[m];
+        Queue<Integer> idxQueue = new ArrayDeque<>();
+        idxQueue.offer(0);
+        for (int i = 0; i < n; i++) {
+            List<Integer> nexts = idxMap.get(key.charAt(i));
+            int[] newDp = new int[m];
+            Arrays.fill(newDp, Integer.MAX_VALUE);
+            for (int j = 0, size = idxQueue.size(); j < size; j++) {
+                int cur = idxQueue.poll();
+                for (int next : nexts) {
+                    int diff = Math.abs(next - cur);
+                    newDp[next] = Math.min(newDp[next], dp[cur] + Math.min(diff, m - diff));
+                }
+            }
+            dp = newDp;
+            idxQueue.addAll(nexts);
+        }
+        int ans = Integer.MAX_VALUE;
+        for (int val : dp) {ans = Math.min(ans, val);}
+        return ans + key.length();
+    }
+
     public static void main(String[] args) {
         String ring = "bicligfijg";
         String key = "cgijcjlgiggigigijiiciicjilicjflccgilcflijgigbiifiggigiggibbjbijlbcifjlblfggiibjgblgfiiifgbiiciffgbfl";
