@@ -27,9 +27,10 @@ import work.huangdu.data_structure.TreeNode;
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  */
 public class ConstructFromPrePost {
+    // TODO 复制粘贴需要复习
     public TreeNode constructFromPrePost(int[] preorder, int[] postorder) {
         int n = preorder.length;
-        Map<Integer, Integer> postMap = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> postMap = new HashMap<>();
         for (int i = 0; i < n; i++) {
             postMap.put(postorder[i], i);
         }
