@@ -78,4 +78,22 @@ public class GetHint {
         sb.append('B');
         return sb.toString();
     }
+
+    public String getHint4(String secret, String guess) {
+        int n = secret.length(), a = 0, b = 0;
+        int[] count = new int[10];
+        for (int i = 0; i < n; i++) {
+            char s = secret.charAt(i), g = guess.charAt(i);
+            if (s == g) {
+                a++;
+            } else {
+                count[s - '0']++;
+                count[g - '0']--;
+            }
+        }
+        for (int cnt : count) {
+            b += Math.abs(cnt);
+        }
+        return new StringBuilder().append(a).append('A').append(n - a - b / 2).append('B').toString();
+    }
 }
