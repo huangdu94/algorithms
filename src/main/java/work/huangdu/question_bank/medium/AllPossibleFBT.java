@@ -1,6 +1,7 @@
 package work.huangdu.question_bank.medium;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import work.huangdu.data_structure.TreeNode;
@@ -55,5 +56,30 @@ public class AllPossibleFBT {
             }
         }
         return fullBinaryTrees;
+    }
+
+    private static int len = 3;
+    private static final List<TreeNode>[] ANS_ARRAY = new List[20];
+
+    static {
+        ANS_ARRAY[1] = Arrays.asList(new TreeNode(0));
+    }
+
+    public List<TreeNode> allPossibleFBT2(int n) {
+        if ((n & 1) == 0) { return new ArrayList(0); }
+        if (n < len) { return ANS_ARRAY[n]; }
+        for (int i = len; i <= n; i += 2) {
+            List<TreeNode> ans = new ArrayList();
+            for (int j = 1; j < i; j += 2) {
+                for (TreeNode left : ANS_ARRAY[j]) {
+                    for (TreeNode right : ANS_ARRAY[i - j - 1]) {
+                        ans.add(new TreeNode(0, left, right));
+                    }
+                }
+            }
+            ANS_ARRAY[i] = ans;
+        }
+        len = n + 2;
+        return ANS_ARRAY[n];
     }
 }
