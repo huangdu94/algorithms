@@ -2,8 +2,11 @@ package work.huangdu.question_bank.medium;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * 1600. 皇位继承顺序
@@ -131,6 +134,43 @@ public class ThroneInheritance {
         }
         for (TreeNode child : node.getChildren()) {
             preOrder(child);
+        }
+    }
+}
+class ThroneInheritance2 {
+    private final String root;
+    private final Map<String, List<String>> tree;
+    private final Set<String> deathSet;
+
+    public ThroneInheritance2(String kingName) {
+        this.root = kingName;
+        tree = new HashMap<>();
+        tree.put(kingName, new ArrayList<>());
+        deathSet = new HashSet<>();
+    }
+
+    public void birth(String parentName, String childName) {
+        List<String> children = tree.computeIfAbsent(parentName, k -> new ArrayList<>());
+        children.add(childName);
+    }
+
+    public void death(String name) {
+        deathSet.add(name);
+    }
+
+    public List<String> getInheritanceOrder() {
+        Set<String> curOrder = new LinkedHashSet<>();
+        successor(root, curOrder);
+        curOrder.removeAll(deathSet);
+        return new ArrayList<>(curOrder);
+    }
+
+    private void successor(String x, Set<String> curOrder) {
+        if (curOrder.contains(x)) {return;}
+        curOrder.add(x);
+        if (!tree.containsKey(x)) {return;}
+        for (String child : tree.get(x)) {
+            successor(child, curOrder);
         }
     }
 }
