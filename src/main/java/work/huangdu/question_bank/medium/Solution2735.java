@@ -22,7 +22,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums[i] <= 10^9
  * 1 <= x <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class Solution2735 {
     public long minCost(int[] nums, int x) {

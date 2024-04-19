@@ -14,8 +14,8 @@ package work.huangdu.question_bank.easy;
  * -50 <= points[i][j] <= 50.
  * 结果误差值在 10^-6 以内都认为是正确答案。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/15
+ * @author huangdu
+ * @version 2022/5/15
  */
 public class LargestTriangleArea {
     public double largestTriangleArea(int[][] points) {

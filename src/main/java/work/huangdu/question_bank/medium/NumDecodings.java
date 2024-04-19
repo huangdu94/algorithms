@@ -40,8 +40,8 @@ import java.util.Queue;
  * 1 <= s.length <= 100
  * s 只包含数字，并且可能包含前导零。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/21
+ * @author huangdu
+ * @version 2021/4/21
  */
 public class NumDecodings {
     public int numDecodings(String s) {

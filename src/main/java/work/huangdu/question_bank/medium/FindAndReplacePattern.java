@@ -26,7 +26,7 @@ import java.util.Set;
  * 1 <= pattern.length = words[i].length <= 20
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/6/12
+ * @version 2022/6/12
  */
 public class FindAndReplacePattern {
     public List<String> findAndReplacePattern(String[] words, String pattern) {

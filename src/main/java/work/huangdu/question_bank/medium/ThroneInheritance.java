@@ -61,8 +61,8 @@ import java.util.Set;
  * obj.death(name);
  * List<String> param_3 = obj.getInheritanceOrder();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/20
+ * @author huangdu
+ * @version 2021/6/20
  */
 public class ThroneInheritance {
     private static class TreeNode {

@@ -29,7 +29,7 @@ import java.util.HashMap;
  * 不存在指向顶点自身的边
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/12/19
+ * @version 2022/12/19
  */
 public class ValidPath {
     public boolean validPath(int n, int[][] edges, int source, int destination) {

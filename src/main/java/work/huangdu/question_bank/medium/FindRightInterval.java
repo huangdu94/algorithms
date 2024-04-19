@@ -29,8 +29,8 @@ import java.util.Comparator;
  * -10^6 <= starti <= endi <= 10^6
  * 每个间隔的起点都 不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/20
+ * @author huangdu
+ * @version 2022/5/20
  */
 public class FindRightInterval {
     public int[] findRightInterval(int[][] intervals) {

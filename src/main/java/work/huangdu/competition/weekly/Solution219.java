@@ -5,8 +5,8 @@ import java.util.Arrays;
 /**
  * 第219场周赛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/13 9:58
+ * @author huangdu
+ * @version 2020/12/13 9:58
  */
 public class Solution219 {
     /**

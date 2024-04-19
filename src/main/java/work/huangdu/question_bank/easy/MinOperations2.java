@@ -21,8 +21,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 10^4
  * s[i] 是 '0' 或 '1'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/29
+ * @author huangdu
+ * @version 2022/11/29
  */
 public class MinOperations2 {
     public int minOperations(String s) {

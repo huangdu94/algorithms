@@ -26,8 +26,8 @@ package work.huangdu.question_bank.easy;
  * ParkingSystem obj = new ParkingSystem(big, medium, small);
  * boolean param_1 = obj.addCar(carType);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/19
+ * @author huangdu
+ * @version 2021/3/19
  */
 public class ParkingSystem {
     private final int[] count;

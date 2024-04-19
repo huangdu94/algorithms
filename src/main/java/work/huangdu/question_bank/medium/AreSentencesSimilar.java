@@ -27,8 +27,8 @@ import java.util.Arrays;
  * sentence1 和 sentence2 都只包含大小写英文字母和空格。
  * sentence1 和 sentence2 中的单词都只由单个空格隔开。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/16
+ * @author huangdu
+ * @version 2023/1/16
  */
 public class AreSentencesSimilar {
     public boolean areSentencesSimilar(String sentence1, String sentence2) {

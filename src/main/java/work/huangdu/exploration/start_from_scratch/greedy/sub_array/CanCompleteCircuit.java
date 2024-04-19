@@ -35,8 +35,8 @@ package work.huangdu.exploration.start_from_scratch.greedy.sub_array;
  * 你无法返回 2 号加油站，因为返程需要消耗 4 升汽油，但是你的油箱只有 3 升汽油。
  * 因此，无论怎样，你都不可能绕环路行驶一周。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/17 20:15
+ * @author huangdu
+ * @version 2020/11/17 20:15
  */
 public class CanCompleteCircuit {
     public int canCompleteCircuit(int[] gas, int[] cost) {

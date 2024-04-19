@@ -25,7 +25,7 @@ package work.huangdu.question_bank.easy;
  * operations[i].length == 2
  * 0 <= operations[i][0], operations[i][1] < gem.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class GiveGem {
     public int giveGem(int[] gem, int[][] operations) {

@@ -34,8 +34,8 @@ import java.util.PriorityQueue;
  * 1 <= nums.length <= 10^5
  * 1 <= nums[i] <= 10^7
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/25
+ * @author huangdu
+ * @version 2023/7/25
  */
 public class HalveArray {
     public int halveArray(int[] nums) {

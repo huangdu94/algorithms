@@ -33,8 +33,8 @@ import work.huangdu.data_structure.TreeNode;
  * 树中的所有值 互不相同
  * 1 <= val <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/30
+ * @author huangdu
+ * @version 2022/8/30
  */
 public class InsertIntoMaxTree {
     public TreeNode insertIntoMaxTree(TreeNode root, int val) {

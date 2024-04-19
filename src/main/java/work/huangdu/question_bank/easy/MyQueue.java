@@ -28,8 +28,8 @@ import java.util.LinkedList;
  * int param_3 = obj.peek();
  * boolean param_4 = obj.empty();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/15 13:51
+ * @author huangdu
+ * @version 2020/8/15 13:51
  * @see MyStack
  */
 public class MyQueue {

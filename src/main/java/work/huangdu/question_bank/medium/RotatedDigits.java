@@ -18,8 +18,8 @@ import java.util.Set;
  * 提示：
  * N 的取值范围是 [1, 10000]。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/27
+ * @author huangdu
+ * @version 2022/9/27
  */
 public class RotatedDigits {
     private int lastKey = 0;

@@ -50,7 +50,7 @@ import java.util.List;
  * 0 <= stock[i] <= 10^8
  * 1 <= cost[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaxNumberOfAlloys {
     public int maxNumberOfAlloys(int n, int k, int budget, List<List<Integer>> compositions, List<Integer> stock, List<Integer> cost) {

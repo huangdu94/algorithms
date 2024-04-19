@@ -33,8 +33,8 @@ import java.util.Queue;
  * 每个钥匙都对应一个 不同 的字母
  * 每个钥匙正好打开一个对应的锁
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/10
+ * @author huangdu
+ * @version 2022/11/10
  */
 public class ShortestPathAllKeys {
     public int shortestPathAllKeys(String[] grid) {

@@ -36,8 +36,8 @@ import java.util.TreeMap;
  * 1 <= n <= 4 * 10^4
  * 1 <= coins[i] <= 4 * 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/6
+ * @author huangdu
+ * @version 2023/2/6
  */
 public class GetMaximumConsecutive {
     public int getMaximumConsecutive(int[] coins) {

@@ -20,8 +20,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= arr[i] <= 15
  * 答案保证是一个 32 位带符号整数，即小于 2^31 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/31
+ * @author huangdu
+ * @version 2023/5/31
  */
 public class MctFromLeafValues {
     private int[][] max;

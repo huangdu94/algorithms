@@ -27,7 +27,7 @@ import java.util.PriorityQueue;
  * -10^9 <= nums[i] <= 10^9
  * 1 <= k <= min(2000, 2^n)
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class KSum {
     public long kSum(int[] nums, int k) {

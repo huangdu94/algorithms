@@ -29,8 +29,8 @@ package work.huangdu.question_bank.medium;
  * obj.addAtIndex(index,val);
  * obj.deleteAtIndex(index);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/23
+ * @author huangdu
+ * @version 2022/9/23
  */
 public class MyLinkedList {
     private int size;

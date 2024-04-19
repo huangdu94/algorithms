@@ -31,7 +31,7 @@ import work.huangdu.data_structure.TreeNode;
  * 1 <= n <= 10^5
  * 1 <= queries[i] <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class ClosestNodes {
     public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries) {

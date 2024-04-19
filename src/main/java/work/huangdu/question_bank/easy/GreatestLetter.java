@@ -26,7 +26,7 @@ package work.huangdu.question_bank.easy;
  * s 由小写和大写英文字母组成
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/1/27
+ * @version 2023/1/27
  */
 public class GreatestLetter {
     public String greatestLetter(String s) {

@@ -29,8 +29,8 @@ import java.util.Set;
  * 1 <= nums1.length, nums2.length, nums3.length <= 100
  * 1 <= nums1[i], nums2[j], nums3[k] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/29
+ * @author huangdu
+ * @version 2022/12/29
  */
 public class TwoOutOfThree {
     public List<Integer> twoOutOfThree(int[] nums1, int[] nums2, int[] nums3) {

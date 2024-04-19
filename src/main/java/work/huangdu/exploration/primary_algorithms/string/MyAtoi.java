@@ -35,8 +35,8 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 解释: 数字 "-91283472332" 超过 32 位有符号整数范围。
  * 因此返回 INT_MIN (−2^31) 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 17:11
+ * @author huangdu
+ * @version 2020/7/26 17:11
  */
 public class MyAtoi {
     public static int INTEGER_MAX_DIVIDE10 = Integer.MAX_VALUE / 10;

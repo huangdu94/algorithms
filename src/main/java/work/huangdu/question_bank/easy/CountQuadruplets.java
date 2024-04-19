@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * 4 <= nums.length <= 50
  * 1 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/29
+ * @author huangdu
+ * @version 2021/12/29
  */
 public class CountQuadruplets {
     public int countQuadruplets(int[] nums) {

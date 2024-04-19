@@ -11,8 +11,8 @@ import java.util.Set;
  * 输入: k = 5
  * 输出: 9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/28
+ * @author huangdu
+ * @version 2022/9/28
  */
 public class GetKthMagicNumber {
     public int getKthMagicNumber(int k) {

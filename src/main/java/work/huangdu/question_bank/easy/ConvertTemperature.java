@@ -19,8 +19,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 0 <= celsius <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/21
+ * @author huangdu
+ * @version 2023/3/21
  */
 public class ConvertTemperature {
     public double[] convertTemperature(double celsius) {

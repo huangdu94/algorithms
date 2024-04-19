@@ -22,8 +22,8 @@ import java.util.Map;
  * 2 <= arr[i] <= 10^9
  * arr 中的所有值 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/29
+ * @author huangdu
+ * @version 2023/8/29
  */
 public class NumFactoredBinaryTrees {
     public int numFactoredBinaryTrees(int[] arr) {

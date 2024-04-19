@@ -22,8 +22,8 @@ import java.util.Set;
  * s1 和 s2 都不含前导或尾随空格
  * s1 和 s2 中的所有单词间均由单个空格分隔
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/30
+ * @author huangdu
+ * @version 2022/1/30
  */
 public class UncommonFromSentences {
     public String[] uncommonFromSentences(String s1, String s2) {

@@ -23,8 +23,8 @@ import java.util.PriorityQueue;
  * 0 <= k <= 2 * 10^8
  * 对于所有的1 <= i < j <= points.length，points[i][0] < points[j][0]都成立。也就是说，xi 是严格递增的。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/21
+ * @author huangdu
+ * @version 2023/7/21
  */
 public class FindMaxValueOfEquation {
     public int findMaxValueOfEquation(int[][] points, int k) {

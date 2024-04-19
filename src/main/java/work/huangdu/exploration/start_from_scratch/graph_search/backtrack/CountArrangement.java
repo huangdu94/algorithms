@@ -19,8 +19,8 @@ package work.huangdu.exploration.start_from_scratch.graph_search.backtrack;
  * 说明:
  * N 是一个正整数，并且不会超过15。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/26
+ * @author huangdu
+ * @version 2021/3/26
  */
 public class CountArrangement {
     private int count;

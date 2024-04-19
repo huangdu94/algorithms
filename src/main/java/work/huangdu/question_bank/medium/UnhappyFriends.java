@@ -41,8 +41,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= xi, yi <= n - 1
  * 每位朋友都 恰好 被包含在一对中
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/14
+ * @author huangdu
+ * @version 2021/8/14
  */
 public class UnhappyFriends {
     public int unhappyFriends(int n, int[][] preferences, int[][] pairs) {

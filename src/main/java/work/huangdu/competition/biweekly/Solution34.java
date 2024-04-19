@@ -5,8 +5,8 @@ import java.util.Arrays;
 /**
  * 第 34 场双周赛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/5 21:18
+ * @author huangdu
+ * @version 2020/9/5 21:18
  */
 public class Solution34 {
     /**

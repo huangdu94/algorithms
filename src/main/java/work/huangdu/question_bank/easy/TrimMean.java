@@ -27,8 +27,8 @@ import java.util.Arrays;
  * arr.length 是 20 的 倍数
  * 0 <= arr[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/14
+ * @author huangdu
+ * @version 2022/9/14
  */
 public class TrimMean {
     public double trimMean(int[] arr) {

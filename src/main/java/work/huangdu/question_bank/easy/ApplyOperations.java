@@ -27,8 +27,8 @@ package work.huangdu.question_bank.easy;
  * 2 <= nums.length <= 2000
  * 0 <= nums[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/5
+ * @author huangdu
+ * @version 2023/6/5
  */
 public class ApplyOperations {
     public int[] applyOperations(int[] nums) {

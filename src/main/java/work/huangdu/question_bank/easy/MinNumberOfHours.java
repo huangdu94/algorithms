@@ -32,8 +32,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= n <= 100
  * 1 <= initialEnergy, initialExperience, energy[i], experience[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/13
+ * @author huangdu
+ * @version 2023/3/13
  */
 public class MinNumberOfHours {
     public int minNumberOfHours(int initialEnergy, int initialExperience, int[] energy, int[] experience) {

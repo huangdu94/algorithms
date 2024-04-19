@@ -22,8 +22,8 @@ import java.util.Map;
  * 1 <= hours.length <= 10^4
  * 0 <= hours[i] <= 16
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/14
+ * @author huangdu
+ * @version 2023/2/14
  */
 public class LongestWPI {
     public int longestWPI(int[] hours) {

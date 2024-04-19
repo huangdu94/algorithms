@@ -24,8 +24,8 @@ import work.huangdu.data_structure.TreeNode;
  * to_delete.length <= 1000
  * to_delete 包含一些从 1 到 1000、各不相同的值。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/30
+ * @author huangdu
+ * @version 2023/5/30
  */
 public class DelNodes {
     public List<TreeNode> delNodes(TreeNode root, int[] to_delete) {

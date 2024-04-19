@@ -20,8 +20,8 @@ import java.util.Arrays;
  * 1 <= s.length <= 2000
  * s 仅由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/8
+ * @author huangdu
+ * @version 2021/3/8
  */
 public class MinCut {
 

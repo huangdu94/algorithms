@@ -21,8 +21,8 @@ import java.util.Map;
  * 1 <= piles.length <= 100
  * 1 <= piles[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/22
+ * @author huangdu
+ * @version 2023/2/22
  */
 public class StoneGameII {
     public int stoneGameII(int[] piles) {

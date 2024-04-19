@@ -20,8 +20,8 @@ import java.util.List;
  * 你可以假设所给定的表达式都是有效的。
  * 请不要使用内置的库函数 eval。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/27 19:17
+ * @author huangdu
+ * @version 2020/7/27 19:17
  */
 public class Calculate {
     private static final List<Character> symbolList = Arrays.asList('+', '-', '*', '/');

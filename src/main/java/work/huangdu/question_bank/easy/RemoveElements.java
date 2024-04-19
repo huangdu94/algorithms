@@ -19,8 +19,8 @@ import work.huangdu.data_structure.ListNode;
  * 1 <= Node.val <= 50
  * 0 <= k <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/14 0:54
+ * @author huangdu
+ * @version 2020/8/14 0:54
  * @see RemoveElement
  */
 public class RemoveElements {

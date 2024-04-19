@@ -34,7 +34,7 @@ import java.util.Arrays;
  * 1 <= heights[i] <= 100
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/6/15
+ * @version 2022/6/15
  */
 public class HeightChecker {
     public int heightChecker(int[] heights) {

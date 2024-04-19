@@ -11,8 +11,8 @@ package work.huangdu.question_bank.medium;
  * 给定单词的长度不超过500。
  * 给定单词中的字符只含有小写字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/25
+ * @author huangdu
+ * @version 2021/9/25
  */
 public class MinDistance {
     public int minDistance(String word1, String word2) {

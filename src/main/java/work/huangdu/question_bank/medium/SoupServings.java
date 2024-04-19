@@ -23,8 +23,8 @@ package work.huangdu.question_bank.medium;
  * 提示:
  * 0 <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/21
+ * @author huangdu
+ * @version 2022/11/21
  */
 public class SoupServings {
     public double soupServings(int n) {

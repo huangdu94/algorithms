@@ -33,8 +33,8 @@ import java.util.PriorityQueue;
  * KthLargest obj = new KthLargest(k, nums);
  * int param_1 = obj.add(val);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/11
+ * @author huangdu
+ * @version 2021/2/11
  */
 public class KthLargest {
     private final int k;

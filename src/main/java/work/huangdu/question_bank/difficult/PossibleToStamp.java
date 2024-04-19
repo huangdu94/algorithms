@@ -29,7 +29,7 @@ import java.util.Arrays;
  * grid[r][c] 要么是 0 ，要么是 1 。
  * 1 <= stampHeight, stampWidth <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class PossibleToStamp {
     // TODO 二维差分数组

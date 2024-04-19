@@ -44,8 +44,8 @@ import java.util.TreeMap;
  * items1 中每个 valuei 都是 唯一的 。
  * items2 中每个 valuei 都是 唯一的 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/28
+ * @author huangdu
+ * @version 2023/2/28
  */
 public class MergeSimilarItems {
     public List<List<Integer>> mergeSimilarItems(int[][] items1, int[][] items2) {

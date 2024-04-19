@@ -21,8 +21,8 @@ package work.huangdu.question_bank.difficult;
  * rollMax.length == 6
  * 1 <= rollMax[i] <= 15
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/13
+ * @author huangdu
+ * @version 2023/2/13
  */
 public class DieSimulator {
     // TODO 动态规划需要复习。

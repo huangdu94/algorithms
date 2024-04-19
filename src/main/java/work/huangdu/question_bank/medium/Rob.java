@@ -20,8 +20,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums.length <= 100
  * 0 <= nums[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/15
+ * @author huangdu
+ * @version 2021/4/15
  */
 public class Rob {
     public int rob(int[] nums) {

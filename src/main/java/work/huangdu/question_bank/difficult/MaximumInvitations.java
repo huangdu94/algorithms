@@ -41,7 +41,7 @@ import java.util.List;
  * 0 <= favorite[i] <= n - 1
  * favorite[i] != i
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumInvitations {
     public int maximumInvitations(int[] favorite) {

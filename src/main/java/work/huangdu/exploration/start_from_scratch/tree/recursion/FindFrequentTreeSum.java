@@ -25,8 +25,8 @@ import work.huangdu.data_structure.TreeNode;
  * 返回 [2]，只有 2 出现两次，-5 只出现 1 次。
  * 提示： 假设任意子树元素和均可以用 32 位有符号整数表示。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/27 12:56
+ * @author huangdu
+ * @version 2020/12/27 12:56
  */
 public class FindFrequentTreeSum {
     /**

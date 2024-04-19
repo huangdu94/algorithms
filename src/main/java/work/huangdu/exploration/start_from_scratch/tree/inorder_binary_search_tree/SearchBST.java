@@ -20,7 +20,7 @@ import work.huangdu.data_structure.TreeNode;
  * 在上述示例中，如果要找的值是 5，但因为没有节点值为 5，我们应该返回 NULL。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2021/2/6
+ * @version 2021/2/6
  */
 public class SearchBST {
     public TreeNode searchBST2(TreeNode root, int val) {

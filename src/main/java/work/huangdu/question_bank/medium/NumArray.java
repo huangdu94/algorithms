@@ -34,8 +34,8 @@ import work.huangdu.data_structure.BinaryIndexedTree;
  * obj.update(index,val);
  * int param_2 = obj.sumRange(left,right);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/4
+ * @author huangdu
+ * @version 2022/4/4
  */
 public class NumArray {
     static class Solution1 {

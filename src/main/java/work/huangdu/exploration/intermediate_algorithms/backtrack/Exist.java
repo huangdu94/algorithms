@@ -20,8 +20,8 @@ package work.huangdu.exploration.intermediate_algorithms.backtrack;
  * 1 <= board[i].length <= 200
  * 1 <= word.length <= 10^3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/9 0:24
+ * @author huangdu
+ * @version 2020/7/9 0:24
  */
 public class Exist {
     static class Solution {

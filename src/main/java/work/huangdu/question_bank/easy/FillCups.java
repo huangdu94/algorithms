@@ -34,8 +34,8 @@ import java.util.Arrays;
  * amount.length == 3
  * 0 <= amount[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/13
+ * @author huangdu
+ * @version 2023/2/13
  */
 public class FillCups {
     public int fillCups(int[] amount) {

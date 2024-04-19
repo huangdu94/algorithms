@@ -23,8 +23,8 @@ import java.util.Queue;
  * \   \
  * 3    3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/6/23 9:37
+ * @author huangdu
+ * @version 2020/6/23 9:37
  */
 public class Symmetric {
     public boolean isSymmetric2(TreeNode root) {

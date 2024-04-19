@@ -27,7 +27,7 @@ import work.huangdu.specific.union_find_set.FinalUnionFindSet;
  * ai != bi
  * 不会有重复边。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CountPairs2 {
     public long countPairs(int n, int[][] edges) {

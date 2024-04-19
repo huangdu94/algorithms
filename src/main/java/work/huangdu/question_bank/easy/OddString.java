@@ -30,8 +30,8 @@ import java.util.Map;
  * 2 <= n <= 20
  * words[i] 只含有小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/25
+ * @author huangdu
+ * @version 2023/5/25
  */
 public class OddString {
     public String oddString(String[] words) {

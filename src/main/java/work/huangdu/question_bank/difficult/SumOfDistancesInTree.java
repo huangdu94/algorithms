@@ -29,8 +29,8 @@ import java.util.List;
  * ai != bi
  * 给定的输入保证为有效的树
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/6 13:40
+ * @author huangdu
+ * @version 2020/10/6 13:40
  */
 public class SumOfDistancesInTree {
     static class Solution {

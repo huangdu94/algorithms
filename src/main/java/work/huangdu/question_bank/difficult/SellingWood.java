@@ -36,7 +36,7 @@ package work.huangdu.question_bank.difficult;
  * 1 <= price_i <= 10^6
  * 所有 (h_i, w_i) 互不相同 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SellingWood {
     public long sellingWood(int m, int n, int[][] prices) {

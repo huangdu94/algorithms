@@ -29,8 +29,8 @@ package work.huangdu.exploration.intermediate_algorithms.math;
  * columnTitle 仅由大写英文组成
  * columnTitle 在范围 ["A", "FXSHRXW"] 内
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/22 0:16
+ * @author huangdu
+ * @version 2020/7/22 0:16
  */
 public class TitleToNumber {
     public int titleToNumber(String s) {

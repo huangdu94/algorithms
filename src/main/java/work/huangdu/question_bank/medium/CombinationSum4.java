@@ -37,7 +37,7 @@ import work.huangdu.exploration.start_from_scratch.graph_search.backtrack.Combin
  * 进阶：如果给定的数组中含有负数会发生什么？问题会产生何种变化？如果允许负数出现，需要向题目中添加哪些限制条件？
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2021/4/24
+ * @version 2021/4/24
  * @see CombinationSum
  * @see CombinationSum2
  * @see CombinationSum3

@@ -19,8 +19,8 @@ import work.huangdu.data_structure.TreeNode;
  * 所有节点的值都是唯一的。
  * p、q 为不同节点且均存在于给定的二叉搜索树中。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/14
+ * @author huangdu
+ * @version 2021/3/14
  * @see work.huangdu.exploration.advanced_algorithms.tree_graph.LowestCommonAncestor
  */
 public class LowestCommonAncestor {

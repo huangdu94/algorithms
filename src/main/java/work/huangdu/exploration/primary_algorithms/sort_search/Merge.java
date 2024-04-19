@@ -17,8 +17,8 @@ package work.huangdu.exploration.primary_algorithms.sort_search;
  * 1 <= m + n <= 200
  * -10^9 <= nums1[i], nums2[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/6/23 15:05
+ * @author huangdu
+ * @version 2020/6/23 15:05
  */
 public class Merge {
     public void merge(int[] nums1, int m, int[] nums2, int n) {

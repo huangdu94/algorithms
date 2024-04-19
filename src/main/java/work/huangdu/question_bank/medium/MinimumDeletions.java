@@ -19,8 +19,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= s.length <= 10^5
  * s[i] 要么是 'a' 要么是 'b' 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/6
+ * @author huangdu
+ * @version 2023/3/6
  */
 public class MinimumDeletions {
     public int minimumDeletions(String s) {

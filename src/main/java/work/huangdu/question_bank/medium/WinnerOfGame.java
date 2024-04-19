@@ -42,8 +42,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= colors.length <= 10^5
  * colors 只包含字母 'A' 和 'B'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/22
+ * @author huangdu
+ * @version 2022/3/22
  */
 public class WinnerOfGame {
     public boolean winnerOfGame(String colors) {

@@ -25,8 +25,8 @@ package work.huangdu.question_bank.difficult;
  * 0 <= node < n
  * 至多查询 5 * 10^4 次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/14
+ * @author huangdu
+ * @version 2023/6/14
  */
 public class TreeAncestor {
     private int maxDepth = 0;

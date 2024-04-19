@@ -31,7 +31,7 @@ import java.util.Set;
  * words[i] 仅由小写英文字母组成
  * 0 <= left <= right < words.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class VowelStrings {
     private final Set<Character> set;

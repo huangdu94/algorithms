@@ -32,7 +32,7 @@ import java.util.TreeMap;
  * 1 <= repeatLimit <= s.length <= 10^5
  * s 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class RepeatLimitedString {
     public String repeatLimitedString(String s, int repeatLimit) {

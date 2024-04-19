@@ -24,7 +24,7 @@ package work.huangdu.question_bank.medium;
  * -10^6 <= insertVal <= 10^6
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/6/18
+ * @version 2022/6/18
  */
 public class Insert {
     public Node insert(Node head, int insertVal) {

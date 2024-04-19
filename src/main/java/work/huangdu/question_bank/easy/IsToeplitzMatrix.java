@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * 如果矩阵存储在磁盘上，并且内存有限，以至于一次最多只能将矩阵的一行加载到内存中，该怎么办？
  * 如果矩阵太大，以至于一次只能将不完整的一行加载到内存中，该怎么办？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/22
+ * @author huangdu
+ * @version 2021/2/22
  */
 public class IsToeplitzMatrix {
     public boolean isToeplitzMatrix(int[][] matrix) {

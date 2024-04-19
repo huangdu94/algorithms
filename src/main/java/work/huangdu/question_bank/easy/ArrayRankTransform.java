@@ -26,8 +26,8 @@ import java.util.Map;
  * 0 <= arr.length <= 10^5
  * -10^9 <= arr[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/28
+ * @author huangdu
+ * @version 2022/7/28
  */
 public class ArrayRankTransform {
     public int[] arrayRankTransform(int[] arr) {

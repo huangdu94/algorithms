@@ -22,8 +22,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= n <= 3 * 10^4
  * -3 * 10^4 <= nums[i] <= 3 * 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)8
- * @date 2023/7/20
+ * @author huangdu8
+ * @version 2023/7/20
  */
 public class MaxSubarraySumCircular {
     public int maxSubarraySumCircular(int[] nums) {

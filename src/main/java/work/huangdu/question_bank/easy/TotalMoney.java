@@ -20,8 +20,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/17
+ * @author huangdu
+ * @version 2022/1/17
  */
 public class TotalMoney {
     public int totalMoney(int n) {

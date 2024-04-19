@@ -31,8 +31,8 @@ import java.util.List;
  * obj.insert(key,val);
  * int param_2 = obj.sum(prefix);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/11/14
+ * @author huangdu
+ * @version 2021/11/14
  */
 public class MapSum {
     private final TrieNode root;

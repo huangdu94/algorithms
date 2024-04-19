@@ -28,7 +28,7 @@ import java.util.Set;
  * 1 <= words1[i].length, words2[j].length <= 30
  * words1[i] 和 words2[j] 都只包含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CountWords {
     public int countWords(String[] words1, String[] words2) {

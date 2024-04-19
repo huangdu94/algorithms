@@ -33,8 +33,8 @@ package work.huangdu.question_bank.easy;
  * 0 <= bills.length <= 10000
  * bills[i] 不是 5 就是 10 或是 20
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/10 12:38
+ * @author huangdu
+ * @version 2020/12/10 12:38
  */
 public class LemonadeChange {
     public boolean lemonadeChange(int[] bills) {

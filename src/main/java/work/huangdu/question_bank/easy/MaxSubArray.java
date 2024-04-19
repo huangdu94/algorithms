@@ -13,7 +13,7 @@ package work.huangdu.question_bank.easy;
  * -100 <= arr[i] <= 100
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2021/7/17
+ * @version 2021/7/17
  * @see work.huangdu.exploration.primary_algorithms.dynamic.MaxSubArray
  */
 public class MaxSubArray {

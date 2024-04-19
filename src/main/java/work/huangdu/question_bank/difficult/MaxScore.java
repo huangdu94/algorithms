@@ -29,8 +29,8 @@ package work.huangdu.question_bank.difficult;
  * nums.length == 2 * n
  * 1 <= nums[i] <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/25
+ * @author huangdu
+ * @version 2022/12/25
  */
 public class MaxScore {
     // TODO CV

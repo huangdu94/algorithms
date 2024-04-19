@@ -19,7 +19,7 @@ import java.util.Deque;
  * 0 <= Node.val <= 1000
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2021/4/25
+ * @version 2021/4/25
  */
 public class IncreasingBST {
     public TreeNode increasingBST(TreeNode root) {

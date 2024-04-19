@@ -18,7 +18,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= prices[i] <= 100
  * 1 <= money <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class BuyChoco {
     public int buyChoco(int[] prices, int money) {

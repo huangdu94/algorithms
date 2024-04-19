@@ -30,8 +30,8 @@ import java.util.PriorityQueue;
  * 0 <= profits[i] <= 10^4
  * 0 <= capital[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/8
+ * @author huangdu
+ * @version 2021/9/8
  */
 public class FindMaximizedCapital {
     public int findMaximizedCapital(int k, int w, int[] profits, int[] capital) {

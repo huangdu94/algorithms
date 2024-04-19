@@ -25,8 +25,8 @@ import java.util.Map;
  * 1 <= nums[i], k <= n
  * nums 中的整数互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/19
+ * @author huangdu
+ * @version 2023/3/19
  */
 public class CountSubarrays {
     public int countSubarrays(int[] nums, int k) {

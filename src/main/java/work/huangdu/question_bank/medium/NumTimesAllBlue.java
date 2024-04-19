@@ -30,8 +30,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= n <= 5 * 10^4
  * flips 是范围 [1, n] 中所有整数构成的一个排列
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/14
+ * @author huangdu
+ * @version 2023/6/14
  */
 public class NumTimesAllBlue {
     public int numTimesAllBlue(int[] flips) {

@@ -36,8 +36,8 @@ import java.util.List;
  * OrderedStream obj = new OrderedStream(n);
  * List<String> param_1 = obj.insert(idKey,value);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/17
+ * @author huangdu
+ * @version 2022/8/17
  */
 public class OrderedStream {
     private final String[] array;

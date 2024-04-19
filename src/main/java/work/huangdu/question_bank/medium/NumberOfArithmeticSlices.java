@@ -18,8 +18,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums.length <= 5000
  * -1000 <= nums[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/13
+ * @author huangdu
+ * @version 2021/8/13
  */
 public class NumberOfArithmeticSlices {
     // TODO 代码可以优化 写的不够简洁

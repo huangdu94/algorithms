@@ -27,8 +27,8 @@ import java.util.Stack;
  * num 仅含数字
  * -2^31 <= target <= 2^31 - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/10/18
+ * @author huangdu
+ * @version 2021/10/18
  */
 public class AddOperators {
     private int target;

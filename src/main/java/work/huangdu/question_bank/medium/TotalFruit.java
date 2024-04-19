@@ -33,8 +33,8 @@ import java.util.Map;
  * 1 <= fruits.length <= 10^5
  * 0 <= fruits[i] < fruits.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/17
+ * @author huangdu
+ * @version 2022/10/17
  */
 public class TotalFruit {
     public int totalFruit(int[] fruits) {

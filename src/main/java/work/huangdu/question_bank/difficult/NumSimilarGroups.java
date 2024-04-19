@@ -24,7 +24,7 @@ import java.util.*;
  * 字母异位词（anagram），一种把某个字符串的字母的位置（顺序）加以改换所形成的新词。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2021/1/31
+ * @version 2021/1/31
  */
 public class NumSimilarGroups {
     public int numSimilarGroups(String[] strs) {

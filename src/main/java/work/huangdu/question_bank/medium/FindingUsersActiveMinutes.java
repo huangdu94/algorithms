@@ -34,7 +34,7 @@ import java.util.Set;
  * k 的取值范围是 [用户的最大用户活跃分钟数, 10^5]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/1/28
+ * @version 2023/1/28
  */
 public class FindingUsersActiveMinutes {
     public int[] findingUsersActiveMinutes(int[][] logs, int k) {

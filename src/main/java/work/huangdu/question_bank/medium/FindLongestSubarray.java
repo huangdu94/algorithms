@@ -16,8 +16,8 @@ import java.util.Map;
  * 提示：
  * array.length <= 100000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/11
+ * @author huangdu
+ * @version 2023/3/11
  */
 public class FindLongestSubarray {
     public String[] findLongestSubarray(String[] array) {

@@ -31,8 +31,8 @@ import java.util.TreeMap;
  * from_i 和 to_i 由大写英文字母组成
  * from_i != to_i
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/27
+ * @author huangdu
+ * @version 2022/9/27
  */
 public class FindItinerary {
     private int total;

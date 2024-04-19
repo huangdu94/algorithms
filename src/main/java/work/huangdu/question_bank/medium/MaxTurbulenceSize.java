@@ -21,8 +21,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= A.length <= 40000
  * 0 <= A[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/8
+ * @author huangdu
+ * @version 2021/2/8
  */
 public class MaxTurbulenceSize {
     public int maxTurbulenceSize(int[] arr) {

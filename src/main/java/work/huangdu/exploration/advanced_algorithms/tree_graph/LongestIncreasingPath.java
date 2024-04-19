@@ -23,8 +23,8 @@ package work.huangdu.exploration.advanced_algorithms.tree_graph;
  * 输出: 4
  * 解释: 最长递增路径是[3, 4, 5, 6]。注意不允许在对角线方向上移动。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/11 11:27
+ * @author huangdu
+ * @version 2020/8/11 11:27
  */
 public class LongestIncreasingPath {
     public int longestIncreasingPath(int[][] matrix) {

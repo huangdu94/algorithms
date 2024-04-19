@@ -32,8 +32,8 @@ import java.util.Random;
  * 2 * threshold > right - left + 1
  * 调用 query 的次数最多为 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/16
+ * @author huangdu
+ * @version 2023/4/16
  */
 public class MajorityChecker {
     public static final int K = 20;

@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums.length <= 100
  * 1 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/7
+ * @author huangdu
+ * @version 2022/10/7
  */
 public class MaxAscendingSum {
     public int maxAscendingSum(int[] nums) {

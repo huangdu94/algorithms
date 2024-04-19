@@ -21,8 +21,8 @@ import java.util.List;
  * 1 <= s.length <= 20
  * s 仅由数字组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/9 0:43
+ * @author huangdu
+ * @version 2020/8/9 0:43
  */
 public class RestoreIpAddresses {
     public List<String> restoreIpAddresses(String s) {

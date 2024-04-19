@@ -31,8 +31,8 @@ import java.util.Queue;
  * RecentCounter obj = new RecentCounter();
  * int param_1 = obj.ping(t);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/6
+ * @author huangdu
+ * @version 2022/5/6
  */
 public class RecentCounter {
     private final Queue<Integer> pq;

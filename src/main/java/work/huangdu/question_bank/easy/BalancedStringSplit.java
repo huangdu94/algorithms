@@ -27,8 +27,8 @@ package work.huangdu.question_bank.easy;
  * s[i] = 'L' 或 'R'
  * s 是一个 平衡 字符串
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/7
+ * @author huangdu
+ * @version 2021/9/7
  */
 public class BalancedStringSplit {
     public int balancedStringSplit(String s) {

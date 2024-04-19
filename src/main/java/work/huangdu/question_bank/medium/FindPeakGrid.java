@@ -23,7 +23,7 @@ import java.util.Arrays;
  * 1 <= mat[i][j] <= 10^5
  * 任意两个相邻元素均不相等.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FindPeakGrid {
     public int[] findPeakGrid(int[][] mat) {

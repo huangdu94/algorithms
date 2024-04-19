@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= numBottles <= 100
  * 2 <= numExchange <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/17
+ * @author huangdu
+ * @version 2021/12/17
  */
 public class NumWaterBottles {
     public int numWaterBottles(int numBottles, int numExchange) {

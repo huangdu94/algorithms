@@ -23,8 +23,8 @@ import java.util.List;
  * arr1[i] 和 arr2[i] 都是 0 或 1
  * arr1 和 arr2 都没有前导0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/18
+ * @author huangdu
+ * @version 2023/5/18
  */
 public class AddNegabinary {
     public int[] addNegabinary(int[] arr1, int[] arr2) {

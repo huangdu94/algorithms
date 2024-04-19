@@ -23,8 +23,8 @@ package work.huangdu.question_bank.difficult;
  * nums2.length == nums1.length
  * 0 <= nums1[i], nums2[i] <= 2 * 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/10
+ * @author huangdu
+ * @version 2022/10/10
  */
 public class MinSwap {
     public int minSwap(int[] nums1, int[] nums2) {

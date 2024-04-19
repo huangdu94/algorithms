@@ -40,8 +40,8 @@ import java.util.Map;
  * 答案和所有中间计算结果都符合 32-bit 整数范围
  * 测试用例中的表达式均为合法的且最终结果为整数
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/20
+ * @author huangdu
+ * @version 2022/8/20
  */
 public class Evaluate {
     private List<Map<String, Integer>> stack;

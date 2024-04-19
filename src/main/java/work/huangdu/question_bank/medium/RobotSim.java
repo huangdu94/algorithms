@@ -43,8 +43,8 @@ import java.util.Set;
  * -3 * 10^4 <= x_i, y_i <= 3 * 10^4
  * 答案保证小于 2^31
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/19
+ * @author huangdu
+ * @version 2023/7/19
  */
 public class RobotSim {
     private static final int LIMIT = 60001;

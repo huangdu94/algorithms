@@ -18,8 +18,8 @@ import java.util.List;
  * 提示：
  * 1 <= left <= right <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/31
+ * @author huangdu
+ * @version 2022/3/31
  */
 public class SelfDividingNumbers {
     /**

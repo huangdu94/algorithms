@@ -15,8 +15,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/30
+ * @author huangdu
+ * @version 2022/6/30
  */
 public class NumPrimeArrangements {
     private static final int BASE = 1000000007;

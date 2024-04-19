@@ -19,8 +19,8 @@ import java.util.Calendar;
  * 提示：
  * 给出的日期一定是在 1971 到 2100 年之间的有效日期。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/4
+ * @author huangdu
+ * @version 2022/1/4
  */
 public class DayOfTheWeek {
     private static final String[] CONSTANT_ARRAY = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};

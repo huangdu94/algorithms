@@ -33,7 +33,7 @@ import work.huangdu.data_structure.TreeNode;
  * *     }
  * * }
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class AllPossibleFBT {
     public List<TreeNode> allPossibleFBT(int n) {

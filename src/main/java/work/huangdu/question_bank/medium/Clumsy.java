@@ -19,8 +19,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= N <= 10000
  * -2^31 <= answer <= 2^31 - 1  （答案保证符合 32 位整数。）
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/1
+ * @author huangdu
+ * @version 2021/4/1
  */
 public class Clumsy {
     // 可以用数学推导直接o(1)

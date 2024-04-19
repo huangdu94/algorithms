@@ -22,7 +22,7 @@ import java.util.Map;
  * 1 <= groups[i] <= 10^9
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/1/28
+ * @version 2023/1/28
  */
 public class MaxHappyGroups {
     public int maxHappyGroups(int batchSize, int[] groups) {

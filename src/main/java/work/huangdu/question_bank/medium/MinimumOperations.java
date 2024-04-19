@@ -16,8 +16,8 @@ package work.huangdu.question_bank.medium;
  * 3 <= leaves.length <= 10^5
  * leaves 中只包含字符 'r' 和字符 'y'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/1 10:57
+ * @author huangdu
+ * @version 2020/10/1 10:57
  */
 public class MinimumOperations {
     public int minimumOperations3(String leaves) {

@@ -28,8 +28,8 @@ import java.util.TreeSet;
  * int param_1 = obj.seat();
  * obj.leave(p);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/30
+ * @author huangdu
+ * @version 2022/12/30
  */
 public class ExamRoom {
     private int n;

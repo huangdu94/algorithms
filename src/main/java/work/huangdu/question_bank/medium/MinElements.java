@@ -18,8 +18,8 @@ package work.huangdu.question_bank.medium;
  * -limit <= nums[i] <= limit
  * -10^9 <= goal <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/16
+ * @author huangdu
+ * @version 2022/12/16
  */
 public class MinElements {
     public int minElements(int[] nums, int limit, int goal) {

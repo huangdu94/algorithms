@@ -3,8 +3,8 @@ package work.huangdu.data_structure;
 /**
  * 线段树
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/19
+ * @author huangdu
+ * @version 2022/7/19
  */
 public class SegmentTree {
     private final Node root;

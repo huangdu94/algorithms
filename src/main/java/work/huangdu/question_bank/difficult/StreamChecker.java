@@ -37,8 +37,8 @@ import java.util.Queue;
  * letter 是一个小写英文字母
  * 最多调用查询 4 * 10^4 次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/24
+ * @author huangdu
+ * @version 2023/3/24
  */
 public class StreamChecker {
     // AC自动机

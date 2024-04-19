@@ -37,8 +37,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= amount_i <= 10^4
  * 0 <= k <= 2 * 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/4
+ * @author huangdu
+ * @version 2023/5/4
  */
 public class MaxTotalFruits {
     public int maxTotalFruits(int[][] fruits, int startPos, int k) {

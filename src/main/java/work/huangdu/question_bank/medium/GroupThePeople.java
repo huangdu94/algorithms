@@ -27,8 +27,8 @@ import java.util.Map;
  * 1 <= n <= 500
  * 1 <= groupSizes[i] <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/12
+ * @author huangdu
+ * @version 2022/8/12
  */
 public class GroupThePeople {
     public List<List<Integer>> groupThePeople(int[] groupSizes) {

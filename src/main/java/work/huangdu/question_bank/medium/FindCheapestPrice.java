@@ -33,8 +33,8 @@ import java.util.Arrays;
  * 0 <= src, dst, k < n
  * src != dst
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/24
+ * @author huangdu
+ * @version 2021/8/24
  */
 public class FindCheapestPrice {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {

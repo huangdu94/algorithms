@@ -17,8 +17,8 @@ import java.util.Set;
  * 2 <= s.length <= 3 * 10^4
  * s 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/23
+ * @author huangdu
+ * @version 2021/12/23
  */
 public class LongestDupSubstring {
     // TODO 需要复习 Rabin-Karp 字符串编码

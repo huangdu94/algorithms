@@ -35,8 +35,8 @@ import java.util.Arrays;
  * 1 <= arr.length <= 10^5
  * 1 <= arr[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/15
+ * @author huangdu
+ * @version 2021/7/15
  */
 public class MaximumElementAfterDecrementingAndRearranging {
     // TODO 有O(n) 时间复杂度算法

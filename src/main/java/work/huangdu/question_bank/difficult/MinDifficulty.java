@@ -33,8 +33,8 @@ import java.util.Arrays;
  * 0 <= jobDifficulty[i] <= 1000
  * 1 <= d <= 10
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/16
+ * @author huangdu
+ * @version 2023/5/16
  */
 public class MinDifficulty {
     private int n;

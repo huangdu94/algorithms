@@ -19,8 +19,8 @@ import java.util.Map;
  * 2 <= nums.length <= 10^5
  * 1 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/18
+ * @author huangdu
+ * @version 2022/8/18
  */
 public class MaxEqualFreq {
     public int maxEqualFreq(int[] nums) {

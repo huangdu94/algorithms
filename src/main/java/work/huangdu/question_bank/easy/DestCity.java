@@ -32,8 +32,8 @@ import java.util.Set;
  * cityAi != cityBi
  * 所有字符串均由大小写英文字母和空格字符组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/10/1
+ * @author huangdu
+ * @version 2021/10/1
  */
 public class DestCity {
     public String destCity(List<List<String>> paths) {

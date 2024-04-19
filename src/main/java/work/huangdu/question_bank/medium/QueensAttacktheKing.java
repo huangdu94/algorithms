@@ -32,7 +32,7 @@ import java.util.List;
  * 0 <= king[0], king[1] < 8
  * 一个棋盘格上最多只能放置一枚棋子。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class QueensAttacktheKing {
     public List<List<Integer>> queensAttacktheKing(int[][] queens, int[] king) {

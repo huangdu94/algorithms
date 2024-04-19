@@ -30,8 +30,8 @@ import java.util.Objects;
  * 1 <= left < right <= 10^9
  * 在单个测试用例中，对 addRange 、  queryRange 和 removeRange 的调用总数不超过 10^4 次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/24
+ * @author huangdu
+ * @version 2022/6/24
  */
 public class RangeModule {
     private final Map<Integer, Boolean> tree;

@@ -24,7 +24,7 @@ import java.util.Map;
  * nums 中所有值都 不同
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/7/30
+ * @version 2022/7/30
  */
 public class LargestComponentSize {
     private final int[] parent = new int[100001];

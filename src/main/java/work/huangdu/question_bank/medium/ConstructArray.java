@@ -20,8 +20,8 @@ import java.util.Set;
  * 提示：
  * 1 <= k < n <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/8
+ * @author huangdu
+ * @version 2022/9/8
  */
 public class ConstructArray {
     // 脑筋急转弯

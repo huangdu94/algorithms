@@ -20,8 +20,8 @@ package work.huangdu.question_bank.medium;
  * rand7()调用次数的 期望值 是多少 ?
  * 你能否尽量少调用 rand7() ?
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/5
+ * @author huangdu
+ * @version 2021/9/5
  */
 public class Rand10 {
     // TODO 复习 拒绝采样

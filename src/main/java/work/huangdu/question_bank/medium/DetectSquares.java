@@ -36,8 +36,8 @@ import java.util.Map;
  * 0 <= x, y <= 1000
  * 调用 add 和 count 的 总次数 最多为 5000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/26
+ * @author huangdu
+ * @version 2022/1/26
  */
 public class DetectSquares {
     // 只需要一个map就可以实现

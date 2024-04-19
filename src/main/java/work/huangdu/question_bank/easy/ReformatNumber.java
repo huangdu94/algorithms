@@ -44,8 +44,8 @@ package work.huangdu.question_bank.easy;
  * number 由数字和字符 '-' 及 ' ' 组成。
  * number 中至少含 2 个数字。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/1
+ * @author huangdu
+ * @version 2022/10/1
  */
 public class ReformatNumber {
     public String reformatNumber(String number) {

@@ -30,7 +30,7 @@ package work.huangdu.question_bank.medium;
  * moveCost[i].length == n
  * 1 <= moveCost[i][j] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinPathCost {
     public int minPathCost(int[][] grid, int[][] moveCost) {

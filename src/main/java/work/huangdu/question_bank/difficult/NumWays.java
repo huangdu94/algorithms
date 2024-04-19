@@ -27,8 +27,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= steps <= 500
  * 1 <= arrLen <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/13
+ * @author huangdu
+ * @version 2021/5/13
  */
 public class NumWays {
     // TODO 复制粘贴需要复习。

@@ -25,8 +25,8 @@ import java.util.Map;
  * 1. (0, 0, 0, 1) -> A[0] + B[0] + C[0] + D[1] = 1 + (-2) + (-1) + 2 = 0
  * 2. (1, 1, 0, 0) -> A[1] + B[1] + C[0] + D[0] = 2 + (-1) + (-1) + 0 = 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 20:02
+ * @author huangdu
+ * @version 2020/7/26 20:02
  * @see work.huangdu.exploration.primary_algorithms.array.TwoSum
  * @see TwoSum2
  * @see ThreeSum

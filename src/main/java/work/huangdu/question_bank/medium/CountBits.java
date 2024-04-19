@@ -14,8 +14,8 @@ package work.huangdu.question_bank.medium;
  * 要求算法的空间复杂度为O(n)。
  * 你能进一步完善解法吗？要求在C++或任何其他语言中不使用任何内置函数（如 C++ 中的 __builtin_popcount）来执行此操作。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/3
+ * @author huangdu
+ * @version 2021/3/3
  */
 public class CountBits {
     // 暴力

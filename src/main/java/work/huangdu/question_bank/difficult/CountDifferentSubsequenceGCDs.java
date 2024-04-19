@@ -22,8 +22,8 @@ import java.util.Arrays;
  * 1 <= nums.length <= 10^5
  * 1 <= nums[i] <= 2 * 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/16
+ * @author huangdu
+ * @version 2023/1/16
  */
 public class CountDifferentSubsequenceGCDs {
     public int countDifferentSubsequenceGCDs(int[] nums) {

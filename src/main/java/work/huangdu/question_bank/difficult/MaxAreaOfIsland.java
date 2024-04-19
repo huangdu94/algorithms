@@ -22,8 +22,8 @@ import java.util.Queue;
  * 1 <= m, n <= 50
  * grid[i][j] 为 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/25
+ * @author huangdu
+ * @version 2022/5/25
  */
 public class MaxAreaOfIsland {
     public int maxAreaOfIsland(int[][] grid) {

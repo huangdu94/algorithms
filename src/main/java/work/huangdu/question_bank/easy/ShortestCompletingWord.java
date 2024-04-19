@@ -39,8 +39,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= words[i].length <= 15
  * words[i] 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/10
+ * @author huangdu
+ * @version 2021/12/10
  */
 public class ShortestCompletingWord {
     public String shortestCompletingWord(String licensePlate, String[] words) {

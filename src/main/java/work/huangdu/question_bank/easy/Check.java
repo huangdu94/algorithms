@@ -25,7 +25,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums[i] <= 100
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/11/27
+ * @version 2022/11/27
  */
 public class Check {
     public boolean check(int[] nums) {

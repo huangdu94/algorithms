@@ -26,8 +26,8 @@ package work.huangdu.question_bank.easy;
  * print(nums[i]);
  * }
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/6 17:15
+ * @author huangdu
+ * @version 2020/8/6 17:15
  * @see RemoveElements
  */
 public class RemoveElement {

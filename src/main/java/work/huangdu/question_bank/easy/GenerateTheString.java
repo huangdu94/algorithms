@@ -21,7 +21,7 @@ import java.util.Arrays;
  * 1 <= n <= 500
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/8/1
+ * @version 2022/8/1
  */
 public class GenerateTheString {
     public String generateTheString(int n) {

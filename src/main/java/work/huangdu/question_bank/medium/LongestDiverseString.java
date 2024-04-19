@@ -23,8 +23,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= a, b, c <= 100
  * a + b + c > 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/7
+ * @author huangdu
+ * @version 2022/2/7
  */
 public class LongestDiverseString {
 

@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * s 只包含小写英文字母，竖线 '|' 和星号 '*' 。
  * s 包含 偶数 个竖线 '|' 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/29
+ * @author huangdu
+ * @version 2023/1/29
  */
 public class CountAsterisks {
     public int countAsterisks(String s) {

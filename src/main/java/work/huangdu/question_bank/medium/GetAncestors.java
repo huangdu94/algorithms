@@ -41,7 +41,7 @@ import java.util.TreeSet;
  * 图中不会有重边。
  * 图是 有向 且 无环 的。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class GetAncestors {
     public List<List<Integer>> getAncestors(int n, int[][] edges) {

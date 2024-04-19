@@ -27,8 +27,8 @@ package work.huangdu.question_bank.easy;
  * widths 是长度为 26的数组。
  * widths[i] 值的范围在 [2, 10]。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/12
+ * @author huangdu
+ * @version 2022/4/12
  */
 public class NumberOfLines {
     public int[] numberOfLines(int[] widths, String s) {

@@ -20,8 +20,8 @@ import work.huangdu.data_structure.ListNode;
  * 给定的节点为非末尾节点并且一定是链表中的一个有效节点。
  * 不要从你的函数中返回任何结果。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 17:48
+ * @author huangdu
+ * @version 2020/7/26 17:48
  */
 public class DeleteNode {
     public void deleteNode(ListNode node) {

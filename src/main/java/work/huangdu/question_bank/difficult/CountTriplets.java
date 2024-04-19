@@ -34,8 +34,8 @@ import java.util.Map;
  * 1 <= nums.length <= 1000
  * 0 <= nums[i] < 2^16
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/4
+ * @author huangdu
+ * @version 2023/3/4
  */
 public class CountTriplets {
     public int countTriplets(int[] nums) {

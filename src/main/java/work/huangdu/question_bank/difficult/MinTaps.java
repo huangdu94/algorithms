@@ -26,8 +26,8 @@ package work.huangdu.question_bank.difficult;
  * ranges.length == n + 1
  * 0 <= ranges[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/22
+ * @author huangdu
+ * @version 2023/2/22
  */
 public class MinTaps {
     public int minTaps(int n, int[] ranges) {

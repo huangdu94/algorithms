@@ -16,8 +16,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= sentence.length <= 1000
  * sentence 由小写英语字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/13
+ * @author huangdu
+ * @version 2022/12/13
  */
 public class CheckIfPangram {
     public boolean checkIfPangram(String sentence) {

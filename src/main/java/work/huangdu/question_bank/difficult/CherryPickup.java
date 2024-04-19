@@ -29,8 +29,8 @@ import java.util.Arrays;
  * 每一个 grid[i][j] 都是集合 {-1, 0, 1}其中的一个数。
  * 可以保证起点 grid[0][0] 和终点 grid[N-1][N-1] 的值都不会是 -1。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/11
+ * @author huangdu
+ * @version 2022/7/11
  */
 public class CherryPickup {
 

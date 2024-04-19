@@ -30,8 +30,8 @@ package work.huangdu.question_bank.medium;
  * board[i].length == 3
  * board[i][j] 为 'X'、'O' 或 ' '
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/9
+ * @author huangdu
+ * @version 2021/12/9
  */
 public class ValidTicTacToe {
     private static final char o = 'O';

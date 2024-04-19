@@ -12,8 +12,8 @@ package work.huangdu.exploration.start_from_scratch.string.reverse;
  * 该字符串只包含小写英文字母。
  * 给定字符串的长度和 k 在 [1, 10000] 范围内。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/21 13:48
+ * @author huangdu
+ * @version 2020/9/21 13:48
  */
 public class ReverseStr {
     public String reverseStr(String s, int k) {

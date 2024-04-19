@@ -26,7 +26,7 @@ import java.util.Set;
  * 提示:
  * 1 <= jug1Capacity, jug2Capacity, targetCapacity <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CanMeasureWater {
     // TODO 复制粘贴 需要复习

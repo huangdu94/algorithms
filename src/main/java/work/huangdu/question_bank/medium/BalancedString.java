@@ -29,8 +29,8 @@ package work.huangdu.question_bank.medium;
  * s.length 是 4 的倍数
  * s 中只含有 'Q', 'W', 'E', 'R' 四种字符
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/13
+ * @author huangdu
+ * @version 2023/2/13
  */
 public class BalancedString {
     public int balancedString(String s) {

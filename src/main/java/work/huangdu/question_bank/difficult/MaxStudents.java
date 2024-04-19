@@ -42,7 +42,7 @@ import java.util.Queue;
  * 1 <= m <= 8
  * 1 <= n <= 8
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaxStudents {
     public int maxStudents(char[][] seats) {

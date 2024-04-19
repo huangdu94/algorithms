@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * 3 <= s.length <= 1000
  * s[i] 为 'X' 或 'O'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/27
+ * @author huangdu
+ * @version 2022/12/27
  */
 public class MinimumMoves {
     public int minimumMoves(String s) {

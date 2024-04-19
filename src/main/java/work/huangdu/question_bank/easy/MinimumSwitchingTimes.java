@@ -32,8 +32,8 @@ import java.util.Map;
  * 1 <= n, m <=100
  * 1 <= source[i][j], target[i][j] <=10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/26
+ * @author huangdu
+ * @version 2022/4/26
  */
 public class MinimumSwitchingTimes {
     public int minimumSwitchingTimes(int[][] source, int[][] target) {

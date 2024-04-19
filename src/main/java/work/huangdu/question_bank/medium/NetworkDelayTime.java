@@ -27,8 +27,8 @@ import java.util.PriorityQueue;
  * 0 <= wi <= 100
  * 所有 (ui, vi) 对都 互不相同（即，不含重复边）
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/2
+ * @author huangdu
+ * @version 2021/8/2
  */
 public class NetworkDelayTime {
     public int networkDelayTime(int[][] times, int n, int k) {

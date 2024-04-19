@@ -30,7 +30,7 @@ import java.util.List;
  * 1 <= starti < endi <= n
  * 1 <= tipi <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaxTaxiEarnings {
 

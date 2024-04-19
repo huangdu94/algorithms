@@ -45,8 +45,8 @@ import java.util.Deque;
  * 节点数目不超过 1000
  * 1 <= Node.val <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/27 14:48
+ * @author huangdu
+ * @version 2020/10/27 14:48
  */
 public class Flatten {
     public Node flatten(Node head) {

@@ -24,8 +24,8 @@ import java.util.Set;
  * 1 <= words[i].length <= 30
  * 所有输入的字符串 words[i] 都只包含小写字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/17
+ * @author huangdu
+ * @version 2022/3/17
  */
 public class LongestWord {
     public String longestWord(String[] words) {

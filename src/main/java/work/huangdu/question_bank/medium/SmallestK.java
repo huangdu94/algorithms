@@ -12,8 +12,8 @@ import java.util.Arrays;
  * 0 <= len(arr) <= 100000
  * 0 <= k <= min(100000, len(arr))
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/3
+ * @author huangdu
+ * @version 2021/9/3
  */
 public class SmallestK {
     public int[] smallestK(int[] arr, int k) {

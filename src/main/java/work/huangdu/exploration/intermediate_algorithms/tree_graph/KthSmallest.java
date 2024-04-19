@@ -34,8 +34,8 @@ import work.huangdu.specific.traversal.Recursion;
  * 进阶：
  * 如果二叉搜索树经常被修改（插入/删除操作）并且你需要频繁地查找第 k 小的值，你将如何优化 kthSmallest 函数？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/7 18:56
+ * @author huangdu
+ * @version 2020/7/7 18:56
  */
 public class KthSmallest {
     public int kthSmallest(TreeNode root, int k) {

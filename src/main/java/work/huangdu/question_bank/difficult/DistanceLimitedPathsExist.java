@@ -29,8 +29,8 @@ import java.util.Comparator;
  * 1 <= dis_i, limit_j <= 10^9
  * 两个点之间可能有 多条 边。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/14
+ * @author huangdu
+ * @version 2022/12/14
  */
 public class DistanceLimitedPathsExist {
     public boolean[] distanceLimitedPathsExist(int n, int[][] edgeList, int[][] queries) {

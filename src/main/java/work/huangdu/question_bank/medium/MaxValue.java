@@ -16,8 +16,8 @@ package work.huangdu.question_bank.medium;
  * 0 < grid.length <= 200
  * 0 < grid[0].length <= 200
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/8
+ * @author huangdu
+ * @version 2023/3/8
  */
 public class MaxValue {
     public int maxValue(int[][] grid) {

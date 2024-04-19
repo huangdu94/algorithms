@@ -14,8 +14,8 @@ import java.util.Arrays;
  * 输出: [[1,5]]
  * 解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/12 15:50
+ * @author huangdu
+ * @version 2020/7/12 15:50
  */
 public class Merge {
     public int[][] merge(int[][] intervals) {

@@ -44,7 +44,7 @@ import java.util.TreeSet;
  * 1 <= rains.length <= 10^5
  * 0 <= rains[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class AvoidFlood {
     public int[] avoidFlood(int[] rains) {

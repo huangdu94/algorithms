@@ -37,8 +37,8 @@ import work.huangdu.data_structure.ListNode;
  * Solution obj = new Solution(head);
  * int param_1 = obj.getRandom();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/24
+ * @author huangdu
+ * @version 2022/1/24
  */
 public class GetRandom {
     static class Solution {

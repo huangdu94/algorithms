@@ -3,8 +3,8 @@ package work.huangdu.exploration.coding_interviews.medium;
 /**
  * 剑指 Offer 04. 二维数组中的查找
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/23
+ * @author huangdu
+ * @version 2021/6/23
  * @see work.huangdu.exploration.intermediate_algorithms.sort_search.SearchMatrix
  */
 public class FindNumberIn2DArray {

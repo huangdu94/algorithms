@@ -30,7 +30,7 @@ import java.util.List;
  * nums1.length == nums2.length
  * 0 <= x <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class Solution2809 {
     /*

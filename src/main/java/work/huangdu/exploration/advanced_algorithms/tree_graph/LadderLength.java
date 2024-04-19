@@ -29,8 +29,8 @@ import java.util.*;
  * 输出:0
  * 解释:endWord "cog" 不在字典中，所以无法进行转换。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/4 12:06
+ * @author huangdu
+ * @version 2020/8/4 12:06
  */
 public class LadderLength {
     // 学习点:

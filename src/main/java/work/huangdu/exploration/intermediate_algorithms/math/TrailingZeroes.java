@@ -13,8 +13,8 @@ package work.huangdu.exploration.intermediate_algorithms.math;
  * 解释: 5! = 120, 尾数中有 1 个零.
  * 说明: 你算法的时间复杂度应为 O(log n) 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/22 0:15
+ * @author huangdu
+ * @version 2020/7/22 0:15
  */
 public class TrailingZeroes {
     public int trailingZeroes(int n) {

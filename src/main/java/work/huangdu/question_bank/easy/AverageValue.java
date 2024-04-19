@@ -16,8 +16,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums.length <= 1000
  * 1 <= nums[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/29
+ * @author huangdu
+ * @version 2023/5/29
  */
 public class AverageValue {
     public int averageValue(int[] nums) {

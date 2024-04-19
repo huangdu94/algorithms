@@ -28,8 +28,8 @@ import java.util.Arrays;
  * nums.length 能被 k 整除。
  * 1 <= nums[i] <= nums.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/3
+ * @author huangdu
+ * @version 2023/7/3
  */
 public class MinimumIncompatibility {
     private int n;

@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * arr 中的整数 互不相同
  * pieces 中的整数 互不相同（也就是说，如果将 pieces 扁平化成一维数组，数组中的所有整数互不相同）
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/22
+ * @author huangdu
+ * @version 2022/9/22
  */
 public class CanFormArray {
     public boolean canFormArray(int[] arr, int[][] pieces) {

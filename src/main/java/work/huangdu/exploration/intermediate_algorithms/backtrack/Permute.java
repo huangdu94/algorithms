@@ -21,8 +21,8 @@ import java.util.List;
  * -10 <= nums[i] <= 10
  * nums 中的所有整数 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/9 0:21
+ * @author huangdu
+ * @version 2020/7/9 0:21
  */
 public class Permute {
     static class Solution {

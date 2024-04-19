@@ -26,8 +26,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= n <= 10
  * num 只包含数字。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/11
+ * @author huangdu
+ * @version 2023/1/11
  */
 public class DigitCount {
     public boolean digitCount(String num) {

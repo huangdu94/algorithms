@@ -19,8 +19,8 @@ import work.huangdu.data_structure.TreeNode;
  * 1 <= low <= high <= 10^5
  * 所有 Node.val 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/27
+ * @author huangdu
+ * @version 2021/4/27
  */
 public class RangeSumBST {
     public int rangeSumBST(TreeNode root, int low, int high) {

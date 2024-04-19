@@ -19,8 +19,8 @@ import java.util.Set;
  * 0 < nums[i] < 10000
  * 每个元素的频率在 [1,4] 范围内
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/20
+ * @author huangdu
+ * @version 2022/9/20
  */
 public class CanPartitionKSubsets {
     public boolean canPartitionKSubsets(int[] nums, int k) {

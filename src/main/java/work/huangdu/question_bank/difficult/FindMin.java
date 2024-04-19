@@ -22,8 +22,8 @@ package work.huangdu.question_bank.difficult;
  * 这道题是 寻找旋转排序数组中的最小值 的延伸题目。
  * 允许重复会影响算法的时间复杂度吗？会如何影响，为什么？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/9
+ * @author huangdu
+ * @version 2021/4/9
  * @see work.huangdu.question_bank.medium.FindMin
  */
 public class FindMin {

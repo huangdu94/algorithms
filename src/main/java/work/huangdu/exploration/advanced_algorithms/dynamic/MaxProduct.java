@@ -12,8 +12,8 @@ package work.huangdu.exploration.advanced_algorithms.dynamic;
  * 输出: 0
  * 解释:结果不能为 2, 因为 [-2,-1] 不是子数组。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/25 15:12
+ * @author huangdu
+ * @version 2020/8/25 15:12
  */
 public class MaxProduct {
     // 时间复杂度o(n^2) 空间复杂度o(1)

@@ -20,7 +20,7 @@ package work.huangdu.question_bank.medium;
  * 0 <= grid[row][col] < n * n
  * grid 中的所有整数 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CheckValidGrid {
     private final static int[] DIRECTION = {-2, -1, 2, -1, -2, 1, 2, 1, -2};

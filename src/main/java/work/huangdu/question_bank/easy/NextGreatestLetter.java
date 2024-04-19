@@ -21,8 +21,8 @@ package work.huangdu.question_bank.easy;
  * letters 最少包含两个不同的字母
  * target 是一个小写字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/3
+ * @author huangdu
+ * @version 2022/4/3
  */
 public class NextGreatestLetter {
     public char nextGreatestLetter(char[] letters, char target) {

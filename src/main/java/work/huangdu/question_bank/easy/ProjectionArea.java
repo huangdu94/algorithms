@@ -22,8 +22,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= n <= 50
  * 0 <= grid[i][j] <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/26
+ * @author huangdu
+ * @version 2022/4/26
  */
 public class ProjectionArea {
     // 通过交换下标，cojMaxArray数组可以省掉

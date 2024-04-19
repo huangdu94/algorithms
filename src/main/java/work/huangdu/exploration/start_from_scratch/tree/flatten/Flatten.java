@@ -24,8 +24,8 @@ import work.huangdu.data_structure.TreeNode;
  * -100 <= Node.val <= 100
  * 进阶：你可以使用原地算法（O(1) 额外空间）展开这棵树吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/9
+ * @author huangdu
+ * @version 2021/3/9
  */
 public class Flatten {
     //原地算法 寻找前驱节点

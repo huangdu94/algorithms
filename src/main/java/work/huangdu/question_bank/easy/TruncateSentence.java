@@ -29,8 +29,8 @@ package work.huangdu.question_bank.easy;
  * s 中的单词之间由单个空格隔开
  * 不存在前导或尾随空格
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/6
+ * @author huangdu
+ * @version 2021/12/6
  */
 public class TruncateSentence {
     public String truncateSentence(String s, int k) {

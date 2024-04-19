@@ -19,8 +19,8 @@ import java.util.PriorityQueue;
  * 1 <= barcodes.length <= 10000
  * 1 <= barcodes[i] <= 10000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/15
+ * @author huangdu
+ * @version 2023/5/15
  */
 public class RearrangeBarcodes {
     public int[] rearrangeBarcodes(int[] barcodes) {

@@ -28,8 +28,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= m, n <= 50
  * 1 <= accounts[i][j] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/14
+ * @author huangdu
+ * @version 2022/4/14
  */
 public class MaximumWealth {
     public int maximumWealth(int[][] accounts) {

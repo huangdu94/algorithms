@@ -25,8 +25,8 @@ package work.huangdu.question_bank.difficult;
  * m 和 n 的范围在 [1, 30000] 之间。
  * k 的范围在 [1, m * n] 之间。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/18
+ * @author huangdu
+ * @version 2022/5/18
  */
 public class FindKthNumber2 {
     public int findKthNumber(int m, int n, int k) {

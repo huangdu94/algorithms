@@ -16,8 +16,8 @@ import java.util.Map;
  * 输入：[2,2,1,1,1,2,2]
  * 输出：2
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/9
+ * @author huangdu
+ * @version 2021/7/9
  */
 public class MajorityElement {
     public int majorityElement(int[] nums) {

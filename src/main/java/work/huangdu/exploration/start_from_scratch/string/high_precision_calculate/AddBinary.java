@@ -15,8 +15,8 @@ package work.huangdu.exploration.start_from_scratch.string.high_precision_calcul
  * 1 <= a.length, b.length <= 10^4
  * 字符串如果不是 "0" ，就都不含前导零。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/8 10:02
+ * @author huangdu
+ * @version 2020/8/8 10:02
  */
 public class AddBinary {
     public String addBinary(String a, String b) {

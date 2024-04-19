@@ -28,8 +28,8 @@ import java.util.Queue;
  * 所有 (ai, bi) 互不相同
  * 给定的输入 保证 是一棵树，并且 不会有重复的边
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/6
+ * @author huangdu
+ * @version 2022/4/6
  */
 public class FindMinHeightTrees {
     // TODO 此题理解证明很难

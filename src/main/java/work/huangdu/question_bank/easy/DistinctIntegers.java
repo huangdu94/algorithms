@@ -25,7 +25,7 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class DistinctIntegers {
     public int distinctIntegers(int n) {

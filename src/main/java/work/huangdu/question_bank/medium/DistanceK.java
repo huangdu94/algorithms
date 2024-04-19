@@ -27,8 +27,8 @@ import work.huangdu.data_structure.TreeNode;
  * 目标结点 target 是树上的结点。
  * 0 <= K <= 1000.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/28
+ * @author huangdu
+ * @version 2021/7/28
  */
 public class DistanceK {
     private List<Integer> nodeList;

@@ -15,8 +15,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= str1.length, str2.length <= 1000
  * str1 和 str2 都由小写英文字母组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/29
+ * @author huangdu
+ * @version 2023/3/29
  */
 public class ShortestCommonSupersequence {
     private String s;

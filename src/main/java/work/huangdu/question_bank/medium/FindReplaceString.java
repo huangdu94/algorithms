@@ -1,8 +1,8 @@
 package work.huangdu.question_bank.medium;
 
 /**
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/15
+ * @author huangdu
+ * @version 2023/8/15
  */
 public class FindReplaceString {
     public String findReplaceString(String s, int[] indices, String[] sources, String[] targets) {

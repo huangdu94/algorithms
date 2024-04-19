@@ -34,7 +34,7 @@ import java.util.Set;
  * 位置 x 不在 forbidden 中。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/8/30
+ * @version 2023/8/30
  */
 public class MinimumJumps {
     public int minimumJumps(int[] forbidden, int a, int b, int x) {

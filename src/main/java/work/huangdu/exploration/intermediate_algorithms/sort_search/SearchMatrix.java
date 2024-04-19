@@ -17,8 +17,8 @@ package work.huangdu.exploration.intermediate_algorithms.sort_search;
  * 给定 target = 5，返回 true。
  * 给定 target = 20，返回 false。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/12 15:51
+ * @author huangdu
+ * @version 2020/7/12 15:51
  */
 public class SearchMatrix {
     public boolean searchMatrix(int[][] matrix, int target) {

@@ -22,8 +22,8 @@ import java.util.Arrays;
  * 1 <= c <= 100
  * a != b, b != c, c != a
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/4
+ * @author huangdu
+ * @version 2023/5/4
  */
 public class NumMovesStones {
     public int[] numMovesStones(int a, int b, int c) {

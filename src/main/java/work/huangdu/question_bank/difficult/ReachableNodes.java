@@ -31,7 +31,7 @@ import java.util.*;
  * 1 <= n <= 3000
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/11/26
+ * @version 2022/11/26
  */
 public class ReachableNodes {
     // TODO CV需要复习

@@ -47,8 +47,8 @@ import java.util.TreeMap;
  * 1 <= m <= 10^6
  * 1 <= k <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/10
+ * @author huangdu
+ * @version 2021/5/10
  */
 public class MinDays {
     private int[] parent;

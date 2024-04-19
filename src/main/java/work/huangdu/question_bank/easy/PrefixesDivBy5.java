@@ -25,8 +25,8 @@ import java.util.List;
  * 1 <= A.length <= 30000
  * A[i] 为 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/14
+ * @author huangdu
+ * @version 2021/1/14
  */
 public class PrefixesDivBy5 {
     public List<Boolean> prefixesDivBy52(int[] A) {

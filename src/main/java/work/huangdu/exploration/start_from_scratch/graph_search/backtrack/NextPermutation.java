@@ -23,8 +23,8 @@ import java.util.Arrays;
  * 1 <= nums.length <= 100
  * 0 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/10 12:22
+ * @author huangdu
+ * @version 2020/11/10 12:22
  */
 public class NextPermutation {
     public void nextPermutation(int[] nums) {

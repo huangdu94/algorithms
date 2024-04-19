@@ -23,8 +23,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= thickness_i <= shelfWidth <= 1000
  * 1 <= height_i <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/23
+ * @author huangdu
+ * @version 2023/4/23
  */
 public class MinHeightShelves {
     static class Solution {

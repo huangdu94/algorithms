@@ -30,8 +30,8 @@ import java.util.Comparator;
  * 1 <= startTime[i] < endTime[i] <= 10^9
  * 1 <= profit[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/24
+ * @author huangdu
+ * @version 2022/10/24
  */
 public class JobScheduling {
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {

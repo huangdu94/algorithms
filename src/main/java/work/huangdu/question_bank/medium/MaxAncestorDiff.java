@@ -23,8 +23,8 @@ import work.huangdu.data_structure.TreeNode;
  * 树中的节点数在 2 到 5000 之间。
  * 0 <= Node.val <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/18
+ * @author huangdu
+ * @version 2023/4/18
  */
 public class MaxAncestorDiff {
     public int maxAncestorDiff(TreeNode root) {

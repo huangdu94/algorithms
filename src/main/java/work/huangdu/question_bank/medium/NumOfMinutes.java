@@ -31,8 +31,8 @@ import java.util.List;
  * 如果员工 i 没有下属，informTime[i] == 0 。
  * 题目 保证 所有员工都可以收到通知。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/4
+ * @author huangdu
+ * @version 2023/5/4
  */
 public class NumOfMinutes {
     private List<Integer>[] emps;

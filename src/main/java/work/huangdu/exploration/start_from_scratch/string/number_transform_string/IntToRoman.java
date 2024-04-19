@@ -37,8 +37,8 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 提示：
  * 1 <= num <= 3999
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/28 18:54
+ * @author huangdu
+ * @version 2020/9/28 18:54
  */
 public class IntToRoman {
     public String intToRoman(int num) {

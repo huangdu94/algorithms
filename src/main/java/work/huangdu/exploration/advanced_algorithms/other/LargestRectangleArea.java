@@ -14,8 +14,8 @@ import java.util.Deque;
  * 输入: [2,1,5,6,2,3]
  * 输出: 10
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/8 12:42
+ * @author huangdu
+ * @version 2020/9/8 12:42
  */
 public class LargestRectangleArea {
     public int largestRectangleArea1(int[] heights) {

@@ -10,8 +10,8 @@ package work.huangdu.exploration.start_from_scratch.binary.fast_power;
  * 输入: a = 2, b = [1,0]
  * 输出: 1024
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/21 10:33
+ * @author huangdu
+ * @version 2020/10/21 10:33
  */
 public class SuperPow {
     public int superPow(int a, int[] b) {

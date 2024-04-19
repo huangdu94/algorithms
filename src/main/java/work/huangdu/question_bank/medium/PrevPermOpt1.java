@@ -22,8 +22,8 @@ import java.util.Arrays;
  * 1 <= arr.length <= 10^4
  * 1 <= arr[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/3
+ * @author huangdu
+ * @version 2023/4/3
  */
 public class PrevPermOpt1 {
     public int[] prevPermOpt1(int[] arr) {

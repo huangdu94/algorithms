@@ -51,8 +51,8 @@ import work.huangdu.data_structure.TreeNode;
  * 输入的深度值 d 的范围是：[1，二叉树最大深度 + 1]。
  * 输入的二叉树至少有一个节点。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/23
+ * @author huangdu
+ * @version 2021/1/23
  */
 public class AddOneRow {
     public TreeNode addOneRow(TreeNode root, int val, int depth) {

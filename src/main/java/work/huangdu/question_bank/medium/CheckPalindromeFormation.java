@@ -28,8 +28,8 @@ package work.huangdu.question_bank.medium;
  * a.length == b.length
  * a 和 b 都只包含小写英文字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/18
+ * @author huangdu
+ * @version 2023/3/18
  */
 public class CheckPalindromeFormation {
     public boolean checkPalindromeFormation(String a, String b) {

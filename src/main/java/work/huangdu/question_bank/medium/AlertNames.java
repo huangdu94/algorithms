@@ -39,8 +39,8 @@ import java.util.TreeSet;
  * 1 <= keyName[i].length <= 10
  * keyName[i] 只包含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/7
+ * @author huangdu
+ * @version 2023/2/7
  */
 public class AlertNames {
     public List<String> alertNames(String[] keyName, String[] keyTime) {

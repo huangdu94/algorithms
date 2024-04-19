@@ -32,8 +32,8 @@ import java.util.Arrays;
  * [0,3,1,0]
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/30
+ * @author huangdu
+ * @version 2022/9/30
  */
 public class SetZeroes {
     public void setZeroes(int[][] matrix) {

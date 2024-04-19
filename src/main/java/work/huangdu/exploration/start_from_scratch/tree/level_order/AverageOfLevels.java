@@ -23,8 +23,8 @@ import java.util.Queue;
  * 提示：
  * 节点值的范围在32位有符号整数范围内。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/12 0:06
+ * @author huangdu
+ * @version 2020/9/12 0:06
  */
 public class AverageOfLevels {
     public List<Double> averageOfLevels(TreeNode root) {

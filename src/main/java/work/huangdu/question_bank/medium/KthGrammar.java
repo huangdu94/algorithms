@@ -25,8 +25,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= n <= 30
  * 1 <= k <= 2^n - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/21
+ * @author huangdu
+ * @version 2022/10/21
  */
 public class KthGrammar {
     public int kthGrammar(int n, int k) {

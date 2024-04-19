@@ -17,8 +17,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= n <= 100
  * -100 <= gain[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/21
+ * @author huangdu
+ * @version 2022/11/21
  */
 public class LargestAltitude {
     public int largestAltitude(int[] gain) {

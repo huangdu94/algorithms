@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
  * veganFriendly_i 和 veganFriendly 的值为 0 或 1 。
  * 所有 id_i 各不相同。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FilterRestaurants {
     public List<Integer> filterRestaurants(int[][] restaurants, int veganFriendly, int maxPrice, int maxDistance) {

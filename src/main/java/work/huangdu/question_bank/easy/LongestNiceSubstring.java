@@ -26,8 +26,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 100
  * s 只包含大写和小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/1
+ * @author huangdu
+ * @version 2022/2/1
  */
 public class LongestNiceSubstring {
     public String longestNiceSubstring(String s) {

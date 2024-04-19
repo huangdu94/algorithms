@@ -13,8 +13,8 @@ import work.huangdu.data_structure.ListNode;
  * 进阶：
  * 你能尝试使用一趟扫描实现吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 17:53
+ * @author huangdu
+ * @version 2020/7/26 17:53
  */
 public class RemoveNthFromEnd {
     public ListNode removeNthFromEnd(ListNode head, int n) {

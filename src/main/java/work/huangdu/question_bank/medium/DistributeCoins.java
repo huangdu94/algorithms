@@ -25,8 +25,8 @@ import work.huangdu.data_structure.TreeNode;
  * 1<= N <= 100
  * 0 <= node.val <= N
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/14
+ * @author huangdu
+ * @version 2023/7/14
  */
 public class DistributeCoins {
     private int ans;

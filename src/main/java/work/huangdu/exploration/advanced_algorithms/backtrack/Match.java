@@ -39,8 +39,8 @@ package work.huangdu.exploration.advanced_algorithms.backtrack;
  * p = "mis*is*p*."
  * 输出: false
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/19 22:49
+ * @author huangdu
+ * @version 2020/8/19 22:49
  */
 public class Match {
     public boolean isMatch(String s, String p) {

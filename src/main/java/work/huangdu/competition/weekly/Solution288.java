@@ -9,8 +9,8 @@ import java.util.PriorityQueue;
 /**
  * 第 288 场周赛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/10
+ * @author huangdu
+ * @version 2022/4/10
  */
 public class Solution288 {
     /**

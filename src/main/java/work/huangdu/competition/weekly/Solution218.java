@@ -5,8 +5,8 @@ import java.util.*;
 /**
  * 第218场周赛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/6 9:56
+ * @author huangdu
+ * @version 2020/12/6 9:56
  */
 public class Solution218 {
     /**

@@ -24,8 +24,8 @@ import java.util.Set;
  * -1000 <= nums[i] <= 1000
  * nums[i] != 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/15
+ * @author huangdu
+ * @version 2023/5/15
  */
 public class FindMaxK {
     public int findMaxK(int[] nums) {

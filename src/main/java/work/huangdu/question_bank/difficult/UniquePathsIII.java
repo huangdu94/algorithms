@@ -32,8 +32,8 @@ package work.huangdu.question_bank.difficult;
  * 提示：
  * 1 <= grid.length * grid[0].length <= 20
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/9
+ * @author huangdu
+ * @version 2023/8/9
  */
 public class UniquePathsIII {
     private static final int START = 1;

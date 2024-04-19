@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * 2 <= n <= 1000
  * 1 <= nums[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/26
+ * @author huangdu
+ * @version 2022/2/26
  */
 public class MaximumDifference {
     public int maximumDifference(int[] nums) {

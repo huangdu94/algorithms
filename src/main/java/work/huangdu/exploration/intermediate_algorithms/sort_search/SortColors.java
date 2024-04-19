@@ -16,8 +16,8 @@ import java.util.Arrays;
  * 首先，迭代计算出0、1 和 2 元素的个数，然后按照0、1、2的排序，重写当前数组。
  * 你能想出一个仅使用常数空间的一趟扫描算法吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/12 15:45
+ * @author huangdu
+ * @version 2020/7/12 15:45
  */
 public class SortColors {
     public void sortColors(int[] nums) {

@@ -29,8 +29,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= k <= n <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/16
+ * @author huangdu
+ * @version 2023/8/16
  */
 public class CircularGameLosers {
     public int[] circularGameLosers(int n, int k) {

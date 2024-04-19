@@ -23,8 +23,8 @@ import java.util.Map;
  * 1 <= nums[i] <= 10^4
  * 1 <= x <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/9
+ * @author huangdu
+ * @version 2023/1/9
  */
 public class Solution1658 {
     public int minOperations(int[] nums, int x) {

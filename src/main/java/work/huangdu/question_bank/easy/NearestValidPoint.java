@@ -22,8 +22,8 @@ package work.huangdu.question_bank.easy;
  * points[i].length == 2
  * 1 <= x, y, ai, bi <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/2
+ * @author huangdu
+ * @version 2022/12/2
  */
 public class NearestValidPoint {
     public int nearestValidPoint(int x, int y, int[][] points) {

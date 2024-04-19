@@ -23,8 +23,8 @@ import java.util.Map;
  * 给你的链表中可能有 1 到 1000 个节点。
  * 对于链表中的每个节点，节点的值：-1000 <= node.val <= 1000.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/12
+ * @author huangdu
+ * @version 2023/6/12
  */
 public class RemoveZeroSumSublists {
     public ListNode removeZeroSumSublists(ListNode head) {

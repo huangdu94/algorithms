@@ -23,8 +23,8 @@ import java.util.Arrays;
  * 1 <= s.length <= 2000
  * s 仅由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/24
+ * @author huangdu
+ * @version 2022/10/24
  */
 public class DistinctSubseqII {
     private static final int MOD = (int)1e9 + 7;

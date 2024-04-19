@@ -24,7 +24,7 @@ import work.huangdu.data_structure.TreeNode;
  * target 节点是树 original 中的一个节点，并且不会是 null 。
  * 进阶：如果树中允许出现值相同的节点，将如何解答？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class GetTargetCopy {
     public final TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {

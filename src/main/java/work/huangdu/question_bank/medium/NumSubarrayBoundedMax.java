@@ -16,8 +16,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= nums[i] <= 10^9
  * 0 <= left <= right <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/24
+ * @author huangdu
+ * @version 2022/11/24
  */
 public class NumSubarrayBoundedMax {
     public int numSubarrayBoundedMax(int[] nums, int left, int right) {

@@ -16,8 +16,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * -10^4 <= ax1, ay1, ax2, ay2, bx1, by1, bx2, by2 <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/30
+ * @author huangdu
+ * @version 2021/9/30
  */
 public class ComputeArea {
     public int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {

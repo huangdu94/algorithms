@@ -26,8 +26,8 @@ import java.util.Map;
  * 1 <= croakOfFrogs.length <= 10^5
  * 字符串中的字符只有 'c', 'r', 'o', 'a' 或者 'k'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/6
+ * @author huangdu
+ * @version 2023/5/6
  */
 public class MinNumberOfFrogs {
     private static final Map<Character, Integer> MAP = new HashMap<>(5);

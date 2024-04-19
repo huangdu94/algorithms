@@ -15,8 +15,8 @@ package work.huangdu.question_bank.difficult;
  * 每个运算符对两个数进行运算。特别是我们不能用 - 作为一元运算符。例如，[1, 1, 1, 1] 作为输入时，表达式 -1 - 1 - 1 - 1 是不允许的。
  * 你不能将数字连接在一起。例如，输入为 [1, 2, 1, 2] 时，不能写成 12 + 12 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/22 12:23
+ * @author huangdu
+ * @version 2020/8/22 12:23
  */
 public class JudgePoint24 {
     // 采用回溯算法会更优雅，用list装四个数，每次拿两个出来计算，计算结果放回去

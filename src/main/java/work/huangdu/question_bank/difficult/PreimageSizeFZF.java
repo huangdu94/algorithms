@@ -19,8 +19,8 @@ package work.huangdu.question_bank.difficult;
  * 提示:
  * 0 <= k <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/2
+ * @author huangdu
+ * @version 2022/9/2
  */
 public class PreimageSizeFZF {
     /*

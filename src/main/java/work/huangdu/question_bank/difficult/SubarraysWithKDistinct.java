@@ -23,8 +23,8 @@ import java.util.Set;
  * 1 <= A[i] <= A.length
  * 1 <= K <= A.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/9
+ * @author huangdu
+ * @version 2021/2/9
  */
 public class SubarraysWithKDistinct {
     // 暴力法，枚举每一个开始位置(超时)

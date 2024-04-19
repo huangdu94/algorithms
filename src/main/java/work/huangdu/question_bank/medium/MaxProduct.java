@@ -26,8 +26,8 @@ import java.util.Map;
  * 1 <= words[i].length <= 1000
  * words[i] 仅包含小写字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/11/17
+ * @author huangdu
+ * @version 2021/11/17
  */
 public class MaxProduct {
     public int maxProduct(String[] words) {

@@ -37,8 +37,8 @@ import java.util.TreeSet;
  * words[i][j], puzzles[i][j] 都是小写英文字母。
  * 每个 puzzles[i] 所包含的字符都不重复。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/26
+ * @author huangdu
+ * @version 2021/2/26
  */
 public class FindNumOfValidWords {
     private static final int PUZZLE_LEN = 7;

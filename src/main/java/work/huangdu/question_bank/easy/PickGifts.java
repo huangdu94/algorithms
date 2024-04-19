@@ -32,7 +32,7 @@ import java.util.Queue;
  * 1 <= gifts[i] <= 10^9
  * 1 <= k <= 10^3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class PickGifts {
     public long pickGifts(int[] gifts, int k) {

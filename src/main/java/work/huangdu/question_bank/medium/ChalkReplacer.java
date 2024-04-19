@@ -36,8 +36,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= chalk[i] <= 10^5
  * 1 <= k <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/11
+ * @author huangdu
+ * @version 2021/9/11
  */
 public class ChalkReplacer {
     public int chalkReplacer(int[] chalk, int k) {

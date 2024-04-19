@@ -26,8 +26,8 @@ import work.huangdu.data_structure.TreeNode;
  * 二叉树中节点数目范围是 [1, 10^5] 。
  * 每个节点权值的范围是 [-10^4, 10^4] 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/25
+ * @author huangdu
+ * @version 2023/8/25
  */
 public class GoodNodes {
     public int goodNodes(TreeNode root) {

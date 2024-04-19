@@ -23,8 +23,8 @@ import java.util.Set;
  * 提示：
  * 1 <= k <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/10
+ * @author huangdu
+ * @version 2023/5/10
  */
 public class SmallestRepunitDivByK {
     public int smallestRepunitDivByK(int k) {

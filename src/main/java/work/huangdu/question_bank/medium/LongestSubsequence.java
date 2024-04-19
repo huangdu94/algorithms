@@ -26,8 +26,8 @@ import java.util.Map;
  * 1 <= arr.length <= 10^5
  * -10^4 <= arr[i], difference <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/11/5
+ * @author huangdu
+ * @version 2021/11/5
  */
 public class LongestSubsequence {
     public int longestSubsequence(int[] arr, int difference) {

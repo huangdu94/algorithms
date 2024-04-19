@@ -22,8 +22,8 @@ import java.util.Map;
  * 1 <= ransomNote.length, magazine.length <= 10^5
  * ransomNote 和 magazine 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/23 21:53
+ * @author huangdu
+ * @version 2020/9/23 21:53
  */
 public class CanConstruct {
     public boolean canConstruct(String ransomNote, String magazine) {

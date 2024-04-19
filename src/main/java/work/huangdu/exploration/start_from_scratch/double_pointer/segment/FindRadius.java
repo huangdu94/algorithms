@@ -23,8 +23,8 @@ import java.util.Arrays;
  * 1 <= houses.length, heaters.length <= 3 * 10^4
  * 1 <= houses[i], heaters[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/20 13:15
+ * @author huangdu
+ * @version 2020/12/20 13:15
  */
 public class FindRadius {
     public int findRadius(int[] houses, int[] heaters) {

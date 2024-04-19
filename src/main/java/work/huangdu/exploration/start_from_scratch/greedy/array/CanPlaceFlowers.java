@@ -15,8 +15,8 @@ package work.huangdu.exploration.start_from_scratch.greedy.array;
  * 输入的数组长度范围为 [1, 20000]。
  * n 是非负整数，且不会超过输入数组的大小。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/8 18:30
+ * @author huangdu
+ * @version 2020/11/8 18:30
  */
 public class CanPlaceFlowers {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {

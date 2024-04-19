@@ -23,7 +23,7 @@ import java.util.Queue;
  * 0 <= from_i < to_i <= 1000
  * 1 <= capacity <= 105
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CarPooling {
     public boolean carPooling(int[][] trips, int capacity) {

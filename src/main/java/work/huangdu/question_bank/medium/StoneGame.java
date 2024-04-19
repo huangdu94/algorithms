@@ -21,8 +21,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= piles[i] <= 500
  * sum(piles) 是奇数。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/16
+ * @author huangdu
+ * @version 2021/6/16
  */
 public class StoneGame {
     private int[] piles;

@@ -25,8 +25,8 @@ package work.huangdu.question_bank.difficult;
  * 2 <= n <= 30
  * board[i][j] 将只包含 0或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/1
+ * @author huangdu
+ * @version 2022/9/1
  */
 public class MovesToChessboard {
     public int movesToChessboard(int[][] board) {

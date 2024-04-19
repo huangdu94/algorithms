@@ -29,8 +29,8 @@ import java.util.Set;
  * ui != vi
  * 图中没有重复的边。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/31
+ * @author huangdu
+ * @version 2023/8/31
  */
 public class MinTrioDegree {
     public int minTrioDegree(int n, int[][] edges) {

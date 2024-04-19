@@ -21,8 +21,8 @@ import java.util.List;
  * 1 <= n <= 10^4
  * 1 <= Node.val <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/10
+ * @author huangdu
+ * @version 2023/4/10
  */
 public class NextLargerNodes {
     public int[] nextLargerNodes(ListNode head) {

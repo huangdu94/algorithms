@@ -32,8 +32,8 @@ import java.util.PriorityQueue;
  * 1 <= lefti <= righti <= 10^7
  * 1 <= queries[j] <= 10^7
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/18
+ * @author huangdu
+ * @version 2023/7/18
  */
 public class MinInterval {
     public int[] minInterval(int[][] intervals, int[] queries) {

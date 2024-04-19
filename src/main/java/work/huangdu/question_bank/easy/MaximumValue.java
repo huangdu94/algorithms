@@ -26,8 +26,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= strs[i].length <= 9
  * strs[i] 只包含小写英文字母和数字。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/25
+ * @author huangdu
+ * @version 2023/6/25
  */
 public class MaximumValue {
     public int maximumValue(String[] strs) {

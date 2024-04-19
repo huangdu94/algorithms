@@ -31,7 +31,7 @@ import java.util.Queue;
  * 0 <= connections[i][0], connections[i][1] <= n-1
  * connections[i][0] != connections[i][1]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinReorder {
     public int minReorder(int n, int[][] connections) {

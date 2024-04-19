@@ -31,8 +31,8 @@ import java.util.PriorityQueue;
  * 0 <= succProb[i] <= 1
  * 每两个节点之间最多有一条边
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/15
+ * @author huangdu
+ * @version 2023/6/15
  */
 public class MaxProbability {
     public double maxProbability(int n, int[][] edges, double[] succProb, int start, int end) {

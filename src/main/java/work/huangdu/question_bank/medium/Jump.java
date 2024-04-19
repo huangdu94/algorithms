@@ -20,8 +20,8 @@ import java.util.Arrays;
  * 1 <= nums.length <= 1000
  * 0 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/11
+ * @author huangdu
+ * @version 2021/5/11
  */
 public class Jump {
     public int jump(int[] nums) {

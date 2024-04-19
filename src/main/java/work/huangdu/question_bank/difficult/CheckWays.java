@@ -38,8 +38,8 @@ import java.util.Set;
  * 1 <= xi < yi <= 500
  * pairs 中的元素互不相同。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/16
+ * @author huangdu
+ * @version 2022/2/16
  */
 public class CheckWays {
     // TODO 这题是CV的。需要复习。

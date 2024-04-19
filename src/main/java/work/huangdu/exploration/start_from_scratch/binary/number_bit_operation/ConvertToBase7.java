@@ -11,8 +11,8 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 输出: "-10"
  * 注意: 输入范围是 [-1e7, 1e7] 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/10 16:05
+ * @author huangdu
+ * @version 2020/10/10 16:05
  */
 public class ConvertToBase7 {
     public String convertToBase7(int num) {

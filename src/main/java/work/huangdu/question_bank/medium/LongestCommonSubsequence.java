@@ -22,8 +22,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= text1.length, text2.length <= 1000
  * text1 和 text2 仅由小写英文字符组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/3
+ * @author huangdu
+ * @version 2021/4/3
  * @see work.huangdu.question_bank.difficult.NumDistinct
  */
 public class LongestCommonSubsequence {

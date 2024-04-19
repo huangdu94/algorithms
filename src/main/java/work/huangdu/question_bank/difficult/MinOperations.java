@@ -22,8 +22,8 @@ import java.util.Map;
  * 1 <= target[i], arr[i] <= 10^9
  * target 不包含任何重复元素。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/26
+ * @author huangdu
+ * @version 2021/7/26
  */
 public class MinOperations {
     public int minOperations(int[] target, int[] arr) {

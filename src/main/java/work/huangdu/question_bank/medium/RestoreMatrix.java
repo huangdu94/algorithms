@@ -42,8 +42,8 @@ import java.util.PriorityQueue;
  * 0 <= rowSum[i], colSum[i] <= 10^8
  * sum(rowSum) == sum(colSum)
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/14
+ * @author huangdu
+ * @version 2023/3/14
  */
 public class RestoreMatrix {
     public int[][] restoreMatrix(int[] rowSum, int[] colSum) {

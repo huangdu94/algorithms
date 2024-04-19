@@ -34,8 +34,8 @@ import java.util.Random;
  * 所有的矩形不重叠。
  * pick 最多被调用 10^4 次。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/9
+ * @author huangdu
+ * @version 2022/6/9
  */
 public class Pick {
     static class Solution {

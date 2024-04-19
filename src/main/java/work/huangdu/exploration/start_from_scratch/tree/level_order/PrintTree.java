@@ -50,8 +50,8 @@ import work.huangdu.data_structure.TreeNode;
  * ["4", "",  "", "",  "", "", "", "",  "",  "",  "",  "",  "", "", ""]]
  * 注意: 二叉树的高度在范围 [1, 10] 中。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/28
+ * @author huangdu
+ * @version 2021/1/28
  */
 public class PrintTree {
     public List<List<String>> printTree2(TreeNode root) {

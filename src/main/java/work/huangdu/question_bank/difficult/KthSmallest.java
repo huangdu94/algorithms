@@ -31,8 +31,8 @@ import java.util.List;
  * 1 <= mat[i][j] <= 5000
  * mat[i] 是一个非递减数组
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/28
+ * @author huangdu
+ * @version 2023/5/28
  */
 public class KthSmallest {
     public int kthSmallest(int[][] mat, int k) {

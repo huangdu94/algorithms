@@ -22,8 +22,8 @@ import java.util.Set;
  * -2^31 <= nums[i] <= 2^31 - 1
  * 除两个只出现一次的整数外，nums 中的其他数字都出现两次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/2
+ * @author huangdu
+ * @version 2021/5/2
  * @see work.huangdu.exploration.primary_algorithms.array.SingleNumber
  * @see work.huangdu.question_bank.medium.SingleNumber2
  */

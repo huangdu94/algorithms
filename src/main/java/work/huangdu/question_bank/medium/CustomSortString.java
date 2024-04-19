@@ -22,8 +22,8 @@ import java.util.Arrays;
  * order 和 s 由小写英文字母组成
  * order 中的所有字符都 不同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/14
+ * @author huangdu
+ * @version 2022/11/14
  */
 public class CustomSortString {
     public String customSortString(String order, String s) {

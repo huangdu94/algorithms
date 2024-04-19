@@ -16,8 +16,8 @@ import java.util.List;
  * 解释: 最长递增子序列的长度是1，并且存在5个子序列的长度为1，因此输出5。
  * 注意: 给定的数组长度不超过 2000 并且结果一定是32位有符号整数。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/20
+ * @author huangdu
+ * @version 2021/9/20
  */
 public class FindNumberOfLIS {
     public int findNumberOfLIS(int[] nums) {

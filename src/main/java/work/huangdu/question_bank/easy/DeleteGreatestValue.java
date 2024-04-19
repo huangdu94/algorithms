@@ -30,8 +30,8 @@ import java.util.Arrays;
  * 1 <= m, n <= 50
  * 1 <= grid[i][j] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/27
+ * @author huangdu
+ * @version 2023/7/27
  */
 public class DeleteGreatestValue {
     public int deleteGreatestValue(int[][] grid) {

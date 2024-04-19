@@ -25,8 +25,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= arr.length <= 10^5
  * 0 <= arr[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/25
+ * @author huangdu
+ * @version 2023/3/25
  */
 public class FindLengthOfShortestSubarray {
     public int findLengthOfShortestSubarray(int[] arr) {

@@ -28,7 +28,7 @@ import java.util.Arrays;
  * 题目数据保证 horizontalCuts 中的所有元素各不相同
  * 题目数据保证 verticalCuts 中的所有元素各不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaxArea {
     public int maxArea(int h, int w, int[] horizontalCuts, int[] verticalCuts) {

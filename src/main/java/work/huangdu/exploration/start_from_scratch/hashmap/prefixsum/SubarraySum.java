@@ -13,8 +13,8 @@ import java.util.Map;
  * 数组的长度为 [1, 20,000]。
  * 数组中元素的范围是 [-1000, 1000] ，且整数 k 的范围是 [-1e7, 1e7]。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/8 15:24
+ * @author huangdu
+ * @version 2020/11/8 15:24
  */
 public class SubarraySum {
     // 暴力法 o(n^2)

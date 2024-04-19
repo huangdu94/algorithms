@@ -25,8 +25,8 @@ import java.util.List;
  * 0 <= queries[i][2] <= s.length
  * s 中只有小写英文字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/15
+ * @author huangdu
+ * @version 2023/6/15
  */
 public class CanMakePaliQueries {
     public List<Boolean> canMakePaliQueries(String s, int[][] queries) {

@@ -26,8 +26,8 @@ import java.util.Set;
  * 1 <= arr[i].length <= 26
  * arr[i] 中只含有小写英文字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/19
+ * @author huangdu
+ * @version 2021/6/19
  */
 public class MaxLength {
     private int n;

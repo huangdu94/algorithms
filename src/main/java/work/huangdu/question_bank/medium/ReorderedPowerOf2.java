@@ -26,8 +26,8 @@ import java.util.Set;
  * 提示：
  * 1 <= N <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/10/28
+ * @author huangdu
+ * @version 2021/10/28
  */
 public class ReorderedPowerOf2 {
     private final static Set<String> SET = new HashSet<>();

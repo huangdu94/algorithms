@@ -38,8 +38,8 @@ import java.util.Arrays;
  * 提示：
  * 1 <= a, b, c <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/25
+ * @author huangdu
+ * @version 2022/12/25
  */
 public class MaximumScore {
     /*

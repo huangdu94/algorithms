@@ -20,7 +20,7 @@ package work.huangdu.question_bank.medium;
  * 给定列表中的节点数目在范围 [1, 10^5] 内
  * 1 <= Node.val <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class RemoveNodes {
     public ListNode removeNodes(ListNode head) {

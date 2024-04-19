@@ -24,8 +24,8 @@ package work.huangdu.question_bank.medium;
  * -10^9 <= target <= 10^9
  * target != 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/4
+ * @author huangdu
+ * @version 2022/11/4
  */
 public class ReachNumber {
     public int reachNumber(int target) {

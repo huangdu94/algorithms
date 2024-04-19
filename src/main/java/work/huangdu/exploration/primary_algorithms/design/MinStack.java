@@ -26,8 +26,8 @@ import java.util.NoSuchElementException;
  * 提示：
  * pop、top 和 getMin 操作总是在 非空栈 上调用。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/6/29 15:05
+ * @author huangdu
+ * @version 2020/6/29 15:05
  */
 public class MinStack {
     /**

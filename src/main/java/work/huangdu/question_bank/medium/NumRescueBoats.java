@@ -23,8 +23,8 @@ import java.util.Arrays;
  * 1 <= people.length <= 50000
  * 1 <= people[i] <= limit <= 30000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/26
+ * @author huangdu
+ * @version 2021/8/26
  */
 public class NumRescueBoats {
     public int numRescueBoats(int[] people, int limit) {

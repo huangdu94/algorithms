@@ -35,8 +35,8 @@ import java.util.List;
  * 1 <= target <= 10^9
  * 输入的图是连通图，且没有自环和重边。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/15
+ * @author huangdu
+ * @version 2023/6/15
  */
 public class ModifiedGraphEdges {
     public int[][] modifiedGraphEdges(int n, int[][] edges, int source, int destination, int target) {

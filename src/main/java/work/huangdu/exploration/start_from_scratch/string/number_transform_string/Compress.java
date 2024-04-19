@@ -34,8 +34,8 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 所有字符都有一个ASCII值在[35, 126]区间内。
  * 1 <= len(chars) <= 1000。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/28 16:44
+ * @author huangdu
+ * @version 2020/9/28 16:44
  */
 public class Compress {
     public int compress(char[] chars) {

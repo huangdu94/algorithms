@@ -23,8 +23,8 @@ import java.util.TreeMap;
  * 1 <= queries[i].length, words[i].length <= 10
  * queries[i][j]、words[i][j] 都由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/12
+ * @author huangdu
+ * @version 2023/6/12
  */
 public class NumSmallerByFrequency {
     public int[] numSmallerByFrequency(String[] queries, String[] words) {

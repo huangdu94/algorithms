@@ -22,8 +22,8 @@ package work.huangdu.exploration.start_from_scratch.string.conversion;
  * E C   I H   N
  * T     S     G
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/3 8:51
+ * @author huangdu
+ * @version 2020/10/3 8:51
  */
 public class Convert {
     public String convert(String s, int numRows) {

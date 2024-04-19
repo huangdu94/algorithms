@@ -20,8 +20,8 @@ import java.util.Arrays;
  * 1 <= nums.length <= 10^5
  * 1 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/21
+ * @author huangdu
+ * @version 2022/11/21
  */
 public class SumSubseqWidths {
     /**

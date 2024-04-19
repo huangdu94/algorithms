@@ -33,8 +33,8 @@ import java.util.List;
  * special[i].length == n + 1
  * 0 <= special[i][j] <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/10/25
+ * @author huangdu
+ * @version 2021/10/25
  */
 public class ShoppingOffers {
     private int size;

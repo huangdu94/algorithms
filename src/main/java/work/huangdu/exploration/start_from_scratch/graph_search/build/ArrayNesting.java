@@ -20,8 +20,8 @@ import java.util.Set;
  * A中不含有重复的元素。
  * A中的元素大小在[0, N-1]之间。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/16
+ * @author huangdu
+ * @version 2021/3/16
  */
 public class ArrayNesting {
     public int arrayNesting5(int[] nums) {

@@ -41,7 +41,7 @@ import java.util.function.Predicate;
  * grid[i][j] 是 0 ，1 或者 2 。
  * grid[0][0] == grid[m - 1][n - 1] == 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumMinutes {
     private static final int[] DIRECTIONS = {0, 1, 0, -1, 0};

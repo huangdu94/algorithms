@@ -15,8 +15,8 @@ import java.util.Arrays;
  * 第三轮后, 灯泡状态 [开启, 关闭, 关闭].
  * 你应该返回 1，因为只有一个灯泡还亮着。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/18 10:18
+ * @author huangdu
+ * @version 2020/10/18 10:18
  */
 public class BulbSwitch {
     // 暴力模拟 时间复杂度o(n^2) 空间复杂度o(n)

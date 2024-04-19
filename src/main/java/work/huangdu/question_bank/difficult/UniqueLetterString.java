@@ -28,8 +28,8 @@ import java.util.Map;
  * 1 <= s.length <= 10^5
  * s 只包含大写英文字符
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/6
+ * @author huangdu
+ * @version 2022/9/6
  */
 public class UniqueLetterString {
     public int uniqueLetterString(String s) {

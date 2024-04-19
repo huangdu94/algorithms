@@ -27,8 +27,8 @@ package work.huangdu.question_bank.easy;
  * startTime2 <= endTime2
  * 所有事件的时间都按照 HH:MM 格式给出
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/17
+ * @author huangdu
+ * @version 2023/5/17
  */
 public class HaveConflict {
     public boolean haveConflict(String[] event1, String[] event2) {

@@ -27,8 +27,8 @@ package work.huangdu.question_bank.easy;
  * logs[i] 符合语句中描述的格式
  * 文件夹名称由小写英文字母和数字组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/9
+ * @author huangdu
+ * @version 2022/9/9
  */
 public class MinOperations {
 

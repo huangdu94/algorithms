@@ -42,8 +42,8 @@ import java.util.Objects;
  * 输入: s1 = "abcde", s2 = "caebd"
  * 输出: false
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/1 17:13
+ * @author huangdu
+ * @version 2021/1/1 17:13
  */
 public class IsScramble {
 

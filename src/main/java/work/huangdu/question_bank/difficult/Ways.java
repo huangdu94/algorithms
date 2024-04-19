@@ -24,8 +24,8 @@ import java.util.Arrays;
  * 1 <= k <= 10
  * pizza 只包含字符 'A' 和 '.' 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/21
+ * @author huangdu
+ * @version 2023/8/21
  */
 public class Ways {
     private int m;

@@ -35,8 +35,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= s.length, t.length <= 100
  * s 和 t 都只包含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/27
+ * @author huangdu
+ * @version 2023/3/27
  */
 public class CountSubstrings {
     public int countSubstrings(String s, String t) {

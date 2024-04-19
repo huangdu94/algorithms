@@ -18,8 +18,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= fronts[i] <= 2000
  * 1 <= backs[i] <= 2000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/2
+ * @author huangdu
+ * @version 2023/8/2
  */
 public class Flipgame {
     public int flipgame(int[] fronts, int[] backs) {

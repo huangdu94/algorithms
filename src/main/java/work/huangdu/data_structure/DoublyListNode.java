@@ -3,8 +3,8 @@ package work.huangdu.data_structure;
 /**
  * Definition for doubly linked list.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/5 21:56
+ * @author huangdu
+ * @version 2020/9/5 21:56
  */
 public class DoublyListNode {
     public int val;

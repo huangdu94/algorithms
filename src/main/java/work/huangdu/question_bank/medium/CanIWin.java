@@ -26,7 +26,7 @@ package work.huangdu.question_bank.medium;
  * 0 <= desiredTotal <= 300
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/5/22
+ * @version 2022/5/22
  */
 public class CanIWin {
     public boolean canIWin(int maxChoosableInteger, int desiredTotal) {

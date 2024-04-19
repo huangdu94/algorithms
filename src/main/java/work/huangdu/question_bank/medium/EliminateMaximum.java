@@ -38,7 +38,7 @@ import java.util.Arrays;
  * 1 <= dist[i], speed[i] <= 10^5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/9/3
+ * @version 2023/9/3
  */
 public class EliminateMaximum {
     public int eliminateMaximum(int[] dist, int[] speed) {

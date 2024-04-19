@@ -33,8 +33,8 @@ package work.huangdu.question_bank.medium;
  * target.length == 2
  * -10^4 <= xtarget, ytarget <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/22
+ * @author huangdu
+ * @version 2021/8/22
  */
 public class EscapeGhosts {
     public boolean escapeGhosts(int[][] ghosts, int[] target) {

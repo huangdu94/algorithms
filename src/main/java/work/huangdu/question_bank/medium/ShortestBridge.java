@@ -24,8 +24,8 @@ import java.util.Queue;
  * grid[i][j] 为 0 或 1
  * grid 中恰有两个岛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/25
+ * @author huangdu
+ * @version 2022/10/25
  */
 public class ShortestBridge {
     public int shortestBridge(int[][] grid) {

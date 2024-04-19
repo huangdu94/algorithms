@@ -31,8 +31,8 @@ import java.util.Arrays;
  * -10^4 <= coordinates[i][0], coordinates[i][1] <= 10^4
  * coordinates 中不含重复的点
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/17
+ * @author huangdu
+ * @version 2021/1/17
  */
 public class CheckStraightLine {
     public boolean checkStraightLine(int[][] coordinates) {

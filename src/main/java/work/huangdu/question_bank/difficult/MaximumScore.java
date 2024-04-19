@@ -18,7 +18,7 @@ package work.huangdu.question_bank.difficult;
  * 1 <= nums[i] <= 2 * 10^4
  * 0 <= k < nums.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumScore {
     public int maximumScore(int[] nums, int k) {

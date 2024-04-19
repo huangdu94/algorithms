@@ -23,7 +23,7 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 1 <= neededApples <= 10^15
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinimumPerimeter {
     /**

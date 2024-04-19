@@ -23,8 +23,8 @@ import java.util.Arrays;
  * answers 的长度最大为1000。
  * answers[i] 是在 [0, 999] 范围内的整数。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/4
+ * @author huangdu
+ * @version 2021/4/4
  */
 public class NumRabbits {
     public int numRabbits(int[] answers) {

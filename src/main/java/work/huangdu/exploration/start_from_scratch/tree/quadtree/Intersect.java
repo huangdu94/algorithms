@@ -55,8 +55,8 @@ package work.huangdu.exploration.start_from_scratch.tree.quadtree;
  * quadTree1 和 quadTree2 都是符合题目要求的四叉树，每个都代表一个 n * n 的矩阵。
  * n == 2^x ，其中 0 <= x <= 9.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/14
+ * @author huangdu
+ * @version 2021/3/14
  */
 public class Intersect {
     public Node intersect(Node quadTree1, Node quadTree2) {

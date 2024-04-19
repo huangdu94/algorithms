@@ -31,8 +31,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= nums[i] <= 2 * 10^4
  * 1 <= low <= high <= 2 * 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/5
+ * @author huangdu
+ * @version 2023/1/5
  */
 public class CountPairs {
     private final int LIMIT = 14;

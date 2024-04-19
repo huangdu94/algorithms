@@ -17,8 +17,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= n <= 100
  * -100 <= matrix[i][j] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/13
+ * @author huangdu
+ * @version 2023/7/13
  */
 public class MinFallingPathSum {
     public int minFallingPathSum(int[][] matrix) {

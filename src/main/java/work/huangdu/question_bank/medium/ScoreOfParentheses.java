@@ -22,8 +22,8 @@ package work.huangdu.question_bank.medium;
  * S 是平衡括号字符串，且只含有 ( 和 ) 。
  * 2 <= S.length <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/9
+ * @author huangdu
+ * @version 2022/10/9
  */
 public class ScoreOfParentheses {
 

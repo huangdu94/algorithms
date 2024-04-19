@@ -35,7 +35,7 @@ import work.huangdu.data_structure.TreeNode;
  * 0 <= Node.val <= 1000
  * 每个节点的值都是独一无二的。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class LcaDeepestLeaves {
     private int max = 0;

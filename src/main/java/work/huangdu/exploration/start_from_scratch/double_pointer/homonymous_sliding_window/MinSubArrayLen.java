@@ -12,8 +12,8 @@ import java.util.Arrays;
  * 进阶：
  * 如果你已经完成了 O(n) 时间复杂度的解法, 请尝试 O(n log n) 时间复杂度的解法。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/15 14:40
+ * @author huangdu
+ * @version 2020/12/15 14:40
  */
 public class MinSubArrayLen {
     public int minSubArrayLen(int s, int[] nums) {

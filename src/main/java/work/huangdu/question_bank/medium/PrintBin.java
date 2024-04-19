@@ -14,8 +14,8 @@ package work.huangdu.question_bank.medium;
  * 32位包括输出中的 "0." 这两位。
  * 题目保证输入用例的小数位数最多只有 6 位
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/2
+ * @author huangdu
+ * @version 2023/3/2
  */
 public class PrintBin {
     public String printBin(double num) {

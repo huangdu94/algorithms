@@ -27,8 +27,8 @@ import java.util.Queue;
  * words[i] 仅由小写字母组成
  * 0 <= sum(words[i].length) <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/28
+ * @author huangdu
+ * @version 2021/12/28
  */
 public class FindAllConcatenatedWordsInADict {
     public List<String> findAllConcatenatedWordsInADict(String[] words) {

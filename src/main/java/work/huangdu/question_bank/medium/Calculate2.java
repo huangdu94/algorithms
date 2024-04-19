@@ -20,8 +20,8 @@ package work.huangdu.question_bank.medium;
  * 表达式中的所有整数都是非负整数，且在范围 [0, 23^1 - 1] 内
  * 题目数据保证答案是一个 32-bit 整数
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/11
+ * @author huangdu
+ * @version 2021/3/11
  */
 public class Calculate2 {
     public int calculate(String s) {

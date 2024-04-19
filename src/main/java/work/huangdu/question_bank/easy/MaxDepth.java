@@ -31,8 +31,8 @@ package work.huangdu.question_bank.easy;
  * s 由数字 0-9 和字符 '+'、'-'、'*'、'/'、'('、')' 组成
  * 题目数据保证括号表达式 s 是 有效的括号表达式
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/7
+ * @author huangdu
+ * @version 2022/1/7
  */
 public class MaxDepth {
     public int maxDepth(String s) {

@@ -24,7 +24,7 @@ import work.huangdu.data_structure.TreeNode;
  * postorder 中所有值都 不同
  * 保证 preorder 和 postorder 是同一棵二叉树的前序遍历和后序遍历
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class ConstructFromPrePost {
     // TODO 复制粘贴需要复习

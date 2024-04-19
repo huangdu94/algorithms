@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 500
  * s 只包含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/1
+ * @author huangdu
+ * @version 2021/12/1
  */
 public class MaxPower {
     public int maxPower(String s) {

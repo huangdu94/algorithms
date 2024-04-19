@@ -30,8 +30,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= target.length <= 10
  * s 和 target 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/13
+ * @author huangdu
+ * @version 2023/1/13
  */
 public class RearrangeCharacters {
     public int rearrangeCharacters(String s, String target) {

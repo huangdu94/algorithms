@@ -44,8 +44,8 @@ import java.util.Set;
  * 1 <= names[i].length <= 20
  * names[i] 由小写英文字母、数字和/或圆括号组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/3
+ * @author huangdu
+ * @version 2023/3/3
  */
 public class GetFolderNames {
     public String[] getFolderNames(String[] names) {

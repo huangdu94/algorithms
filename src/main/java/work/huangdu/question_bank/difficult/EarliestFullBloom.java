@@ -39,7 +39,7 @@ import java.util.Arrays;
  * 1 <= plantTime[i], growTime[i] <= 10^4
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/10/2
+ * @version 2023/10/2
  */
 public class EarliestFullBloom {
     public int earliestFullBloom(int[] plantTime, int[] growTime) {

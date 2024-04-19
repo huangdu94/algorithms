@@ -18,8 +18,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= distance.length <= 10^5
  * 1 <= distance[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/10/29
+ * @author huangdu
+ * @version 2021/10/29
  */
 public class IsSelfCrossing {
     // TODO 归纳法

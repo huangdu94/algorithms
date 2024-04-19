@@ -23,8 +23,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums.length <= 5000
  * 1 <= nums[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/11
+ * @author huangdu
+ * @version 2022/12/11
  */
 public class MinOperations1827 {
     public int minOperations(int[] nums) {

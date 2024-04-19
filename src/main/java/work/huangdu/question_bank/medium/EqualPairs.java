@@ -24,8 +24,8 @@ import java.util.Map;
  * 1 <= n <= 200
  * 1 <= grid[i][j] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/6
+ * @author huangdu
+ * @version 2023/6/6
  */
 public class EqualPairs {
     public int equalPairs(int[][] grid) {

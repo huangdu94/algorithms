@@ -27,8 +27,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums.length <= 100
  * -100 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/9
+ * @author huangdu
+ * @version 2022/8/9
  */
 public class MinStartValue {
     public int minStartValue(int[] nums) {

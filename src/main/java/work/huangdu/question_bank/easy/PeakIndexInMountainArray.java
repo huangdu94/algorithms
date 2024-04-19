@@ -29,8 +29,8 @@ package work.huangdu.question_bank.easy;
  * 题目数据保证 arr 是一个山脉数组
  * 进阶：很容易想到时间复杂度 O(n) 的解决方案，你可以设计一个 O(log(n)) 的解决方案吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/15
+ * @author huangdu
+ * @version 2021/6/15
  */
 public class PeakIndexInMountainArray {
     public int peakIndexInMountainArray(int[] arr) {

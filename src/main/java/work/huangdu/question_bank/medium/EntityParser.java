@@ -31,7 +31,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= text.length <= 10^5
  * 字符串可能包含 256 个ASCII 字符中的任意字符。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class EntityParser {
     public String entityParser(String text) {

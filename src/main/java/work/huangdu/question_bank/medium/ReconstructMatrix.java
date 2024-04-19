@@ -29,8 +29,8 @@ import java.util.List;
  * 0 <= upper, lower <= colsum.length
  * 0 <= colsum[i] <= 2
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/29
+ * @author huangdu
+ * @version 2023/6/29
  */
 public class ReconstructMatrix {
     public List<List<Integer>> reconstructMatrix(int upper, int lower, int[] colsum) {

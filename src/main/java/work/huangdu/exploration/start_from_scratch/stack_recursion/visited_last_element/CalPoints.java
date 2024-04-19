@@ -44,8 +44,8 @@ import java.util.Deque;
  * 对于 "+" 操作，题目数据保证记录此操作时前面总是存在两个有效的分数
  * 对于 "C" 和 "D" 操作，题目数据保证记录此操作时前面总是存在一个有效的分数
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/22 13:05
+ * @author huangdu
+ * @version 2020/10/22 13:05
  */
 public class CalPoints {
     public int calPoints(String[] ops) {

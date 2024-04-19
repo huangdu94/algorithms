@@ -1,8 +1,8 @@
 package work.huangdu.exploration.primary_algorithms.dynamic;
 
 /**
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/6/27 10:30
+ * @author huangdu
+ * @version 2020/6/27 10:30
  */
 public class Test {
     public static void main(String[] args) {

@@ -39,8 +39,8 @@ import java.util.Map;
  * obj.set(key,value,timestamp);
  * String param_2 = obj.get(key,timestamp);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/10
+ * @author huangdu
+ * @version 2021/7/10
  */
 public class TimeMap {
     private final Map<String, List<Value>> map;

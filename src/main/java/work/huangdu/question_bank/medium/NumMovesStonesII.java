@@ -30,8 +30,8 @@ import java.util.Arrays;
  * 1 <= stones[i] <= 10^9
  * stones[i] 的值各不相同。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/7
+ * @author huangdu
+ * @version 2023/4/7
  */
 public class NumMovesStonesII {
     public int[] numMovesStonesII(int[] stones) {

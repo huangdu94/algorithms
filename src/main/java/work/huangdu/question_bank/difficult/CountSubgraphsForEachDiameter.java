@@ -33,8 +33,8 @@ import java.util.Queue;
  * 1 <= u_i, v_i <= n
  * 题目保证 (u_i, v_i) 所表示的边互不相同。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/19
+ * @author huangdu
+ * @version 2023/3/19
  */
 public class CountSubgraphsForEachDiameter {
     public int[] countSubgraphsForEachDiameter(int n, int[][] edges) {

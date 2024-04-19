@@ -39,8 +39,8 @@ import java.util.TreeMap;
  * 1 <= m, n <= 500
  * -10^9 <= matrix[row][col] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/29
+ * @author huangdu
+ * @version 2023/1/29
  */
 public class MatrixRankTransform {
     public int[][] matrixRankTransform(int[][] matrix) {

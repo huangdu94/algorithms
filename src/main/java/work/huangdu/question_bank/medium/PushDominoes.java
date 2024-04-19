@@ -27,8 +27,8 @@ import java.util.Queue;
  *
  * dominoes[i] 为 'L'、'R' 或 '.'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/21
+ * @author huangdu
+ * @version 2022/2/21
  */
 public class PushDominoes {
     public String pushDominoes(String dominoes) {

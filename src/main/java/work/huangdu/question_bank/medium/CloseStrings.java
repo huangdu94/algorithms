@@ -37,7 +37,7 @@ import java.util.Map;
  * 1 <= word1.length, word2.length <= 10^5
  * word1 和 word2 仅包含小写英文字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CloseStrings {
     public boolean closeStrings(String word1, String word2) {

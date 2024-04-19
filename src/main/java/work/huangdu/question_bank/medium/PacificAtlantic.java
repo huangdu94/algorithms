@@ -24,8 +24,8 @@ import java.util.Queue;
  * 1 <= m, n <= 200
  * 0 <= heights[r][c] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/27
+ * @author huangdu
+ * @version 2022/4/27
  */
 public class PacificAtlantic {
     private static final byte PACIFIC = 0X01;

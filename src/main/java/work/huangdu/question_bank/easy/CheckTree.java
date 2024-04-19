@@ -20,8 +20,8 @@ import work.huangdu.data_structure.TreeNode;
  * 树只包含根结点、左子结点和右子结点
  * -100 <= Node.val <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/21
+ * @author huangdu
+ * @version 2023/8/21
  */
 public class CheckTree {
     public boolean checkTree(TreeNode root) {

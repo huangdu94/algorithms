@@ -21,7 +21,7 @@ package work.huangdu.question_bank.difficult;
  * 1 <= nums[i] <= 10^9
  * 题目保证 nums 删除一些元素后一定能得到山形数组。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinimumMountainRemovals {
     // LIS 问题

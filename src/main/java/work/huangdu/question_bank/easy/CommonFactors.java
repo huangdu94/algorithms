@@ -15,8 +15,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= a, b <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/6
+ * @author huangdu
+ * @version 2023/4/6
  */
 public class CommonFactors {
     public int commonFactors(int a, int b) {

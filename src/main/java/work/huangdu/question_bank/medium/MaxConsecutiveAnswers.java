@@ -29,8 +29,8 @@ package work.huangdu.question_bank.medium;
  * answerKey[i] 要么是 'T' ，要么是 'F'
  * 1 <= k <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/29
+ * @author huangdu
+ * @version 2022/3/29
  */
 public class MaxConsecutiveAnswers {
     public int maxConsecutiveAnswers(String answerKey, int k) {

@@ -22,8 +22,8 @@ import work.huangdu.data_structure.TreeNode;
  * 树中的节点数在 [1, 1000] 范围内
  * Node.val 仅为 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/30
+ * @author huangdu
+ * @version 2022/5/30
  */
 public class SumRootToLeaf {
     public int sumRootToLeaf(TreeNode root) {

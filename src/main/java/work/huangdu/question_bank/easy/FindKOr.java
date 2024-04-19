@@ -28,7 +28,7 @@ package work.huangdu.question_bank.easy;
  * 0 <= nums[i] < 2^31
  * 1 <= k <= nums.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FindKOr {
     public int findKOr(int[] nums, int k) {

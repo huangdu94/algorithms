@@ -27,8 +27,8 @@ import java.util.List;
  * s 中只有小写英文字母和括号
  * 我们确保所有括号都是成对出现的
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/26
+ * @author huangdu
+ * @version 2021/5/26
  */
 public class ReverseParentheses {
     private char[] chars;

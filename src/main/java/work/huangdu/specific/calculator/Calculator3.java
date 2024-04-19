@@ -10,8 +10,8 @@ import static work.huangdu.specific.calculator.Tools.isDigit;
  * 相比于Calculator2多了一个功能
  * 1. 支持括号
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/1 12:24
+ * @author huangdu
+ * @version 2020/8/1 12:24
  */
 public class Calculator3 {
     // 全局index，记录已经处理到哪个字符了

@@ -21,8 +21,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/12
+ * @author huangdu
+ * @version 2023/7/12
  */
 public class AlternateDigitSum {
     public int alternateDigitSum(int n) {

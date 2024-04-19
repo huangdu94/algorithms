@@ -21,8 +21,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= nums[i] <= 10^6
  * 可以保证至少有一种方法能够按题目所描述的那样对 nums 进行划分。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/24
+ * @author huangdu
+ * @version 2022/10/24
  */
 public class PartitionDisjoint {
     public int partitionDisjoint(int[] nums) {

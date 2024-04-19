@@ -36,8 +36,8 @@ import java.util.Arrays;
  * 一个简单的改进方案是使用 O(m + n) 的额外空间，但这仍然不是最好的解决方案。
  * 你能想出一个常数空间的解决方案吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/2 10:34
+ * @author huangdu
+ * @version 2020/7/2 10:34
  */
 public class SetZeroes {
     public void setZeroes(int[][] matrix) {

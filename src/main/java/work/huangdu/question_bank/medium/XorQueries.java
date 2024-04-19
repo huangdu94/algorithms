@@ -31,8 +31,8 @@ import java.util.Arrays;
  * queries[i].length == 2
  * 0 <= queries[i][0] <= queries[i][1] < arr.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/12
+ * @author huangdu
+ * @version 2021/5/12
  */
 public class XorQueries {
     public int[] xorQueries(int[] arr, int[][] queries) {

@@ -32,8 +32,8 @@ import java.util.List;
  * graph[i] 中的所有元素 互不相同
  * 保证输入为 有向无环图（DAG）
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/25
+ * @author huangdu
+ * @version 2021/8/25
  */
 public class AllPathsSourceTarget {
     private int n;

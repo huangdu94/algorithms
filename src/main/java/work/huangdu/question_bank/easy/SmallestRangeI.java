@@ -23,8 +23,8 @@ package work.huangdu.question_bank.easy;
  * 0 <= nums[i] <= 10^4
  * 0 <= k <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/30
+ * @author huangdu
+ * @version 2022/4/30
  */
 public class SmallestRangeI {
     public int smallestRangeI(int[] nums, int k) {

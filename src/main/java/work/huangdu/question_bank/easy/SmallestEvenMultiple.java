@@ -14,8 +14,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 150
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/21
+ * @author huangdu
+ * @version 2023/4/21
  */
 public class SmallestEvenMultiple {
     public int smallestEvenMultiple(int n) {

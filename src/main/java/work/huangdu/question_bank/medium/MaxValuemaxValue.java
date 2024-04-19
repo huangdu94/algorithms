@@ -21,8 +21,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= n <= maxSum <= 10^9
  * 0 <= index < n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/4
+ * @author huangdu
+ * @version 2023/1/4
  */
 public class MaxValuemaxValue {
     public int maxValue(int n, int index, int maxSum) {

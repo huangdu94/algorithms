@@ -28,7 +28,7 @@ import java.util.Set;
  * 1 <= people.length <= 5 * 10^4
  * 1 <= people[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FullBloomFlowers {
     public int[] fullBloomFlowers(int[][] flowers, int[] people) {

@@ -40,8 +40,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= w[i] <= 10^5
  * pickIndex 将被调用不超过 10000 次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/30
+ * @author huangdu
+ * @version 2021/8/30
  */
 public class PickIndex {
     private final int n;

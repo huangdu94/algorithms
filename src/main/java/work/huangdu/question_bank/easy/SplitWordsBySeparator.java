@@ -36,7 +36,7 @@ import java.util.List;
  * words[i] 中的字符要么是小写英文字母，要么就是字符串 ".,|$#@" 中的字符（不包括引号）
  * separator 是字符串 ".,|$#@" 中的某个字符（不包括引号）
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SplitWordsBySeparator {
     public List<String> splitWordsBySeparator(List<String> words, char separator) {

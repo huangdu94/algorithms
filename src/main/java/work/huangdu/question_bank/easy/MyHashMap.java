@@ -39,8 +39,8 @@ import java.util.Arrays;
  *
  * 进阶：你能否不使用内置的 HashMap 库解决此问题？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/14
+ * @author huangdu
+ * @version 2021/3/14
  */
 public class MyHashMap {
     private static final int INIT_SIZE = 1000001;

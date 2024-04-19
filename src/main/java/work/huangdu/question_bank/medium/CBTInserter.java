@@ -37,8 +37,8 @@ import work.huangdu.data_structure.TreeNode;
  * int param_1 = obj.insert(val);
  * TreeNode param_2 = obj.get_root();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/25
+ * @author huangdu
+ * @version 2022/7/25
  */
 public class CBTInserter {
     private List<TreeNode> cur;

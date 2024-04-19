@@ -18,8 +18,8 @@ import java.util.List;
  * [1,4],
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/8 10:51
+ * @author huangdu
+ * @version 2020/9/8 10:51
  */
 public class Combine {
     class Solution {

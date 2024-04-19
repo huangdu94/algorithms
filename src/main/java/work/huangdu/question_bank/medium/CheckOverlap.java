@@ -21,8 +21,8 @@ package work.huangdu.question_bank.medium;
  * -10^4 <= x1 < x2 <= 10^4
  * -10^4 <= y1 < y2 <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/25
+ * @author huangdu
+ * @version 2023/6/25
  */
 public class CheckOverlap {
     public boolean checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {

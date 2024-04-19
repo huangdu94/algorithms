@@ -40,8 +40,8 @@ import java.util.List;
  * 1 <= security.length <= 10^5
  * 0 <= security[i], time <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/6
+ * @author huangdu
+ * @version 2022/3/6
  */
 public class GoodDaysToRobBank {
     public List<Integer> goodDaysToRobBank(int[] security, int time) {

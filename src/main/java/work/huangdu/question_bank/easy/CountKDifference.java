@@ -30,8 +30,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums[i] <= 100
  * 1 <= k <= 99
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/9
+ * @author huangdu
+ * @version 2022/2/9
  */
 public class CountKDifference {
     public int countKDifference(int[] nums, int k) {

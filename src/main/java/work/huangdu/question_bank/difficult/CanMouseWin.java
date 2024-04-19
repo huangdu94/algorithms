@@ -45,8 +45,8 @@ package work.huangdu.question_bank.difficult;
  * grid 中只包含一个 'C' ，'M' 和 'F' 。
  * 1 <= catJump, mouseJump <= 8
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/10
+ * @author huangdu
+ * @version 2022/5/10
  */
 public class CanMouseWin {
     private static final char CAT = 'C';

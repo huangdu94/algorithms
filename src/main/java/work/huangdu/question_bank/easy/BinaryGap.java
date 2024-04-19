@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/24
+ * @author huangdu
+ * @version 2022/4/24
  */
 public class BinaryGap {
     public int binaryGap(int n) {

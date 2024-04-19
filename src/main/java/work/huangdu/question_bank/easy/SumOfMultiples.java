@@ -19,7 +19,7 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 10^3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SumOfMultiples {
     public int sumOfMultiples(int n) {

@@ -28,8 +28,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= s.length <= 10^5
  * s 由小写字符串组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/26
+ * @author huangdu
+ * @version 2022/12/26
  */
 public class CountHomogenous {
     public int countHomogenous(String s) {

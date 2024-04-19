@@ -28,8 +28,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums.length <= 100
  * 0 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/16
+ * @author huangdu
+ * @version 2023/2/16
  */
 public class NumberOfPairs {
     public int[] numberOfPairs(int[] nums) {

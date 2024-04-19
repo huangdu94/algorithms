@@ -34,7 +34,7 @@ import java.util.Arrays;
  * y_i == queries[i][2]
  * 1 <= x_i, y_i <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumSumQueries {
     public int[] maximumSumQueries(int[] nums1, int[] nums2, int[][] queries) {

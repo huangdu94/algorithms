@@ -30,8 +30,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 1 <= k <= n <= 500
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/4
+ * @author huangdu
+ * @version 2022/5/4
  */
 public class FindTheWinner {
     public int findTheWinner(int n, int k) {

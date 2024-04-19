@@ -41,8 +41,8 @@ import java.util.Set;
  * 1 <= arr.length <= 5 * 10^4
  * -10^8 <= arr[i] <= 10^8
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/21
+ * @author huangdu
+ * @version 2022/1/21
  */
 public class MinJumps {
     public int minJumps(int[] arr) {

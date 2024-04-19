@@ -24,8 +24,8 @@ import java.util.Comparator;
  * 1 <= n <= 200
  * -99 <= grid[i][j] <= 99
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/10
+ * @author huangdu
+ * @version 2023/8/10
  */
 public class MinFallingPathSum {
     public int minFallingPathSum(int[][] grid) {

@@ -18,8 +18,8 @@ import java.util.Queue;
  * 树的深度不会超过 1000 。
  * 树的节点数目位于 [0, 104] 之间。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/23
+ * @author huangdu
+ * @version 2021/1/23
  */
 public class MaxDepthN {
     public int maxDepth(Node root) {

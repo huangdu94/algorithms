@@ -19,8 +19,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums.length <= 10^5
  * -10^4 <= nums[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/8
+ * @author huangdu
+ * @version 2023/8/8
  */
 public class MaxAbsoluteSum {
     public int maxAbsoluteSum(int[] nums) {

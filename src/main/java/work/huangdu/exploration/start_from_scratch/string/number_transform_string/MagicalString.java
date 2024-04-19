@@ -16,8 +16,8 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 提示：
  * 1 <= n <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/28 22:07
+ * @author huangdu
+ * @version 2020/9/28 22:07
  */
 public class MagicalString {
     public int magicalString(int n) {

@@ -21,8 +21,8 @@ package work.huangdu.question_bank.easy;
  * ¤ ¤
  * 因为第四行不完整，所以返回3.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/30
+ * @author huangdu
+ * @version 2021/1/30
  */
 public class ArrangeCoins {
     public int arrangeCoins(int n) {

@@ -20,8 +20,8 @@ package work.huangdu.exploration.primary_algorithms.array;
  * 尽可能想出更多的解决方案，至少有三种不同的方法可以解决这个问题。
  * 要求使用空间复杂度为 O(1) 的 原地 算法。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 15:09
+ * @author huangdu
+ * @version 2020/7/26 15:09
  */
 public class Rotate {
     public void rotate(int[] nums, int k) {

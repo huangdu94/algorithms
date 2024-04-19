@@ -14,8 +14,8 @@ import java.util.Map;
  * 输入: [2,2,1,1,1,2,2]
  * 输出: 2
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/22 0:24
+ * @author huangdu
+ * @version 2020/7/22 0:24
  */
 public class MajorityElement {
     // 投票算法最优

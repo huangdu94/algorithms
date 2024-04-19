@@ -34,8 +34,8 @@ import java.util.Set;
  * people[i] 中的每个技能是 req_skills 中的技能
  * 题目数据保证「必要团队」一定存在
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/10
+ * @author huangdu
+ * @version 2023/4/10
  */
 public class SmallestSufficientTeam {
     private int n;

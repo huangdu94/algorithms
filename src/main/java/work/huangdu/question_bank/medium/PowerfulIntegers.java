@@ -28,8 +28,8 @@ import java.util.Set;
  * 1 <= x, y <= 100
  * 0 <= bound <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/4
+ * @author huangdu
+ * @version 2023/5/4
  */
 public class PowerfulIntegers {
     public List<Integer> powerfulIntegers(int x, int y, int bound) {

@@ -21,8 +21,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= arr.length <= 10^5
  * -10^4 <= arr[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/27
+ * @author huangdu
+ * @version 2023/6/27
  */
 public class MaximumSum {
     // 暴力超时

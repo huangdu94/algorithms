@@ -17,8 +17,8 @@ import java.util.*;
  * 题目数据保证答案唯一，换句话说，数组中前 k 个高频元素的集合是唯一的。
  * 你可以按任意顺序返回答案。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/12 15:45
+ * @author huangdu
+ * @version 2020/7/12 15:45
  */
 public class TopKFrequent {
     @SuppressWarnings("rawtypes")

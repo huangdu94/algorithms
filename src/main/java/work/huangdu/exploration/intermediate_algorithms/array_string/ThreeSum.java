@@ -18,8 +18,8 @@ import java.util.*;
  * [-1, -1, 2]
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/2 10:33
+ * @author huangdu
+ * @version 2020/7/2 10:33
  * @see work.huangdu.exploration.primary_algorithms.array.TwoSum
  * @see TwoSum2
  * @see FourSumCount

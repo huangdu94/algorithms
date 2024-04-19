@@ -23,7 +23,7 @@ import work.huangdu.data_structure.TreeNode;
  * 给定二叉树的节点数目在范围 [1, 10^5] 内
  * 1 <= Node.val <= 9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class PseudoPalindromicPaths {
     public int pseudoPalindromicPaths(TreeNode root) {

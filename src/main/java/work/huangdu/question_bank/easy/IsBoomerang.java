@@ -15,8 +15,8 @@ package work.huangdu.question_bank.easy;
  * points[i].length == 2
  * 0 <= xi, yi <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/8
+ * @author huangdu
+ * @version 2022/6/8
  */
 public class IsBoomerang {
     public boolean isBoomerang(int[][] points) {

@@ -20,8 +20,8 @@ package work.huangdu.question_bank.easy;
  * s 仅由 ASCII 值在范围 [33, 122] 的字符组成
  * s 不含 '\"' 或 '\\'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/23
+ * @author huangdu
+ * @version 2022/2/23
  */
 public class ReverseOnlyLetters {
     public String reverseOnlyLetters(String s) {

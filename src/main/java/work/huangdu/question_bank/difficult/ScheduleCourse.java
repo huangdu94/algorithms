@@ -29,8 +29,8 @@ import java.util.Queue;
  * 1 <= courses.length <= 10^4
  * 1 <= durationi, lastDayi <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/20
+ * @author huangdu
+ * @version 2021/12/20
  */
 public class ScheduleCourse {
     /**

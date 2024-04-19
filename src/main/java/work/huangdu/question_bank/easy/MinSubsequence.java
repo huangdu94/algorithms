@@ -25,8 +25,8 @@ import java.util.List;
  * 1 <= nums.length <= 500
  * 1 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/4
+ * @author huangdu
+ * @version 2022/8/4
  */
 public class MinSubsequence {
     public List<Integer> minSubsequence(int[] nums) {

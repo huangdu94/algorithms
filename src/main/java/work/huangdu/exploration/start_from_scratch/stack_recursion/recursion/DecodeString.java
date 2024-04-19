@@ -19,8 +19,8 @@ package work.huangdu.exploration.start_from_scratch.stack_recursion.recursion;
  * 输入：s = "abc3[cd]xyz"
  * 输出："abccdcdcdxyz"
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/26 18:24
+ * @author huangdu
+ * @version 2020/10/26 18:24
  */
 public class DecodeString {
     private int i = 0;

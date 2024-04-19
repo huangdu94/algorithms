@@ -39,7 +39,7 @@ import java.util.List;
  * 1 <= n == maxHeights <= 10^3
  * 1 <= maxHeights[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class Solution2865 {
     public long maximumSumOfHeights(List<Integer> maxHeights) {

@@ -34,8 +34,8 @@ import work.huangdu.question_bank.medium.CombinationSum4;
  * candidate 中的每个元素都是独一无二的。
  * 1 <= target <= 500
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/9 12:46
+ * @author huangdu
+ * @version 2020/9/9 12:46
  * @see CombinationSum2
  * @see CombinationSum3
  * @see CombinationSum4

@@ -49,7 +49,7 @@ import java.util.Map;
  * 1 <= frequency <= 10^5
  * 最多调用 add、deleteOne 和 hasFrequency 共计 2 * 10^5 次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FrequencyTracker {
     private final Map<Integer, Integer> freq;

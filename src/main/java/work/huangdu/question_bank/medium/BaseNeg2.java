@@ -19,8 +19,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 0 <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/6
+ * @author huangdu
+ * @version 2023/4/6
  */
 public class BaseNeg2 {
     /**

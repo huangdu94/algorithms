@@ -25,7 +25,7 @@ import java.util.List;
  * 1 <= k <= sum(nums)
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/12/20
+ * @version 2022/12/20
  */
 public class MinMoves {
     public int minMoves(int[] nums, int k) {

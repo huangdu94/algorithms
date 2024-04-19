@@ -25,8 +25,8 @@ import java.util.Arrays;
  * -100 <= nums[i] <= 100
  * 1 <= k <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/3
+ * @author huangdu
+ * @version 2021/12/3
  */
 public class LargestSumAfterKNegations {
     public int largestSumAfterKNegations(int[] nums, int k) {

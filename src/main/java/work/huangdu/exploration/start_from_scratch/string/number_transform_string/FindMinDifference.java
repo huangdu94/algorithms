@@ -12,8 +12,8 @@ import java.util.List;
  * 列表中时间数在 2~20000 之间。
  * 每个时间取值在 00:00~23:59 之间。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/26 18:08
+ * @author huangdu
+ * @version 2020/9/26 18:08
  */
 public class FindMinDifference {
     public int findMinDifference(List<String> timePoints) {

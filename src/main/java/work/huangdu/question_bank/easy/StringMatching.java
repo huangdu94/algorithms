@@ -28,7 +28,7 @@ import java.util.List;
  * 题目数据 保证 每个 words[i] 都是独一无二的。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/8/6
+ * @version 2022/8/6
  */
 public class StringMatching {
     public List<String> stringMatching(String[] words) {

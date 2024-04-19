@@ -44,8 +44,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 1 <= n <= 200
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/11/18
+ * @author huangdu
+ * @version 2021/11/18
  */
 public class GetMoneyAmount {
     // TODO 动态规划需要复习

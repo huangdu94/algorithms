@@ -31,8 +31,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= startTime[i] <= endTime[i] <= 1000
  * 1 <= queryTime <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/19
+ * @author huangdu
+ * @version 2022/8/19
  */
 public class BusyStudent {
     public int busyStudent(int[] startTime, int[] endTime, int queryTime) {

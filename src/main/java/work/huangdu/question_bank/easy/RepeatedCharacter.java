@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * s 由小写英文字母组成
  * s 包含至少一个重复字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/3
+ * @author huangdu
+ * @version 2023/1/3
  */
 public class RepeatedCharacter {
     public char repeatedCharacter(String s) {

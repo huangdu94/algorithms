@@ -24,8 +24,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= n <= 250
  * grid[i][j] == 0 or 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/24
+ * @author huangdu
+ * @version 2023/8/24
  */
 public class CountServers {
     public int countServers(int[][] grid) {

@@ -31,7 +31,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= k <= cardPoints.length
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2021/2/6
+ * @version 2021/2/6
  */
 public class MaxScore {
     public int maxScore3(int[] cardPoints, int k) {

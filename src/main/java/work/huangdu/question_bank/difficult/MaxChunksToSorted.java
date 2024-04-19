@@ -25,8 +25,8 @@ import java.util.Map;
  * arr的长度在[1, 2000]之间。
  * arr[i]的大小在[0, 10**8]之间。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/15
+ * @author huangdu
+ * @version 2022/8/15
  */
 public class MaxChunksToSorted {
     // TODO 还可以用单调栈来做。

@@ -23,8 +23,8 @@ package work.huangdu.question_bank.easy;
  * 0 <= start, destination < n
  * 0 <= distance[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/25
+ * @author huangdu
+ * @version 2022/7/25
  */
 public class DistanceBetweenBusStops {
     public int distanceBetweenBusStops(int[] distance, int start, int destination) {

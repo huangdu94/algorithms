@@ -15,8 +15,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums.length <= 10^5
  * 0 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/14
+ * @author huangdu
+ * @version 2022/2/14
  */
 public class SingleNonDuplicate {
     // O(n) 异或

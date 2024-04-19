@@ -21,8 +21,8 @@ package work.huangdu.question_bank.easy;
  * 'a' <= coordinates[0] <= 'h'
  * '1' <= coordinates[1] <= '8'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/8
+ * @author huangdu
+ * @version 2022/12/8
  */
 public class SquareIsWhite {
     public boolean squareIsWhite(String coordinates) {

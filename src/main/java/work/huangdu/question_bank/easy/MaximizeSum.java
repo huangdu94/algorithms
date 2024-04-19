@@ -30,7 +30,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums[i] <= 100
  * 1 <= k <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximizeSum {
     public int maximizeSum(int[] nums, int k) {

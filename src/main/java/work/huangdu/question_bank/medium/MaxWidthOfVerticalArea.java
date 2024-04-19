@@ -21,8 +21,8 @@ import java.util.TreeSet;
  * points[i].length == 2
  * 0 <= xi, yi <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/30
+ * @author huangdu
+ * @version 2023/3/30
  */
 public class MaxWidthOfVerticalArea {
     public int maxWidthOfVerticalArea(int[][] points) {

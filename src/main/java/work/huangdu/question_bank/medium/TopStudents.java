@@ -42,7 +42,7 @@ import java.util.Set;
  * student_id[i] 的值互不相同 。
  * 1 <= k <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class TopStudents {
     public List<Integer> topStudents(String[] positive_feedback, String[] negative_feedback, String[] report, int[] student_id, int k) {

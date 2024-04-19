@@ -23,7 +23,7 @@ package work.huangdu.question_bank.medium;
  * 链表中结点数目在 [1, 5000] 之间。
  * 1 <= Node.val <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class InsertGreatestCommonDivisors {
     public ListNode insertGreatestCommonDivisors(ListNode head) {

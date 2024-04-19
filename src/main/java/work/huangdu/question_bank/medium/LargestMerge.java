@@ -26,8 +26,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= word1.length, word2.length <= 3000
  * word1 和 word2 仅由小写英文组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/24
+ * @author huangdu
+ * @version 2022/12/24
  */
 public class LargestMerge {
     public String largestMerge(String word1, String word2) {

@@ -26,8 +26,8 @@ import java.util.Queue;
  * -10^5 <= val <= 10^5
  * 最多调用 next 方法 10^4 次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/18
+ * @author huangdu
+ * @version 2022/7/18
  */
 public class MovingAverage {
     private Queue<Integer> queue;

@@ -30,7 +30,7 @@ import java.util.Queue;
  * 1 <= piles[i] <= 10^4
  * 1 <= k <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinStoneSum {
     public int minStoneSum(int[] piles, int k) {

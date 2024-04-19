@@ -28,8 +28,8 @@ import work.huangdu.data_structure.TreeNode;
  * 二叉树的节点数介于 2 到 100 之间。
  * 每个节点的值都是唯一的、范围为 1 到 100 的整数。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/17
+ * @author huangdu
+ * @version 2021/5/17
  */
 public class IsCousins {
     private static final TreeNode DEFAULT = new TreeNode();

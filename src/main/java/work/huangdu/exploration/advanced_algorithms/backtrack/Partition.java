@@ -15,8 +15,8 @@ import java.util.List;
  * ["a","a","b"]
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/13 13:59
+ * @author huangdu
+ * @version 2020/8/13 13:59
  */
 public class Partition {
     private final List<List<String>> res = new ArrayList<>();

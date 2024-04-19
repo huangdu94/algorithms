@@ -32,8 +32,8 @@ import java.util.Random;
  * 每次调用flip 时，矩阵中至少存在一个值为 0 的格子。
  * 最多调用 1000 次 flip 和 reset 方法。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/11/27
+ * @author huangdu
+ * @version 2021/11/27
  */
 public class FlipMatrix {
     public static class Solution3 {

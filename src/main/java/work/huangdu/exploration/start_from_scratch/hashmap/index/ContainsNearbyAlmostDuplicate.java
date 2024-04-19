@@ -16,8 +16,8 @@ import java.util.*;
  * 输入: nums = [1,5,9,1,5,9], k = 2, t = 3
  * 输出: false
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/3 21:17
+ * @author huangdu
+ * @version 2020/11/3 21:17
  * @see work.huangdu.exploration.primary_algorithms.array.ContainsDuplicate
  * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyAlmostDuplicate
  */

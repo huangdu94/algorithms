@@ -17,8 +17,8 @@ import java.util.Map;
  * 因为 nums[0] + nums[1] = 2 + 7 = 9
  * 所以返回 [0, 1]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 16:02
+ * @author huangdu
+ * @version 2020/7/26 16:02
  * @see TwoSum2
  * @see ThreeSum
  * @see FourSumCount

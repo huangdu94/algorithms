@@ -14,7 +14,7 @@ package work.huangdu.question_bank.medium;
  * 输出: 1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/11/12
+ * @version 2022/11/12
  */
 public class NumTilings {
     public int numTilings(int n) {

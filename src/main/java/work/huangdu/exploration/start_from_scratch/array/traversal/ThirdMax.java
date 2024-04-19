@@ -22,8 +22,8 @@ package work.huangdu.exploration.start_from_scratch.array.traversal;
  * -2^31 <= nums[i] <= 2^31 - 1
  * 进阶：你能设计一个时间复杂度 O(n) 的解决方案吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/13 14:32
+ * @author huangdu
+ * @version 2020/9/13 14:32
  */
 public class ThirdMax {
     public int thirdMax(int[] nums) {

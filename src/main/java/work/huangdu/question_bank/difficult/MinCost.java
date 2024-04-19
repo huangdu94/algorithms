@@ -38,8 +38,8 @@ import java.util.Arrays;
  * 0 <= houses[i] <= n
  * 1 <= cost[i][j] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/4
+ * @author huangdu
+ * @version 2021/5/4
  */
 public class MinCost {
     // TODO 复制粘贴 需要复习

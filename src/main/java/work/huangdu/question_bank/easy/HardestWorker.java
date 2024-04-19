@@ -42,8 +42,8 @@ package work.huangdu.question_bank.easy;
  * id_i != id_i + 1
  * leaveTime_i 按严格递增顺序排列
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/5
+ * @author huangdu
+ * @version 2023/5/5
  */
 public class HardestWorker {
     public int hardestWorker(int n, int[][] logs) {

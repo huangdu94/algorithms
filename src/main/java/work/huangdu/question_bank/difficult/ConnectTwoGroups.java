@@ -35,8 +35,8 @@ import java.util.List;
  * size1 >= size2
  * 0 <= cost[i][j] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/20
+ * @author huangdu
+ * @version 2023/6/20
  */
 public class ConnectTwoGroups {
     private List<List<Integer>> cost;

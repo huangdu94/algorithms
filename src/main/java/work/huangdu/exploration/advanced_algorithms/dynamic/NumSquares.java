@@ -20,8 +20,8 @@ import java.util.Set;
  * 提示：
  * 1 <= n <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/28 12:37
+ * @author huangdu
+ * @version 2020/8/28 12:37
  */
 public class NumSquares {
     private Set<Integer> squareSet;

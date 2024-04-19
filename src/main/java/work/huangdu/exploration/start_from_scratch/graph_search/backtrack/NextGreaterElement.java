@@ -17,8 +17,8 @@ import java.util.List;
  * 提示：
  * 1 <= n <= 2^31 - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/2
+ * @author huangdu
+ * @version 2021/4/2
  */
 public class NextGreaterElement {
     public int nextGreaterElement2(int n) {

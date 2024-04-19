@@ -6,8 +6,8 @@ import java.util.PriorityQueue;
 /**
  * 第 76 场双周赛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/16
+ * @author huangdu
+ * @version 2022/4/16
  */
 public class Solution76 {
     /**

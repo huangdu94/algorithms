@@ -30,8 +30,8 @@ import work.huangdu.data_structure.TreeNode;
  * 给定的两棵树可能会有 1 到 200 个结点。
  * 给定的两棵树上的值介于 0 到 200 之间。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/10
+ * @author huangdu
+ * @version 2021/5/10
  */
 public class LeafSimilar {
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {

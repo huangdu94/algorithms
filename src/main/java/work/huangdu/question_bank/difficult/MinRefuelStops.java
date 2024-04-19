@@ -33,8 +33,8 @@ import java.util.PriorityQueue;
  * 0 <= stations.length <= 500
  * 0 < stations[0][0] < stations[1][0] < ... < stations[stations.length-1][0] < target
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/26
+ * @author huangdu
+ * @version 2022/8/26
  */
 public class MinRefuelStops {
     // 贪心

@@ -13,8 +13,8 @@ import java.util.Arrays;
  * n 是由字符串表示的正整数，其长度不超过18。
  * 如果有多个结果，返回最小的那个。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/5 13:44
+ * @author huangdu
+ * @version 2020/10/5 13:44
  */
 public class NearestPalindromic {
     public String nearestPalindromic(String n) {

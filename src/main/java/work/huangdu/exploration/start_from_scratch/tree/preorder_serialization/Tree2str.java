@@ -28,8 +28,8 @@ import work.huangdu.data_structure.TreeNode;
  * 解释: 和第一个示例相似，
  * 除了我们不能省略第一个对括号来中断输入和输出之间的一对一映射关系。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/1
+ * @author huangdu
+ * @version 2021/2/1
  */
 public class Tree2str {
     public String tree2str(TreeNode t) {

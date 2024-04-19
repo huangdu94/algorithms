@@ -33,8 +33,8 @@ import java.util.Map;
  * -10^5 <= nums[i], ui, vi <= 10^5
  * 题目数据保证存在一些以 adjacentPairs 作为元素对的数组 nums
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/25
+ * @author huangdu
+ * @version 2021/7/25
  */
 public class RestoreArray {
     public int[] restoreArray(int[][] adjacentPairs) {

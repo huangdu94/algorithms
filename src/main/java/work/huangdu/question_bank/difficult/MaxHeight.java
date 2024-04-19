@@ -33,8 +33,8 @@ import java.util.Arrays;
  * 1 <= n <= 100
  * 1 <= width_i, length_i, height_i <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/10
+ * @author huangdu
+ * @version 2022/12/10
  */
 public class MaxHeight {
     public int maxHeight(int[][] cuboids) {

@@ -20,8 +20,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= A.length <= 10000
  * 0 <= A[i] <= 10000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/25 8:42
+ * @author huangdu
+ * @version 2020/10/25 8:42
  */
 public class LongestMountain {
     public int longestMountain(int[] A) {

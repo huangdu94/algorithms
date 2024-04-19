@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * 2 <= s.length <= 500
  * 字符串 s 仅由字符 '0' 和 '1' 组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/15
+ * @author huangdu
+ * @version 2022/8/15
  */
 public class MaxScore {
     public int maxScore(String s) {

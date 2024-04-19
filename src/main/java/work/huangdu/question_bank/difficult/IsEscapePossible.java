@@ -32,8 +32,8 @@ import java.util.Set;
  * source != target
  * 题目数据保证 source 和 target 不在封锁列表内
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/9
+ * @author huangdu
+ * @version 2022/2/9
  */
 public class IsEscapePossible {
     private static final long LENGTH = (int)1e6;

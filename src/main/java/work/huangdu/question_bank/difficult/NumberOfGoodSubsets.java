@@ -39,8 +39,8 @@ import java.util.Set;
  * 1 <= nums.length <= 10^5
  * 1 <= nums[i] <= 30
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/22
+ * @author huangdu
+ * @version 2022/2/22
  */
 public class NumberOfGoodSubsets {
     private static final int BASE = 1000000007;

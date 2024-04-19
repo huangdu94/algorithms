@@ -27,8 +27,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= n <= 2 * 10^4
  * 1 <= ages[i] <= 120
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/27
+ * @author huangdu
+ * @version 2021/12/27
  */
 public class NumFriendRequests {
     public int numFriendRequests(int[] ages) {

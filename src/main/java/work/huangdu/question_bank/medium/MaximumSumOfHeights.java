@@ -40,7 +40,7 @@ import java.util.List;
  * 1 <= n == maxHeights <= 10^5
  * 1 <= maxHeights[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumSumOfHeights {
     public long maximumSumOfHeights(List<Integer> maxHeights) {

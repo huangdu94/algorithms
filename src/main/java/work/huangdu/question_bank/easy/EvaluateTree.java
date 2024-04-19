@@ -31,8 +31,8 @@ import work.huangdu.data_structure.TreeNode;
  * 叶子节点的值为 0 或 1 。
  * 非叶子节点的值为 2 或 3 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/6
+ * @author huangdu
+ * @version 2023/2/6
  */
 public class EvaluateTree {
     public boolean evaluateTree(TreeNode root) {

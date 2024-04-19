@@ -17,8 +17,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= customers[i] <= 1000
  * 0 <= grumpy[i] <= 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/23
+ * @author huangdu
+ * @version 2021/2/23
  */
 public class MaxSatisfied {
     public int maxSatisfied(int[] customers, int[] grumpy, int X) {

@@ -40,7 +40,7 @@ import java.util.Arrays;
  * s 只包含 'L' 和 'R' 。
  * nums[i] 互不相同。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SumDistance {
     public int sumDistance(int[] nums, String s, int d) {

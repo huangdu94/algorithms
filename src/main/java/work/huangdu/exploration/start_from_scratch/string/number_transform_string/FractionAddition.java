@@ -25,8 +25,8 @@ import java.util.List;
  * 输入的分数个数范围是 [1,10]。
  * 最终结果的分子与分母保证是 32 位整数范围内的有效整数。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/27 9:23
+ * @author huangdu
+ * @version 2020/9/27 9:23
  */
 public class FractionAddition {
     public String fractionAddition(String expression) {

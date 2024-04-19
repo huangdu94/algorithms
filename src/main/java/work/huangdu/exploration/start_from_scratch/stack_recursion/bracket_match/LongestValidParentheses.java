@@ -15,8 +15,8 @@ import java.util.LinkedList;
  * 输出: 4
  * 解释: 最长有效括号子串为 "()()"
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/25 10:35
+ * @author huangdu
+ * @version 2020/10/25 10:35
  */
 public class LongestValidParentheses {
 

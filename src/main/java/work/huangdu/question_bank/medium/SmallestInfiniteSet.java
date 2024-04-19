@@ -32,7 +32,7 @@ package work.huangdu.question_bank.medium;
  * int param_1 = obj.popSmallest();
  * obj.addBack(num);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SmallestInfiniteSet {
     private static final int N = 1000;

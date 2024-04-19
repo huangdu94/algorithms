@@ -33,8 +33,8 @@ import javafx.util.Pair;
  * -10^6 <= xi, yi <= 10^6
  * 所有点 (xi, yi) 两两不同。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/19
+ * @author huangdu
+ * @version 2021/1/19
  */
 public class MinCostConnectPoints {
     private int[] parents;

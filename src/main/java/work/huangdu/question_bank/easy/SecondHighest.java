@@ -16,8 +16,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 500
  * s 只包含小写英文字母和（或）数字。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/3
+ * @author huangdu
+ * @version 2022/12/3
  */
 public class SecondHighest {
     public int secondHighest(String s) {

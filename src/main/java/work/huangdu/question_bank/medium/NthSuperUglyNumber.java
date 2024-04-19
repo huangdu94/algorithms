@@ -28,8 +28,8 @@ import java.util.Set;
  * 题目数据 保证 primes[i] 是一个质数
  * primes 中的所有值都 互不相同 ，且按 递增顺序 排列
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/9
+ * @author huangdu
+ * @version 2021/8/9
  */
 public class NthSuperUglyNumber {
     // TODO 需要复习

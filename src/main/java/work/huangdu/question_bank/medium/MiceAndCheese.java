@@ -27,8 +27,8 @@ import java.util.PriorityQueue;
  * 1 <= reward1[i], reward2[i] <= 1000
  * 0 <= k <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/7
+ * @author huangdu
+ * @version 2023/6/7
  */
 public class MiceAndCheese {
     public int miceAndCheese(int[] reward1, int[] reward2, int k) {

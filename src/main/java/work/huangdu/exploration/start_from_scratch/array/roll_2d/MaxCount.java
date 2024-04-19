@@ -29,8 +29,8 @@ package work.huangdu.exploration.start_from_scratch.array.roll_2d;
  * a 的范围是 [1,m]，b 的范围是 [1,n]。
  * 操作数目不超过 10000。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/16 1:02
+ * @author huangdu
+ * @version 2020/9/16 1:02
  */
 public class MaxCount {
     public int maxCount(int m, int n, int[][] ops) {

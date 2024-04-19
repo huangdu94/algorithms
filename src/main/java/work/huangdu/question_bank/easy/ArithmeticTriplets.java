@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= diff <= 50
  * nums 严格 递增
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/31
+ * @author huangdu
+ * @version 2023/3/31
  */
 public class ArithmeticTriplets {
     public int arithmeticTriplets(int[] nums, int diff) {

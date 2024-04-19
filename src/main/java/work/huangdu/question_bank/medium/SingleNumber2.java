@@ -18,8 +18,8 @@ import java.util.Map;
  * nums中，除某个元素仅出现一次外，其余每个元素都恰出现三次
  * 进阶：你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/30
+ * @author huangdu
+ * @version 2021/4/30
  * @see work.huangdu.exploration.primary_algorithms.array.SingleNumber
  * @see work.huangdu.question_bank.medium.SingleNumber3
  */

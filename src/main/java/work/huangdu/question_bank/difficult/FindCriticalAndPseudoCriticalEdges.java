@@ -29,8 +29,8 @@ import java.util.List;
  * 1 <= weight_i <= 1000
  * 所有 (from_i, to_i) 数对都是互不相同的。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/21
+ * @author huangdu
+ * @version 2021/1/21
  */
 public class FindCriticalAndPseudoCriticalEdges {
 

@@ -19,8 +19,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums.length <= 1000
  * -10^6 <= nums[i] <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/28
+ * @author huangdu
+ * @version 2021/8/28
  */
 public class RunningSum {
     public int[] runningSum(int[] nums) {

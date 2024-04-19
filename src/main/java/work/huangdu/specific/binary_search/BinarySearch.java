@@ -8,8 +8,8 @@ package work.huangdu.specific.binary_search;
  * < target   ->  (>= target) - 1  (>=target左边那个数)
  * <= target  ->  (> target) - 1  (>target左边那个数)
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/21
+ * @author huangdu
+ * @version 2023/4/21
  */
 public class BinarySearch {
     // lowerBound 返回最小的满足 nums[i] >= target 的 i

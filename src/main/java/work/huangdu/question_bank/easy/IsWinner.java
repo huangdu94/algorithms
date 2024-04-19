@@ -35,7 +35,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= n <= 1000
  * 0 <= player1[i], player2[i] <= 10
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class IsWinner {
     public int isWinner(int[] player1, int[] player2) {

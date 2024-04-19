@@ -26,8 +26,8 @@ import java.util.List;
  * 每个块注释都会被闭合。
  * 给定的源码中不会有单引号、双引号或其他控制字符。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/3
+ * @author huangdu
+ * @version 2023/8/3
  */
 public class RemoveComments {
     public List<String> removeComments(String[] source) {

@@ -14,8 +14,8 @@ import work.huangdu.exploration.primary_algorithms.math.IsPowerOfThree;
  * 进阶：
  * 你能不使用循环或者递归来完成本题吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/1 10:32
+ * @author huangdu
+ * @version 2020/9/1 10:32
  * @see IsPowerOfTwo
  * @see IsPowerOfThree
  */

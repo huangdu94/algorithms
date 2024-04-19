@@ -30,8 +30,8 @@ import java.util.Arrays;
  * 1 <= edges[i][1] < edges[i][2] <= n
  * 所有元组 (type_i, u_i, v_i) 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/27
+ * @author huangdu
+ * @version 2021/1/27
  */
 public class MaxNumEdgesToRemove {
     public int maxNumEdgesToRemove(int n, int[][] edges) {

@@ -24,8 +24,8 @@ import java.util.List;
  * 输入: n = 4, k = 9
  * 输出: "2314"
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/5 10:15
+ * @author huangdu
+ * @version 2020/9/5 10:15
  */
 public class GetPermutation {
     class Solution {

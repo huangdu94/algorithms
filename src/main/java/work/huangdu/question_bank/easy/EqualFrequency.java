@@ -25,8 +25,8 @@ import java.util.Objects;
  * 2 <= word.length <= 100
  * word 只包含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/29
+ * @author huangdu
+ * @version 2023/4/29
  */
 public class EqualFrequency {
     public boolean equalFrequency(String word) {

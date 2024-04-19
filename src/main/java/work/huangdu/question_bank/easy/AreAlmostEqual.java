@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * s1.length == s2.length
  * s1 和 s2 仅由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/11
+ * @author huangdu
+ * @version 2022/10/11
  */
 public class AreAlmostEqual {
     public boolean areAlmostEqual(String s1, String s2) {

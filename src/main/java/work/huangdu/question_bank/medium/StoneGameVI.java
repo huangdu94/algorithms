@@ -37,7 +37,7 @@ import java.util.Arrays;
  * 1 <= n <= 10^5
  * 1 <= aliceValues[i], bobValues[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class StoneGameVI {
     public int stoneGameVI(int[] aliceValues, int[] bobValues) {

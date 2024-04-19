@@ -11,8 +11,8 @@ import work.huangdu.data_structure.ListNode;
  * 输入: 1->2->3->4->5->NULL, m = 2, n = 4
  * 输出: 1->4->3->2->5->NULL
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/27 14:52
+ * @author huangdu
+ * @version 2020/10/27 14:52
  */
 public class ReverseBetween {
     public ListNode reverseBetween(ListNode head, int m, int n) {

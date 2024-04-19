@@ -31,8 +31,8 @@ import java.util.List;
  * text 由小写英文字母和 ' ' 组成
  * text 中至少包含一个单词
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/7
+ * @author huangdu
+ * @version 2022/9/7
  */
 public class ReorderSpaces {
     public String reorderSpaces(String text) {

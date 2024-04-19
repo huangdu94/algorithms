@@ -17,8 +17,8 @@ package work.huangdu.question_bank.easy;
  * 输入: [1,3,5,6], 0
  * 输出: 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/7 10:41
+ * @author huangdu
+ * @version 2020/8/7 10:41
  */
 public class SearchInsert {
     // 二分查找法

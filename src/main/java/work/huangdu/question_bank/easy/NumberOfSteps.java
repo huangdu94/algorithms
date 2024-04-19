@@ -27,8 +27,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 0 <= num <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/31
+ * @author huangdu
+ * @version 2022/1/31
  */
 public class NumberOfSteps {
     public int numberOfSteps(int num) {

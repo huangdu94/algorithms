@@ -20,8 +20,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/9
+ * @author huangdu
+ * @version 2023/8/9
  */
 public class SubtractProductAndSum {
     public int subtractProductAndSum(int n) {

@@ -37,8 +37,8 @@ import java.util.Arrays;
  * [16, 7,10,11]
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 16:42
+ * @author huangdu
+ * @version 2020/7/26 16:42
  */
 public class RotateMap {
     public void rotate(int[][] matrix) {

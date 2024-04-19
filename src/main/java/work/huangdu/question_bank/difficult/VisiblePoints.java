@@ -30,8 +30,8 @@ import java.util.List;
  * 0 <= angle < 360
  * 0 <= posx, posy, xi, yi <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/17
+ * @author huangdu
+ * @version 2021/12/17
  */
 public class VisiblePoints {
     public int visiblePoints(List<List<Integer>> points, int angle, List<Integer> location) {

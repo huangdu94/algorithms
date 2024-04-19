@@ -23,7 +23,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 100
  * s 仅由大写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinLength {
     public int minLength(String s) {

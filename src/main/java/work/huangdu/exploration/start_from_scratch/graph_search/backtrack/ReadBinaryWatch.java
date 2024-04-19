@@ -18,8 +18,8 @@ import java.util.List;
  * 分钟必须由两位数组成，可能会以零开头，比如 “10:2” 是无效的，应为 “10:02”。
  * 超过表示范围（小时 0-11，分钟 0-59）的数据将会被舍弃，也就是说不会出现 "13:00", "0:61" 等时间。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/31
+ * @author huangdu
+ * @version 2021/3/31
  */
 public class ReadBinaryWatch {
     private static final int[] HOUR = {8, 4, 2, 1};

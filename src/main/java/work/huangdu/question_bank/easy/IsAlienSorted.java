@@ -22,8 +22,8 @@ package work.huangdu.question_bank.easy;
  * order.length == 26
  * 在 words[i] 和 order 中的所有字符都是英文小写字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/17
+ * @author huangdu
+ * @version 2022/5/17
  */
 public class IsAlienSorted {
     public boolean isAlienSorted(String[] words, String order) {

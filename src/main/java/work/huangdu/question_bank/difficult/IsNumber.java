@@ -35,8 +35,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= s.length <= 20
  * s 仅含英文字母（大写和小写），数字（0-9），加号 '+' ，减号 '-' ，或者点 '.' 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/17
+ * @author huangdu
+ * @version 2021/6/17
  */
 public class IsNumber {
     // 有限状态机题目 把各个状态及状态间的跳转理清楚就行

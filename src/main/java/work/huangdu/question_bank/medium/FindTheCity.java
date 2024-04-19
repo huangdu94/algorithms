@@ -38,7 +38,7 @@ import java.util.Queue;
  * 1 <= weight_i, distanceThreshold <= 10^4
  * 所有 (from_i, to_i) 都是不同的。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FindTheCity {
     public int findTheCity(int n, int[][] edges, int distanceThreshold) {

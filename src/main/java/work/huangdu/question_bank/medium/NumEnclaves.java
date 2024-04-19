@@ -21,8 +21,8 @@ import work.huangdu.specific.union_find_set.FinalUnionFindSet;
  * 1 <= m, n <= 500
  * grid[i][j] 的值为 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/12
+ * @author huangdu
+ * @version 2022/2/12
  */
 public class NumEnclaves {
     public int numEnclaves(int[][] grid) {

@@ -17,8 +17,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= m, n <= 100
  * -10^4 <= matrix[i][j], target <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/30
+ * @author huangdu
+ * @version 2021/3/30
  */
 public class SearchMatrix {
     // 暴力

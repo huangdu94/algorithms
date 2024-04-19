@@ -31,8 +31,8 @@ import java.util.List;
  * 1 <= pattern.length <= 100
  * 所有字符串都仅由大写和小写英文字母组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/15
+ * @author huangdu
+ * @version 2023/4/15
  */
 public class CamelMatch {
     public List<Boolean> camelMatch(String[] queries, String pattern) {

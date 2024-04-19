@@ -38,8 +38,8 @@ import java.util.List;
  * obj.addNum(val);
  * int[][] param_2 = obj.getIntervals();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/10/9
+ * @author huangdu
+ * @version 2021/10/9
  */
 public class SummaryRanges {
     // TODO 使用TreeMap

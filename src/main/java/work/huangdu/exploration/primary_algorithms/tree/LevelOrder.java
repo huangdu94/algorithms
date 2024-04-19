@@ -24,8 +24,8 @@ import java.util.Queue;
  * [15,7]
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/6/22 17:42
+ * @author huangdu
+ * @version 2020/6/22 17:42
  */
 public class LevelOrder {
     public List<List<Integer>> levelOrder3(TreeNode root) {

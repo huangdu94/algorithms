@@ -11,8 +11,8 @@ import java.util.Queue;
 /**
  * 招商银行专场竞赛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/10
+ * @author huangdu
+ * @version 2022/4/10
  */
 public class SolutionChinaMerchantsBank {
     // TODO 待研究

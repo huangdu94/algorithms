@@ -14,8 +14,8 @@ package work.huangdu.question_bank.difficult;
  * 给定数组的长度不会超过50000。
  * 输入数组中的所有数字都在32位整数的表示范围内。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/28 10:18
+ * @author huangdu
+ * @version 2020/11/28 10:18
  */
 public class ReversePairs {
     // 暴力 时间复杂度o(n^2) 空间复杂度o(1) 超时

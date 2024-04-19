@@ -25,8 +25,8 @@ import java.util.List;
  * ruleKey 等于 "type"、"color" 或 "name"
  * 所有字符串仅由小写字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/31
+ * @author huangdu
+ * @version 2022/10/31
  */
 public class CountMatches {
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {

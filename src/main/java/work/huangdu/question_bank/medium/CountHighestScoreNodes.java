@@ -32,8 +32,8 @@ package work.huangdu.question_bank.medium;
  * 对于 i != 0 ，有 0 <= parents[i] <= n - 1
  * parents 表示一棵二叉树。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/16
+ * @author huangdu
+ * @version 2022/3/16
  */
 public class CountHighestScoreNodes {
     // TODO 未提交 每日一题

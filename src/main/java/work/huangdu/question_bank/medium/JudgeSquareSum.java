@@ -22,8 +22,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 0 <= c <= 2^31 - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/28
+ * @author huangdu
+ * @version 2021/4/28
  */
 public class JudgeSquareSum {
     public boolean judgeSquareSum(int c) {

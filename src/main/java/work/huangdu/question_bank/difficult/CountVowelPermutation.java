@@ -24,8 +24,8 @@ package work.huangdu.question_bank.difficult;
  * 提示：
  * 1 <= n <= 2 * 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/9
+ * @author huangdu
+ * @version 2022/2/9
  */
 public class CountVowelPermutation {
     private final static int BASE = (int)1e9 + 7;

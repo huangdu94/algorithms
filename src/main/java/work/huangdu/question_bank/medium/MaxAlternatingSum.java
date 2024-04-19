@@ -22,8 +22,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums.length <= 10^5
  * 1 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/11
+ * @author huangdu
+ * @version 2023/7/11
  */
 public class MaxAlternatingSum {
     public long maxAlternatingSum(int[] nums) {

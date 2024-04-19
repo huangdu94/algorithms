@@ -40,8 +40,8 @@ import java.util.Set;
  * 1 <= n <= 1000
  * 0 <= presses <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/15
+ * @author huangdu
+ * @version 2022/9/15
  */
 public class FlipLights {
     private static int MASK;

@@ -29,8 +29,8 @@ import java.util.Arrays;
  * 1 <= code[i] <= 100
  * -(n - 1) <= k <= n - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/24
+ * @author huangdu
+ * @version 2022/9/24
  */
 public class Decrypt {
     public int[] decrypt(int[] code, int k) {

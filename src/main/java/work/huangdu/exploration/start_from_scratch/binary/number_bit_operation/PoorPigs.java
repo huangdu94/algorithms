@@ -23,8 +23,8 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 1 <= buckets <= 1000
  * 1 <= minutesToDie <= minutesToTest <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/17 11:16
+ * @author huangdu
+ * @version 2020/10/17 11:16
  */
 public class PoorPigs {
     public int poorPigs(int buckets, int minutesToDie, int minutesToTest) {

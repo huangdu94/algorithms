@@ -16,8 +16,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= s.length <= 500
  * s 只包含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/12
+ * @author huangdu
+ * @version 2022/12/12
  */
 public class BeautySum {
     public int beautySum(String s) {

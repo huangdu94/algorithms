@@ -37,8 +37,8 @@ import java.util.Map;
  * 1 <= stones.length <= 10^5
  * 1 <= stones[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/20
+ * @author huangdu
+ * @version 2022/1/20
  */
 public class StoneGameIX {
     private final Map<Integer, Boolean> memo = new HashMap<>();

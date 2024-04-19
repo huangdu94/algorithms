@@ -29,8 +29,8 @@ import java.util.Set;
  * bank[i].length == 8
  * start、end 和 bank[i] 仅由字符 ['A', 'C', 'G', 'T'] 组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/9
+ * @author huangdu
+ * @version 2022/5/9
  */
 public class MinMutation {
     public int minMutation(String start, String end, String[] bank) {

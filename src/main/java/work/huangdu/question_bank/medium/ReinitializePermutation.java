@@ -28,8 +28,8 @@ package work.huangdu.question_bank.medium;
  * 2 <= n <= 1000
  * n 是一个偶数
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/9
+ * @author huangdu
+ * @version 2023/1/9
  */
 public class ReinitializePermutation {
     public int reinitializePermutation(int n) {

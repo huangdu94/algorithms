@@ -9,8 +9,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * words.length <= 100000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/27
+ * @author huangdu
+ * @version 2022/5/27
  */
 public class FindClosest {
     public int findClosest(String[] words, String word1, String word2) {

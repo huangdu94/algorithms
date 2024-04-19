@@ -22,8 +22,8 @@ import java.util.Map;
  * 1 <= deliciousness.length <= 10^5
  * 0 <= deliciousness[i] <= 2^20
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/7
+ * @author huangdu
+ * @version 2021/7/7
  */
 public class CountPairs {
     private static final int BASE = (int)1e9 + 7;

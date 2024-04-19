@@ -26,8 +26,8 @@ package work.huangdu.question_bank.easy;
  * blocks[i] 要么是 'W' ，要么是 'B' 。
  * 1 <= k <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/9
+ * @author huangdu
+ * @version 2023/3/9
  */
 public class MinimumRecolors {
     public int minimumRecolors(String blocks, int k) {

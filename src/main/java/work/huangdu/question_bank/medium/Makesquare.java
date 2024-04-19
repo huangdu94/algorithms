@@ -18,8 +18,8 @@ import java.util.Arrays;
  * 1 <= matchsticks.length <= 15
  * 1 <= matchsticks[i] <= 10^8
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/1
+ * @author huangdu
+ * @version 2022/6/1
  */
 public class Makesquare {
     public boolean makesquare(int[] matchsticks) {

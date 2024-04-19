@@ -31,8 +31,8 @@ import java.util.Set;
  * ai != bi
  * 每对城市之间 最多只有一条 道路相连
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/15
+ * @author huangdu
+ * @version 2023/3/15
  */
 public class MaximalNetworkRank {
     public int maximalNetworkRank(int n, int[][] roads) {

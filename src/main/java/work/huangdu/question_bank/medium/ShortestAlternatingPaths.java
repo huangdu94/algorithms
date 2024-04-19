@@ -33,8 +33,8 @@ import java.util.Queue;
  * red_edges[i].length == blue_edges[i].length == 2
  * 0 <= red_edges[i][j], blue_edges[i][j] < n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/2
+ * @author huangdu
+ * @version 2023/2/2
  */
 public class ShortestAlternatingPaths {
     public int[] shortestAlternatingPaths(int n, int[][] redEdges, int[][] blueEdges) {

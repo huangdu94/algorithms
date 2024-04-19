@@ -46,7 +46,7 @@ import java.util.*;
  * lock ，unlock 和 upgrade 的调用 总共 不超过 2000 次。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/9/23
+ * @version 2023/9/23
  */
 public class LockingTree {
     private final int[] parent;

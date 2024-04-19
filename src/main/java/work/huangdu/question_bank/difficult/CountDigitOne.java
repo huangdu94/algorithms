@@ -12,8 +12,8 @@ package work.huangdu.question_bank.difficult;
  * 提示：
  * 0 <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/13
+ * @author huangdu
+ * @version 2021/8/13
  */
 public class CountDigitOne {
     // 思路：统计每一位上1出现的个数

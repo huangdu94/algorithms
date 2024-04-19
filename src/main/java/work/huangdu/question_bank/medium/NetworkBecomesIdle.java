@@ -60,8 +60,8 @@ import java.util.Set;
  * 不会有重边。
  * 每个服务器都直接或间接与别的服务器相连。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/20
+ * @author huangdu
+ * @version 2022/3/20
  */
 public class NetworkBecomesIdle {
     public int networkBecomesIdle2(int[][] edges, int[] patience) {

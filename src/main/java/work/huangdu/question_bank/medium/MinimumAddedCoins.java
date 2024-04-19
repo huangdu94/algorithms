@@ -29,7 +29,7 @@ import java.util.Arrays;
  * 1 <= coins.length <= 10^5
  * 1 <= coins[i] <= target
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinimumAddedCoins {
     public int minimumAddedCoins(int[] coins, int target) {

@@ -27,8 +27,8 @@ import java.util.Arrays;
  * 1 <= nums[i] <= 10^5
  * 1 <= k <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/19
+ * @author huangdu
+ * @version 2021/7/19
  */
 public class MaxFrequency {
     // TODO 再感受一下这一题

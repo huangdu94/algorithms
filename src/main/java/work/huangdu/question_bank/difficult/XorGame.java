@@ -16,8 +16,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= N <= 1000
  * 0 <= nums[i] <= 2^16
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/22
+ * @author huangdu
+ * @version 2021/5/22
  */
 public class XorGame {
     /*

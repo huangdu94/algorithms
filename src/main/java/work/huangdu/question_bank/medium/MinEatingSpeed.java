@@ -20,8 +20,8 @@ package work.huangdu.question_bank.medium;
  * piles.length <= h <= 10^9
  * 1 <= piles[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/7
+ * @author huangdu
+ * @version 2022/6/7
  */
 public class MinEatingSpeed {
     // 二分法

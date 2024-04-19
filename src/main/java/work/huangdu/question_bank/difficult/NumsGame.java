@@ -26,7 +26,7 @@ import java.util.Queue;
  * 1 <= nums.length <= 10^5
  * 1 <= nums[i] <= 10^3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class NumsGame {
     public int[] numsGame(int[] nums) {

@@ -14,8 +14,8 @@ import java.util.Arrays;
  * 提示：
  * 给出数对的个数在 [1, 1000] 范围内。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/14 11:22
+ * @author huangdu
+ * @version 2020/11/14 11:22
  */
 public class FindLongestChain {
     public int findLongestChain(int[][] pairs) {

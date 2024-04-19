@@ -33,8 +33,8 @@ import java.util.Queue;
  * isWater[i][j] 要么是 0 ，要么是 1 。
  * 至少有 1 个水域格子。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/29
+ * @author huangdu
+ * @version 2022/1/29
  */
 public class HighestPeak {
     public int[][] highestPeak(int[][] isWater) {

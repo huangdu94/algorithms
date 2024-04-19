@@ -22,8 +22,8 @@ import java.util.Arrays;
  * 1 <= n <= 100
  * 1 <= costs[i][j] <= 20
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/28
+ * @author huangdu
+ * @version 2022/6/28
  */
 public class MinCost {
     public int minCost(int[][] costs) {

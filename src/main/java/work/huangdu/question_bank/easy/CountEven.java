@@ -18,8 +18,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= num <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/6
+ * @author huangdu
+ * @version 2023/1/6
  */
 public class CountEven {
     public int countEven(int num) {

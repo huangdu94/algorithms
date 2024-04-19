@@ -27,8 +27,8 @@ import java.util.*;
  * int param_1 = obj.next();
  * boolean param_2 = obj.hasNext();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/15
+ * @author huangdu
+ * @version 2021/2/15
  */
 public class BSTIterator {
     private final Deque<TreeNode> stack = new ArrayDeque<>();

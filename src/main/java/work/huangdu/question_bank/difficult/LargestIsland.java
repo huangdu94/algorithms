@@ -29,8 +29,8 @@ import java.util.Set;
  * 1 <= n <= 500
  * grid[i][j] 为 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/20
+ * @author huangdu
+ * @version 2022/9/20
  */
 public class LargestIsland {
     private int n;

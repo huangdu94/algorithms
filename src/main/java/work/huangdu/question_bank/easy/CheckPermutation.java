@@ -16,8 +16,8 @@ import java.util.Map;
  * 0 <= len(s1) <= 100
  * 0 <= len(s2) <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/27
+ * @author huangdu
+ * @version 2022/9/27
  */
 public class CheckPermutation {
     public boolean checkPermutation(String s1, String s2) {

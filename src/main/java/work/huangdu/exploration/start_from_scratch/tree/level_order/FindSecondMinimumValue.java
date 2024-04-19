@@ -23,8 +23,8 @@ import work.huangdu.data_structure.TreeNode;
  * 1 <= Node.val <= 2^31 - 1
  * 对于树中每个节点 root.val == min(root.left.val, root.right.val)
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/27
+ * @author huangdu
+ * @version 2021/1/27
  */
 public class FindSecondMinimumValue {
     public int findSecondMinimumValue(TreeNode root) {

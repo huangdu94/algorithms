@@ -28,8 +28,8 @@ import java.util.List;
  * -1000 <= grid[i][j] <= 1000
  * 0 <= k <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/20
+ * @author huangdu
+ * @version 2022/7/20
  */
 public class ShiftGrid {
     public List<List<Integer>> shiftGrid(int[][] grid, int k) {

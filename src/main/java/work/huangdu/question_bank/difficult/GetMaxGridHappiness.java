@@ -34,8 +34,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= m, n <= 5
  * 0 <= introvertsCount, extrovertsCount <= min(m * n, 6)
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/25
+ * @author huangdu
+ * @version 2023/6/25
  */
 public class GetMaxGridHappiness {
     private int m;

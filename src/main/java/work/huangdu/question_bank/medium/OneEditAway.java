@@ -14,8 +14,8 @@ package work.huangdu.question_bank.medium;
  * second = "pal"
  * 输出: False
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/13
+ * @author huangdu
+ * @version 2022/5/13
  */
 public class OneEditAway {
     private final int REPLACE = 0;

@@ -28,7 +28,7 @@ package work.huangdu.question_bank.easy;
  * title 由单个空格隔开的单词组成，且不含有任何前导或后缀空格。
  * 每个单词由大写和小写英文字母组成，且都是 非空 的。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CapitalizeTitle {
     public String capitalizeTitle(String title) {

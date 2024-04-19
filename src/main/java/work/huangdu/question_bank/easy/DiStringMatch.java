@@ -19,8 +19,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 10^5
  * s 只包含字符 "I" 或 "D"
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/9
+ * @author huangdu
+ * @version 2022/5/9
  */
 public class DiStringMatch {
     public int[] diStringMatch(String s) {

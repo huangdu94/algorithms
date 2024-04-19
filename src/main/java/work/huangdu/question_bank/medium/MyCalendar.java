@@ -28,8 +28,8 @@ import java.util.Set;
  * 0 <= start < end <= 10^9
  * 每个测试用例，调用 book 方法的次数最多不超过 1000 次。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/5
+ * @author huangdu
+ * @version 2022/7/5
  */
 public class MyCalendar {
     private final Set<Integer> tree;

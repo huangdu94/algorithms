@@ -30,8 +30,8 @@ import java.util.Queue;
  * 1 <= t <= 50
  * 1 <= target <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/24
+ * @author huangdu
+ * @version 2023/5/24
  */
 public class FrogPosition {
     public double frogPosition(int n, int[][] edges, int t, int target) {

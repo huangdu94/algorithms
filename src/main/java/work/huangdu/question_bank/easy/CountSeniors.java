@@ -23,7 +23,7 @@ package work.huangdu.question_bank.easy;
  * details[i][10] 是 'M' ，'F' 或者 'O' 之一。
  * 所有乘客的手机号码和座位号互不相同。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CountSeniors {
     public int countSeniors(String[] details) {

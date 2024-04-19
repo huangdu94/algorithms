@@ -24,8 +24,8 @@ import java.util.Arrays;
  * 1 <= n, m <= 1000
  * 1 <= nums[i], queries[i] <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/17
+ * @author huangdu
+ * @version 2023/3/17
  */
 public class AnswerQueries {
     public int[] answerQueries(int[] nums, int[] queries) {

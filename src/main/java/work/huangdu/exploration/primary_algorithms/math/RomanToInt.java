@@ -45,8 +45,8 @@ import java.util.Map;
  * IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。
  * 关于罗马数字的详尽书写规则，可以参考 罗马数字 - Mathematics 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/1 16:21
+ * @author huangdu
+ * @version 2020/7/1 16:21
  */
 public class RomanToInt {
     private static final Map<String, Integer> romanMap = new HashMap<>();

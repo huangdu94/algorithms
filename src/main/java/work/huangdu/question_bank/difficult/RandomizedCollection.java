@@ -30,8 +30,8 @@ import java.util.*;
  * boolean param_2 = obj.remove(val);
  * int param_3 = obj.getRandom();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/31 11:01
+ * @author huangdu
+ * @version 2020/10/31 11:01
  */
 public class RandomizedCollection {
     /**

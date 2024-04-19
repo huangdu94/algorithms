@@ -23,8 +23,8 @@ import java.util.Queue;
  * arr 按 升序 排列
  * -10^4 <= arr[i], x <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/25
+ * @author huangdu
+ * @version 2022/8/25
  */
 public class FindClosestElements {
     public List<Integer> findClosestElements(int[] arr, int k, int x) {

@@ -19,8 +19,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 1 <= total, cost1, cost2 <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/9/1
+ * @author huangdu
+ * @version 2023/9/1
  */
 public class WaysToBuyPensPencils {
     public long waysToBuyPensPencils(int total, int cost1, int cost2) {

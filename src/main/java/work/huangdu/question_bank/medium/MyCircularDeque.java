@@ -35,8 +35,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= value <= 1000
  * insertFront, insertLast, deleteFront, deleteLast, getFront, getRear, isEmpty, isFull  调用次数不大于 2000 次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/15
+ * @author huangdu
+ * @version 2022/8/15
  */
 public class MyCircularDeque {
     private final int n;

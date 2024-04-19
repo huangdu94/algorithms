@@ -1,7 +1,7 @@
 package work.huangdu.question_bank.easy;
 
 /**
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SplitNum {
     public int splitNum(int num) {

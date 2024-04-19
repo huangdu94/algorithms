@@ -21,8 +21,8 @@ import work.huangdu.data_structure.TreeNode;
  * -10^5 <= Node.val <= 10^5
  * -10^9 <= limit <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/22
+ * @author huangdu
+ * @version 2023/5/22
  */
 public class SufficientSubset {
     private int limit;

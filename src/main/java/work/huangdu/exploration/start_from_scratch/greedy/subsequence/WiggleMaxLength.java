@@ -19,8 +19,8 @@ package work.huangdu.exploration.start_from_scratch.greedy.subsequence;
  * 进阶:
  * 你能否用 O(n) 时间复杂度完成此题?
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/19 19:49
+ * @author huangdu
+ * @version 2020/11/19 19:49
  */
 public class WiggleMaxLength {
     // 思路连续上升的和连续下降的段中你最多只能选一段，并且至少可以选一段使满足题意。

@@ -18,8 +18,8 @@ import work.huangdu.question_bank.medium.CombinationSum4;
  * 输入: k = 3, n = 9
  * 输出: [[1,2,6], [1,3,5], [2,3,4]]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/11 9:19
+ * @author huangdu
+ * @version 2020/9/11 9:19
  * @see CombinationSum
  * @see CombinationSum2
  * @see CombinationSum4

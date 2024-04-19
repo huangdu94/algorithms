@@ -13,8 +13,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 给出的 address 是一个有效的 IPv4 地址
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/21
+ * @author huangdu
+ * @version 2022/6/21
  */
 public class DefangIPaddr {
     public String defangIPaddr(String address) {

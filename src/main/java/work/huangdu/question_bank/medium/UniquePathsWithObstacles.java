@@ -22,8 +22,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= m, n <= 100
  * obstacleGrid[i][j] 为 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/30
+ * @author huangdu
+ * @version 2022/3/30
  */
 public class UniquePathsWithObstacles {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {

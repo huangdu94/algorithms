@@ -36,8 +36,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= s.length <= 10^5
  * s[i] 是 0 - 9 中的一位数字或字符 '*'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/27
+ * @author huangdu
+ * @version 2021/9/27
  */
 public class NumDecodings {
     public int numDecodings(String s) {

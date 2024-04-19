@@ -16,8 +16,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 100
  * s 由 ASCII 字符集中的可打印字符组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/12
+ * @author huangdu
+ * @version 2021/12/12
  */
 public class ToLowerCase {
     public String toLowerCase(String s) {

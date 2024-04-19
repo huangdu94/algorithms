@@ -32,8 +32,8 @@ import java.util.Set;
  * 1 <= words[i].length <= 12
  * words[i] 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/10
+ * @author huangdu
+ * @version 2022/4/10
  */
 public class UniqueMorseRepresentations {
     private static final String[] MORSE_CODE = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};

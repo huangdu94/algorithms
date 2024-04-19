@@ -29,8 +29,8 @@ import java.util.TreeMap;
  * 0 <= apples[i], days[i] <= 2 * 10^4
  * 只有在 apples[i] = 0 时，days[i] = 0 才成立
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/24
+ * @author huangdu
+ * @version 2021/12/24
  */
 public class EatenApples {
     // 优先队列会更快一些。

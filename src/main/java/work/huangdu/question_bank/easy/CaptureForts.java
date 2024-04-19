@@ -27,7 +27,7 @@ package work.huangdu.question_bank.easy;
  * -1 <= forts[i] <= 1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/9/2
+ * @version 2023/9/2
  */
 public class CaptureForts {
     public int captureForts(int[] forts) {

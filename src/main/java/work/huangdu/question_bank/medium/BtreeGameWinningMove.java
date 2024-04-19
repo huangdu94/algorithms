@@ -30,8 +30,8 @@ import work.huangdu.data_structure.TreeNode;
  * 1 <= Node.val <= n
  * 树中所有值 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/3
+ * @author huangdu
+ * @version 2023/2/3
  */
 public class BtreeGameWinningMove {
     public boolean btreeGameWinningMove(TreeNode root, int n, int x) {

@@ -30,8 +30,8 @@ import java.util.Set;
  * 保证爱丽丝与鲍勃的糖果总量不同。
  * 答案肯定存在。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/1
+ * @author huangdu
+ * @version 2021/2/1
  */
 public class FairCandySwap {
     public int[] fairCandySwap(int[] A, int[] B) {

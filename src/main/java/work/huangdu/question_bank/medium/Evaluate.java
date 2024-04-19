@@ -42,8 +42,8 @@ import java.util.Map;
  * key_i 和 value_i 只包含小写英文字母。
  * knowledge 中的 key_i 不会重复。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/12
+ * @author huangdu
+ * @version 2023/1/12
  */
 public class Evaluate {
     public String evaluate(String s, List<List<String>> knowledge) {

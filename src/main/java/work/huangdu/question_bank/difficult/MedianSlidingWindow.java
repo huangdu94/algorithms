@@ -24,8 +24,8 @@ import java.util.*;
  * 你可以假设 k 始终有效，即：k 始终小于输入的非空数组的元素个数。
  * 与真实值误差在 10 ^ -5 以内的答案将被视作正确答案。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/3
+ * @author huangdu
+ * @version 2021/2/3
  */
 public class MedianSlidingWindow {
     // 暴力法

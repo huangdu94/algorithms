@@ -32,8 +32,8 @@ import work.huangdu.question_bank.medium.CombinationSum4;
  * [5]
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/10 9:44
+ * @author huangdu
+ * @version 2020/9/10 9:44
  * @see CombinationSum
  * @see CombinationSum3
  * @see CombinationSum4

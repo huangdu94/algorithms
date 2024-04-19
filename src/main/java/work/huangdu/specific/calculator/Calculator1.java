@@ -6,8 +6,8 @@ import java.util.Stack;
  * 加减法计算器
  * 输入的这个算式只包含加减法，而且不存在空格(只包含正数)
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/1 11:46
+ * @author huangdu
+ * @version 2020/8/1 11:46
  */
 public class Calculator1 {
     public int calculate(String s) {
