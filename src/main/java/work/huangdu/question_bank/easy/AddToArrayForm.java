@@ -1,7 +1,5 @@
 package work.huangdu.question_bank.easy;
 
-import sun.plugin.javascript.navig.Link;
-
 import java.util.*;
 
 /**
