@@ -10,8 +10,8 @@ import java.util.Queue;
 /**
  * 第 289 场周赛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/17
+ * @author huangdu
+ * @version 2022/4/17
  */
 public class Solution289 {
     /**

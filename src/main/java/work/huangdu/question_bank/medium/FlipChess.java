@@ -44,8 +44,8 @@ import java.util.List;
  * 1 <= chessboard.length, chessboard[i].length <= 8
  * chessboard[i] 仅包含 "."、"O" 和 "X"
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/25
+ * @author huangdu
+ * @version 2023/6/25
  */
 public class FlipChess {
     private int m;

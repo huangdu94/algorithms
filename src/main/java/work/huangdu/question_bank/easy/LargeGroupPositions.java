@@ -30,8 +30,8 @@ import java.util.List;
  * 1 <= s.length <= 1000
  * s 仅含小写英文字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/5 17:18
+ * @author huangdu
+ * @version 2021/1/5 17:18
  */
 public class LargeGroupPositions {
     public List<List<Integer>> largeGroupPositions(String s) {

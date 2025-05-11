@@ -31,8 +31,8 @@ package work.huangdu.question_bank.medium;
  * times[0] <= t <= 10^9
  * 每个测试用例最多调用 10^4 次 q
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/11
+ * @author huangdu
+ * @version 2021/12/11
  */
 public class TopVotedCandidate {
     private final int n;

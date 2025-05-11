@@ -25,8 +25,8 @@ package work.huangdu.question_bank.difficult;
  * 0 <= nums1[i] <= 1
  * 0 <= nums2[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/26
+ * @author huangdu
+ * @version 2023/7/26
  */
 public class HandleQuery {
     public long[] handleQuery(int[] nums1, int[] nums2, int[][] queries) {

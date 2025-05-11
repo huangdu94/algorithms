@@ -16,8 +16,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 0 <= n <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/4
+ * @author huangdu
+ * @version 2021/9/4
  */
 public class Fib2 {
     public int fib(int n) {

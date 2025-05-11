@@ -29,8 +29,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= k <= 10
  * s 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/15
+ * @author huangdu
+ * @version 2022/12/15
  */
 public class GetLucky {
     public int getLucky(String s, int k) {

@@ -38,8 +38,8 @@ package work.huangdu.question_bank.difficult;
  * 0 <= score[i] <= 10
  * words[i] 和 letters[i] 只包含小写的英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/1
+ * @author huangdu
+ * @version 2023/3/1
  */
 public class MaxScoreWords {
     public int maxScoreWords(String[] words, char[] letters, int[] score) {

@@ -34,7 +34,7 @@ import java.util.Set;
  * words 包含的字符串互不相同。
  * words[i] 只包含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumNumberOfStringPairs {
     public int maximumNumberOfStringPairs(String[] words) {

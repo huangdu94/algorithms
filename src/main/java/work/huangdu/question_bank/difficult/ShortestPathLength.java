@@ -24,8 +24,8 @@ import java.util.Queue;
  * 如果 graph[a] 包含 b ，那么 graph[b] 也包含 a
  * 输入的图总是连通图
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/6
+ * @author huangdu
+ * @version 2021/8/6
  */
 public class ShortestPathLength {
 

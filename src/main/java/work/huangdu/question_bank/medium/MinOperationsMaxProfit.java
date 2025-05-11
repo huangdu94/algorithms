@@ -42,8 +42,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= customers[i] <= 50
  * 1 <= boardingCost, runningCost <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/5
+ * @author huangdu
+ * @version 2023/3/5
  */
 public class MinOperationsMaxProfit {
     public int minOperationsMaxProfit(int[] customers, int boardingCost, int runningCost) {

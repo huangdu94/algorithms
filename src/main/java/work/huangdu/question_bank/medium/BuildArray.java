@@ -32,8 +32,8 @@ import java.util.List;
  * 1 <= target[i] <= n
  * target 严格递增
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/18
+ * @author huangdu
+ * @version 2022/10/18
  */
 public class BuildArray {
     public List<String> buildArray(int[] target, int n) {

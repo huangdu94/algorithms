@@ -21,8 +21,8 @@ package work.huangdu.question_bank.easy;
  * 0 <= nums[i] <= 100
  * nums 中的最大元素是唯一的
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/13
+ * @author huangdu
+ * @version 2022/1/13
  */
 public class DominantIndex {
     public int dominantIndex(int[] nums) {

@@ -34,7 +34,7 @@ import java.util.Set;
  * 1 <= restricted[i] < n
  * restricted 中的所有值 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class ReachableNodes {
     public int reachableNodes(int n, int[][] edges, int[] restricted) {

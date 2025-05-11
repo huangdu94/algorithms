@@ -16,8 +16,8 @@ import java.util.List;
  * 提示：
  * 1 <= n <= 5 * 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/18
+ * @author huangdu
+ * @version 2022/4/18
  */
 public class LexicalOrder {
     public List<Integer> lexicalOrder(int n) {

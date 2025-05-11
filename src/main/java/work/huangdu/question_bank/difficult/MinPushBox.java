@@ -51,8 +51,8 @@ import java.util.Set;
  * grid 仅包含字符 '.', '#',  'S' , 'T', 以及 'B'。
  * grid 中 'S', 'B' 和 'T' 各只能出现一个。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/8
+ * @author huangdu
+ * @version 2023/5/8
  */
 public class MinPushBox {
     private final int[] direction = {0, 1, 0, -1, 0};

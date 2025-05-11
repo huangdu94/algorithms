@@ -27,8 +27,8 @@ import java.util.Deque;
  * -10^4 <= nums[i] <= 10^4
  * 1 <= k <= nums.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/27 20:27
+ * @author huangdu
+ * @version 2020/7/27 20:27
  */
 public class MaxSlidingWindow {
     // 时间复杂度依然不是线性，但相比暴力解大大优化

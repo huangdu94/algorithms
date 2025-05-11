@@ -30,8 +30,8 @@ import com.sun.tools.javac.util.Assert;
  * 1 <= s1.length, s2.length <= 1000
  * s1, s2 只包含 'x' 或 'y'。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/28
+ * @author huangdu
+ * @version 2023/2/28
  */
 public class MinimumSwap {
     public int minimumSwap(String s1, String s2) {

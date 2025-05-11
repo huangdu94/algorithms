@@ -14,8 +14,8 @@ package work.huangdu.exploration.primary_algorithms.sort_search;
  * The isBadVersion API is defined in the parent class VersionControl.
  * boolean isBadVersion(int version);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/6/23 11:22
+ * @author huangdu
+ * @version 2020/6/23 11:22
  */
 public class FirstBadVersion extends VersionControl {
     public FirstBadVersion(int count, int firstVersion) {

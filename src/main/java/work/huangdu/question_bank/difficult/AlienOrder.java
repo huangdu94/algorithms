@@ -30,8 +30,8 @@ import java.util.Queue;
  * 1 <= words[i].length <= 100
  * words[i] 仅由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/31
+ * @author huangdu
+ * @version 2022/5/31
  */
 public class AlienOrder {
     public String alienOrder(String[] words) {

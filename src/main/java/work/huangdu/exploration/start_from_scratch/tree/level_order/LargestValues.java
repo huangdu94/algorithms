@@ -19,8 +19,8 @@ import work.huangdu.data_structure.TreeNode;
  * *       5   3   9
  * 输出: [1, 3, 9]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/23
+ * @author huangdu
+ * @version 2021/1/23
  */
 public class LargestValues {
     public List<Integer> largestValues(TreeNode root) {

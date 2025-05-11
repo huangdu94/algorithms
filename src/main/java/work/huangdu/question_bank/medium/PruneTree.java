@@ -22,8 +22,8 @@ import work.huangdu.data_structure.TreeNode;
  * 树中节点的数目在范围 [1, 200] 内
  * Node.val 为 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/21
+ * @author huangdu
+ * @version 2022/7/21
  */
 public class PruneTree {
     public TreeNode pruneTree(TreeNode root) {

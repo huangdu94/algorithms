@@ -7,8 +7,8 @@ import work.huangdu.data_structure.TreeNode;
 /**
  * 莫里斯
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/10/18
+ * @author huangdu
+ * @version 2021/10/18
  */
 public class Morris implements Traversal {
     private Consumer<TreeNode> operation;

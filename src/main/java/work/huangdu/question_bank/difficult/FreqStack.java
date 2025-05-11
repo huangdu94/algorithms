@@ -37,8 +37,8 @@ import java.util.Map;
  * push 和 pop 的操作数不大于 2 * 10^4。
  * 输入保证在调用 pop 之前堆栈中至少有一个元素。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/30
+ * @author huangdu
+ * @version 2022/11/30
  */
 public class FreqStack {
     private final Map<Integer, Integer> freq;

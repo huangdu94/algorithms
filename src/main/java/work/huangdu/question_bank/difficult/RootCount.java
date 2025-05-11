@@ -49,7 +49,7 @@ import java.util.Set;
  * guesses 是唯一的。
  * 0 <= k <= guesses.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class RootCount {
     private Set<Long> guessSet;

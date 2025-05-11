@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length, goal.length <= 2 * 10^4
  * s 和 goal 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/11/23
+ * @author huangdu
+ * @version 2021/11/23
  */
 public class BuddyStrings {
     public boolean buddyStrings(String s, String goal) {

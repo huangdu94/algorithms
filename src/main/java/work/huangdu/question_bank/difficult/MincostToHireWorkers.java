@@ -23,8 +23,8 @@ import java.util.PriorityQueue;
  * 1 <= k <= n <= 10^4
  * 1 <= quality[i], wage[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/11
+ * @author huangdu
+ * @version 2022/9/11
  */
 public class MincostToHireWorkers {
     public double mincostToHireWorkers(int[] quality, int[] wage, int k) {

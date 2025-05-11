@@ -29,8 +29,8 @@ import java.util.Queue;
  * 0 <= row < m
  * 0 <= col < n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/7
+ * @author huangdu
+ * @version 2021/12/7
  */
 public class ColorBorder {
     public int[][] colorBorder(int[][] grid, int row, int col, int color) {

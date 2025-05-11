@@ -17,8 +17,8 @@ import java.util.*;
  * 输出: [1,3,2]
  * 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/5 19:28
+ * @author huangdu
+ * @version 2020/7/5 19:28
  */
 public class InorderTraversal {
     public List<Integer> inorderTraversal(TreeNode root) {

@@ -57,8 +57,8 @@ package work.huangdu.question_bank.medium;
  * 10 <= s.length <= 20
  * s 是由数字、空格、字符 '('、')'、'-' 和 '+' 组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/1
+ * @author huangdu
+ * @version 2023/4/1
  */
 public class MaskPII {
     private final String[] prefix = {"", "+*-", "+**-", "+***-"};

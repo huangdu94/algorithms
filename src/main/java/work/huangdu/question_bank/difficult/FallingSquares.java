@@ -32,8 +32,8 @@ import java.util.List;
  * 1 <= lefti <= 10^8
  * 1 <= sideLengthi <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/26
+ * @author huangdu
+ * @version 2022/5/26
  */
 public class FallingSquares {
     public List<Integer> fallingSquares(int[][] positions) {

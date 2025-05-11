@@ -26,8 +26,8 @@ import java.util.Map;
  * -10^4 <= xi, yi <= 10^4
  * 所有点都 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/13
+ * @author huangdu
+ * @version 2021/9/13
  */
 public class NumberOfBoomerangs {
     public int numberOfBoomerangs(int[][] points) {

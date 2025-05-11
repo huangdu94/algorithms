@@ -13,8 +13,8 @@ import java.util.Arrays;
  * 1 <= k <= n <= 30,000。
  * 所给数据范围 [-10,000，10,000]。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/15 12:30
+ * @author huangdu
+ * @version 2020/12/15 12:30
  */
 public class FindMaxAverage {
     public double findMaxAverage(int[] nums, int k) {

@@ -22,8 +22,8 @@ import java.util.Arrays;
  * 1 <= k <= S.length <= 1000
  * s 只由小写字母组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/6
+ * @author huangdu
+ * @version 2022/9/6
  */
 public class OrderlyQueue {
     public String orderlyQueue(String s, int k) {

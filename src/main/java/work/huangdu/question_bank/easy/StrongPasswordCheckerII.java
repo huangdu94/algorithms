@@ -27,7 +27,7 @@ package work.huangdu.question_bank.easy;
  * password 包含字母，数字和 "!@#$%^&*()-+" 这些特殊字符。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/1/28
+ * @version 2023/1/28
  */
 public class StrongPasswordCheckerII {
     public boolean strongPasswordCheckerII(String password) {

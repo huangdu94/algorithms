@@ -31,8 +31,8 @@ import java.util.Map;
  * MyCalendarTwo obj = new MyCalendarTwo();
  * boolean param_1 = obj.book(start,end);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/19
+ * @author huangdu
+ * @version 2022/7/19
  */
 public class MyCalendarTwo {
     private final Map<Integer, Integer> tree = new HashMap<>();

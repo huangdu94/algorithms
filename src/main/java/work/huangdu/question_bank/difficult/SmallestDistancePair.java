@@ -27,7 +27,7 @@ import java.util.Arrays;
  * 1 <= k <= n * (n - 1) / 2
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/6/15
+ * @version 2022/6/15
  */
 public class SmallestDistancePair {
     public int smallestDistancePair(int[] nums, int k) {

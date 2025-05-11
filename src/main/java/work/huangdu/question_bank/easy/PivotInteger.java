@@ -20,8 +20,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/26
+ * @author huangdu
+ * @version 2023/6/26
  */
 public class PivotInteger {
     // (1 + i) * i / 2 == (i + n) * (n - i + 1) / 2

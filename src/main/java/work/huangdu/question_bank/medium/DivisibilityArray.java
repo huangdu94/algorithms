@@ -21,7 +21,7 @@ package work.huangdu.question_bank.medium;
  * word 由数字 0 到 9 组成
  * 1 <= m <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class DivisibilityArray {
     public int[] divisibilityArray(String word, int m) {

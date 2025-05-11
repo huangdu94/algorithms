@@ -22,8 +22,8 @@ import java.util.List;
  * S 只包含字母数字（a-z，A-Z，0-9）以及破折号'-'
  * S 非空
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/2 11:59
+ * @author huangdu
+ * @version 2020/10/2 11:59
  */
 public class LicenseKeyFormatting {
     public String licenseKeyFormatting(String S, int K) {

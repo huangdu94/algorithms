@@ -46,7 +46,7 @@ import java.util.Queue;
  * roads 表示一棵合法的树。
  * 1 <= seats <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinimumFuelCost {
     public long minimumFuelCost(int[][] roads, int seats) {

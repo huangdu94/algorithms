@@ -29,8 +29,8 @@ import java.util.List;
  * expression[i] 由 {'(', ')', '&', '|', '!', 't', 'f', ','} 中的字符组成。
  * expression 是以上述形式给出的有效表达式，表示一个布尔值。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/8
+ * @author huangdu
+ * @version 2022/11/8
  */
 public class ParseBoolExpr {
     public boolean parseBoolExpr(String expression) {

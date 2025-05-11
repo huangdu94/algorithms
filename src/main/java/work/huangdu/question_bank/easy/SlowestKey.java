@@ -35,8 +35,8 @@ package work.huangdu.question_bank.easy;
  * releaseTimes[i] < releaseTimes[i+1]
  * keysPressed 仅由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/9
+ * @author huangdu
+ * @version 2022/1/9
  */
 public class SlowestKey {
     public char slowestKey(int[] releaseTimes, String keysPressed) {

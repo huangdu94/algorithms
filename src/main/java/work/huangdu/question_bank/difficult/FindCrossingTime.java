@@ -51,8 +51,8 @@ import java.util.PriorityQueue;
  * time[i].length == 4
  * 1 <= leftToRight_i, pickOld_i, rightToLeft_i, putNew_i <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/7
+ * @author huangdu
+ * @version 2023/7/7
  */
 public class FindCrossingTime {
     public int findCrossingTime(int n, int k, int[][] time) {

@@ -32,8 +32,8 @@ package work.huangdu.question_bank.easy;
  * obj.remove(key);
  * boolean param_3 = obj.contains(key);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/13
+ * @author huangdu
+ * @version 2021/3/13
  */
 public class MyHashSet {
     private static final int INIT_SIZE = 1000001;

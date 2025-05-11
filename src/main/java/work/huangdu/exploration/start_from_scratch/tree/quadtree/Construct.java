@@ -54,8 +54,8 @@ import java.util.Queue;
  * n == grid.length == grid[i].length
  * n == 2^x 其中 0 <= x <= 6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/14
+ * @author huangdu
+ * @version 2021/3/14
  */
 public class Construct {
     public Node construct(int[][] grid) {

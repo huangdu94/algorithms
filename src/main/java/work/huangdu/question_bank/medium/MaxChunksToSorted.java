@@ -23,8 +23,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= arr[i] < n
  * arr 中每个元素都 不同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/13
+ * @author huangdu
+ * @version 2022/10/13
  */
 public class MaxChunksToSorted {
     public int maxChunksToSorted(int[] arr) {

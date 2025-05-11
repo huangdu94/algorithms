@@ -28,8 +28,8 @@ package work.huangdu.question_bank.medium;
  * 至少有一个 空座位
  * 至少有一个 座位上有人
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/22
+ * @author huangdu
+ * @version 2023/8/22
  */
 public class MaxDistToClosest {
     public int maxDistToClosest(int[] seats) {

@@ -21,8 +21,8 @@ import java.math.BigInteger;
  * num 仅由数字（0 - 9）组成
  * 进阶：你计划如何处理由过大的整数输入导致的溢出?
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/2 11:20
+ * @author huangdu
+ * @version 2020/10/2 11:20
  */
 public class IsAdditiveNumber {
     public boolean isAdditiveNumber(String num) {

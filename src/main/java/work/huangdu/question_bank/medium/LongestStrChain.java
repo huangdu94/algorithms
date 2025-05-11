@@ -28,8 +28,8 @@ import java.util.Comparator;
  * 1 <= words[i].length <= 16
  * words[i] 仅由小写英文字母组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/27
+ * @author huangdu
+ * @version 2023/4/27
  */
 public class LongestStrChain {
     public int longestStrChain(String[] words) {

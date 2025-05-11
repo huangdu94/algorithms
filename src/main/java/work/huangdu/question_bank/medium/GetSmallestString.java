@@ -22,7 +22,7 @@ import java.util.Arrays;
  * n <= k <= 26 * n
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/1/28
+ * @version 2023/1/28
  */
 public class GetSmallestString {
     public String getSmallestString(int n, int k) {

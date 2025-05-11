@@ -21,8 +21,8 @@ package work.huangdu.question_bank.easy;
  * date[4] == date[7] == '-'，其他的 date[i] 都是数字
  * date 表示的范围从 1900 年 1 月 1 日至 2019 年 12 月 31 日
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/21
+ * @author huangdu
+ * @version 2021/12/21
  */
 public class DayOfYear {
     private static final int[] MONTH_DAY = {0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};

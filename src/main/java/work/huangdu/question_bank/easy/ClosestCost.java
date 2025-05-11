@@ -47,8 +47,8 @@ import java.util.Set;
  * 1 <= baseCosts[i], toppingCosts[i] <= 10^4
  * 1 <= target <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/4
+ * @author huangdu
+ * @version 2022/12/4
  */
 public class ClosestCost {
     public int closestCost(int[] baseCosts, int[] toppingCosts, int target) {

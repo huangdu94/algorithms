@@ -22,8 +22,8 @@ import java.util.Set;
  * k 的范围是 [1, 10]。
  * k^n 最大可能为 4096。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/27 22:25
+ * @author huangdu
+ * @version 2020/8/27 22:25
  */
 public class CrackSafe {
     class Solution {

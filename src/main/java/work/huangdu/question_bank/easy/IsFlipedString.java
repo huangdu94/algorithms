@@ -14,8 +14,8 @@ package work.huangdu.question_bank.easy;
  * 说明:
  * 你能只调用一次检查子串的方法吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/29
+ * @author huangdu
+ * @version 2022/9/29
  */
 public class IsFlipedString {
     public boolean isFlipedString(String s1, String s2) {

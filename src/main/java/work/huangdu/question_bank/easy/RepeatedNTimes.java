@@ -26,7 +26,7 @@ import java.util.Set;
  * nums 由 n + 1 个 不同的 元素组成，且其中一个元素恰好重复 n 次
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/5/21
+ * @version 2022/5/21
  */
 public class RepeatedNTimes {
     public int repeatedNTimes(int[] nums) {

@@ -23,8 +23,8 @@ package work.huangdu.question_bank.medium;
  * firstLen + secondLen <= nums.length <= 1000
  * 0 <= nums[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/26
+ * @author huangdu
+ * @version 2023/4/26
  */
 public class MaxSumTwoNoOverlap {
     public int maxSumTwoNoOverlap(int[] nums, int firstLen, int secondLen) {

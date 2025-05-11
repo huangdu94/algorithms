@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * word 由小写英文字母组成
  * ch 是一个小写英文字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/2
+ * @author huangdu
+ * @version 2022/2/2
  */
 public class ReversePrefix {
         public String reversePrefix(String word, char ch) {

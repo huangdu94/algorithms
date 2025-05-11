@@ -17,7 +17,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= m, n <= 200
  * 0 <= grid[i][j] <= 200
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinPathSum {
     public int minPathSum(int[][] grid) {

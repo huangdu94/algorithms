@@ -37,8 +37,8 @@ package work.huangdu.question_bank.difficult;
  * 0 <= s.length, t.length <= 1000
  * s 和 t 由英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/17
+ * @author huangdu
+ * @version 2021/3/17
  * @see work.huangdu.question_bank.medium.LongestCommonSubsequence
  */
 public class NumDistinct {

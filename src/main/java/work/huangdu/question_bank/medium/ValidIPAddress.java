@@ -24,8 +24,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * queryIP 仅由英文字母，数字，字符 '.' 和 ':' 组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/30
+ * @author huangdu
+ * @version 2022/5/30
  */
 public class ValidIPAddress {
     public String validIPAddress(String queryIP) {

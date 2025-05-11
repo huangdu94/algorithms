@@ -34,7 +34,7 @@ package work.huangdu.question_bank.medium;
  * matrix[i][j] 要么是 0 要么是 1
  * 1 <= numSelect <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumRows {
     public int maximumRows(int[][] matrix, int numSelect) {

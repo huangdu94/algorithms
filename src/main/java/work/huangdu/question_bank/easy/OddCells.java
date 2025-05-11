@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * 0 <= ci < n
  * 进阶：你可以设计一个时间复杂度为 O(n + m + indices.length) 且仅用 O(n + m) 额外空间的算法来解决此问题吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/12
+ * @author huangdu
+ * @version 2022/7/12
  */
 public class OddCells {
     public int oddCells(int m, int n, int[][] indices) {

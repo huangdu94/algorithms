@@ -31,8 +31,8 @@ import java.util.List;
  * 函数允许被递归调用，直到运行结束。
  * 1 <= n <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/25 9:32
+ * @author huangdu
+ * @version 2020/10/25 9:32
  */
 public class ExclusiveTime {
     public int[] exclusiveTime(int n, List<String> logs) {

@@ -16,8 +16,8 @@ package work.huangdu.question_bank.medium;
  * s 仅由小写英文字母组成
  * 1 <= k <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/27
+ * @author huangdu
+ * @version 2021/2/27
  */
 public class LongestSubstring {
     private static final int LOWERCASE_LETTER_COUNT = 26;

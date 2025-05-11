@@ -21,8 +21,8 @@ import java.util.List;
  * 提示：
  * 1 <= n <= 10^7
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/9
+ * @author huangdu
+ * @version 2022/12/9
  */
 public class CheckPowersOfThree {
     public boolean checkPowersOfThree(int n) {

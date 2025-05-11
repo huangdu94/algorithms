@@ -22,7 +22,7 @@ import java.util.Map;
  * 1 <= nums.length <= 10^5
  * 1 <= nums[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumSum2 {
     public int maximumSum(int[] nums) {

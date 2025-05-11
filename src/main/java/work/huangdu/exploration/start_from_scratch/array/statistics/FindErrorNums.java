@@ -11,8 +11,8 @@ package work.huangdu.exploration.start_from_scratch.array.statistics;
  * 给定数组的长度范围是 [2, 10000]。
  * 给定的数组是无序的。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/14 15:15
+ * @author huangdu
+ * @version 2020/9/14 15:15
  */
 public class FindErrorNums {
     public int[] findErrorNums(int[] nums) {

@@ -23,8 +23,8 @@ import java.util.Deque;
  * 提示：
  * 树中至少有 2 个节点。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/12 15:49
+ * @author huangdu
+ * @version 2020/10/12 15:49
  */
 public class GetMinimumDifference {
     public int getMinimumDifference(TreeNode root) {

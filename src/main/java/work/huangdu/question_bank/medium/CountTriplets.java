@@ -29,8 +29,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= arr.length <= 300
  * 1 <= arr[i] <= 10^8
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/18
+ * @author huangdu
+ * @version 2021/5/18
  */
 public class CountTriplets {
     public int countTriplets(int[] arr) {

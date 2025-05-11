@@ -30,7 +30,7 @@ import java.util.Arrays;
  * 1 <= spells[i], potions[i] <= 10^5
  * 1 <= success <= 10^10
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SuccessfulPairs {
     public int[] successfulPairs(int[] spells, int[] potions, long success) {

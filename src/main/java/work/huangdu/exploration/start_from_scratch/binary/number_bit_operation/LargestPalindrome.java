@@ -11,8 +11,8 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 说明:
  * n 的取值范围为 [1,8]。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/5 13:35
+ * @author huangdu
+ * @version 2020/10/5 13:35
  */
 public class LargestPalindrome {
     public int largestPalindrome(int n) {

@@ -32,8 +32,8 @@ package work.huangdu.question_bank.easy;
  * *              otherwise return 0
  * *int guess(int num);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/5 22:14
+ * @author huangdu
+ * @version 2020/9/5 22:14
  */
 public class GuessNumber {
 

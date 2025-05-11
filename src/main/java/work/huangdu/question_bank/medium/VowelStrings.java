@@ -26,8 +26,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= queries.length <= 10^5
  * 0 <= queries[j][0] <= queries[j][1] < words.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/2
+ * @author huangdu
+ * @version 2023/6/2
  */
 public class VowelStrings {
     private static final boolean[] VOWEL = new boolean[128];

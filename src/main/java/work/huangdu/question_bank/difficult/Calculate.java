@@ -17,8 +17,8 @@ package work.huangdu.question_bank.difficult;
  * s 由数字、'+'、'-'、'('、')'、和 ' ' 组成
  * s 表示一个有效的表达式
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/10
+ * @author huangdu
+ * @version 2021/3/10
  */
 public class Calculate {
     private int n;

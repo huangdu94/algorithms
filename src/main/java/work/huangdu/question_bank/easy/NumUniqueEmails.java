@@ -29,7 +29,7 @@ import java.util.Set;
  * 本地名不会以 '+' 字符作为开头
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/6/4
+ * @version 2022/6/4
  */
 public class NumUniqueEmails {
     public int numUniqueEmails(String[] emails) {

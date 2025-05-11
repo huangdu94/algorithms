@@ -19,8 +19,8 @@ import java.util.Queue;
  * 15   7
  * 返回它的最大深度 3 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/6/22 17:00
+ * @author huangdu
+ * @version 2020/6/22 17:00
  */
 public class MaxDepth {
     public int maxDepth(TreeNode root) {

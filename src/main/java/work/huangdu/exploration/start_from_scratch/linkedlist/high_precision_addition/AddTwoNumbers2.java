@@ -15,8 +15,8 @@ import work.huangdu.data_structure.ListNode;
  * 输入：(7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
  * 输出：7 -> 8 -> 0 -> 7
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/29 12:56
+ * @author huangdu
+ * @version 2020/10/29 12:56
  */
 public class AddTwoNumbers2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

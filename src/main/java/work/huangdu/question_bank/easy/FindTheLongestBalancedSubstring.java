@@ -22,7 +22,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 50
  * '0' <= s[i] <= '1'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FindTheLongestBalancedSubstring {
     public int findTheLongestBalancedSubstring(String s) {

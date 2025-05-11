@@ -22,8 +22,8 @@ package work.huangdu.question_bank.medium;
  * properties[i].length == 2
  * 1 <= attacki, defensei <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/8
+ * @author huangdu
+ * @version 2022/2/8
  */
 public class NumberOfWeakCharacters {
     public int numberOfWeakCharacters(int[][] properties) {

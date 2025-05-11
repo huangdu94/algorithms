@@ -28,7 +28,7 @@ import java.util.List;
  * 1 <= s.length <= 100
  * words[i] 和 s 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class IsAcronym {
     public boolean isAcronym(List<String> words, String s) {

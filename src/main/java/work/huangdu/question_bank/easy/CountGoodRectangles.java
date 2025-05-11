@@ -20,8 +20,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= li, wi <= 10^9
  * li != wi
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/4
+ * @author huangdu
+ * @version 2022/2/4
  */
 public class CountGoodRectangles {
     public int countGoodRectangles(int[][] rectangles) {

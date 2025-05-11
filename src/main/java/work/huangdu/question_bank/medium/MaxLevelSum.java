@@ -25,7 +25,7 @@ import work.huangdu.data_structure.TreeNode;
  * -10^5 <= Node.val <= 10^5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/7/31
+ * @version 2022/7/31
  */
 public class MaxLevelSum {
     public int maxLevelSum(TreeNode root) {

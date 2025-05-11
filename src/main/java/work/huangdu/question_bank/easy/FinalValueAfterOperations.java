@@ -36,8 +36,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= operations.length <= 100
  * operations[i] 将会是 "++X"、"X++"、"--X" 或 "X--"
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/25
+ * @author huangdu
+ * @version 2022/12/25
  */
 public class FinalValueAfterOperations {
     public int finalValueAfterOperations(String[] operations) {

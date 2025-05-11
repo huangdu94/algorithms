@@ -34,7 +34,7 @@ package work.huangdu.question_bank.medium;
  * 2 <= n <= 10^5
  * 0 <= nextVisit[i] <= i
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FirstDayBeenInAllRooms {
     public int firstDayBeenInAllRooms(int[] nextVisit) {

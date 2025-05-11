@@ -19,8 +19,8 @@ package work.huangdu.question_bank.easy;
  * Alice 和 Bob 的到达日期都 早于或等于 他们的离开日期。
  * 题目测试用例所给出的日期均为 非闰年 的有效日期。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/17
+ * @author huangdu
+ * @version 2023/4/17
  */
 public class CountDaysTogether {
     private final int[] day = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};

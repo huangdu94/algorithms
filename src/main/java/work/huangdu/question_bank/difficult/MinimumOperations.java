@@ -24,8 +24,8 @@ import java.util.Set;
  * 1 <= nums.length <= 100
  * 0 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/24
+ * @author huangdu
+ * @version 2023/2/24
  */
 public class MinimumOperations {
     public int minimumOperations(int[] nums) {

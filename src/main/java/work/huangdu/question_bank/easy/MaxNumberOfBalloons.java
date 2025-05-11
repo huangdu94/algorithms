@@ -17,8 +17,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= text.length <= 10^4
  * text 全部由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/13
+ * @author huangdu
+ * @version 2022/2/13
  */
 public class MaxNumberOfBalloons {
     public int maxNumberOfBalloons(String text) {

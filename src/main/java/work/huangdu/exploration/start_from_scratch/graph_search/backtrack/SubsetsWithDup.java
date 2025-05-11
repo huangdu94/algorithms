@@ -18,8 +18,8 @@ import java.util.List;
  * 1 <= nums.length <= 10
  * -10 <= nums[i] <= 10
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/31
+ * @author huangdu
+ * @version 2021/3/31
  */
 public class SubsetsWithDup {
     class Solution {

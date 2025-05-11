@@ -19,8 +19,8 @@ import java.util.Queue;
  * 1 <= s.length <= 12
  * s 由小写英文字母、大写英文字母和数字组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/31
+ * @author huangdu
+ * @version 2022/10/31
  */
 public class LetterCasePermutation {
     public List<String> letterCasePermutation(String s) {

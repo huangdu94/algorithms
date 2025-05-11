@@ -28,7 +28,7 @@ package work.huangdu.question_bank.medium;
  * cost.length == n
  * 1 <= cost[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinIncrements {
     /*

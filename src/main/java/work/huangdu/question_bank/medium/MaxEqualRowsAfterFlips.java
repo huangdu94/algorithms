@@ -26,8 +26,8 @@ import java.util.Map;
  * 1 <= m, n <= 300
  * matrix[i][j] == 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/15
+ * @author huangdu
+ * @version 2023/5/15
  */
 public class MaxEqualRowsAfterFlips {
     public int maxEqualRowsAfterFlips(int[][] matrix) {

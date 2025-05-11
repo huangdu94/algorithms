@@ -28,8 +28,8 @@ import java.util.Queue;
  * 1 <= grid.length, grid[0].length <= 100
  * 0 <= grid[i][j] <=1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/18
+ * @author huangdu
+ * @version 2023/6/18
  */
 public class ClosedIsland {
     public int closedIsland(int[][] grid) {

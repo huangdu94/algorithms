@@ -11,8 +11,8 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 输入: "race a car"
  * 输出: false
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 17:06
+ * @author huangdu
+ * @version 2020/7/26 17:06
  */
 public class IsPalindrome {
     public boolean isPalindrome(String s) {

@@ -25,7 +25,7 @@ package work.huangdu.question_bank.medium;
  * 4 <= m * n <= 10^5
  * 1 <= grid[i][j] <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaxMoves {
     public int maxMoves(int[][] grid) {

@@ -33,8 +33,8 @@ import java.util.Set;
  * nums.length 是偶数。
  * 0 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/4
+ * @author huangdu
+ * @version 2023/6/4
  */
 public class DistinctAverages {
     public int distinctAverages(int[] nums) {

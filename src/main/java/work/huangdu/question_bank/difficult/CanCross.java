@@ -21,8 +21,8 @@ import java.util.Arrays;
  * 0 <= stones[i] <= 2^31 - 1
  * stones[0] == 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/29
+ * @author huangdu
+ * @version 2021/4/29
  */
 public class CanCross {
 /*    private int n;

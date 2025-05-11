@@ -18,8 +18,8 @@ import java.util.Map;
  * 1 <= nums.length <= 10^5
  * nums[i] 不是 0 就是 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/8 17:59
+ * @author huangdu
+ * @version 2020/11/8 17:59
  */
 public class FindMaxLength {
     // 遇到1加1，遇到0减1

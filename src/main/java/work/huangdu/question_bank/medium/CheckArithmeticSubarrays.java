@@ -34,8 +34,8 @@ import java.util.List;
  * 0 <= l[i] < r[i] < n
  * -10^5 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/23
+ * @author huangdu
+ * @version 2023/3/23
  */
 public class CheckArithmeticSubarrays {
     public List<Boolean> checkArithmeticSubarrays(int[] nums, int[] l, int[] r) {

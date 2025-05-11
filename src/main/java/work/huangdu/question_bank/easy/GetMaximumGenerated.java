@@ -34,8 +34,8 @@ import java.util.Arrays;
  * 提示：
  * 0 <= n <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/23
+ * @author huangdu
+ * @version 2021/8/23
  */
 public class GetMaximumGenerated {
     private static final int n = 102;

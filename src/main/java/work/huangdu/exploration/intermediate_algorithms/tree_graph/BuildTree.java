@@ -21,8 +21,8 @@ import work.huangdu.data_structure.TreeNode;
  * /  \
  * 15   7
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/5 19:31
+ * @author huangdu
+ * @version 2020/7/5 19:31
  */
 public class BuildTree {
     public TreeNode buildTree(int[] preorder, int[] inorder) {

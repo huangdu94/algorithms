@@ -40,8 +40,8 @@ import java.util.Arrays;
  * 1 <= cost[i] <= 5000
  * 1 <= target <= 5000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/12
+ * @author huangdu
+ * @version 2021/6/12
  */
 public class LargestNumber {
     // TODO 没做出来需要复习

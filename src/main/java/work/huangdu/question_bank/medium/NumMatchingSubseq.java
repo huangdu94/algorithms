@@ -23,8 +23,8 @@ import java.util.Queue;
  * 1 <= words[i].length <= 50
  * words[i]和 s 都只由小写字母组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/17
+ * @author huangdu
+ * @version 2022/11/17
  */
 public class NumMatchingSubseq {
     public int numMatchingSubseq(String s, String[] words) {

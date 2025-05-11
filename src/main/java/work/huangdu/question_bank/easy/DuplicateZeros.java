@@ -20,7 +20,7 @@ import java.util.Arrays;
  * 0 <= arr[i] <= 9
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/6/17
+ * @version 2022/6/17
  */
 public class DuplicateZeros {
     public void duplicateZeros(int[] arr) {

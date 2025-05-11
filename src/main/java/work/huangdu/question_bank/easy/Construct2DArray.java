@@ -35,8 +35,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= original[i] <= 10^5
  * 1 <= m, n <= 4 * 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/4
+ * @author huangdu
+ * @version 2022/1/4
  */
 public class Construct2DArray {
     public int[][] construct2DArray(int[] original, int m, int n) {

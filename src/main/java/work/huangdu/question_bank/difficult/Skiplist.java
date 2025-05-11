@@ -34,8 +34,8 @@ package work.huangdu.question_bank.difficult;
  * 0 <= num, target <= 2 * 10^4
  * 调用search, add,  erase操作次数不大于 5 * 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/6
+ * @author huangdu
+ * @version 2022/9/6
  * @see work.huangdu.data_structure.Skiplist
  */
 class Skiplist {

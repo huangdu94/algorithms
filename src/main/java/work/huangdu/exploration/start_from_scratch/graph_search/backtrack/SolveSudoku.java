@@ -19,8 +19,8 @@ import java.util.List;
  * 你可以假设给定的数独只有唯一解。
  * 给定数独永远是 9x9 形式的。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/15 9:54
+ * @author huangdu
+ * @version 2020/9/15 9:54
  */
 public class SolveSudoku {
     private char[][] board;

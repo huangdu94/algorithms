@@ -34,7 +34,7 @@ package work.huangdu.question_bank.easy;
  * s 由小写英文字母组成
  * s[0] != 'i'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FinalString {
     public String finalString(String s) {

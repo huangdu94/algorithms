@@ -19,7 +19,7 @@ import work.huangdu.data_structure.TreeNode;
  * 树的节点数在 [1, 10^4] 范围内
  * 0 <= Node.val <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class Rob3 {
     public int rob(TreeNode root) {

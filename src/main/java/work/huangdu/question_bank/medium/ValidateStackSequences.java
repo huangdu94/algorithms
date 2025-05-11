@@ -20,8 +20,8 @@ package work.huangdu.question_bank.medium;
  * popped.length == pushed.length
  * popped 是 pushed 的一个排列
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/31
+ * @author huangdu
+ * @version 2022/8/31
  */
 public class ValidateStackSequences {
     public boolean validateStackSequences(int[] pushed, int[] popped) {

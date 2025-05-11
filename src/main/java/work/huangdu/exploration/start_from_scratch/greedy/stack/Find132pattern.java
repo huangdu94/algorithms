@@ -22,8 +22,8 @@ import java.util.List;
  * 输出: True
  * 解释: 序列中有 3 个132模式的的子序列: [-1, 3, 2], [-1, 3, 0] 和 [-1, 2, 0].
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/21 14:34
+ * @author huangdu
+ * @version 2020/11/21 14:34
  */
 public class Find132pattern {
     public boolean find132pattern(int[] nums) {

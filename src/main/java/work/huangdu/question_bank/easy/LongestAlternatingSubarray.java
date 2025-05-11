@@ -32,7 +32,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums[i] <= 100
  * 1 <= threshold <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class LongestAlternatingSubarray {
     public int longestAlternatingSubarray(int[] nums, int threshold) {

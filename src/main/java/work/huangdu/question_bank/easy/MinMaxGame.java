@@ -27,8 +27,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums[i] <= 10^9
  * nums.length 是 2 的幂
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/16
+ * @author huangdu
+ * @version 2023/1/16
  */
 public class MinMaxGame {
     public int minMaxGame(int[] nums) {

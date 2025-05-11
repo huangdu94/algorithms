@@ -21,8 +21,8 @@ package work.huangdu.question_bank.easy;
  * 3 <= n <= 100
  * 1 <= grid[i][j] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/1
+ * @author huangdu
+ * @version 2023/3/1
  */
 public class LargestLocal {
     public int[][] largestLocal(int[][] grid) {

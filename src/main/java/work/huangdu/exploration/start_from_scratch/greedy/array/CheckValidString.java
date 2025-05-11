@@ -20,8 +20,8 @@ package work.huangdu.exploration.start_from_scratch.greedy.array;
  * 注意:
  * 字符串大小将在 [1，100] 范围内。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/15 16:58
+ * @author huangdu
+ * @version 2020/11/15 16:58
  */
 public class CheckValidString {
     // 算法思路，从左到右来一遍，再从右到左来一遍

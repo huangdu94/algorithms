@@ -26,8 +26,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= target[i] <= 1000
  * 1 <= arr[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/24
+ * @author huangdu
+ * @version 2022/8/24
  */
 public class CanBeEqual {
     public boolean canBeEqual(int[] target, int[] arr) {

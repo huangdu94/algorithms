@@ -26,8 +26,8 @@ import work.huangdu.exploration.start_from_scratch.hashmap.index.TwoSum2;
  * -10^9 <= nums[i] <= 10^9
  * -10^9 <= target <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/5 12:07
+ * @author huangdu
+ * @version 2020/10/5 12:07
  * @see work.huangdu.exploration.primary_algorithms.array.TwoSum
  * @see TwoSum2
  * @see ThreeSum

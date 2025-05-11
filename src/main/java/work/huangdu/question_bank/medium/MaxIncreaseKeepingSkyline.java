@@ -26,8 +26,8 @@ package work.huangdu.question_bank.medium;
  * 2 <= n <= 50
  * 0 <= grid[r][c] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/13
+ * @author huangdu
+ * @version 2021/12/13
  */
 public class MaxIncreaseKeepingSkyline {
     public int maxIncreaseKeepingSkyline(int[][] grid) {

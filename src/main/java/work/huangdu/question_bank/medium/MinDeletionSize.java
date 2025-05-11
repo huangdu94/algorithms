@@ -38,8 +38,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= strs[i].length <= 1000
  * strs[i] 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/12
+ * @author huangdu
+ * @version 2022/5/12
  */
 public class MinDeletionSize {
     public int minDeletionSize(String[] strs) {

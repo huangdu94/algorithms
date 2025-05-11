@@ -23,7 +23,7 @@ import java.util.PriorityQueue;
  * 1 <= nums.length, k <= 10^5
  * -10^4 <= nums[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaxResult {
     public int maxResult(int[] nums, int k) {

@@ -18,8 +18,8 @@ package work.huangdu.question_bank.difficult;
  * 说明:
  * n 的范围是 [1, 1000] 并且 k 的范围是 [0, 1000]。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/11/18
+ * @author huangdu
+ * @version 2021/11/18
  */
 public class KInversePairs {
     /**

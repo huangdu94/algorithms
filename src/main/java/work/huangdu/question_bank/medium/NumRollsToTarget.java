@@ -25,7 +25,7 @@ import java.util.Arrays;
  * 1 <= n, k <= 30
  * 1 <= target <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class NumRollsToTarget {
     private int k;

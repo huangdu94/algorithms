@@ -31,8 +31,8 @@ import java.util.Queue;
  * 0 <= rooms[i].length <= 1000
  * 所有房间中的钥匙数量总计不超过 3000。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/31 11:37
+ * @author huangdu
+ * @version 2020/8/31 11:37
  */
 public class CanVisitAllRooms {
     private boolean[] v;

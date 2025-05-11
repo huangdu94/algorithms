@@ -21,8 +21,8 @@ package work.huangdu.question_bank.medium;
  * nums[i] 不是 0 就是 1
  * 0 <= goal <= nums.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/8
+ * @author huangdu
+ * @version 2021/7/8
  */
 public class NumSubarraysWithSum {
     // TODO 尝试滑动窗口

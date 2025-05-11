@@ -31,7 +31,7 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 1 <= p <= 60
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinNonZeroProduct {
     private static final int MOD = 1_000_000_007;

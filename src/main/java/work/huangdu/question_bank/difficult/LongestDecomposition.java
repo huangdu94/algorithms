@@ -23,8 +23,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= text.length <= 1000
  * text 仅由小写英文字符组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/12
+ * @author huangdu
+ * @version 2023/4/12
  */
 public class LongestDecomposition {
     private String text;

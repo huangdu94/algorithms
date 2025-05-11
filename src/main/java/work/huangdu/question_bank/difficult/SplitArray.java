@@ -24,7 +24,7 @@ import java.util.Arrays;
  * 0 <= nums[i] <= 10^6
  * 1 <= k <= min(50, nums.length)
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SplitArray {
     public int splitArray(int[] nums, int k) {

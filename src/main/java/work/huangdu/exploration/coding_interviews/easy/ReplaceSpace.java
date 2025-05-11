@@ -9,8 +9,8 @@ package work.huangdu.exploration.coding_interviews.easy;
  * 限制：
  * 0 <= s 的长度 <= 10000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/23
+ * @author huangdu
+ * @version 2021/6/23
  */
 public class ReplaceSpace {
     public String replaceSpace(String s) {

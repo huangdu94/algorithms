@@ -25,8 +25,8 @@ import java.util.List;
  * 图中可能包含自环。
  * 图中边的数目在范围 [1, 4 * 10^4] 内。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/5
+ * @author huangdu
+ * @version 2021/8/5
  */
 public class EventualSafeNodes {
     // TODO 图遍历的三色标记法

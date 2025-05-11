@@ -17,8 +17,8 @@ package work.huangdu.question_bank.difficult;
  * 其中，只有整数3违反规则（有两个连续的1），其他5个满足规则。
  * 说明: 1 <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/11
+ * @author huangdu
+ * @version 2021/9/11
  */
 public class FindIntegers {
     // TODO  复制粘贴需要复习

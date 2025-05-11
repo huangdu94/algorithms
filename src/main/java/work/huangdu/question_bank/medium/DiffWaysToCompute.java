@@ -27,8 +27,8 @@ import java.util.List;
  * expression 由数字和算符 '+'、'-' 和 '*' 组成。
  * 输入表达式中的所有整数值在范围 [0, 99]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/12
+ * @author huangdu
+ * @version 2022/7/12
  */
 public class DiffWaysToCompute {
 

@@ -26,8 +26,8 @@ import work.huangdu.data_structure.TreeNode;
  * *4   4
  * 返回 false 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/8 22:40
+ * @author huangdu
+ * @version 2020/8/8 22:40
  */
 public class IsBalanced {
     public boolean isBalanced(TreeNode root) {

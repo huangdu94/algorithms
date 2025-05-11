@@ -28,8 +28,8 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sl
  * -10^4 <= nums[i] <= 10^4
  * nums 按递增顺序排列
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/13 10:24
+ * @author huangdu
+ * @version 2020/12/13 10:24
  */
 public class removeDuplicates2 {
     public int removeDuplicates(int[] nums) {

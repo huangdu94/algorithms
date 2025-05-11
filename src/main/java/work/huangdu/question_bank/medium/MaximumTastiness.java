@@ -28,8 +28,8 @@ import java.util.Arrays;
  * 1 <= price[i] <= 10^9
  * 2 <= k <= price.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/1
+ * @author huangdu
+ * @version 2023/6/1
  */
 public class MaximumTastiness {
     public int maximumTastiness(int[] price, int k) {

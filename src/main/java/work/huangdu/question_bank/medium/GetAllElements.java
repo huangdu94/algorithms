@@ -18,8 +18,8 @@ import work.huangdu.data_structure.TreeNode;
  * 每棵树的节点数在 [0, 5000] 范围内
  * -10^5 <= Node.val <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/1
+ * @author huangdu
+ * @version 2022/5/1
  */
 public class GetAllElements {
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {

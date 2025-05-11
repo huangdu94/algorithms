@@ -37,8 +37,8 @@ package work.huangdu.question_bank.easy;
  * sentence 中的单词由单个空格进行分隔
  * 不含任何前导或尾随空格
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/30
+ * @author huangdu
+ * @version 2023/6/30
  */
 public class IsCircularSentence {
     public boolean isCircularSentence(String sentence) {

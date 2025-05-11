@@ -41,8 +41,8 @@ import java.util.TreeMap;
  * customerNamei 和 foodItemi 由大小写英文字母及空格字符 ' ' 组成。
  * tableNumberi 是 1 到 500 范围内的整数。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/6
+ * @author huangdu
+ * @version 2021/7/6
  */
 public class DisplayTable {
     public List<List<String>> displayTable(List<List<String>> orders) {

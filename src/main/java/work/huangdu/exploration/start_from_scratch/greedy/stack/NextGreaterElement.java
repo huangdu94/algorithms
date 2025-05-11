@@ -24,8 +24,8 @@ import java.util.Map;
  * nums1和nums2中所有元素是唯一的。
  * nums1和nums2 的数组大小都不超过1000。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/20 13:23
+ * @author huangdu
+ * @version 2020/11/20 13:23
  */
 public class NextGreaterElement {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {

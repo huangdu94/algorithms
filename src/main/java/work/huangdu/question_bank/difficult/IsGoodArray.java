@@ -1,8 +1,8 @@
 package work.huangdu.question_bank.difficult;
 
 /**
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/15
+ * @author huangdu
+ * @version 2023/2/15
  */
 public class IsGoodArray {
     // 裴蜀定理

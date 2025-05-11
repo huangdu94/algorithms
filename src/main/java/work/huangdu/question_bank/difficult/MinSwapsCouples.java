@@ -19,8 +19,8 @@ import java.util.*;
  * len(row) 是偶数且数值在 [4, 60]范围内。
  * 可以保证row 是序列 0...len(row)-1 的一个全排列。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/14
+ * @author huangdu
+ * @version 2021/2/14
  */
 public class MinSwapsCouples {
     // 1. 并查集

@@ -21,7 +21,7 @@ import java.util.Arrays;
  * s 仅由 '0' 和 '1' 组成
  * s 中至少包含一个 '1'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumOddBinaryNumber {
     public String maximumOddBinaryNumber(String s) {

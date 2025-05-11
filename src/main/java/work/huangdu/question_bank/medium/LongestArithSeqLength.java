@@ -26,8 +26,8 @@ import java.util.Map;
  * 2 <= nums.length <= 1000
  * 0 <= nums[i] <= 500
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/23
+ * @author huangdu
+ * @version 2023/4/23
  */
 public class LongestArithSeqLength {
     public int longestArithSeqLength(int[] nums) {

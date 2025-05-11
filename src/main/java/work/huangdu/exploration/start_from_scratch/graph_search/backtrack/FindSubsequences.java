@@ -14,8 +14,8 @@ package work.huangdu.exploration.start_from_scratch.graph_search.backtrack;
  * 1 <= nums.length <= 15
  * -100 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/28
+ * @author huangdu
+ * @version 2022/9/28
  * @see work.huangdu.question_bank.medium.FindSubsequences
  */
 public class FindSubsequences {

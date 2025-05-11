@@ -30,8 +30,8 @@ import java.util.Arrays;
  * 1 <= nums.length <= 100
  * 0 <= nums[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/13
+ * @author huangdu
+ * @version 2022/9/13
  */
 public class SpecialArray {
     public int specialArray(int[] nums) {

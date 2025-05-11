@@ -19,8 +19,8 @@ package work.huangdu.exploration.primary_algorithms.other;
  * 进阶:
  * 如果多次调用这个函数，你将如何优化你的算法？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/1 21:21
+ * @author huangdu
+ * @version 2020/7/1 21:21
  */
 public class ReverseBits {
     // you need treat n as an unsigned value

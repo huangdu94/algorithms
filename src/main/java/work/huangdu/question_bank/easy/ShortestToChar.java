@@ -21,8 +21,8 @@ package work.huangdu.question_bank.easy;
  * s[i] 和 c 均为小写英文字母
  * 题目数据保证 c 在 s 中至少出现一次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/19
+ * @author huangdu
+ * @version 2022/4/19
  */
 public class ShortestToChar {
     public int[] shortestToChar(String s, char c) {

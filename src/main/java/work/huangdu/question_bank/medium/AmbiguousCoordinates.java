@@ -28,8 +28,8 @@ import java.util.List;
  * 4 <= S.length <= 12.
  * S[0] = "(", S[S.length - 1] = ")", 且字符串 S 中的其他元素都是数字。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/7
+ * @author huangdu
+ * @version 2022/11/7
  */
 public class AmbiguousCoordinates {
     public List<String> ambiguousCoordinates(String s) {

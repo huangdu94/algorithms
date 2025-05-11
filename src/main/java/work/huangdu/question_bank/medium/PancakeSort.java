@@ -33,8 +33,8 @@ import java.util.List;
  * 1 <= arr[i] <= arr.length
  * arr 中的所有整数互不相同（即，arr 是从 1 到 arr.length 整数的一个排列）
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/19
+ * @author huangdu
+ * @version 2022/2/19
  */
 public class PancakeSort {
     public List<Integer> pancakeSort(int[] arr) {

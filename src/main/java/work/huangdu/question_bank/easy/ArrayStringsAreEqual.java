@@ -23,8 +23,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= sum(word1[i].length), sum(word2[i].length) <= 10^3
  * word1[i] 和 word2[i] 由小写字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/1
+ * @author huangdu
+ * @version 2022/11/1
  */
 public class ArrayStringsAreEqual {
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {

@@ -27,7 +27,7 @@ package work.huangdu.question_bank.medium;
  * 所有的坐标都是整数。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/1/28
+ * @version 2023/1/28
  */
 public class CountPoints {
     public int[] countPoints(int[][] points, int[][] queries) {

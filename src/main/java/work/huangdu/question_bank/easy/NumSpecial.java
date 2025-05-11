@@ -35,8 +35,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= rows, cols <= 100
  * mat[i][j] 是 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/4
+ * @author huangdu
+ * @version 2022/9/4
  */
 public class NumSpecial {
     public int numSpecial(int[][] mat) {

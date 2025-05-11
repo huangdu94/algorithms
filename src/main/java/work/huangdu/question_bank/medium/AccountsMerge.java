@@ -29,8 +29,8 @@ import java.util.Set;
  * accounts[i]的长度将在[1，10]的范围内。
  * accounts[i][j]的长度将在[1，30]的范围内。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/18
+ * @author huangdu
+ * @version 2021/1/18
  */
 public class AccountsMerge {
     // 最优解 哈希表+并查集

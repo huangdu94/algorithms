@@ -26,8 +26,8 @@ import java.util.Arrays;
  * 1 <= numberOfBoxesi, numberOfUnitsPerBoxi <= 1000
  * 1 <= truckSize <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/17
+ * @author huangdu
+ * @version 2022/11/17
  */
 public class MaximumUnits {
     public int maximumUnits(int[][] boxTypes, int truckSize) {

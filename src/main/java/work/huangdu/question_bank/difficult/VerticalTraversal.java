@@ -45,8 +45,8 @@ import work.huangdu.data_structure.TreeNode;
  * 树中结点数目总数在范围 [1, 1000] 内
  * 0 <= Node.val <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/31
+ * @author huangdu
+ * @version 2021/7/31
  */
 public class VerticalTraversal {
     public List<List<Integer>> verticalTraversal(TreeNode root) {

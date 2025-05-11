@@ -1,8 +1,8 @@
 package work.huangdu.specific.union_find_set;
 
 /**
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/27
+ * @author huangdu
+ * @version 2021/2/27
  */
 public class QuickFindUnionFindSet extends AbstractUnionFindSet {
     public QuickFindUnionFindSet(int n) {

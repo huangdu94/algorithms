@@ -10,7 +10,7 @@ import java.util.*;
  * 说明: 递归法很简单，你可以使用迭代法完成此题吗?
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2021/2/6
+ * @version 2021/2/6
  */
 public class postorderN {
     // TODO 未提交

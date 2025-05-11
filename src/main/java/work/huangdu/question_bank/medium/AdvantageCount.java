@@ -18,8 +18,8 @@ import java.util.TreeMap;
  * nums2.length == nums1.length
  * 0 <= nums1[i], nums2[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/8
+ * @author huangdu
+ * @version 2022/10/8
  */
 public class AdvantageCount {
     public int[] advantageCount(int[] nums1, int[] nums2) {

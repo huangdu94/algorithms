@@ -27,8 +27,8 @@ import java.util.Set;
  * 1 <= nums.length <= 2 * 10^4
  * 0 <= nums[i] <= 2^31 - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/16
+ * @author huangdu
+ * @version 2021/5/16
  */
 public class FindMaximumXOR {
     public int findMaximumXOR(int[] nums) {

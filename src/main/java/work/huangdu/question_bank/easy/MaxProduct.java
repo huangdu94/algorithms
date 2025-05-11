@@ -19,8 +19,8 @@ package work.huangdu.question_bank.easy;
  * 2 <= nums.length <= 500
  * 1 <= nums[i] <= 10^3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/26
+ * @author huangdu
+ * @version 2022/8/26
  */
 public class MaxProduct {
     public int maxProduct(int[] nums) {

@@ -20,8 +20,8 @@ import java.util.Arrays;
  * p1.length == p2.length == p3.length == p4.length == 2
  * -10^4 <= xi, yi <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/29
+ * @author huangdu
+ * @version 2022/7/29
  */
 public class ValidSquare {
     public boolean validSquare(int[] p1, int[] p2, int[] p3, int[] p4) {

@@ -49,8 +49,8 @@ import java.util.Set;
  * 1 <= a <= 9
  * 1 <= b <= s.length - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/19
+ * @author huangdu
+ * @version 2023/3/19
  */
 public class FindLexSmallestString {
     private int n;

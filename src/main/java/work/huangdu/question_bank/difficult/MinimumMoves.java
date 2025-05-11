@@ -37,8 +37,8 @@ import java.util.Queue;
  * 0 <= grid[i][j] <= 1
  * 蛇保证从空单元格开始出发。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/6
+ * @author huangdu
+ * @version 2023/2/6
  */
 public class MinimumMoves {
     public int minimumMoves(int[][] grid) {

@@ -34,8 +34,8 @@ import java.util.Set;
  * 提示：
  * 1 <= n <= 16
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/8
+ * @author huangdu
+ * @version 2022/1/8
  */
 public class GrayCode {
     public List<Integer> grayCode(int n) {

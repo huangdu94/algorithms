@@ -25,8 +25,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= stones.length <= 30
  * 1 <= stones[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/8
+ * @author huangdu
+ * @version 2021/6/8
  */
 public class LastStoneWeightII {
     // TODO 背包问题 需要复习

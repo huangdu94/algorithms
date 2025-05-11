@@ -54,8 +54,8 @@ import java.util.Set;
  * board 和 hand 由字符 'R'、'Y'、'B'、'G' 和 'W' 组成
  * 桌面上一开始的球中，不会有三个及三个以上颜色相同且连着的球
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/11/18
+ * @author huangdu
+ * @version 2021/11/18
  */
 public class FindMinStep {
     private static final int COLOR_KIND = 5;

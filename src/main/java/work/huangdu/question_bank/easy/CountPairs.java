@@ -31,7 +31,7 @@ import java.util.List;
  * 1 <= nums.length == n <= 50
  * -50 <= nums[i], target <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CountPairs {
     public int countPairs(List<Integer> nums, int target) {

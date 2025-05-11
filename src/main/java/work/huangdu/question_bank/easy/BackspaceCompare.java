@@ -27,8 +27,8 @@ package work.huangdu.question_bank.easy;
  * 进阶：
  * 你可以用 O(N) 的时间复杂度和 O(1) 的空间复杂度解决该问题吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/19 15:14
+ * @author huangdu
+ * @version 2020/10/19 15:14
  */
 public class BackspaceCompare {
     // 暴力 时间复杂度o(n) 空间复杂度o(n)

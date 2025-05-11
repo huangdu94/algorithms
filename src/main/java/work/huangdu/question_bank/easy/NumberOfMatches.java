@@ -26,8 +26,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 200
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/25
+ * @author huangdu
+ * @version 2022/1/25
  */
 public class NumberOfMatches {
     public int numberOfMatches(int n) {

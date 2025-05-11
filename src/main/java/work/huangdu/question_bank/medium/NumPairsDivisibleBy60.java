@@ -19,8 +19,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= time.length <= 6 * 10^4
  * 1 <= time[i] <= 500
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/8
+ * @author huangdu
+ * @version 2023/5/8
  */
 public class NumPairsDivisibleBy60 {
     public int numPairsDivisibleBy60(int[] time) {

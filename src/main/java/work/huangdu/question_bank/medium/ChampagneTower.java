@@ -21,8 +21,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= poured <= 10^9
  * 0 <= query_glass <= query_row < 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/21
+ * @author huangdu
+ * @version 2022/11/21
  */
 public class ChampagneTower {
     public double champagneTower(int poured, int query_row, int query_glass) {

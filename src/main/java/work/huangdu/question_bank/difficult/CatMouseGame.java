@@ -29,8 +29,8 @@ package work.huangdu.question_bank.difficult;
  * graph[i] 互不相同
  * 猫和老鼠在游戏中总是移动
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/4
+ * @author huangdu
+ * @version 2022/1/4
  */
 public class CatMouseGame {
     private static final int DRAW = 0;

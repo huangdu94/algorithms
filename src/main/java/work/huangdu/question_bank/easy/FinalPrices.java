@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= prices.length <= 500
  * 1 <= prices[i] <= 10^3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/1
+ * @author huangdu
+ * @version 2022/9/1
  */
 public class FinalPrices {
     public int[] finalPrices(int[] prices) {

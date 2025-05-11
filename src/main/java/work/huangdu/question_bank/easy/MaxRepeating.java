@@ -21,8 +21,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= word.length <= 100
  * sequence 和 word 都只包含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/4
+ * @author huangdu
+ * @version 2022/11/4
  */
 public class MaxRepeating {
     public int maxRepeating(String sequence, String word) {

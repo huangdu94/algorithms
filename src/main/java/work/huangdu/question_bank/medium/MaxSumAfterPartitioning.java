@@ -19,8 +19,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= arr[i] <= 10^9
  * 1 <= k <= arr.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/19
+ * @author huangdu
+ * @version 2023/4/19
  */
 public class MaxSumAfterPartitioning {
     public int maxSumAfterPartitioning(int[] arr, int k) {

@@ -21,8 +21,8 @@ import java.util.TreeMap;
  * 0 <= hand[i] <= 10^9
  * 1 <= groupSize <= hand.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/30
+ * @author huangdu
+ * @version 2021/12/30
  */
 public class IsNStraightHand {
     public boolean isNStraightHand(int[] hand, int groupSize) {

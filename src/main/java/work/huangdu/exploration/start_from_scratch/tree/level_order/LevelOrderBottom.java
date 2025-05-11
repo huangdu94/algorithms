@@ -21,8 +21,8 @@ import java.util.*;
  * [3]
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/8 22:25
+ * @author huangdu
+ * @version 2020/8/8 22:25
  */
 public class LevelOrderBottom {
     private final List<List<Integer>> list = new ArrayList<>();

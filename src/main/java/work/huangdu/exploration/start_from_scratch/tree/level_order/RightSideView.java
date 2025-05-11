@@ -20,8 +20,8 @@ import java.util.Queue;
  * *  \     \
  * *   5     4       <---
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/4 10:20
+ * @author huangdu
+ * @version 2021/1/4 10:20
  */
 public class RightSideView {
     public List<Integer> rightSideView(TreeNode root) {

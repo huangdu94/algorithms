@@ -26,8 +26,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= nums.length <= 10^5
  * 0 <= nums[i] < nums.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/2
+ * @author huangdu
+ * @version 2022/4/2
  */
 public class BestRotation {
     /*

@@ -22,8 +22,8 @@ import java.util.Set;
  * s.length 是偶数
  * s 由 大写和小写 字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/11
+ * @author huangdu
+ * @version 2022/11/11
  */
 public class HalvesAreAlike {
     private static final Set<Character> vowelSet = new HashSet<>(12);

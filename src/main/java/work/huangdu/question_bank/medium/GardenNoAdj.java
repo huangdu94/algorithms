@@ -32,8 +32,8 @@ import java.util.List;
  * xi != yi
  * 每个花园 最多 有 3 条路径可以进入或离开
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/15
+ * @author huangdu
+ * @version 2023/4/15
  */
 public class GardenNoAdj {
     public int[] gardenNoAdj(int n, int[][] paths) {

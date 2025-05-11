@@ -18,8 +18,8 @@ import java.util.Arrays;
  * 1 <= cnt <= cards.length <= 10^5
  * 1 <= cards[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/26
+ * @author huangdu
+ * @version 2022/4/26
  */
 public class MaxmiumScore {
     public int maxmiumScore(int[] cards, int cnt) {

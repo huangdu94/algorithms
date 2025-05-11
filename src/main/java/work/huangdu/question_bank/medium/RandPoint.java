@@ -22,7 +22,7 @@ package work.huangdu.question_bank.medium;
  * randPoint 最多被调用 3 * 10^4 次
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/6/5
+ * @version 2022/6/5
  */
 public class RandPoint {
     // 直接使用拒绝采样更简单

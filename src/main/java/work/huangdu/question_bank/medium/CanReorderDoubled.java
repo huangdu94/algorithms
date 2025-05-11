@@ -18,8 +18,8 @@ package work.huangdu.question_bank.medium;
  * arr.length 是偶数
  * -10^5 <= arr[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/1
+ * @author huangdu
+ * @version 2022/4/1
  */
 public class CanReorderDoubled {
     public boolean canReorderDoubled(int[] arr) {

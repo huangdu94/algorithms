@@ -23,8 +23,8 @@ package work.huangdu.question_bank.easy;
  * 3 <= n <= 100
  * 0 <= grid[i][j] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/31
+ * @author huangdu
+ * @version 2023/1/31
  */
 public class CheckXMatrix {
     public boolean checkXMatrix(int[][] grid) {

@@ -39,8 +39,8 @@ import java.util.Set;
  * board 是一个如上所述的 2 x 3 的数组.
  * board[i][j] 是一个 [0, 1, 2, 3, 4, 5] 的排列.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/27
+ * @author huangdu
+ * @version 2021/6/27
  */
 public class SlidingPuzzle {
     // TODO 可尝试启发式搜索

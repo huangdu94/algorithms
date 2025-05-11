@@ -25,8 +25,8 @@ import work.huangdu.data_structure.ListNode;
  * 进阶：
  * 你是否可以不用额外空间解决此题？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/10 10:02
+ * @author huangdu
+ * @version 2020/10/10 10:02
  */
 public class DetectCycle {
     // 使用额外空间

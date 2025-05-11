@@ -20,8 +20,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= nums[i] <= 10^4
  * 1 <= k <= nums.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/28
+ * @author huangdu
+ * @version 2022/11/28
  */
 public class LargestSumOfAverages {
     // TODO 复习动态规划

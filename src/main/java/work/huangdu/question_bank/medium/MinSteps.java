@@ -20,8 +20,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 1 <= n <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/19
+ * @author huangdu
+ * @version 2021/9/19
  */
 public class MinSteps {
     private int minStep;

@@ -33,7 +33,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= n <= 10^9
  * 1 <= target <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinimumPossibleSum {
     // 两部分组成。 [1,...,x] x+x+1 >= target  [target,...,n-x+target-1]

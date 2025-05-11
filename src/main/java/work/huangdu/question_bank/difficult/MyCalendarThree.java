@@ -30,8 +30,8 @@ import java.util.TreeMap;
  * 0 <= start < end <= 10^9
  * 每个测试用例，调用 book 函数最多不超过 400次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/6
+ * @author huangdu
+ * @version 2022/6/6
  */
 public class MyCalendarThree {
     // TODO 线段树需要复习。

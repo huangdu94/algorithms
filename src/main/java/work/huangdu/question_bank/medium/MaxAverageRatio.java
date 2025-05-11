@@ -22,7 +22,7 @@ import java.util.PriorityQueue;
  * 1 <= extraStudents <= 10^5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/2/19
+ * @version 2023/2/19
  */
 public class MaxAverageRatio {
     public double maxAverageRatio(int[][] classes, int extraStudents) {

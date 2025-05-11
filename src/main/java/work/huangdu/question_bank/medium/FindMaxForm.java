@@ -20,8 +20,8 @@ package work.huangdu.question_bank.medium;
  * strs[i] 仅由 '0' 和 '1' 组成
  * 1 <= m, n <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/7
+ * @author huangdu
+ * @version 2021/6/7
  */
 public class FindMaxForm {
     // TODO 需要复习

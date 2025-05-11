@@ -15,7 +15,7 @@ package work.huangdu.question_bank.medium;
  * grid[i][j] 为 0 或 1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/2/19
+ * @version 2023/2/19
  */
 public class Largest1BorderedSquare {
     public int largest1BorderedSquare(int[][] grid) {

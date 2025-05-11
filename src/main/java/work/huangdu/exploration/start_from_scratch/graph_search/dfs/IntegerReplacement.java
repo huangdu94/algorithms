@@ -21,8 +21,8 @@ package work.huangdu.exploration.start_from_scratch.graph_search.dfs;
  * 提示：
  * 1 <= n <= 2^31 - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/3/23
+ * @author huangdu
+ * @version 2021/3/23
  */
 public class IntegerReplacement {
 

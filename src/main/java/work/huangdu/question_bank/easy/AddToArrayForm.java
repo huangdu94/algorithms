@@ -1,7 +1,5 @@
 package work.huangdu.question_bank.easy;
 
-import sun.plugin.javascript.navig.Link;
-
 import java.util.*;
 
 /**
@@ -30,8 +28,8 @@ import java.util.*;
  * 0 <= K <= 10000
  * 如果 A.length > 1，那么 A[0] != 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/22
+ * @author huangdu
+ * @version 2021/1/22
  */
 public class AddToArrayForm {
     public List<Integer> addToArrayForm2(int[] A, int K) {

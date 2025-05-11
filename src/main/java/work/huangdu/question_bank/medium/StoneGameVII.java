@@ -26,7 +26,7 @@ import java.util.Arrays;
  * 2 <= n <= 1000
  * 1 <= stones[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class StoneGameVII {
     private int[][] memo;

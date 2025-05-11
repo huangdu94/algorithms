@@ -6,7 +6,7 @@ import java.util.List;
 import work.huangdu.data_structure.TreeNode;
 
 /**
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class ReplaceValueInTree {
     public TreeNode replaceValueInTree(TreeNode root) {

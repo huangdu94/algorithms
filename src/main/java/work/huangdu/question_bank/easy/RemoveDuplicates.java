@@ -15,7 +15,7 @@ package work.huangdu.question_bank.easy;
  * S 仅由小写英文字母组成。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2021/3/9
+ * @version 2021/3/9
  */
 public class RemoveDuplicates {
     public String removeDuplicates2(String s) {

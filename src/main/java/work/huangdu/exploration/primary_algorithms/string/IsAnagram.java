@@ -14,8 +14,8 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 进阶:
  * 如果输入字符串包含 unicode 字符怎么办？你能否调整你的解法来应对这种情况？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 17:01
+ * @author huangdu
+ * @version 2020/7/26 17:01
  */
 public class IsAnagram {
     // 如果是unicode字符的话，使用HashMap

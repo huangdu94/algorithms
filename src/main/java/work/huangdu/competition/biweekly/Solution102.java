@@ -15,8 +15,8 @@ import work.huangdu.data_structure.TreeNode;
 /**
  * 第 102 场双周赛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/15
+ * @author huangdu
+ * @version 2023/4/15
  */
 public class Solution102 {
     /**

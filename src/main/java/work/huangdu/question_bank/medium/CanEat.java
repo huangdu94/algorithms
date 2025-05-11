@@ -31,8 +31,8 @@ import java.util.Arrays;
  * 0 <= favoriteDay_i <= 109
  * 1 <= dailyCap_i <= 109
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/1
+ * @author huangdu
+ * @version 2021/6/1
  */
 public class CanEat {
     public boolean[] canEat(int[] candiesCount, int[][] queries) {

@@ -10,8 +10,8 @@ import work.huangdu.data_structure.ListNode;
  * 给定一个链表: 1->2->3->4->5, 和 k = 2.
  * 返回链表 4->5.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/2
+ * @author huangdu
+ * @version 2021/9/2
  */
 public class GetKthFromEnd {
     public ListNode getKthFromEnd(ListNode head, int k) {

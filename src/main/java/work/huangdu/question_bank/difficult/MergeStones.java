@@ -33,8 +33,8 @@ import java.util.Arrays;
  * 2 <= K <= 30
  * 1 <= stones[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/4
+ * @author huangdu
+ * @version 2023/4/4
  */
 public class MergeStones {
     public int mergeStones(int[] stones, int k) {

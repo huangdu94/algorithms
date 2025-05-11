@@ -56,8 +56,8 @@ import java.util.Deque;
  * 1 <= portsi <= portsCount
  * 1 <= weightsi <= maxWeight
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/5
+ * @author huangdu
+ * @version 2022/12/5
  */
 public class BoxDelivering {
     public int boxDelivering(int[][] boxes, int portsCount, int maxBoxes, int maxWeight) {

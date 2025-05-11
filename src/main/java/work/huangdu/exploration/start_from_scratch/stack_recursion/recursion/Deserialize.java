@@ -25,8 +25,8 @@ import java.util.List;
  * *    ii. 一个包含一个元素的嵌套列表
  * *         a. 一个 integer 包含值 789
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/26 14:11
+ * @author huangdu
+ * @version 2020/10/26 14:11
  */
 public class Deserialize {
     public NestedInteger deserialize(String s) {

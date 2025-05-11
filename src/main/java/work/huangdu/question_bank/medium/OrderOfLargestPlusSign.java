@@ -23,8 +23,8 @@ import java.util.TreeSet;
  * 0 <= xi, yi < n
  * 每一对 (xi, yi) 都 不重复
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/10
+ * @author huangdu
+ * @version 2022/11/10
  */
 public class OrderOfLargestPlusSign {
     public int orderOfLargestPlusSign(int n, int[][] mines) {

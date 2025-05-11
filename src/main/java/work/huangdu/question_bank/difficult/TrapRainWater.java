@@ -21,8 +21,8 @@ import java.util.Queue;
  * 1 <= m, n <= 200
  * 0 <= heightMap[i][j] <= 2 * 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/11/6
+ * @author huangdu
+ * @version 2021/11/6
  */
 public class TrapRainWater {
     public int trapRainWater2(int[][] heightMap) {

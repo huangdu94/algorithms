@@ -18,8 +18,8 @@ import java.util.List;
  * 提示：
  * 1 <= label <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/29
+ * @author huangdu
+ * @version 2021/7/29
  */
 public class PathInZigZagTree {
     private static final int[] sums;

@@ -19,8 +19,8 @@ import work.huangdu.data_structure.TreeNode;
  * *4  5 6
  * 输出: 6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/24 12:10
+ * @author huangdu
+ * @version 2020/11/24 12:10
  */
 public class CountNodes {
     // 最优解 先看看最深的一层是多少层，那么根据最深的一层是多少层可以得到节点数量可能值的范围

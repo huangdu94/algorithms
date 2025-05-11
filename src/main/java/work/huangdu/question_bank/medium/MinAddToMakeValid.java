@@ -19,8 +19,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= s.length <= 1000
  * s 只包含 '(' 和 ')' 字符。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/4
+ * @author huangdu
+ * @version 2022/10/4
  */
 public class MinAddToMakeValid {
     public int minAddToMakeValid(String s) {

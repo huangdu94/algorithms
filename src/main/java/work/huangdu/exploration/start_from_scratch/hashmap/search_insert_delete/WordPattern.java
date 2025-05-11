@@ -21,8 +21,8 @@ import java.util.*;
  * 说明:
  * 你可以假设 pattern 只包含小写字母， str 包含了由单个空格分隔的小写字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/18 21:11
+ * @author huangdu
+ * @version 2020/8/18 21:11
  */
 public class WordPattern {
     public boolean wordPattern(String pattern, String str) {

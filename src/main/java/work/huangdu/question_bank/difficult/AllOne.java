@@ -35,8 +35,8 @@ import java.util.Set;
  * 测试用例保证：在每次调用 dec 时，数据结构中总存在 key
  * 最多调用 inc、dec、getMaxKey 和 getMinKey 方法 5 * 10^4 次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/16
+ * @author huangdu
+ * @version 2022/3/16
  */
 public class AllOne {
     static class DoublyListNode {

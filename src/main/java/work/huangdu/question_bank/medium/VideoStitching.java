@@ -35,8 +35,8 @@ import java.util.Arrays;
  * 0 <= clips[i][0] <= clips[i][1] <= 100
  * 0 <= T <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/24 9:17
+ * @author huangdu
+ * @version 2020/10/24 9:17
  */
 public class VideoStitching {
     // 动态规划 时间复杂度o(n*T) 空间复杂度o(T)

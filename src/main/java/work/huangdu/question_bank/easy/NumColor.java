@@ -21,8 +21,8 @@ import work.huangdu.data_structure.TreeNode;
  * 1 <= 节点个数 <= 1000
  * 1 <= Node.val <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/26
+ * @author huangdu
+ * @version 2022/4/26
  */
 public class NumColor {
     private final Set<Integer> set = new HashSet<>();

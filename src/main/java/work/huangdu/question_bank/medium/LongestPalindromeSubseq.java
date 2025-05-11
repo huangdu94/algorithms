@@ -16,8 +16,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= s.length <= 1000
  * s 仅由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/13
+ * @author huangdu
+ * @version 2021/8/13
  */
 public class LongestPalindromeSubseq {
     // TODO 复习动态规划

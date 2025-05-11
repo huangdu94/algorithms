@@ -27,8 +27,8 @@ import java.util.List;
  * 1 <= password.length <= 50
  * password 由字母、数字、点 '.' 或者感叹号 '!'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/16 0:24
+ * @author huangdu
+ * @version 2020/11/16 0:24
  */
 public class StrongPasswordChecker {
     public int strongPasswordChecker(String password) {

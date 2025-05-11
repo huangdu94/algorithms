@@ -23,8 +23,8 @@ package work.huangdu.question_bank.easy;
  * sentence 由小写英文字母和空格组成。
  * searchWord 由小写英文字母组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/21
+ * @author huangdu
+ * @version 2022/8/21
  */
 public class IsPrefixOfWord {
     public int isPrefixOfWord(String sentence, String searchWord) {

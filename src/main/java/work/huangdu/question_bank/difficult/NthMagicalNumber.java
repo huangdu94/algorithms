@@ -14,8 +14,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= n <= 10^9
  * 2 <= a, b <= 4 * 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/25
+ * @author huangdu
+ * @version 2022/11/25
  */
 public class NthMagicalNumber {
     public int nthMagicalNumber(int n, int a, int b) {

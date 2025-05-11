@@ -22,8 +22,8 @@ import java.util.Map;
  * 1 <= nums.length <= 10^5
  * 0 <= nums[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/17
+ * @author huangdu
+ * @version 2023/1/17
  */
 public class CountNicePairs {
     /**

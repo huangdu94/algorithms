@@ -29,8 +29,8 @@ import java.util.Map;
  * 1 <= message.length <= 2000
  * message 由小写英文字母和 ' ' 组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/1
+ * @author huangdu
+ * @version 2023/2/1
  */
 public class DecodeMessage {
     public String decodeMessage(String key, String message) {

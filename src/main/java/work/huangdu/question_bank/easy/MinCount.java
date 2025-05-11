@@ -14,7 +14,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= n <= 4
  * 1 <= coins[i] <= 10
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinCount {
     public int minCount(int[] coins) {

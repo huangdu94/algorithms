@@ -29,8 +29,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= word1.length, word2.length <= 100
  * word1 和 word2 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/24
+ * @author huangdu
+ * @version 2022/10/24
  */
 public class MergeAlternately {
     public String mergeAlternately(String word1, String word2) {

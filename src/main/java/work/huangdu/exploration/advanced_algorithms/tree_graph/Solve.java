@@ -20,8 +20,8 @@ import java.util.Queue;
  * 解释:
  * 被围绕的区间不会存在于边界上，换句话说，任何边界上的'O'都不会被填充为'X'。 任何不在边界上，或不与边界上的'O'相连的'O'最终都会被填充为'X'。如果两个元素在水平或垂直方向相邻，则称它们是“相连”的。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/4 12:44
+ * @author huangdu
+ * @version 2020/8/4 12:44
  */
 public class Solve {
     public void solve(char[][] board) {

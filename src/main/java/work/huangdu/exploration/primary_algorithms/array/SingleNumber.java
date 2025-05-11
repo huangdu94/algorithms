@@ -12,8 +12,8 @@ package work.huangdu.exploration.primary_algorithms.array;
  * 输入: [4,1,2,1,2]
  * 输出: 4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 15:19
+ * @author huangdu
+ * @version 2020/7/26 15:19
  * @see work.huangdu.question_bank.medium.SingleNumber2
  * @see work.huangdu.question_bank.medium.SingleNumber3
  */

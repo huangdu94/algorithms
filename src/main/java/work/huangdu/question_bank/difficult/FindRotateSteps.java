@@ -29,8 +29,8 @@ import java.util.Queue;
  * 两个字符串中都只有小写字符，并且均可能存在重复字符；
  * 字符串 key 一定可以由字符串 ring 旋转拼出。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/11 0:18
+ * @author huangdu
+ * @version 2020/11/11 0:18
  */
 public class FindRotateSteps {
     // 回溯超时

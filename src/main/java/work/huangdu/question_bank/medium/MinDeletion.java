@@ -20,7 +20,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums.length <= 10^5
  * 0 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinDeletion {
     public int minDeletion(int[] nums) {

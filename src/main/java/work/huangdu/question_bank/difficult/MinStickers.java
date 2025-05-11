@@ -26,8 +26,8 @@ import java.util.Arrays;
  * 1 <= target.length <= 15
  * stickers[i] 和 target 由小写英文单词组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/23
+ * @author huangdu
+ * @version 2022/5/23
  */
 public class MinStickers {
     private int tn;

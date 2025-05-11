@@ -29,7 +29,7 @@ package work.huangdu.question_bank.medium;
  * -10^7 <= groups[i][j], nums[k] <= 10^7
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/12/19
+ * @version 2022/12/19
  */
 public class CanChoose {
     public boolean canChoose(int[][] groups, int[] nums) {

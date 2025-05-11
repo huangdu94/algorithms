@@ -30,8 +30,8 @@ import java.util.PriorityQueue;
  * 1 <= rows, columns <= 100
  * 1 <= heights[i][j] <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/29
+ * @author huangdu
+ * @version 2021/1/29
  */
 public class MinimumEffortPath {
 

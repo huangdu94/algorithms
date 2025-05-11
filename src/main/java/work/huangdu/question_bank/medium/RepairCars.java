@@ -28,7 +28,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= ranks[i] <= 100
  * 1 <= cars <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class RepairCars {
     public long repairCars(int[] ranks, int cars) {

@@ -20,8 +20,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 1 <= n <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/29
+ * @author huangdu
+ * @version 2023/3/29
  */
 public class CountVowelStrings {
     private int n;

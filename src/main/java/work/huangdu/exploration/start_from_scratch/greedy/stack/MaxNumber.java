@@ -27,8 +27,8 @@ package work.huangdu.exploration.start_from_scratch.greedy.stack;
  * 输出:
  * [9, 8, 9]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/2 18:49
+ * @author huangdu
+ * @version 2020/12/2 18:49
  */
 public class MaxNumber {
     public int[] maxNumber(int[] nums1, int[] nums2, int k) {

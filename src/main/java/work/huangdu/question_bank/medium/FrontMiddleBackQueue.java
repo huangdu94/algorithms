@@ -43,7 +43,7 @@ package work.huangdu.question_bank.medium;
  * int param_5 = obj.popMiddle();
  * int param_6 = obj.popBack();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FrontMiddleBackQueue {
     private int n;

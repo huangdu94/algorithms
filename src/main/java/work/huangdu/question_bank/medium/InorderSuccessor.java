@@ -26,8 +26,8 @@ import work.huangdu.data_structure.TreeNode;
  * * 1
  * 输出: null
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/16
+ * @author huangdu
+ * @version 2022/5/16
  */
 public class InorderSuccessor {
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {

@@ -25,8 +25,8 @@ package work.huangdu.question_bank.medium;
  * 硬币种类不超过 500 种
  * 结果符合 32 位符号整数
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/10
+ * @author huangdu
+ * @version 2021/6/10
  */
 public class Change {
     public int change(int amount, int[] coins) {

@@ -25,8 +25,8 @@ import java.util.Arrays;
  * 1 <= bucket.length == vat.length <= 100
  * 0 <= bucket[i], vat[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/22
+ * @author huangdu
+ * @version 2023/5/22
  */
 public class StoreWater {
     public int storeWater(int[] bucket, int[] vat) {

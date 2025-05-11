@@ -23,8 +23,8 @@ import java.util.Arrays;
  * 1 <= starti <= endi <= 50
  * 1 <= left <= right <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/23
+ * @author huangdu
+ * @version 2021/7/23
  */
 public class IsCovered {
     public boolean isCovered2(int[][] ranges, int left, int right) {

@@ -23,7 +23,7 @@ import java.util.Map;
  * 1 <= arr[i] < arr[i + 1] <= 10^9
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/7/9
+ * @version 2022/7/9
  */
 public class LenLongestFibSubseq {
     public int lenLongestFibSubseq(int[] arr) {

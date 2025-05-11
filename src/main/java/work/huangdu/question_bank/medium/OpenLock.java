@@ -45,8 +45,8 @@ import java.util.Set;
  * target 不在 deadends 之中
  * target 和 deadends[i] 仅由若干位数字组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/25
+ * @author huangdu
+ * @version 2021/6/25
  */
 public class OpenLock {
     private static final Map<Integer, List<Integer>> GRAPH = new HashMap<>();

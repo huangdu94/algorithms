@@ -20,8 +20,8 @@ import java.util.Arrays;
  * 1 <= boxes.length <= 100
  * 1 <= boxes[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/15 0:34
+ * @author huangdu
+ * @version 2020/8/15 0:34
  */
 public class RemoveBoxes {
     private static final int MAX_KINDS = 101;

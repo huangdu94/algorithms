@@ -22,8 +22,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= n <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/18
+ * @author huangdu
+ * @version 2023/6/18
  */
 public class NumberOfCuts {
     public int numberOfCuts(int n) {

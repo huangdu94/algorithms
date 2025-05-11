@@ -37,8 +37,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 500
  * s 只包含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/26 18:33
+ * @author huangdu
+ * @version 2020/11/26 18:33
  */
 public class SortString {
     public String sortString(String s) {

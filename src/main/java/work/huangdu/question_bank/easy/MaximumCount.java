@@ -24,7 +24,7 @@ package work.huangdu.question_bank.easy;
  *
  * 进阶：你可以设计并实现时间复杂度为 O(log(n)) 的算法解决此问题吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumCount {
     public int maximumCount(int[] nums) {

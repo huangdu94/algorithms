@@ -22,7 +22,7 @@ package work.huangdu.question_bank.medium;
  * s[i] 为 '0' 或 '1'
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/6/11
+ * @version 2022/6/11
  */
 public class MinFlipsMonoIncr {
     public int minFlipsMonoIncr(String s) {

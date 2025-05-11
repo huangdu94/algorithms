@@ -28,8 +28,8 @@ import work.huangdu.data_structure.TreeNode;
  * 题目数据保证输入是一棵有效的二叉搜索树
  * 0 <= low <= high <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/22
+ * @author huangdu
+ * @version 2021/2/22
  */
 public class TrimBST {
     public TreeNode trimBST(TreeNode root, int low, int high) {

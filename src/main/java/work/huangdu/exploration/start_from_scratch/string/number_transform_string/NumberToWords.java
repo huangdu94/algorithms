@@ -16,8 +16,8 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 输入: 1234567891
  * 输出: "One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One"
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/29 10:35
+ * @author huangdu
+ * @version 2020/9/29 10:35
  */
 public class NumberToWords {
     private static final String[] zeroToTwenty = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"};

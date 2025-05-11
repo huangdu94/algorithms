@@ -29,7 +29,7 @@ package work.huangdu.question_bank.medium;
  * obstacles[0] == obstacles[n] == 0
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/1/28
+ * @version 2023/1/28
  */
 public class MinSideJumps {
     public int minSideJumps(int[] obstacles) {

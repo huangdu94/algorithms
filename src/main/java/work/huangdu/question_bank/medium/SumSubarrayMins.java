@@ -19,8 +19,8 @@ import java.util.Arrays;
  * 1 <= arr.length <= 3 * 10^4
  * 1 <= arr[i] <= 3 * 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/28
+ * @author huangdu
+ * @version 2022/10/28
  */
 public class SumSubarrayMins {
     public int sumSubarrayMins(int[] arr) {

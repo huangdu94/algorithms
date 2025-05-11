@@ -25,7 +25,7 @@ import java.util.Map;
  * 1 <= nums[i] <= 10^4
  * nums 中的所有元素 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class TupleSameProduct {
     public int tupleSameProduct(int[] nums) {

@@ -28,8 +28,8 @@ import java.util.Arrays;
  * 1 <= k <= nums.length <= 1000
  * 0 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/11
+ * @author huangdu
+ * @version 2022/2/11
  */
 public class MinimumDifference {
     public int minimumDifference(int[] nums, int k) {

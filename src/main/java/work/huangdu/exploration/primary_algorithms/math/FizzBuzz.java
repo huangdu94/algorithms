@@ -29,8 +29,8 @@ import java.util.List;
  * "FizzBuzz"
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/6/29 16:11
+ * @author huangdu
+ * @version 2020/6/29 16:11
  */
 public class FizzBuzz {
     public List<String> fizzBuzz(int n) {

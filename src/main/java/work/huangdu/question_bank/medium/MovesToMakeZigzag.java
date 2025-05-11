@@ -18,8 +18,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums.length <= 1000
  * 1 <= nums[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/27
+ * @author huangdu
+ * @version 2023/2/27
  */
 public class MovesToMakeZigzag {
     public int movesToMakeZigzag(int[] nums) {

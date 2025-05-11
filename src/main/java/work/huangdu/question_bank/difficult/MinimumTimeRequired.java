@@ -22,8 +22,8 @@ import java.util.Arrays;
  * 1 <= k <= jobs.length <= 12
  * 1 <= jobs[i] <= 10^7
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/8
+ * @author huangdu
+ * @version 2021/5/8
  */
 public class MinimumTimeRequired {
     // TODO 复制粘贴 需要复习

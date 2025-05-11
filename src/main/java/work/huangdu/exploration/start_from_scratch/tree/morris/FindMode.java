@@ -23,8 +23,8 @@ import work.huangdu.data_structure.TreeNode;
  * 提示：如果众数超过1个，不需考虑输出顺序
  * 进阶：你可以不使用额外的空间吗？（假设由递归产生的隐式调用栈的开销不被计算在内）
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/24 13:04
+ * @author huangdu
+ * @version 2020/9/24 13:04
  */
 public class FindMode {
     private List<Integer> numList;

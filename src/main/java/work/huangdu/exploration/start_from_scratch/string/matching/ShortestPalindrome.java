@@ -10,8 +10,8 @@ package work.huangdu.exploration.start_from_scratch.string.matching;
  * 输入: "abcd"
  * 输出: "dcbabcd"
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/29 20:45
+ * @author huangdu
+ * @version 2020/8/29 20:45
  */
 public class ShortestPalindrome {
     public String shortestPalindrome2(String s) {

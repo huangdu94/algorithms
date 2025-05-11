@@ -25,8 +25,8 @@ import java.util.Arrays;
  * 3 <= arr.length <= 3 * 10^4
  * arr[i] 是 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/7
+ * @author huangdu
+ * @version 2022/10/7
  */
 public class ThreeEqualParts {
     public int[] threeEqualParts(int[] arr) {

@@ -28,8 +28,8 @@ import work.huangdu.data_structure.TreeNode;
  * *     }
  * * }
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/17
+ * @author huangdu
+ * @version 2022/8/17
  */
 public class DeepestLeavesSum {
     private int maxDepth = 0;

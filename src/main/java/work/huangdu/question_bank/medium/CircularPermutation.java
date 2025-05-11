@@ -24,8 +24,8 @@ import java.util.Set;
  * 1 <= n <= 16
  * 0 <= start < 2^n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/24
+ * @author huangdu
+ * @version 2023/2/24
  */
 public class CircularPermutation {
     public List<Integer> circularPermutation(int n, int start) {

@@ -18,8 +18,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= words[i].length, pref.length <= 100
  * words[i] 和 pref 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/9
+ * @author huangdu
+ * @version 2023/1/9
  */
 public class PrefixCount {
     public int prefixCount(String[] words, String pref) {

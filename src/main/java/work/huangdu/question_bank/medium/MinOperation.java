@@ -27,8 +27,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums1.length, nums2.length <= 10^5
  * 1 <= nums1[i], nums2[i] <= 6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/9
+ * @author huangdu
+ * @version 2022/12/9
  */
 public class MinOperation {
     public int minOperations(int[] nums1, int[] nums2) {

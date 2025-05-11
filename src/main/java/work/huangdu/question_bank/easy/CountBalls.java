@@ -29,8 +29,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 1 <= lowLimit <= highLimit <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/23
+ * @author huangdu
+ * @version 2022/11/23
  */
 public class CountBalls {
     public int countBalls(int lowLimit, int highLimit) {

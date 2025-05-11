@@ -12,8 +12,8 @@ package work.huangdu.exploration.intermediate_algorithms.dynamic;
  * 你算法的时间复杂度应该为 O(n2) 。
  * 进阶: 你能将算法的时间复杂度降低到 O(n log n) 吗?
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/20 17:31
+ * @author huangdu
+ * @version 2020/7/20 17:31
  */
 public class LengthOfLIS {
     public int lengthOfLIS(int[] nums) {

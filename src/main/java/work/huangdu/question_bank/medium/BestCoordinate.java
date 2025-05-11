@@ -35,8 +35,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= x_i, y_i, q_i <= 50
  * 1 <= radius <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/2
+ * @author huangdu
+ * @version 2022/11/2
  */
 public class BestCoordinate {
     public int[] bestCoordinate(int[][] towers, int radius) {

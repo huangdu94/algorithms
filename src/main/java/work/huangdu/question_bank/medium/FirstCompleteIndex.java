@@ -25,7 +25,7 @@ package work.huangdu.question_bank.medium;
  * arr 中的所有整数 互不相同
  * mat 中的所有整数 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FirstCompleteIndex {
     public int firstCompleteIndex(int[] arr, int[][] mat) {

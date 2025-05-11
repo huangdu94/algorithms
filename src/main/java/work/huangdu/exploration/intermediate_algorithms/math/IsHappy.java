@@ -17,8 +17,8 @@ import java.util.Set;
  * 6^2 + 8^2 = 100
  * 1^2 + 0^2 + 0^2 = 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/22 0:13
+ * @author huangdu
+ * @version 2020/7/22 0:13
  */
 public class IsHappy {
     public boolean isHappy(int n) {

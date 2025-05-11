@@ -24,8 +24,8 @@ import java.util.Set;
  * 1 <= word.length <= 1000
  * word 由数字和小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/6
+ * @author huangdu
+ * @version 2022/12/6
  */
 public class NumDifferentIntegers {
     public int numDifferentIntegers(String word) {

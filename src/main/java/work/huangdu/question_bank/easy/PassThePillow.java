@@ -21,7 +21,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= time <= 1000
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/9/26
+ * @version 2023/9/26
  */
 public class PassThePillow {
     public int passThePillow(int n, int time) {

@@ -26,8 +26,8 @@ package work.huangdu.exploration.primary_algorithms.other;
  * nums 中的所有数字都 独一无二
  * 进阶：你能否实现线性时间复杂度、仅使用额外常数空间的算法解决此问题?
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/1 23:10
+ * @author huangdu
+ * @version 2020/7/1 23:10
  */
 public class MissingNumber {
     public int missingNumber(int[] nums) {

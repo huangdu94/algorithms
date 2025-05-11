@@ -19,8 +19,8 @@ import java.util.List;
  * 1 <= A[i].length <= 100
  * A[i][j] 是小写字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/14 12:25
+ * @author huangdu
+ * @version 2020/10/14 12:25
  */
 public class CommonChars {
     public List<String> commonChars(String[] A) {

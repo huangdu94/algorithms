@@ -26,8 +26,8 @@ import java.util.Set;
  * sentence 不含前导或尾随空格
  * sentence 中的所有单词由单个空格分隔
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/21
+ * @author huangdu
+ * @version 2022/4/21
  */
 public class ToGoatLatin {
     private static final Set<Character> VOWEL_SET = new HashSet<Character>(6) {

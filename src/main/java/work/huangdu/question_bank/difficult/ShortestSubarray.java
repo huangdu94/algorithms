@@ -21,8 +21,8 @@ import java.util.Deque;
  * -10^5 <= nums[i] <= 10^5
  * 1 <= k <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/27
+ * @author huangdu
+ * @version 2022/10/27
  */
 public class ShortestSubarray {
     // TODO 复习

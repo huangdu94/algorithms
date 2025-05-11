@@ -20,8 +20,8 @@ import java.util.Set;
  * 1 <= nums.length <= 30
  * 0 <= nums[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/14
+ * @author huangdu
+ * @version 2022/11/14
  */
 public class SplitArraySameAverage {
     /**

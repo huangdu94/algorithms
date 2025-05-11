@@ -19,8 +19,8 @@ import java.util.Arrays;
  * 1 <= m * n <= 10^5
  * -10^9 <= matrix[i][j] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/25
+ * @author huangdu
+ * @version 2021/2/25
  */
 public class Transpose {
     public int[][] transpose(int[][] matrix) {

@@ -36,7 +36,7 @@ import java.util.Set;
  * 0 <= ui, vi <= n - 1
  * ui != vi
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CheckIfPrerequisite {
     private List<Integer>[] graph;

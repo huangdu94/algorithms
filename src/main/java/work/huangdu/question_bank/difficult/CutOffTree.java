@@ -38,8 +38,8 @@ import java.util.Set;
  * 1 <= m, n <= 50
  * 0 <= forest[i][j] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/23
+ * @author huangdu
+ * @version 2022/5/23
  */
 public class CutOffTree {
     public int cutOffTree(List<List<Integer>> forest) {

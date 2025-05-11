@@ -41,8 +41,8 @@ import java.util.PriorityQueue;
  * 1 <= time[i] <= 10^4
  * 先修课程图是一个有向无环图。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/28
+ * @author huangdu
+ * @version 2023/7/28
  */
 public class MinimumTime {
     public int minimumTime(int n, int[][] relations, int[] time) {

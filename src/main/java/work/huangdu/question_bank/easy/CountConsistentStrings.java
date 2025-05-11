@@ -23,8 +23,8 @@ package work.huangdu.question_bank.easy;
  * allowed 中的字符 互不相同 。
  * words[i] 和 allowed 只包含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/8
+ * @author huangdu
+ * @version 2022/11/8
  */
 public class CountConsistentStrings {
     public int countConsistentStrings(String allowed, String[] words) {

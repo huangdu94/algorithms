@@ -13,8 +13,8 @@ import java.util.Map;
  * 原因: 最长的和谐数组是：[3,2,2,2,3].
  * 说明: 输入的数组长度最大不超过20,000.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/6 16:57
+ * @author huangdu
+ * @version 2020/11/6 16:57
  */
 public class FindLHS {
     public int findLHS(int[] nums) {

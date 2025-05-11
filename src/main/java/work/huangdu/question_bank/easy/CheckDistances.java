@@ -30,8 +30,8 @@ import java.util.Arrays;
  * distance.length == 26
  * 0 <= distance[i] <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/10
+ * @author huangdu
+ * @version 2023/4/10
  */
 public class CheckDistances {
     public boolean checkDistances(String s, int[] distance) {

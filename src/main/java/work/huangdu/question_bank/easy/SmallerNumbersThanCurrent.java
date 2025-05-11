@@ -27,8 +27,8 @@ import java.util.Comparator;
  * 2 <= nums.length <= 500
  * 0 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/26 1:28
+ * @author huangdu
+ * @version 2020/10/26 1:28
  */
 public class SmallerNumbersThanCurrent {
     // 暴力 时间复杂度o(n^2) 空间复杂度o(1)

@@ -7,8 +7,8 @@ import java.util.List;
 /**
  * 第 341 场周赛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/16
+ * @author huangdu
+ * @version 2023/4/16
  */
 public class Solution341 {
     /**

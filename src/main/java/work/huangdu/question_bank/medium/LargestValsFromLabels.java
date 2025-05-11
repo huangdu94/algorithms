@@ -30,8 +30,8 @@ import java.util.Map;
  * 0 <= values[i], labels[i] <= 2 * 10^4
  * 1 <= numWanted, useLimit <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/23
+ * @author huangdu
+ * @version 2023/5/23
  */
 public class LargestValsFromLabels {
     public int largestValsFromLabels(int[] values, int[] labels, int numWanted, int useLimit) {

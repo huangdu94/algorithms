@@ -36,8 +36,8 @@ import java.util.Set;
  * expression[i] 由 '{'，'}'，',' 或小写英文字母组成
  * 给出的表达式 expression 用以表示一组基于题目描述中语法构造的字符串
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/18
+ * @author huangdu
+ * @version 2023/3/18
  */
 public class BraceExpansionII {
     public List<String> braceExpansionII(String expression) {

@@ -20,8 +20,8 @@ import java.util.Queue;
  * *    /   /
  * *  -10  5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/22
+ * @author huangdu
+ * @version 2021/2/22
  */
 public class SortedListToBST {
     // 分治+中序遍历 最优解

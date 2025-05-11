@@ -30,8 +30,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= m, n <= 100
  * grid[i][j] 为 1 或 -1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/24
+ * @author huangdu
+ * @version 2022/2/24
  */
 public class FindBall {
     public int[] findBall(int[][] grid) {

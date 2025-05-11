@@ -15,8 +15,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 1 <= n <= 1690
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/11
+ * @author huangdu
+ * @version 2021/4/11
  */
 public class NthUglyNumber {
     // TODO 正常解法 最小堆 或动态规划

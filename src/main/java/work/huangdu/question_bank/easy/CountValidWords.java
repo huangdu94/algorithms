@@ -33,8 +33,8 @@ package work.huangdu.question_bank.easy;
  * sentence 由小写英文字母、数字（0-9）、以及字符（' '、'-'、'!'、'.' 和 ','）组成
  * 句子中至少有 1 个 token
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/27
+ * @author huangdu
+ * @version 2022/1/27
  */
 public class CountValidWords {
     public int countValidWords(String sentence) {

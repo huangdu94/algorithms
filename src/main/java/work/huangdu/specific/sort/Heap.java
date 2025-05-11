@@ -11,8 +11,8 @@ import java.util.Arrays;
  * 不稳定
  * 堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/17 23:34
+ * @author huangdu
+ * @version 2020/7/17 23:34
  */
 public class Heap {
     public static void sort(int[] nums) {

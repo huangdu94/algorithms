@@ -14,8 +14,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= s.length <= 4 * 10^5
  * s 仅含有小写英文字符。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/26
+ * @author huangdu
+ * @version 2023/4/26
  */
 public class LastSubstring {
     public String lastSubstring(String s) {

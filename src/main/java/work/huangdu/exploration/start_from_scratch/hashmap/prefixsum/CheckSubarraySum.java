@@ -28,8 +28,8 @@ import java.util.Map;
  * 0 <= sum(nums[i]) <= 2^31 - 1
  * 1 <= k <= 2^31 - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/2
+ * @author huangdu
+ * @version 2021/6/2
  */
 public class CheckSubarraySum {
     public boolean checkSubarraySum(int[] nums, int k) {

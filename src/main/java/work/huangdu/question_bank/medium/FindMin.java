@@ -26,8 +26,8 @@ package work.huangdu.question_bank.medium;
  * nums 中的所有整数 互不相同
  * nums 原来是一个升序排序的数组，并进行了 1 至 n 次旋转
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/8
+ * @author huangdu
+ * @version 2021/4/8
  * @see work.huangdu.question_bank.difficult.FindMin
  */
 public class FindMin {

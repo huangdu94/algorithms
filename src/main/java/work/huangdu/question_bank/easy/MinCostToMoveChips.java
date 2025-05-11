@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= chips.length <= 100
  * 1 <= chips[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/8
+ * @author huangdu
+ * @version 2022/7/8
  */
 public class MinCostToMoveChips {
     public int minCostToMoveChips(int[] position) {

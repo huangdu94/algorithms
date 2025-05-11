@@ -28,8 +28,8 @@ import java.util.Set;
  * 1 <= relation.length <= 90, 且 relation[i].length == 2
  * 0 <= relation[i][0],relation[i][1] < n 且 relation[i][0] != relation[i][1]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/1
+ * @author huangdu
+ * @version 2021/7/1
  */
 public class NumWays {
     // TODO 尝试DFS和DP

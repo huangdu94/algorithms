@@ -28,8 +28,8 @@ import java.util.List;
  * 提示：
  * 1 <= finalSum <= 10^10
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/6
+ * @author huangdu
+ * @version 2023/7/6
  */
 public class MaximumEvenSplit {
     public List<Long> maximumEvenSplit(long finalSum) {

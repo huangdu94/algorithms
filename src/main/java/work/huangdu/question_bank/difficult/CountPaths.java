@@ -43,7 +43,7 @@ import java.util.Set;
  * 1 <= u_i, v_i <= n
  * 输入保证 edges 形成一棵合法的树。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CountPaths {
     private static final Set<Integer> PRIME_SET = new HashSet<>();

@@ -24,8 +24,8 @@ import java.util.Arrays;
  * -1000 <= asteroids[i] <= 1000
  * asteroids[i] != 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/13
+ * @author huangdu
+ * @version 2022/7/13
  */
 public class AsteroidCollision {
     public int[] asteroidCollision(int[] asteroids) {

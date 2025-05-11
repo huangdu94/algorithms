@@ -20,8 +20,8 @@ import work.huangdu.exploration.primary_algorithms.math.IsPowerOfThree;
  * 输入: 218
  * 输出: false
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/15 13:13
+ * @author huangdu
+ * @version 2020/8/15 13:13
  * @see IsPowerOfThree
  * @see IsPowerOfFour
  */

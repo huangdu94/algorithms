@@ -12,8 +12,8 @@ import work.huangdu.data_structure.ListNode;
  * 输入: 1->1->1->2->3
  * 输出: 2->3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/14 11:30
+ * @author huangdu
+ * @version 2020/12/14 11:30
  */
 public class DeleteDuplicates2 {
     public ListNode deleteDuplicates(ListNode head) {

@@ -20,8 +20,8 @@ package work.huangdu.question_bank.difficult;
  * n的取值范围是 [3, 10^18]。
  * 输入总是有效且没有前导 0。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/18
+ * @author huangdu
+ * @version 2021/6/18
  */
 public class SmallestGoodBase {
     // TODO 数学推导 二项式定理

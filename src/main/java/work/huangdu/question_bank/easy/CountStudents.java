@@ -33,8 +33,8 @@ import java.util.Queue;
  * sandwiches[i] 要么是 0 ，要么是 1 。
  * students[i] 要么是 0 ，要么是 1 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/19
+ * @author huangdu
+ * @version 2022/10/19
  */
 public class CountStudents {
     public int countStudents(int[] students, int[] sandwiches) {

@@ -27,7 +27,7 @@ import java.util.Arrays;
  * 1 <= binary.length <= 10^5
  * binary 仅包含 '0' 和 '1' 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaximumBinaryString {
     public String maximumBinaryString(String binary) {

@@ -31,7 +31,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums[i] <= 10^4
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/1/28
+ * @version 2023/1/28
  */
 public class WaysToMakeFair {
     public int waysToMakeFair(int[] nums) {

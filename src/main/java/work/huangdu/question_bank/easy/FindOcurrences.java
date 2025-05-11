@@ -20,8 +20,8 @@ import java.util.List;
  * 1 <= first.length, second.length <= 10
  * first 和 second 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/26
+ * @author huangdu
+ * @version 2021/12/26
  */
 public class FindOcurrences {
     public String[] findOcurrences(String text, String first, String second) {

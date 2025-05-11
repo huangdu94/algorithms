@@ -21,8 +21,8 @@ import java.util.Arrays;
  * 1 <= nums.length <= 100
  * -100 <= nums[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/19
+ * @author huangdu
+ * @version 2022/9/19
  */
 public class FrequencySort {
     public int[] frequencySort(int[] nums) {

@@ -3,8 +3,8 @@ package work.huangdu.data_structure;
 /**
  * Definition for singly-linked list.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/13 13:45
+ * @author huangdu
+ * @version 2020/8/13 13:45
  */
 public class ListNode {
     public int val;

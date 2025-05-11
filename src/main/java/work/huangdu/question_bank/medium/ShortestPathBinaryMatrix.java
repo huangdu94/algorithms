@@ -25,8 +25,8 @@ import java.util.Queue;
  * 1 <= n <= 100
  * grid[i][j] 为 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/26
+ * @author huangdu
+ * @version 2023/5/26
  */
 public class ShortestPathBinaryMatrix {
     public int shortestPathBinaryMatrix(int[][] grid) {

@@ -15,8 +15,8 @@ package work.huangdu.question_bank.medium;
  * 这是 H 指数 的延伸题目，本题中的 citations 数组是保证有序的。
  * 你可以优化你的算法到对数时间复杂度吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/12
+ * @author huangdu
+ * @version 2021/7/12
  */
 public class HIndex2 {
     // 二分查找

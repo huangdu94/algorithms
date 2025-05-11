@@ -48,8 +48,8 @@ import java.util.PriorityQueue;
  * int param_3 = obj.maximum();
  * int param_4 = obj.minimum();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/24
+ * @author huangdu
+ * @version 2022/1/24
  */
 public class StockPrice {
     private final Map<Integer, Record> recordMap;

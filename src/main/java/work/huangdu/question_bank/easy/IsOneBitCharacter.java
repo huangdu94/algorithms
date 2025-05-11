@@ -20,8 +20,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= bits.length <= 1000
  * bits[i] 为 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/21
+ * @author huangdu
+ * @version 2022/2/21
  */
 public class IsOneBitCharacter {
     public boolean isOneBitCharacter(int[] bits) {

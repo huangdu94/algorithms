@@ -25,8 +25,8 @@ import java.util.Map;
  * words[i]、pref 和 suff 仅由小写英文字母组成
  * 最多对函数 f 执行 10^4 次调用
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/14
+ * @author huangdu
+ * @version 2022/7/14
  */
 public class WordFilter {
     // TODO 可以用字典树做。

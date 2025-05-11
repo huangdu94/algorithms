@@ -51,8 +51,8 @@ package work.huangdu.question_bank.difficult;
  * 0 <= yi <= n - 1
  * 所有 (xi, yi) 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/16
+ * @author huangdu
+ * @version 2021/1/16
  */
 public class HitBricks {
 

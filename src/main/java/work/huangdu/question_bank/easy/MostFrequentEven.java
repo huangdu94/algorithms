@@ -25,8 +25,8 @@ import java.util.Map;
  * 1 <= nums.length <= 2000
  * 0 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/13
+ * @author huangdu
+ * @version 2023/4/13
  */
 public class MostFrequentEven {
     public int mostFrequentEven(int[] nums) {

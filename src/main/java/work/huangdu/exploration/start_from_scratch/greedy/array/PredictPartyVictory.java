@@ -26,8 +26,8 @@ package work.huangdu.exploration.start_from_scratch.greedy.array;
  * 注意:
  * 给定字符串的长度在 [1, 10,000] 之间.
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/15 16:40
+ * @author huangdu
+ * @version 2020/11/15 16:40
  */
 public class PredictPartyVictory {
     public String predictPartyVictory(String s) {

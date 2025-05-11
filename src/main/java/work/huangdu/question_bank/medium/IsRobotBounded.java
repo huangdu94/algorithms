@@ -51,8 +51,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= instructions.length <= 100
  * instructions[i] 仅包含 'G', 'L', 'R'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/11
+ * @author huangdu
+ * @version 2023/4/11
  */
 public class IsRobotBounded {
     private final int[] xs = {0, 1, 0, -1};

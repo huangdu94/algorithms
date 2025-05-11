@@ -23,8 +23,8 @@ import java.util.List;
  * ]
  * 输出: [1,2,3,4,8,12,11,10,9,5,6,7]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 19:59
+ * @author huangdu
+ * @version 2020/7/26 19:59
  */
 public class SpiralOrder {
     public List<Integer> spiralOrder(int[][] matrix) {

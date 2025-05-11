@@ -10,8 +10,8 @@ import java.util.Random;
  * 跳表的期望空间复杂度为O(n)，跳表的查询，插入和删除操作的期望时间复杂度均为O(log n)。
  * 跳表实际为一种多层的有序链表，跳表的每一层都为一个有序链表，且满足每个位于第i层的节点有p的概率出现在第i+1层，其中p为常数。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/7
+ * @author huangdu
+ * @version 2022/9/7
  */
 public class Skiplist {
     static final int MAX_LEVEL = 32;

@@ -17,8 +17,8 @@ package work.huangdu.question_bank.easy;
  * s[i] 为 '0' 或 '1'
  * s[0] 为 '1'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/3
+ * @author huangdu
+ * @version 2022/10/3
  */
 public class CheckOnesSegment {
     public boolean checkOnesSegment(String s) {

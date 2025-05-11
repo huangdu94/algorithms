@@ -21,8 +21,8 @@ import java.util.Arrays;
  * 1 <= nums[i].length <= 500
  * 0 <= nums[i][j] <= 10^3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/7/4
+ * @author huangdu
+ * @version 2023/7/4
  */
 public class MatrixSum {
     public int matrixSum(int[][] nums) {

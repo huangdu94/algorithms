@@ -23,8 +23,8 @@ import java.util.List;
  * 提示：
  * 1 <= n <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/10
+ * @author huangdu
+ * @version 2022/2/10
  */
 public class SimplifiedFractions {
     public List<String> simplifiedFractions(int n) {

@@ -24,8 +24,8 @@ import java.util.Comparator;
  * 2. intervals[i] 长度为 2，分别代表左、右边界。
  * 3. intervals[i][j] 的值是 [0, 10^8]范围内的整数。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/7
+ * @author huangdu
+ * @version 2022/9/7
  */
 public class IntersectionSizeTwo {
     public int intersectionSizeTwo(int[][] intervals) {

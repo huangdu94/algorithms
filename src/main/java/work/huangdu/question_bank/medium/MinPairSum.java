@@ -26,8 +26,8 @@ import java.util.Arrays;
  * n 是 偶数 。
  * 1 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/20
+ * @author huangdu
+ * @version 2021/7/20
  */
 public class MinPairSum {
     public int minPairSum(int[] nums) {

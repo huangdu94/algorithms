@@ -37,8 +37,8 @@ import java.util.Queue;
  * 编号为 1 的方格上没有蛇或梯子。
  * 编号为 N*N 的方格上没有蛇或梯子。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/27
+ * @author huangdu
+ * @version 2021/6/27
  */
 public class SnakesAndLadders {
     public int snakesAndLadders(int[][] board) {

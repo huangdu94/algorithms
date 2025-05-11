@@ -19,8 +19,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= a <= b < list1.length - 1
  * 1 <= list2.length <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/30
+ * @author huangdu
+ * @version 2023/1/30
  */
 public class MergeInBetween {
     public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {

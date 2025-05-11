@@ -22,7 +22,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 1000
  * s 仅由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MakeSmallestPalindrome {
     public String makeSmallestPalindrome(String s) {

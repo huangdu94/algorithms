@@ -36,8 +36,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= D <= weights.length <= 50000
  * 1 <= weights[i] <= 500
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/26
+ * @author huangdu
+ * @version 2021/4/26
  */
 public class ShipWithinDays {
     public int shipWithinDays(int[] weights, int D) {

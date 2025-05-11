@@ -18,7 +18,7 @@ import java.util.PriorityQueue;
  * 1 <= nums.length <= 10^5
  * -10^5 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MagicTower {
     public int magicTower(int[] nums) {

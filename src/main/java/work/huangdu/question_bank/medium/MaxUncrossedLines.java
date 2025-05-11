@@ -24,8 +24,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums2.length <= 500
  * 1 <= nums1[i], nums2[i] <= 2000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/21
+ * @author huangdu
+ * @version 2021/5/21
  */
 public class MaxUncrossedLines {
     // TODO 其实就是最长公共子序列问题

@@ -25,7 +25,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= money <= 200
  * 2 <= children <= 30
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class DistMoney {
     public int distMoney(int money, int children) {

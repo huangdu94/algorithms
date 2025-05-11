@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * 3 <= nums.length <= 100
  * 1 <= nums[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/13
+ * @author huangdu
+ * @version 2023/6/13
  */
 public class UnequalTriplets {
     public int unequalTriplets(int[] nums) {

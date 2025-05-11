@@ -39,7 +39,7 @@ package work.huangdu.question_bank.easy;
  * 最后一个税级的上限大于等于 income
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/1/27
+ * @version 2023/1/27
  */
 public class CalculateTax {
     public double calculateTax(int[][] brackets, int income) {

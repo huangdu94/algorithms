@@ -12,8 +12,8 @@ package work.huangdu.question_bank.easy;
  * 限制：
  * 0 <= 数组长度 <= 50000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/16
+ * @author huangdu
+ * @version 2021/7/16
  * @see work.huangdu.exploration.intermediate_algorithms.sort_search.SearchRange
  */
 public class Search {

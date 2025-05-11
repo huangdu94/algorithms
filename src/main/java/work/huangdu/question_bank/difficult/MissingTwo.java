@@ -16,8 +16,8 @@ import java.util.Set;
  * 提示：
  * nums.length <= 30000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/26
+ * @author huangdu
+ * @version 2022/9/26
  */
 public class MissingTwo {
     public int[] missingTwo(int[] nums) {

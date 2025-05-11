@@ -32,7 +32,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= length, width, height <= 10^5
  * 1 <= mass <= 10^3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CategorizeBox {
     public String categorizeBox(int length, int width, int height, int mass) {

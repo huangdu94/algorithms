@@ -22,7 +22,7 @@ package work.huangdu.question_bank.medium;
  * 这会影响到程序的时间复杂度吗？会有怎样的影响，为什么？
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2021/4/7
+ * @version 2021/4/7
  */
 public class Search {
     // 二分

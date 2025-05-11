@@ -31,8 +31,8 @@ import java.util.Map;
  * 1  <= nums.length <= 1000
  * -2^31 <= nums[i] <= 2^31 - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/13
+ * @author huangdu
+ * @version 2021/8/13
  */
 public class NumberOfArithmeticSlices2 {
     // TODO 需要复习

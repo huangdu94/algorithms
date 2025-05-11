@@ -33,8 +33,8 @@ import java.util.Map;
  * -10000 <= Node.val <= 10000
  * Node.random 为空（null）或指向链表中的节点。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/4 9:58
+ * @author huangdu
+ * @version 2020/8/4 9:58
  */
 public class CopyRandomList {
     public Node copyRandomList(Node head) {

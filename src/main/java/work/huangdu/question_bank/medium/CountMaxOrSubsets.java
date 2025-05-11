@@ -29,8 +29,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums.length <= 16
  * 1 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/15
+ * @author huangdu
+ * @version 2022/3/15
  */
 public class CountMaxOrSubsets {
     public int countMaxOrSubsets(int[] nums) {

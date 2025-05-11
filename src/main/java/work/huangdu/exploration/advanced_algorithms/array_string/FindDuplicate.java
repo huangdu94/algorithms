@@ -18,8 +18,8 @@ import java.util.Set;
  * 时间复杂度小于 O(n^2) 。
  * 数组中只有一个重复的数字，但它可能不止重复出现一次。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/27 19:16
+ * @author huangdu
+ * @version 2020/7/27 19:16
  */
 public class FindDuplicate {
     // 交换法 把每一个数字都交换到与之数字对应的index位置上 交换停止后输出index为0的数

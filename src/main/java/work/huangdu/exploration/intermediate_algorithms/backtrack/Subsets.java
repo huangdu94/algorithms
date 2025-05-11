@@ -20,8 +20,8 @@ import java.util.*;
  * []
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/9 0:22
+ * @author huangdu
+ * @version 2020/7/9 0:22
  */
 public class Subsets {
     class Solution {

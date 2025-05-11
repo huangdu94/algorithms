@@ -21,8 +21,8 @@ import java.util.Arrays;
  * 所有树的坐标都是不同的。
  * 输入的点没有顺序。输出顺序也没有要求。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/25
+ * @author huangdu
+ * @version 2022/4/25
  */
 public class OuterTrees {
     public int[][] outerTrees(int[][] trees) {

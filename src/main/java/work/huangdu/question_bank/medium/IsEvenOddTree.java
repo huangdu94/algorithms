@@ -43,8 +43,8 @@ import work.huangdu.data_structure.TreeNode;
  * 树中节点数在范围 [1, 10^5] 内
  * 1 <= Node.val <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/25
+ * @author huangdu
+ * @version 2021/12/25
  */
 public class IsEvenOddTree {
     public boolean isEvenOddTree(TreeNode root) {

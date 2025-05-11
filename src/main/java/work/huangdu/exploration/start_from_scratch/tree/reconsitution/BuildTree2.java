@@ -22,8 +22,8 @@ import work.huangdu.data_structure.TreeNode;
  * *     /  \
  * *    15   7
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/25 16:02
+ * @author huangdu
+ * @version 2020/9/25 16:02
  * @see work.huangdu.exploration.intermediate_algorithms.tree_graph.BuildTree
  */
 public class BuildTree2 {

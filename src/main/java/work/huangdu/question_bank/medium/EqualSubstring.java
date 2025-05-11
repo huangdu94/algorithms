@@ -24,8 +24,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= maxCost <= 10^6
  * s 和 t 都只含小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/5
+ * @author huangdu
+ * @version 2021/2/5
  */
 public class EqualSubstring {
     public int equalSubstring2(String s, String t, int maxCost) {

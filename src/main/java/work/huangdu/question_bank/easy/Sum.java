@@ -14,8 +14,8 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * -100 <= num1, num2 <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/21
+ * @author huangdu
+ * @version 2023/8/21
  */
 public class Sum {
     public int sum(int num1, int num2) {

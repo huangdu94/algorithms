@@ -23,8 +23,8 @@ import java.util.Arrays;
  * names[i] 由大小写英文字母组成
  * heights 中的所有值互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/25
+ * @author huangdu
+ * @version 2023/4/25
  */
 public class SortPeople {
     public String[] sortPeople(String[] names, int[] heights) {

@@ -24,8 +24,8 @@ import java.util.List;
  * 1 <= n <= 2000
  * boxes[i] 为 '0' 或 '1'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/2
+ * @author huangdu
+ * @version 2022/12/2
  */
 public class MinOperations {
     public int[] minOperations(String boxes) {

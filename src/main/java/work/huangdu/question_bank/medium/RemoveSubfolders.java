@@ -28,8 +28,8 @@ import java.util.List;
  * folder[i] 总是以字符 '/' 起始
  * 每个文件夹名都是 唯一 的
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/8
+ * @author huangdu
+ * @version 2023/2/8
  */
 public class RemoveSubfolders {
     public List<String> removeSubfolders(String[] folder) {

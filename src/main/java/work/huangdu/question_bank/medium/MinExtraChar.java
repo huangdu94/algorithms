@@ -25,7 +25,7 @@ import work.huangdu.data_structure.TrieNode;
  * dictionary[i] 和 s 只包含小写英文字母。
  * dictionary 中的单词互不相同。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinExtraChar {
     public int minExtraChar(String s, String[] dictionary) {

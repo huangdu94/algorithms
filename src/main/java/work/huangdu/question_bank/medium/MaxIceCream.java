@@ -26,8 +26,8 @@ import java.util.Arrays;
  * 1 <= costs[i] <= 10^5
  * 1 <= coins <= 10^8
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/2
+ * @author huangdu
+ * @version 2021/7/2
  */
 public class MaxIceCream {
     public int maxIceCream(int[] costs, int coins) {

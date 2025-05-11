@@ -33,8 +33,8 @@ import java.util.Map;
  * buildDict 仅在 search 之前调用一次
  * 最多调用 100 次 search
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/11
+ * @author huangdu
+ * @version 2022/7/11
  */
 public class MagicDictionary {
     private final Map<String, String> md;

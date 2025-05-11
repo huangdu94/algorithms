@@ -47,7 +47,7 @@ import java.util.Set;
  * 1 <= nums[i] <= 10^5
  * nums[i] 互不相同。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SmallestMissingValueSubtree {
     public int[] smallestMissingValueSubtree(int[] parents, int[] nums) {

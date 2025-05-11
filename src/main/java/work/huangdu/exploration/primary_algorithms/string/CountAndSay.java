@@ -27,8 +27,8 @@ import java.util.List;
  * 输出: "1211"
  * 解释：当 n = 3 时，序列是 "21"，其中我们有 "2" 和 "1" 两组，"2" 可以读作 "12"，也就是出现频次 = 1 而 值 = 2；类似 "1" 可以读作 "11"。所以答案是 "12" 和 "11" 组合在一起，也就是 "1211"。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/6/21 9:50
+ * @author huangdu
+ * @version 2020/6/21 9:50
  */
 public class CountAndSay {
     public String test(int n) {

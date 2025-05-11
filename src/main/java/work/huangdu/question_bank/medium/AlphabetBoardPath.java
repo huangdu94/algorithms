@@ -22,8 +22,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= target.length <= 100
  * target 仅含有小写英文字母。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/13
+ * @author huangdu
+ * @version 2023/2/13
  */
 public class AlphabetBoardPath {
     private StringBuilder sb;

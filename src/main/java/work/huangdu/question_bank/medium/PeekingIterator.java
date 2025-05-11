@@ -35,8 +35,8 @@ import java.util.Queue;
  * Java Iterator interface reference:
  * https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/10/6
+ * @author huangdu
+ * @version 2021/10/6
  */
 public class PeekingIterator implements Iterator<Integer> {
     private final Queue<Integer> peekQueue;

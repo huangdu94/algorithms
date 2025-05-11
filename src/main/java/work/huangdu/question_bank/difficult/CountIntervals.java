@@ -41,7 +41,7 @@ import java.util.TreeMap;
  * obj.add(left,right);
  * int param_2 = obj.count();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 class CountIntervals {
     // TODO copy 需要复习

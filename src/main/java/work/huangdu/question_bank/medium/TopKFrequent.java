@@ -26,8 +26,8 @@ import java.util.PriorityQueue;
  * 扩展练习：
  * 尝试以 O(n log k) 时间复杂度和 O(n) 空间复杂度解决。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/20
+ * @author huangdu
+ * @version 2021/5/20
  */
 public class TopKFrequent {
     // O(n log k)

@@ -29,7 +29,7 @@ package work.huangdu.question_bank.medium;
  * 请不要使用内置的队列库。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/8/2
+ * @version 2022/8/2
  */
 public class MyCircularQueue {
     private final int[] array;

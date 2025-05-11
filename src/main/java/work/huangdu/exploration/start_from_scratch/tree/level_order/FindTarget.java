@@ -27,8 +27,8 @@ import work.huangdu.data_structure.TreeNode;
  * Target = 28
  * 输出: False
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/23
+ * @author huangdu
+ * @version 2021/1/23
  */
 public class FindTarget {
     private List<Integer> inorderList;

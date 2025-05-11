@@ -29,8 +29,8 @@ import java.util.List;
  * logs[i] 中，字与字之间都用 单个 空格分隔
  * 题目数据保证 logs[i] 都有一个标识符，并且在标识符之后至少存在一个字
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/3
+ * @author huangdu
+ * @version 2022/5/3
  */
 public class ReorderLogFiles {
     public String[] reorderLogFiles(String[] logs) {

@@ -29,8 +29,8 @@ import java.util.Objects;
  * rectangles[i].length == 4
  * -10^5 <= x_i, y_i, a_i, b_i <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/11/18
+ * @author huangdu
+ * @version 2021/11/18
  */
 public class IsRectangleCover {
     private static final int MAX_LEN = 100000;

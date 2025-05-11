@@ -51,8 +51,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= grid.length == grid[0].length <= 30
  * grid[i][j] 是 '/'、'\'、或 ' '。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/25
+ * @author huangdu
+ * @version 2021/1/25
  */
 public class RegionsBySlashes {
     /**

@@ -34,7 +34,7 @@ import java.util.Map;
  * 1 <= n == nums.length <= 10^5
  * 1 <= nums[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinimumSeconds {
     public int minimumSeconds(List<Integer> nums) {

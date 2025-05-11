@@ -19,8 +19,8 @@ package work.huangdu.question_bank.easy;
  * ui != vi
  * 题目数据给出的 edges 表示一个有效的星型图
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/18
+ * @author huangdu
+ * @version 2022/2/18
  */
 public class FindCenter {
     public int findCenter(int[][] edges) {

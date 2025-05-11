@@ -19,8 +19,8 @@ import java.util.Random;
  * // pick(1) 应该返回 0。因为只有nums[0]等于1。
  * solution.pick(1);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/25
+ * @author huangdu
+ * @version 2022/4/25
  */
 public class Solution398 {
     // 水塘抽样算法 时间换空间很有意思。

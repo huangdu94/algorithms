@@ -22,8 +22,8 @@ package work.huangdu.question_bank.medium;
  * 3 <= n <= 50
  * 1 <= values[i] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/3
+ * @author huangdu
+ * @version 2023/4/3
  */
 public class MinScoreTriangulation {
     private int[] values;

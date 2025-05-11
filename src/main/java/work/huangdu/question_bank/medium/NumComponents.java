@@ -24,8 +24,8 @@ import java.util.Set;
  * 0 <= nums[i] < n
  * nums 中所有值 不同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/13
+ * @author huangdu
+ * @version 2022/10/13
  */
 public class NumComponents {
     public int numComponents(ListNode head, int[] nums) {

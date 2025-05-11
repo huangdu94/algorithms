@@ -23,7 +23,7 @@ package work.huangdu.question_bank.easy;
  * command 由 "G"、"()" 和/或 "(al)" 按某种顺序组成
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/11/6
+ * @version 2022/11/6
  */
 public class Interpret {
     public String interpret(String command) {

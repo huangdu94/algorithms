@@ -3,8 +3,8 @@ package work.huangdu.specific.union_find_set;
 import java.util.Random;
 
 /**
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/28
+ * @author huangdu
+ * @version 2021/2/28
  */
 public class UnionFindSetTest {
     public static void main(String[] args) {

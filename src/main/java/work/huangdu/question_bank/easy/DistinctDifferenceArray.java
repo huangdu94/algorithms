@@ -28,7 +28,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= n == nums.length <= 50
  * 1 <= nums[i] <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class DistinctDifferenceArray {
     public int[] distinctDifferenceArray(int[] nums) {

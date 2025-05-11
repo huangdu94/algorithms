@@ -35,7 +35,7 @@ import java.util.Arrays;
  * 1 <= beans.length <= 10^5
  * 1 <= beans[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinimumRemoval {
     public long minimumRemoval(int[] beans) {

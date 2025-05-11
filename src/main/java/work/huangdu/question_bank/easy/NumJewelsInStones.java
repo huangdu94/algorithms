@@ -14,8 +14,8 @@ package work.huangdu.question_bank.easy;
  * S 和 J 最多含有50个字母。
  * J 中的字符不重复。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/2 9:49
+ * @author huangdu
+ * @version 2020/10/2 9:49
  */
 public class NumJewelsInStones {
     public int numJewelsInStones(String J, String S) {

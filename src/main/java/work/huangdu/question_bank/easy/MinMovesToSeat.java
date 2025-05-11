@@ -40,8 +40,8 @@ import java.util.Arrays;
  * 1 <= n <= 100
  * 1 <= seats[i], students[j] <= 100
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/3
+ * @author huangdu
+ * @version 2023/1/3
  */
 public class MinMovesToSeat {
     public int minMovesToSeat(int[] seats, int[] students) {

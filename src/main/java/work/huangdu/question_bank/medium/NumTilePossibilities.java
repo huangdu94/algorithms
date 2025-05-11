@@ -23,8 +23,8 @@ import java.util.Set;
  * 1 <= tiles.length <= 7
  * tiles 由大写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/19
+ * @author huangdu
+ * @version 2023/5/19
  */
 public class NumTilePossibilities {
     public int numTilePossibilities(String tiles) {

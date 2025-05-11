@@ -23,7 +23,7 @@ import java.util.Map;
  * 不考虑答案输出的顺序。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2021/7/18
+ * @version 2021/7/18
  */
 public class GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {

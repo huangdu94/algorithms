@@ -16,8 +16,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums[i] <= 1000
  * 0 <= k <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/5
+ * @author huangdu
+ * @version 2022/5/5
  */
 public class NumSubarrayProductLessThanK {
     public int numSubarrayProductLessThanK(int[] nums, int k) {

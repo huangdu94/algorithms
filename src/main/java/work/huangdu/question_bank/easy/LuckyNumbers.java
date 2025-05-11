@@ -28,8 +28,8 @@ import java.util.List;
  * 1 <= matrix[i][j] <= 10^5
  * 矩阵中的所有元素都是不同的
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/15
+ * @author huangdu
+ * @version 2022/2/15
  */
 public class LuckyNumbers {
     public List<Integer> luckyNumbers(int[][] matrix) {

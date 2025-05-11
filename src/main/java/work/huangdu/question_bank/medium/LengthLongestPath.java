@@ -42,8 +42,8 @@ import java.util.Deque;
  * 1 <= input.length <= 10^4
  * input 可能包含小写或大写的英文字母，一个换行符 '\n'，一个制表符 '\t'，一个点 '.'，一个空格 ' '，和数字。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/20
+ * @author huangdu
+ * @version 2022/4/20
  */
 public class LengthLongestPath {
     public int lengthLongestPath(String input) {

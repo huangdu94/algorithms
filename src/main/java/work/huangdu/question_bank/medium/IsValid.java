@@ -26,8 +26,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= s.length <= 2 * 10^4
  * s 由字母 'a'、'b' 和 'c' 组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/4
+ * @author huangdu
+ * @version 2023/5/4
  */
 public class IsValid {
 

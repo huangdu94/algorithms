@@ -34,8 +34,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= balance[i], money <= 10^12
  * transfer, deposit, withdraw 三个函数，每个 最多调用 10^4 次
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/18
+ * @author huangdu
+ * @version 2022/3/18
  */
 public class Bank {
     private final int n;

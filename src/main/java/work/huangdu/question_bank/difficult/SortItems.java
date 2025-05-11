@@ -26,8 +26,8 @@ import java.util.*;
  * i != beforeItems[i][j]
  * beforeItems[i] 不含重复元素
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/12 19:59
+ * @author huangdu
+ * @version 2021/1/12 19:59
  */
 public class SortItems {
     public int[] sortItems(int n, int m, int[] group, List<List<Integer>> beforeItems) {

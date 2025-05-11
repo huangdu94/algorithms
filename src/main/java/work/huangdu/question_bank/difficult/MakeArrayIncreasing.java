@@ -25,8 +25,8 @@ import java.util.Map;
  * 1 <= arr_1.length, arr_2.length <= 2000
  * 0 <= arr_1[i], arr_2[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/20
+ * @author huangdu
+ * @version 2023/4/20
  */
 public class MakeArrayIncreasing {
     private int[] a;

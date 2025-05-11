@@ -22,8 +22,8 @@ import java.util.List;
  * 1 <= nums[i] <= 2 * 10^9
  * nums 中的所有整数 互不相同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/23
+ * @author huangdu
+ * @version 2021/4/23
  */
 public class LargestDivisibleSubset {
     private int max;

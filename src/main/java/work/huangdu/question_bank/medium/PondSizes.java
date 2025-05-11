@@ -22,8 +22,8 @@ import java.util.Queue;
  * 0 < len(land) <= 1000
  * 0 < len(land[i]) <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/25
+ * @author huangdu
+ * @version 2023/6/25
  */
 public class PondSizes {
     public int[] pondSizes(int[][] land) {

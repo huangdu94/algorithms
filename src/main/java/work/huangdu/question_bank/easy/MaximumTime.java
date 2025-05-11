@@ -19,8 +19,8 @@ package work.huangdu.question_bank.easy;
  * time 的格式为 hh:mm
  * 题目数据保证你可以由输入的字符串生成有效的时间
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/24
+ * @author huangdu
+ * @version 2021/7/24
  */
 public class MaximumTime {
     public String maximumTime(String time) {

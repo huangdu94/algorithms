@@ -24,8 +24,8 @@ import java.util.List;
  * 1 <= nums.length <= 100
  * 0 <= nums[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/6 16:28
+ * @author huangdu
+ * @version 2020/8/6 16:28
  */
 public class LargestNumber {
     public String largestNumber(int[] nums) {

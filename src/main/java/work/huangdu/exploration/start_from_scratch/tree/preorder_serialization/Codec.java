@@ -26,8 +26,8 @@ import work.huangdu.question_bank.easy.IsSameTree;
  * TreeNode ans = deser.deserialize(tree);
  * return ans;
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/5
+ * @author huangdu
+ * @version 2021/2/5
  */
 public class Codec {
     // Encodes a tree to a single string.

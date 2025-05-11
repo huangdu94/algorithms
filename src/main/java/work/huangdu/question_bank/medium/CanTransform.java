@@ -17,8 +17,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= len(start) = len(end) <= 10000。
  * start和end中的字符串仅限于'L', 'R'和'X'。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/2
+ * @author huangdu
+ * @version 2022/10/2
  */
 public class CanTransform {
     public boolean canTransform(String start, String end) {

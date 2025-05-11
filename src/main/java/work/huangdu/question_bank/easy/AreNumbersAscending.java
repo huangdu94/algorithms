@@ -36,8 +36,8 @@ package work.huangdu.question_bank.easy;
  * s 中的每个数字都是一个 小于 100 的 正 数，且不含前导零
  * s 不含前导或尾随空格
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/3
+ * @author huangdu
+ * @version 2023/1/3
  */
 public class AreNumbersAscending {
     public boolean areNumbersAscending(String s) {

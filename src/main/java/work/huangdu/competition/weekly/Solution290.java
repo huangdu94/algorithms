@@ -13,8 +13,8 @@ import java.util.Set;
 /**
  * 第 290 场周赛
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/24
+ * @author huangdu
+ * @version 2022/4/24
  */
 public class Solution290 {
     /**

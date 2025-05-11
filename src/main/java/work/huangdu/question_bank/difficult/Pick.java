@@ -38,8 +38,8 @@ import java.util.Random;
  * Solution obj = new Solution(n, blacklist);
  * int param_1 = obj.pick();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/29
+ * @author huangdu
+ * @version 2022/6/29
  */
 public class Pick {
     static class Solution {

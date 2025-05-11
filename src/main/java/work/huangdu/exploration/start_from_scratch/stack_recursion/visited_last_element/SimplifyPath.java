@@ -29,8 +29,8 @@ import java.util.LinkedList;
  * 输入："/a//b////c/d//././/.."
  * 输出："/a/b/c"
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/22 13:25
+ * @author huangdu
+ * @version 2020/10/22 13:25
  */
 public class SimplifyPath {
     public String simplifyPath2(String path) {

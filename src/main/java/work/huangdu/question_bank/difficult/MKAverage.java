@@ -46,8 +46,8 @@ import java.util.TreeMap;
  * obj.addElement(num);
  * int param_2 = obj.calculateMKAverage();
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/29
+ * @author huangdu
+ * @version 2023/1/29
  */
 public class MKAverage {
     private final int m;

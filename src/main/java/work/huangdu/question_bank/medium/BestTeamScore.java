@@ -26,8 +26,8 @@ import java.util.TreeMap;
  * 1 <= scores[i] <= 10^6
  * 1 <= ages[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/22
+ * @author huangdu
+ * @version 2023/3/22
  */
 public class BestTeamScore {
     public int bestTeamScore(int[] scores, int[] ages) {

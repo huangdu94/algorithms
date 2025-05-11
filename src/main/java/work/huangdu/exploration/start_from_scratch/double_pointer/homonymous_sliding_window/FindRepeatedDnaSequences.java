@@ -21,8 +21,8 @@ import java.util.Set;
  * 0 <= s.length <= 10^5
  * s[i] 为 'A'、'C'、'G' 或 'T'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/12/15 10:43
+ * @author huangdu
+ * @version 2020/12/15 10:43
  */
 public class FindRepeatedDnaSequences {
     private static final Map<Character, Integer> dictionary = new HashMap<>();

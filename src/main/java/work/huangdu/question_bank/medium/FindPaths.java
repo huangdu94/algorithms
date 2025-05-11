@@ -19,8 +19,8 @@ import java.util.Set;
  * 0 <= startRow < m
  * 0 <= startColumn < n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/15
+ * @author huangdu
+ * @version 2021/8/15
  */
 public class FindPaths {
     public int findPaths(int m, int n, int maxMove, int startRow, int startColumn) {

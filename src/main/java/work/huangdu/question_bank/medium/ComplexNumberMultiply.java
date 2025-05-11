@@ -18,8 +18,8 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * num1 和 num2 都是有效的复数表示。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/25
+ * @author huangdu
+ * @version 2022/2/25
  */
 public class ComplexNumberMultiply {
     public String complexNumberMultiply(String num1, String num2) {

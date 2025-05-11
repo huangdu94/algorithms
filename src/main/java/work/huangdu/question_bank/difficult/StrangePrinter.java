@@ -18,8 +18,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= s.length <= 100
  * s 由小写英文字母组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/24
+ * @author huangdu
+ * @version 2021/5/24
  */
 public class StrangePrinter {
     public int strangePrinter(String s) {

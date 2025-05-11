@@ -12,8 +12,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= A.length <= 5000
  * 0 <= A[i] <= 5000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/12 15:41
+ * @author huangdu
+ * @version 2020/11/12 15:41
  */
 public class SortArrayByParity {
     public int[] sortArrayByParity(int[] nums) {

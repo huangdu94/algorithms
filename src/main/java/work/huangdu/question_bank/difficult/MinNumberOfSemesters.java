@@ -28,8 +28,8 @@ import java.util.Arrays;
  * 所有先修关系都是不同的，也就是说 relations[i] != relations[j] 。
  * 题目输入的图是个有向无环图。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/16
+ * @author huangdu
+ * @version 2023/6/16
  */
 public class MinNumberOfSemesters {
     private int n;

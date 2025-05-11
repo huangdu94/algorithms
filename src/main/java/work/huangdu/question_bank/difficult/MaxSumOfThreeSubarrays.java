@@ -19,8 +19,8 @@ import java.util.Arrays;
  * 1 <= nums[i] < 2^16
  * 1 <= k <= floor(nums.length / 3)
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/8
+ * @author huangdu
+ * @version 2021/12/8
  */
 public class MaxSumOfThreeSubarrays {
     // TODO 需要复习

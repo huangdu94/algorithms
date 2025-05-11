@@ -21,8 +21,8 @@ import java.util.Arrays;
  * 0 <= encoded[i] <= 10^5
  * 0 <= first <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/6
+ * @author huangdu
+ * @version 2021/5/6
  */
 public class Decode {
     public int[] decode(int[] encoded, int first) {

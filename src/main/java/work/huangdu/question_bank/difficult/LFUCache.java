@@ -45,7 +45,7 @@ import java.util.Map;
  * 0 <= value <= 10^9
  * 最多调用 2 * 10^5 次 get 和 put 方法
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class LFUCache {
     private final int capacity;

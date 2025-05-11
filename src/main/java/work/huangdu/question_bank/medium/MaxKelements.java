@@ -27,7 +27,7 @@ import java.util.PriorityQueue;
  * 1 <= nums.length, k <= 10^5
  * 1 <= nums[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaxKelements {
     public long maxKelements(int[] nums, int k) {

@@ -49,8 +49,8 @@ import java.util.TreeSet;
  * 1 <= arrival[i], load[i] <= 10^9
  * arrival 保证 严格递增 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/30
+ * @author huangdu
+ * @version 2022/3/30
  */
 public class BusiestServers {
     public List<Integer> busiestServers(int k, int[] arrival, int[] load) {

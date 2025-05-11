@@ -22,8 +22,8 @@ import java.util.Queue;
  * -10^4 <= nums[i] <= 10^4
  * nums 按 严格递增 顺序排列
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/6/23 10:20
+ * @author huangdu
+ * @version 2020/6/23 10:20
  */
 public class SortedArrayToBST {
     private int[] nums;

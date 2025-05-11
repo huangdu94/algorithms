@@ -26,8 +26,8 @@ import java.util.Arrays;
  * 1 <= s.length <= 300
  * s 只含小写英文字母
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/17
+ * @author huangdu
+ * @version 2022/9/17
  */
 public class MaxLengthBetweenEqualCharacters {
     public int maxLengthBetweenEqualCharacters(String s) {

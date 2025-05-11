@@ -26,8 +26,8 @@ import work.huangdu.data_structure.ListNode;
  * 0 <= Node.val <= 1000
  * 1 <= k <= 50
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/22
+ * @author huangdu
+ * @version 2021/9/22
  */
 public class SplitListToParts {
     public ListNode[] splitListToParts(ListNode head, int k) {

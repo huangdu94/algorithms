@@ -23,8 +23,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= A.length <= 30000
  * 1 <= K <= A.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/18
+ * @author huangdu
+ * @version 2021/2/18
  */
 public class MinKBitFlips {
     public int minKBitFlips(int[] A, int K) {

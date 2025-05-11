@@ -30,8 +30,8 @@ import java.util.Queue;
  * 1 <= s.length <= 500
  * s 仅由小写英文字母和/或数字组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/11
+ * @author huangdu
+ * @version 2022/8/11
  */
 public class Reformat {
     public String reformat(String s) {

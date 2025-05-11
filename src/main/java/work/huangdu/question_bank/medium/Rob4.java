@@ -26,7 +26,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= nums[i] <= 10^9
  * 1 <= k <= (nums.length + 1)/2
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class Rob4 {
     public int minCapability(int[] nums, int k) {

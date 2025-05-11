@@ -34,8 +34,8 @@ import work.huangdu.data_structure.TreeNode;
  * -10^8 <= val <= 10^8
  * 新值和原始二叉搜索树中的任意节点值都不同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/30 12:26
+ * @author huangdu
+ * @version 2020/9/30 12:26
  */
 public class InsertIntoBST {
     public TreeNode insertIntoBST(TreeNode root, int val) {

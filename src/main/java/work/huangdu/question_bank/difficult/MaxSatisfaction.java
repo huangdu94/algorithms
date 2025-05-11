@@ -25,7 +25,7 @@ import java.util.Arrays;
  * 1 <= n <= 500
  * -1000 <= satisfaction[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MaxSatisfaction {
     public int maxSatisfaction(int[] satisfaction) {

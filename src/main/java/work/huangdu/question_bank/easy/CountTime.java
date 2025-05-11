@@ -23,8 +23,8 @@ package work.huangdu.question_bank.easy;
  * "00" <= mm <= "59"
  * 字符串中有的数位是 '?' ，需要用 0 到 9 之间的数字替换。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/9
+ * @author huangdu
+ * @version 2023/5/9
  */
 public class CountTime {
     public int countTime(String time) {

@@ -21,8 +21,8 @@ import java.util.List;
  * S 的长度不超过 50。
  * S 保证为一个满足上述定义的特殊 的二进制序列。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/6
+ * @author huangdu
+ * @version 2022/9/6
  */
 public class MakeLargestSpecial {
     public String makeLargestSpecial(String s) {

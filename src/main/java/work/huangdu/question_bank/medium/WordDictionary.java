@@ -35,8 +35,8 @@ import java.util.Queue;
  * obj.addWord(word);
  * boolean param_2 = obj.search(word);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/10/19
+ * @author huangdu
+ * @version 2021/10/19
  */
 public class WordDictionary {
     private final TrieNode root = new TrieNode();

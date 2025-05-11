@@ -20,7 +20,7 @@ package work.huangdu.question_bank.easy;
  * 2 <= nums.length <= 100
  * 1 <= nums[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class AlternatingSubarray {
     public int alternatingSubarray(int[] nums) {

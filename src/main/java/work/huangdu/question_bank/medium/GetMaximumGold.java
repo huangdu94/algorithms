@@ -32,8 +32,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= grid[i][j] <= 100
  * 最多 25 个单元格中有黄金。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/8
+ * @author huangdu
+ * @version 2022/2/8
  */
 public class GetMaximumGold {
     // 优化点 把 visited优化掉。

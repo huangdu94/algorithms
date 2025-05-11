@@ -21,8 +21,8 @@ import java.util.List;
  * 0 <= digits.length <= 4
  * digits[i] 是范围 ['2', '9'] 的一个数字。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/9 0:19
+ * @author huangdu
+ * @version 2020/7/9 0:19
  */
 public class LetterCombinations {
     private static final char[][] dictionary = {

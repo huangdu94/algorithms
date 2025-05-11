@@ -29,8 +29,8 @@ import work.huangdu.data_structure.TreeNode;
  * 7
  * 注意: 您可以假设树（即给定的根节点）不为 NULL。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/23
+ * @author huangdu
+ * @version 2021/1/23
  */
 public class FindBottomLeftValue {
     public int findBottomLeftValue2(TreeNode root) {

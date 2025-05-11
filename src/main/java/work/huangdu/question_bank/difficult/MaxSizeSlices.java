@@ -24,8 +24,8 @@ import java.util.Arrays;
  * slices.length % 3 == 0
  * 1 <= slices[i] <= 1000
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/21
+ * @author huangdu
+ * @version 2023/8/21
  */
 public class MaxSizeSlices {
     // TODO COPY 需要复习

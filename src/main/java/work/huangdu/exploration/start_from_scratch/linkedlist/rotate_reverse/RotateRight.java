@@ -20,8 +20,8 @@ import work.huangdu.data_structure.ListNode;
  * 向右旋转 3 步: 0->1->2->NULL
  * 向右旋转 4 步: 2->0->1->NULL
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/28 13:27
+ * @author huangdu
+ * @version 2020/10/28 13:27
  */
 public class RotateRight {
     public ListNode rotateRight(ListNode head, int k) {

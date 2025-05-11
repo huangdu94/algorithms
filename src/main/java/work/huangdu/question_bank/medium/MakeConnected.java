@@ -28,8 +28,8 @@ package work.huangdu.question_bank.medium;
  * 没有重复的连接。
  * 两台计算机不会通过多条线缆连接。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/23
+ * @author huangdu
+ * @version 2021/1/23
  */
 public class MakeConnected {
 

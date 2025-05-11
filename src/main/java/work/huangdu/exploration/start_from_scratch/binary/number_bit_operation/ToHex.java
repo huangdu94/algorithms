@@ -19,8 +19,8 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 输出:
  * "ffffffff"
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/10/18 10:50
+ * @author huangdu
+ * @version 2020/10/18 10:50
  */
 public class ToHex {
     private static final char[] HEX_CHARS = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};

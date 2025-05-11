@@ -34,7 +34,7 @@ import java.util.PriorityQueue;
  * 任意两个路口之间至多有一条路。
  * 从任意路口出发，你能够到达其他任意路口。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CountPaths {
     public int countPaths(int n, int[][] roads) {

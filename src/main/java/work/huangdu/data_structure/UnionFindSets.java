@@ -3,8 +3,8 @@ package work.huangdu.data_structure;
 /**
  * union-find sets 并查集
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/4 10:31
+ * @author huangdu
+ * @version 2020/9/4 10:31
  */
 public class UnionFindSets {
     private int count;

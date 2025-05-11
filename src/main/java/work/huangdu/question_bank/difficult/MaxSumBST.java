@@ -31,8 +31,8 @@ import work.huangdu.data_structure.TreeNode;
  * 每棵树有 1 到 40000 个节点。
  * 每个节点的键值在 [-4 * 10^4 , 4 * 10^4] 之间。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/25
+ * @author huangdu
+ * @version 2023/5/25
  */
 public class MaxSumBST {
     private int ans = 0;

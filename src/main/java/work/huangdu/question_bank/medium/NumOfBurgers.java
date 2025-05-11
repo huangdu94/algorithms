@@ -34,7 +34,7 @@ import java.util.List;
  * 0 <= tomatoSlices <= 10^7
  * 0 <= cheeseSlices <= 10^7
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class NumOfBurgers {
     /**

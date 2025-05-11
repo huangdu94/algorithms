@@ -20,8 +20,8 @@ import java.util.TreeSet;
  * -100 <= matrix[i][j] <= 100
  * -10^5 <= k <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/4/22
+ * @author huangdu
+ * @version 2021/4/22
  */
 public class MaxSumSubmatrix {
     private int[][] matrixSum;

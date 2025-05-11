@@ -17,8 +17,8 @@ import java.util.*;
  * 6 的右侧有 1 个更小的元素 (1)
  * 1 的右侧有 0 个更小的元素
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/11 11:33
+ * @author huangdu
+ * @version 2020/8/11 11:33
  */
 public class CountSmaller {
     /**

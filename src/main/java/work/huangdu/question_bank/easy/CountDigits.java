@@ -20,7 +20,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= num <= 10^9
  * num 的数位中不含 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CountDigits {
     public int countDigits(int num) {

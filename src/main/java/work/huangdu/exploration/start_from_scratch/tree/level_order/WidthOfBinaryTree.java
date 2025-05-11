@@ -49,8 +49,8 @@ import work.huangdu.data_structure.TreeNode;
  * 解释: 最大值出现在树的第 4 层，宽度为 8 (6,null,null,null,null,null,null,7)。
  * 注意: 答案在32位有符号整数的表示范围内。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/28
+ * @author huangdu
+ * @version 2021/1/28
  */
 public class WidthOfBinaryTree {
     // 用int溢出了但不影响结果

@@ -25,8 +25,8 @@ import java.util.Set;
  * 2 <= nums.length <= 1000
  * -10^9 <= nums[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/26
+ * @author huangdu
+ * @version 2023/3/26
  */
 public class FindSubarrays {
     public boolean findSubarrays(int[] nums) {

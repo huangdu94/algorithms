@@ -39,7 +39,7 @@ import java.util.PriorityQueue;
  * obj.addEdge(edge);
  * int param_2 = obj.shortestPath(node1,node2);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class Graph {
     private static final int INF = Integer.MAX_VALUE >> 1;

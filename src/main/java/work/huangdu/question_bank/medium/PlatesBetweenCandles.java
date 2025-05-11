@@ -31,8 +31,8 @@ import java.util.TreeSet;
  * queries[i].length == 2
  * 0 <= left_i <= right_i < s.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/8
+ * @author huangdu
+ * @version 2022/3/8
  */
 public class PlatesBetweenCandles {
     public int[] platesBetweenCandles(String s, int[][] queries) {

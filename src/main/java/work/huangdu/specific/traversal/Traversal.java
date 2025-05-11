@@ -8,8 +8,8 @@ import work.huangdu.data_structure.TreeNode;
 /**
  * 遍历接口
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/10/18
+ * @author huangdu
+ * @version 2021/10/18
  */
 public interface Traversal {
     void preorder(TreeNode root);

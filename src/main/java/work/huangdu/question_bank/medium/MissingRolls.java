@@ -30,8 +30,8 @@ import java.util.Arrays;
  * 1 <= n, m <= 10^5
  * 1 <= rolls[i], mean <= 6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/27
+ * @author huangdu
+ * @version 2022/3/27
  */
 public class MissingRolls {
     public int[] missingRolls(int[] rolls, int mean, int n) {

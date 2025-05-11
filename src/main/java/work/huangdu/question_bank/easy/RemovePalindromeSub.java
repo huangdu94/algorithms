@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 1000
  * s 仅包含字母 'a'  和 'b'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/24
+ * @author huangdu
+ * @version 2022/1/24
  */
 public class RemovePalindromeSub {
     public int removePalindromeSub(String s) {

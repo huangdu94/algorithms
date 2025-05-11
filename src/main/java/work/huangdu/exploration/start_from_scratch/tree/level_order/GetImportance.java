@@ -16,8 +16,8 @@ import java.util.*;
  * 一个员工最多有一个直系领导，但是可以有多个直系下属
  * 员工数量不超过2000。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/27
+ * @author huangdu
+ * @version 2021/1/27
  */
 public class GetImportance {
     public int getImportance(List<Employee> employees, int id) {

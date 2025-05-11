@@ -28,8 +28,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= n <= 10^5
  * start 和 target 由字符 'L'、'R' 和 '_' 组成
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/21
+ * @author huangdu
+ * @version 2023/8/21
  */
 public class CanChange {
     public boolean canChange(String start, String target) {

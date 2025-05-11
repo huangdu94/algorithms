@@ -32,7 +32,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= maxOperations, nums[i] <= 10^9
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/12/20
+ * @version 2022/12/20
  */
 public class MinimumSize {
     public int minimumSize(int[] nums, int maxOperations) {

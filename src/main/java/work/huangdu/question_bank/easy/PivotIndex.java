@@ -22,8 +22,8 @@ package work.huangdu.question_bank.easy;
  * nums 的长度范围为 [0, 10000]。
  * 任何一个 nums[i] 将会是一个范围在 [-1000, 1000]的整数。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/1/28
+ * @author huangdu
+ * @version 2021/1/28
  */
 public class PivotIndex {
     public int pivotIndex2(int[] nums) {

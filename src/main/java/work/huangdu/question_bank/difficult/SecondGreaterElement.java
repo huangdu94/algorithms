@@ -33,7 +33,7 @@ import java.util.List;
  * 1 <= nums.length <= 10^5
  * 0 <= nums[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SecondGreaterElement {
     public int[] secondGreaterElement(int[] nums) {

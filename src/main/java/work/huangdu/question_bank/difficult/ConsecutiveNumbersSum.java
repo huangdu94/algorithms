@@ -18,8 +18,8 @@ package work.huangdu.question_bank.difficult;
  * 提示:
  * 1 <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/6/6
+ * @author huangdu
+ * @version 2022/6/6
  */
 public class ConsecutiveNumbersSum {
     /**

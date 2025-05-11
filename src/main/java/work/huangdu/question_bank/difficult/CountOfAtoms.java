@@ -36,8 +36,8 @@ import java.util.TreeMap;
  * formula的长度在[1, 1000]之间。
  * formula只包含字母、数字和圆括号，并且题目中给定的是合法的化学式。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/7/5
+ * @author huangdu
+ * @version 2021/7/5
  */
 public class CountOfAtoms {
     private int n;

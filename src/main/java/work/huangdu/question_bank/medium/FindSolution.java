@@ -44,7 +44,7 @@ import java.util.List;
  * 在 1 <= x, y <= 1000 的前提下，题目保证 f(x, y) 是一个 32 位有符号整数。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2023/2/19
+ * @version 2023/2/19
  */
 public class FindSolution {
     public List<List<Integer>> findSolution(CustomFunction customfunction, int z) {

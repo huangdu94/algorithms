@@ -29,8 +29,8 @@ package work.huangdu.question_bank.difficult;
  * digits 按 非递减顺序 排列
  * 1 <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/21
+ * @author huangdu
+ * @version 2022/10/21
  */
 public class AtMostNGivenDigitSet {
     public int atMostNGivenDigitSet(String[] digits, int n) {

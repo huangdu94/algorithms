@@ -32,8 +32,8 @@ import java.util.Map;
  * 1 <= nums[i] <= 10^9
  * 1 <= p <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/11
+ * @author huangdu
+ * @version 2023/3/11
  */
 public class MinSubarray {
     public int minSubarray(int[] nums, int p) {

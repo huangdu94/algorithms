@@ -23,8 +23,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= text.length <= 20000
  * text 仅由小写英文字母组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/4
+ * @author huangdu
+ * @version 2023/6/4
  */
 public class MaxRepOpt1 {
     public int maxRepOpt1(String text) {

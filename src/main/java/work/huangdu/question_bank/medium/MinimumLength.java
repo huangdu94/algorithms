@@ -31,8 +31,8 @@ package work.huangdu.question_bank.medium;
  * 1 <= s.length <= 10^5
  * s 只包含字符 'a'，'b' 和 'c' 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/12/28
+ * @author huangdu
+ * @version 2022/12/28
  */
 public class MinimumLength {
     public int minimumLength(String s) {

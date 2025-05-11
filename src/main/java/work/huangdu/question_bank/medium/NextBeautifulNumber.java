@@ -31,7 +31,7 @@ package work.huangdu.question_bank.medium;
  * 提示：
  * 0 <= n <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class NextBeautifulNumber {
     /*

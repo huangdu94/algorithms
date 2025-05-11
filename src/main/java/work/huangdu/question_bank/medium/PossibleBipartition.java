@@ -29,8 +29,8 @@ import java.util.Set;
  * ai < bi
  * dislikes 中每一组都 不同
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/10/17
+ * @author huangdu
+ * @version 2022/10/17
  */
 public class PossibleBipartition {
     public boolean possibleBipartition(int n, int[][] dislikes) {

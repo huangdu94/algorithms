@@ -1,8 +1,8 @@
 package work.huangdu.specific.calculator;
 
 /**
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/1 12:25
+ * @author huangdu
+ * @version 2020/8/1 12:25
  */
 public class Tools {
     /**

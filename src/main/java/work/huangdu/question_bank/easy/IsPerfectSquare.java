@@ -11,8 +11,8 @@ package work.huangdu.question_bank.easy;
  * 输入：14
  * 输出：False
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/2 15:58
+ * @author huangdu
+ * @version 2020/9/2 15:58
  */
 public class IsPerfectSquare {
     public boolean isPerfectSquare1(int num) {

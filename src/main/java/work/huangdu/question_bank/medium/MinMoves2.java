@@ -24,7 +24,7 @@ import java.util.Set;
  * -10^9 <= nums[i] <= 10^9
  *
  * @author huangdu.hd@alibaba-inc.com
- * @date 2022/5/19
+ * @version 2022/5/19
  */
 public class MinMoves2 {
     public int minMoves2(int[] nums) {

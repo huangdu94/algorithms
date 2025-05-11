@@ -41,8 +41,8 @@ package work.huangdu.exploration.primary_algorithms.array;
  * board[i].length == 9
  * board[i][j] 是一位数字或者 '.'
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/26 16:14
+ * @author huangdu
+ * @version 2020/7/26 16:14
  */
 public class IsValidSudoku {
     // 9个int存9个区域的信息.对于每一个int,1-9位存row,10-18位存coj,19-27位存block

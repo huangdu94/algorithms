@@ -24,8 +24,8 @@ package work.huangdu.question_bank.easy;
  * 1 <= s.length <= 100
  * s 仅包含小写英文字母和 '?' 字符
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/5
+ * @author huangdu
+ * @version 2022/1/5
  */
 public class ModifyString {
     public String modifyString(String s) {

@@ -15,8 +15,8 @@ package work.huangdu.question_bank.medium;
  * s[i] 不是 '0' 就是 '1'
  * 1 <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/11
+ * @author huangdu
+ * @version 2023/5/11
  */
 public class QueryString {
     public boolean queryString(String s, int n) {

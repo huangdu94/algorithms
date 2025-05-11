@@ -22,8 +22,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= n <= 13
  * 1 <= m <= 13
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/14
+ * @author huangdu
+ * @version 2023/6/14
  */
 public class TilingRectangle {
     private int n;

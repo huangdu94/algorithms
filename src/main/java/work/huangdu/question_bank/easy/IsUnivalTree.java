@@ -19,8 +19,8 @@ import work.huangdu.data_structure.TreeNode;
  * 给定树的节点数范围是 [1, 100]。
  * 每个节点的值都是整数，范围为 [0, 99] 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/24
+ * @author huangdu
+ * @version 2022/5/24
  */
 public class IsUnivalTree {
     public boolean isUnivalTree(TreeNode root) {

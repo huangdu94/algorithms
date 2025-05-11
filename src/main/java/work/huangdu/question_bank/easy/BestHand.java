@@ -31,8 +31,8 @@ package work.huangdu.question_bank.easy;
  * 'a' <= suits[i] <= 'd'
  * 任意两张扑克牌不会同时有相同的大小和花色。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/20
+ * @author huangdu
+ * @version 2023/2/20
  */
 public class BestHand {
     public String bestHand(int[] ranks, char[] suits) {

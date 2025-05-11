@@ -17,8 +17,8 @@ import java.util.Map;
  * N 是一个正整数并且不会超过 10000。
  * 所有运动员的成绩都不相同。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/26 17:44
+ * @author huangdu
+ * @version 2020/9/26 17:44
  */
 public class FindRelativeRanks {
     public String[] findRelativeRanks(int[] nums) {

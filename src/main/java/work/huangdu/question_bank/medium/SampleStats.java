@@ -40,8 +40,8 @@ import java.util.Arrays;
  * 1 <= sum(count) <= 10^9
  * count 的众数是 唯一 的
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/29
+ * @author huangdu
+ * @version 2023/5/29
  */
 public class SampleStats {
     public double[] sampleStats(int[] count) {

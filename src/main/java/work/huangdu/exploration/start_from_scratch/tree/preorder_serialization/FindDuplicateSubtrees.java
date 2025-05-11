@@ -34,8 +34,8 @@ import work.huangdu.data_structure.TreeNode;
  * The number of the nodes in the tree will be in the range [1, 10^4]
  * -200 <= Node.val <= 200
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/2/4
+ * @author huangdu
+ * @version 2021/2/4
  */
 public class FindDuplicateSubtrees {
     // 暴力法(超出容量未通过)

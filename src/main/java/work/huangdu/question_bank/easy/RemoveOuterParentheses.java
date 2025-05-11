@@ -30,8 +30,8 @@ package work.huangdu.question_bank.easy;
  * s[i] 为 '(' 或 ')'
  * s 是一个有效括号字符串
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/5/30
+ * @author huangdu
+ * @version 2022/5/30
  */
 public class RemoveOuterParentheses {
     public String removeOuterParentheses(String s) {

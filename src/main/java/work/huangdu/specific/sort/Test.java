@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/16 17:42
+ * @author huangdu
+ * @version 2020/7/16 17:42
  */
 public class Test {
     public static void main(String[] args) {

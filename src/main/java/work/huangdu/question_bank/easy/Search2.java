@@ -18,8 +18,8 @@ import java.util.Arrays;
  * n 将在 [1, 10000]之间。
  * nums 的每个元素都将在 [-9999, 9999]之间。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/6
+ * @author huangdu
+ * @version 2021/9/6
  */
 public class Search2 {
     public int search2(int[] nums, int target) {

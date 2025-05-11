@@ -25,8 +25,8 @@ import java.util.List;
  * sentence 中单词之间由一个空格隔开。
  * sentence 没有前导或尾随空格。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/8
+ * @author huangdu
+ * @version 2022/7/8
  */
 public class ReplaceWords {
     public String replaceWords(List<String> dictionary, String sentence) {

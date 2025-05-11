@@ -21,8 +21,8 @@ package work.huangdu.question_bank.difficult;
  * 提示:
  * 1 <= sx, sy, tx, ty <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/9
+ * @author huangdu
+ * @version 2022/4/9
  */
 public class ReachingPoints {
     public boolean reachingPoints(int sx, int sy, int tx, int ty) {

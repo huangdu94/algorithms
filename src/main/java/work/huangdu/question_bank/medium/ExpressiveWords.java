@@ -23,8 +23,8 @@ import java.util.List;
  * 1 <= words[i].length <= 100
  * s 和所有在 words 中的单词都只由小写字母组成。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/25
+ * @author huangdu
+ * @version 2022/11/25
  */
 public class ExpressiveWords {
     public int expressiveWords(String s, String[] words) {

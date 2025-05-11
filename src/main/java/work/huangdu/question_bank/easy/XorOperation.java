@@ -25,8 +25,8 @@ package work.huangdu.question_bank.easy;
  * 0 <= start <= 1000
  * n == nums.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/7
+ * @author huangdu
+ * @version 2021/5/7
  */
 public class XorOperation {
     public int xorOperation(int n, int start) {

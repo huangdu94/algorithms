@@ -16,8 +16,8 @@ import work.huangdu.data_structure.ListNode;
  * -100 <= Node.val <= 100
  * 题目数据保证链表已经按升序排列
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/8 10:39
+ * @author huangdu
+ * @version 2020/8/8 10:39
  */
 public class DeleteDuplicates {
     public ListNode deleteDuplicates(ListNode head) {

@@ -34,7 +34,7 @@ import java.util.List;
  * 1 <= nums[i] <= 10^5
  * 0 <= k <= 10
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class SumIndicesWithKSetBits {
     public int sumIndicesWithKSetBits(List<Integer> nums, int k) {

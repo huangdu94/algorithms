@@ -36,7 +36,7 @@ import java.util.Comparator;
  * ranges[i].length == 2
  * 0 <= start_i <= end_i <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CountWays {
     private static final int MOD = 1000000007;

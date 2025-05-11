@@ -21,8 +21,8 @@ import java.util.Arrays;
  * 1 <= nums.length <= 4 * 10^4
  * 1 <= nums[i] <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/6/20
+ * @author huangdu
+ * @version 2023/6/20
  */
 public class MaxSumDivThree {
     public int maxSumDivThree(int[] nums) {

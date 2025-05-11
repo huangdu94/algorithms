@@ -17,10 +17,10 @@ import java.util.*;
  * 输出: [3,2,1]
  * 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  * @author huangdu.hd@alibaba-inc.com
- * @date 2020/9/29 9:54
- * @date 2021/2/6
+ * @version 2020/9/29 9:54
+ * @version 2021/2/6
  */
 public class PostorderTraversal {
     public List<Integer> postorderTraversal(TreeNode root) {

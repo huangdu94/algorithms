@@ -30,7 +30,7 @@ import work.huangdu.data_structure.TreeNode;
  * 1 <= Node.val <= 10^6
  * 1 <= k <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class KthLargestLevelSum {
     public long kthLargestLevelSum(TreeNode root, int k) {

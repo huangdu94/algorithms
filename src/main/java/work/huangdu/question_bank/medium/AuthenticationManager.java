@@ -43,8 +43,8 @@ import java.util.Queue;
  * obj.renew(tokenId,currentTime);
  * int param_3 = obj.countUnexpiredTokens(currentTime);
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/2/9
+ * @author huangdu
+ * @version 2023/2/9
  */
 public class AuthenticationManager {
     private final int timeToLive;

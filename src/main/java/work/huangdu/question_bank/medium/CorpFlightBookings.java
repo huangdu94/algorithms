@@ -33,8 +33,8 @@ import java.util.Arrays;
  * 1 <= first_i <= last_i <= n
  * 1 <= seats_i <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/31
+ * @author huangdu
+ * @version 2021/8/31
  */
 public class CorpFlightBookings {
     public int[] corpFlightBookings(int[][] bookings, int n) {

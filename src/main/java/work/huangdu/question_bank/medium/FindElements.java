@@ -55,7 +55,7 @@ import work.huangdu.data_structure.TreeNode;
  * 调用 find() 的总次数在 [1, 10^4] 之间
  * 0 <= target <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class FindElements {
     private final Set<Integer> set;

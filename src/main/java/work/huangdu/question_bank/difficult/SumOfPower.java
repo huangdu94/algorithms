@@ -27,8 +27,8 @@ import java.util.Arrays;
  * 1 <= nums.length <= 10^5
  * 1 <= nums[i] <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/1
+ * @author huangdu
+ * @version 2023/8/1
  */
 public class SumOfPower {
     private static final int MOD = 1000000007;

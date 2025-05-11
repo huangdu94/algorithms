@@ -27,8 +27,8 @@ import java.util.stream.Collectors;
  * 0 <= xi1, yi1, xi2, yi2 <= 10^9
  * 矩形叠加覆盖后的总面积不会超越 2^63 - 1 ，这意味着可以用一个 64 位有符号整数来保存面积结果。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/16
+ * @author huangdu
+ * @version 2022/9/16
  */
 public class RectangleArea {
     /**

@@ -47,8 +47,8 @@ import java.util.Arrays;
  * 1 <= k <= m
  * matrix[i][j] 不是 0 就是 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/8/1
+ * @author huangdu
+ * @version 2021/8/1
  */
 public class KWeakestRows {
     public int[] kWeakestRows(int[][] mat, int k) {

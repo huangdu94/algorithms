@@ -32,8 +32,8 @@ package work.huangdu.question_bank.easy;
  * trust[i][0] != trust[i][1]
  * 1 <= trust[i][0], trust[i][1] <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/12/19
+ * @author huangdu
+ * @version 2021/12/19
  */
 public class FindJudge {
     public int findJudge(int n, int[][] trust) {

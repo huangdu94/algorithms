@@ -17,8 +17,8 @@ package work.huangdu.question_bank.difficult;
  * 提示：
  * 1 <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/3/25
+ * @author huangdu
+ * @version 2023/3/25
  */
 public class NumDupDigitsAtMostN {
     private String nStr;

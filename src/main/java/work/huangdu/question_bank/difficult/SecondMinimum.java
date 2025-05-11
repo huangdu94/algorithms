@@ -49,8 +49,8 @@ import java.util.Queue;
  * 每个节点都可以从其他节点直接或者间接到达
  * 1 <= time, change <= 10^3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/1/24
+ * @author huangdu
+ * @version 2022/1/24
  */
 public class SecondMinimum {
     public int secondMinimum(int n, int[][] edges, int time, int change) {

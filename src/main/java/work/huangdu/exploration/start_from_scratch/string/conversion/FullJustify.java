@@ -51,8 +51,8 @@ import java.util.List;
  * "do                  "
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/9/9
+ * @author huangdu
+ * @version 2021/9/9
  */
 public class FullJustify {
     public List<String> fullJustify(String[] words, int maxWidth) {

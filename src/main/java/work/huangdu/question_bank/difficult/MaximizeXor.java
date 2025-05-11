@@ -23,8 +23,8 @@ import java.util.Comparator;
  * queries[i].length == 2
  * 0 <= nums[j], xi, mi <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/23
+ * @author huangdu
+ * @version 2021/5/23
  */
 public class MaximizeXor {
     // 保险起见可以设置为L，但根据题目范围，此值29即可

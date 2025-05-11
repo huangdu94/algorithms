@@ -41,8 +41,8 @@ import java.util.Queue;
  * above_i != below_i
  * left_i != right_i
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/5
+ * @author huangdu
+ * @version 2023/5/5
  */
 public class BuildMatrix {
     public int[][] buildMatrix(int k, int[][] rowConditions, int[][] colConditions) {

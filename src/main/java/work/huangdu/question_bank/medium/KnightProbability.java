@@ -21,8 +21,8 @@ package work.huangdu.question_bank.medium;
  * 0 <= k <= 100
  * 0 <= row, column <= n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/17
+ * @author huangdu
+ * @version 2022/2/17
  */
 public class KnightProbability {
     private static final int[][] MOVE = {{-2, -1}, {-2, 1}, {-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}};

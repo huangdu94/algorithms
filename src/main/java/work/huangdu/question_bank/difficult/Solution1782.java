@@ -27,8 +27,8 @@ import java.util.Map;
  * 1 <= queries.length <= 20
  * 0 <= queries[j] < edges.length
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/8/23
+ * @author huangdu
+ * @version 2023/8/23
  */
 public class Solution1782 {
     public int[] countPairs(int n, int[][] edges, int[] queries) {

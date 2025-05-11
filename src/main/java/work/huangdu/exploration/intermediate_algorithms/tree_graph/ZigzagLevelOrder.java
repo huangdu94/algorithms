@@ -23,8 +23,8 @@ import java.util.Stack;
  * [15,7]
  * ]
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/7/5 19:30
+ * @author huangdu
+ * @version 2020/7/5 19:30
  */
 public class ZigzagLevelOrder {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {

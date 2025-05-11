@@ -16,8 +16,8 @@ package work.huangdu.question_bank.difficult;
  * 1 <= nums.length <= 3*10^4
  * -10^5 <= nums[i] <= 10^5
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/5/12
+ * @author huangdu
+ * @version 2023/5/12
  */
 public class MaxValueAfterReverse {
     // TODO 数学推导

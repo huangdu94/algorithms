@@ -19,8 +19,8 @@ package work.huangdu.question_bank.easy;
  * nums.length == 2n
  * 1 <= nums[i] <= 10^3
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/1
+ * @author huangdu
+ * @version 2022/9/1
  */
 public class Shuffle {
     public int[] shuffle(int[] nums, int n) {

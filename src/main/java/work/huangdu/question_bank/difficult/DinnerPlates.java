@@ -64,8 +64,8 @@ import java.util.TreeSet;
  * 0 <= index <= 100000
  * 最多会对 push，pop，和 popAtStack 进行 200000 次调用。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/4/28
+ * @author huangdu
+ * @version 2023/4/28
  */
 public class DinnerPlates {
     private final int capacity;

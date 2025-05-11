@@ -20,8 +20,8 @@ import java.util.Map;
  * s1 和 s2  只包含集合 {'a', 'b', 'c', 'd', 'e', 'f'} 中的小写字母
  * s2 是 s1 的一个字母异位词
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/9/27
+ * @author huangdu
+ * @version 2022/9/27
  */
 public class KSimilarity {
     private int n;

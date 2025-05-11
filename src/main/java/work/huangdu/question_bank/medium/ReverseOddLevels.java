@@ -35,7 +35,7 @@ import work.huangdu.data_structure.TreeNode;
  * 0 <= Node.val <= 10^5
  * root 是一棵 完美 二叉树
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class ReverseOddLevels {
     public TreeNode reverseOddLevels(TreeNode root) {

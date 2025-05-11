@@ -39,8 +39,8 @@ import java.util.List;
  * 输出:
  * []
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/9/3 14:42
+ * @author huangdu
+ * @version 2020/9/3 14:42
  * @see WordBreak
  */
 public class WordBreak2 {

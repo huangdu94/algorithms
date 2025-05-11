@@ -35,8 +35,8 @@ import java.util.Set;
  * isInfected[i][j] is either 0 or 1
  * 在整个描述的过程中，总有一个相邻的病毒区域，它将在下一轮 严格地感染更多未受污染的方块
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/8/27
+ * @author huangdu
+ * @version 2022/8/27
  */
 public class ContainVirus {
     public int containVirus(int[][] isInfected) {

@@ -21,8 +21,8 @@ import java.util.List;
  * 2 <= arr.length <= 10^5
  * -10^6 <= arr[i] <= 10^6
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/7/4
+ * @author huangdu
+ * @version 2022/7/4
  */
 public class MinimumAbsDifference {
     public List<List<Integer>> minimumAbsDifference(int[] arr) {

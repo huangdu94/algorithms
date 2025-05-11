@@ -13,8 +13,8 @@ package work.huangdu.question_bank.difficult;
  * 提示:
  * 1 <= k <= n <= 10^9
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/3/29
+ * @author huangdu
+ * @version 2022/3/29
  */
 public class FindKthNumber {
     // TODO 未提交

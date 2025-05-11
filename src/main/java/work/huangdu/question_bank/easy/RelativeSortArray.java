@@ -17,8 +17,8 @@ import java.util.Arrays;
  * arr2 中的元素 arr2[i] 各不相同
  * arr2 中的每个元素 arr2[i] 都出现在 arr1 中
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/11/14 10:41
+ * @author huangdu
+ * @version 2020/11/14 10:41
  */
 public class RelativeSortArray {
     public int[] relativeSortArray(int[] arr1, int[] arr2) {

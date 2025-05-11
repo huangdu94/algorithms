@@ -35,8 +35,8 @@ import java.util.Set;
  * queries[j].length == 2
  * 0 <= rowj, colj < n
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/2/8
+ * @author huangdu
+ * @version 2022/2/8
  */
 public class GridIllumination {
     // 另一种思路 计数。

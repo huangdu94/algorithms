@@ -33,8 +33,8 @@ import java.util.Set;
  * 1 <= left <= right <= 10^6
  * 0 <= right - left <= 10^4
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/5
+ * @author huangdu
+ * @version 2022/4/5
  */
 public class CountPrimeSetBits {
     private final Set<Integer> PRIME_SET = new HashSet<>(Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31));

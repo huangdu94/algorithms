@@ -22,8 +22,8 @@ import java.util.Set;
  * n 是奇数。
  * encoded.length == n - 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/5/11
+ * @author huangdu
+ * @version 2021/5/11
  */
 public class Decode {
 

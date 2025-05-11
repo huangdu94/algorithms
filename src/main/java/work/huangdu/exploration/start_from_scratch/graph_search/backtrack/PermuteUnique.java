@@ -23,8 +23,8 @@ import java.util.Set;
  * 1 <= nums.length <= 8
  * -10 <= nums[i] <= 10
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2021/6/9
+ * @author huangdu
+ * @version 2021/6/9
  */
 public class PermuteUnique {
     private int n;

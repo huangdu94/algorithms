@@ -38,8 +38,8 @@ import java.util.PriorityQueue;
  * 1 <= price_i, amount_i <= 10^9
  * orderType_i 为 0 或 1
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2023/1/3
+ * @author huangdu
+ * @version 2023/1/3
  */
 public class GetNumberOfBacklogOrders {
     public int getNumberOfBacklogOrders(int[][] orders) {

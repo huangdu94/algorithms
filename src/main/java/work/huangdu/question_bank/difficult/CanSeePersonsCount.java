@@ -26,7 +26,7 @@ import java.util.Arrays;
  * 1 <= heights[i] <= 10^5
  * heights 中所有数 互不相同 。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class CanSeePersonsCount {
     public int[] canSeePersonsCount(int[] heights) {

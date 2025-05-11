@@ -30,8 +30,8 @@ import java.util.Set;
  * 不存在没有连字符或者带有连字符的单词。
  * 单词里只包含字母，不会出现省略号或者其他标点符号。
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/4/17
+ * @author huangdu
+ * @version 2022/4/17
  */
 public class MostCommonWord {
     public String mostCommonWord(String paragraph, String[] banned) {

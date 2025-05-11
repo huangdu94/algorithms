@@ -31,7 +31,7 @@ import java.util.PriorityQueue;
  * 0 <= grid[i][j] < m * n
  * grid[m - 1][n - 1] == 0
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
+ * @author huangdu
  */
 public class MinimumVisitedCells {
     public int minimumVisitedCells(int[][] grid) {

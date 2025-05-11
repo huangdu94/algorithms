@@ -25,8 +25,8 @@ package work.huangdu.question_bank.medium;
  * nums 中的所有整数 互不相同
  * nums 是范围 [0, n - 1] 内所有数字组成的一个排列
  *
- * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2022/11/17
+ * @author huangdu
+ * @version 2022/11/17
  */
 public class IsIdealPermutation {
     /**
