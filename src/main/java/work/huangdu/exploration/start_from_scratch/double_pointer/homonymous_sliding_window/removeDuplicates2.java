@@ -32,6 +32,16 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sl
  * @version 2020/12/13 10:24
  */
 public class removeDuplicates2 {
+    public int removeDuplicates3(int[] nums) {
+        int i = 0;
+        for (int num : nums) {
+            if (i < 2 || num != nums[i - 2]) {
+                nums[i++] = num;
+            }
+        }
+        return i;
+    }
+
     public int removeDuplicates(int[] nums) {
         int curVal = -10001, count = 0, i = 0;
         for (int num : nums) {
