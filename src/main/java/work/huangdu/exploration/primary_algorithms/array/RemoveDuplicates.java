@@ -64,4 +64,15 @@ public class RemoveDuplicates {
         }
         return point + 1;
     }
+
+    public int removeDuplicates4(int[] nums) {
+        int i = 1, j = 1, n = nums.length;
+        while (j < n) {
+            if (nums[j] != nums[j - 1]) {
+                nums[i++] = nums[j];
+            }
+            j++;
+        }
+        return i;
+    }
 }
