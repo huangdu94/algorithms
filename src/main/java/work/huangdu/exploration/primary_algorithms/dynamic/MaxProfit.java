@@ -27,6 +27,13 @@ import work.huangdu.question_bank.difficult.MaxProfit4;
  * @see MaxProfit4
  */
 public class MaxProfit {
+    public int maxProfit(int[] prices) {
+        int min = Integer.MAX_VALUE, ans = 0;
+        for (int price : prices) {
+            ans = Math.max(ans, price - (min = Math.min(min, price)));
+        }
+        return ans;
+    }
 
     public int maxProfit2(int[] prices) {
         if (prices == null || prices.length < 2) {
@@ -63,7 +70,7 @@ public class MaxProfit {
         return dp[len - 1][0];
     }
 
-    public int maxProfit(int[] prices) {
+    public int maxProfit4(int[] prices) {
         int max = 0, i = 0, valley = Integer.MAX_VALUE;
         while (i < prices.length - 1) {
             while (i < prices.length - 1 && prices[i] >= prices[i + 1]) {
