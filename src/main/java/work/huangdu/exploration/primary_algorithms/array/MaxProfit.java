@@ -39,16 +39,11 @@ import java.util.HashSet;
  */
 public class MaxProfit {
     public int maxProfit(int[] prices) {
-        int profit = 0;
-        int pre = prices[0];
-        for (int i = 1; i < prices.length; i++) {
-            int current = prices[i];
-            if (current > pre) {
-                profit += (current - pre);
-            }
-            pre = current;
+        int ans = 0, n = prices.length;
+        for (int i = 1; i < n; i++) {
+            ans += Math.max(prices[i] - prices[i - 1], 0);
         }
-        return profit;
+        return ans;
     }
 
     public int maxProfit2(int[] prices) {
