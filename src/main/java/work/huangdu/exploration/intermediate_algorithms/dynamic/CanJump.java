@@ -49,13 +49,12 @@ public class CanJump {
     }
 
     public boolean canJump3(int[] nums) {
-        // 能跳的最远的距离
-        int len = nums.length, max = nums[0];
-        for (int i = 1; i < len && max < len - 1; i++) {
-            if (i > max) return false;
-            if (i + nums[i] > max) {
-                max = i + nums[i];
+        int n = nums.length, far = 0;
+        for (int i = 0; i < n && far < n; i++) {
+            if (i > far) {
+                return false;
             }
+            far = Math.max(far, i + nums[i]);
         }
         return true;
     }

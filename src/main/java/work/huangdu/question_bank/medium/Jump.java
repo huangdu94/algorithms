@@ -1,6 +1,7 @@
 package work.huangdu.question_bank.medium;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 /**
  * 45. 跳跃游戏 II
@@ -25,17 +26,49 @@ import java.util.Arrays;
  */
 public class Jump {
     public int jump(int[] nums) {
+        int n = nums.length, far = 0, ans = 0;
+        for (int i = 0; i < n && far < n; i++) {
+            if (i == far) {
+                ans++;
+            }
+            far = Math.max(far, i + nums[i]);
+        }
+        return ans;
+    }
+
+    public int jump2(int[] nums) {
         int n = nums.length;
         int[] dp = new int[n];
         Arrays.fill(dp, Integer.MAX_VALUE);
         dp[0] = 0;
-        for (int i = 0; i < n; i++) {
-            int step = dp[i];
-            for (int j = i + 1; j < Math.min(i + nums[i] + 1, n); j++) {
-                dp[j] = Math.min(dp[j], step + 1);
+        for (int start = 0; start < n; start++) {
+            int step = nums[start];
+            for (int pos = start + 1; pos <= start + step && pos < n; pos++) {
+                dp[pos] = Math.min(dp[pos], dp[start] + 1);
             }
         }
         return dp[n - 1];
+    }
+
+    public int jump3(int[] nums) {
+        int n = nums.length;
+        if (n == 1) {
+            return 0;
+        }
+        PriorityQueue<Integer> pq = new PriorityQueue<>((o1, o2) -> Integer.compare(o2 + nums[o2], o1 + nums[o1]));
+        pq.offer(0);
+        int ans = 1;
+        while (true) {
+            int start = pq.remove();
+            if (start + nums[start] >= n - 1) {
+                return ans;
+            }
+            pq.clear();
+            for (int idx = start + 1; idx <= start + nums[start]; idx++) {
+                pq.offer(idx);
+            }
+            ans++;
+        }
     }
 
     public static void main(String[] args) {
