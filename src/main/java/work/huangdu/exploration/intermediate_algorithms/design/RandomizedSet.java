@@ -3,6 +3,7 @@ package work.huangdu.exploration.intermediate_algorithms.design;
 import java.util.*;
 
 /**
+ * 380. O(1) 时间插入、删除和获取随机元素
  * 设计一个支持在平均 时间复杂度 O(1) 下，执行以下操作的数据结构。
  * insert(val)：当元素 val 不存在时，向集合中插入该项。
  * remove(val)：元素 val 存在时，从集合中移除该项。
@@ -237,5 +238,97 @@ class RandomizedSet3 {
         for (int i = -1000000000; i >= -1000000099; i--) {
             System.out.println(randomizedSet.remove(i));
         }
+    }
+}
+
+class RandomizedSet5 {
+    private int capacity;
+    private int[] array;
+    private Map<Integer, Integer> numIdxMap;
+    private int idx;
+    private final Random random;
+
+    public RandomizedSet5() {
+        this.capacity = 16;
+        this.array = new int[this.capacity];
+        this.numIdxMap = new HashMap<>();
+        this.idx = 0;
+        this.random = new Random();
+    }
+
+    public boolean insert(int val) {
+        if (numIdxMap.containsKey(val)) {
+            return false;
+        }
+        numIdxMap.put(val, idx);
+        if (idx == capacity) {
+            expansion();
+        }
+        array[idx++] = val;
+        return true;
+    }
+
+    public boolean remove(int val) {
+        if (!numIdxMap.containsKey(val)) {
+            return false;
+        }
+        int oldIdx = numIdxMap.remove(val);
+        if (oldIdx != idx - 1) {
+            int lastVal = array[idx - 1];
+            array[oldIdx] = lastVal;
+            numIdxMap.put(lastVal, oldIdx);
+        }
+        idx--;
+        return true;
+    }
+
+    public int getRandom() {
+        return array[random.nextInt(idx)];
+    }
+
+    private synchronized void expansion() {
+        int newCapacity = capacity << 1;
+        if (newCapacity < 0) { return; }
+        int[] newArray = Arrays.copyOf(array, newCapacity);
+        this.array = newArray;
+        this.capacity = newCapacity;
+    }
+}
+class RandomizedSet {
+    private List<Integer> numList;
+    private Map<Integer, Integer> numIdxMap;
+    private final Random random;
+
+    public RandomizedSet() {
+        this.numList = new ArrayList<>();
+        this.numIdxMap = new HashMap<>();
+        this.random = new Random();
+    }
+
+    public boolean insert(int val) {
+        if (numIdxMap.containsKey(val)) {
+            return false;
+        }
+        numIdxMap.put(val, numList.size());
+        numList.add(val);
+        return true;
+    }
+
+    public boolean remove(int val) {
+        if (!numIdxMap.containsKey(val)) {
+            return false;
+        }
+        int oldIdx = numIdxMap.remove(val);
+        if (oldIdx != numList.size() - 1) {
+            int lastVal = numList.get(numList.size() - 1);
+            numList.set(oldIdx, lastVal);
+            numIdxMap.put(lastVal, oldIdx);
+        }
+        numList.remove(numList.size() - 1);
+        return true;
+    }
+
+    public int getRandom() {
+        return numList.get(random.nextInt(numList.size()));
     }
 }
