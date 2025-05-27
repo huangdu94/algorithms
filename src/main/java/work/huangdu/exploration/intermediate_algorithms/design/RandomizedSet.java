@@ -241,14 +241,14 @@ class RandomizedSet3 {
     }
 }
 
-class RandomizedSet5 {
+class RandomizedSet4 {
     private int capacity;
     private int[] array;
     private Map<Integer, Integer> numIdxMap;
     private int idx;
     private final Random random;
 
-    public RandomizedSet5() {
+    public RandomizedSet4() {
         this.capacity = 16;
         this.array = new int[this.capacity];
         this.numIdxMap = new HashMap<>();
@@ -294,12 +294,12 @@ class RandomizedSet5 {
         this.capacity = newCapacity;
     }
 }
-class RandomizedSet {
+class RandomizedSet5 {
     private List<Integer> numList;
     private Map<Integer, Integer> numIdxMap;
     private final Random random;
 
-    public RandomizedSet() {
+    public RandomizedSet5() {
         this.numList = new ArrayList<>();
         this.numIdxMap = new HashMap<>();
         this.random = new Random();
