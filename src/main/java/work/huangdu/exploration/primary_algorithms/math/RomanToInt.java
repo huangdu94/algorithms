@@ -131,4 +131,44 @@ public class RomanToInt {
         }
         return result;
     }
+
+    public int romanToInt4(String s) {
+        int n = s.length(), i = 0, ans = 0;
+        while (i < n) {
+            int num1 = convert(s.charAt(i));
+            if (i + 1 < n) {
+                int num2 = convert(s.charAt(i + 1));
+                if (num2 > num1) {
+                    ans += num2 - num1;
+                    i++;
+                } else {
+                    ans += num1;
+                }
+            } else {
+                ans += num1;
+            }
+            i++;
+        }
+        return ans;
+    }
+
+    private int convert(char ch) {
+        switch (ch) {
+            case 'I':
+                return 1;
+            case 'V':
+                return 5;
+            case 'X':
+                return 10;
+            case 'L':
+                return 50;
+            case 'C':
+                return 100;
+            case 'D':
+                return 500;
+            default:
+                // M
+                return 1000;
+        }
+    }
 }
