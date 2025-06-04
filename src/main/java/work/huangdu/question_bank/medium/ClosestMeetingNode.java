@@ -1,8 +1,6 @@
 package work.huangdu.question_bank.medium;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 2359. 找到离给定两个节点最近的节点
