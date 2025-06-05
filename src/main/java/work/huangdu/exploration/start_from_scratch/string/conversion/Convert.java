@@ -74,4 +74,29 @@ public class Convert {
         }
         return new String(chars);
     }
+
+    public String convert3(String s, int numRows) {
+        if (numRows == 1) {
+            return s;
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int curRow = 1, interval = interval(numRows, 1), n = s.length(); curRow <= numRows; curRow++) {
+            int i = curRow - 1, delta = interval(numRows, curRow);
+            while (i < n) {
+                sb.append(s.charAt(i));
+                i += delta;
+                if (delta != interval) {
+                    delta = interval - delta;
+                }
+            }
+        }
+        return sb.toString();
+    }
+
+    private int interval(int numRows, int curRow) {
+        if (numRows == curRow) {
+            curRow = 1;
+        }
+        return (numRows << 1) - (curRow << 1);
+    }
 }
