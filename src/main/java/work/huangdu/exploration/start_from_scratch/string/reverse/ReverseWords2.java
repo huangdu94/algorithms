@@ -1,5 +1,8 @@
 package work.huangdu.exploration.start_from_scratch.string.reverse;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 151. 翻转字符串里的单词
  * 给定一个字符串，逐个翻转字符串中的每个单词。
@@ -52,5 +55,30 @@ public class ReverseWords2 {
         ReverseWords2 reverseWords2 = new ReverseWords2();
         String s = "the sky is blue";
         System.out.println(reverseWords2.reverseWords(s));
+    }
+
+    public String reverseWords2(String s) {
+        int n = s.length(), i = 0;
+        List<String> wordList = new ArrayList<>();
+        while (i < n) {
+            while (i < n && s.charAt(i) == ' ') {
+                i++;
+            }
+            int start = i;
+            while (i < n && s.charAt(i) != ' ') {
+                i++;
+            }
+            if (i > start) {
+                wordList.add(s.substring(start, i));
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int k = wordList.size() - 1; k >= 0; k--) {
+            sb.append(wordList.get(k));
+            if (k > 0) {
+                sb.append(' ');
+            }
+        }
+        return sb.toString();
     }
 }
