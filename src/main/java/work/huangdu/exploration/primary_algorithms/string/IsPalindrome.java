@@ -1,7 +1,7 @@
 package work.huangdu.exploration.primary_algorithms.string;
 
 /**
- * 验证回文字符串
+ * 125. 验证回文串
  * 给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
  * 说明：本题中，我们将空字符串定义为有效的回文串。
  * 示例 1:
@@ -89,5 +89,25 @@ public class IsPalindrome {
         String s = "A man, a plan, a canal: Panama";
         IsPalindrome isPalindrome = new IsPalindrome();
         System.out.println(isPalindrome.isPalindrome2(s));
+    }
+
+    public boolean isPalindrome3(String s) {
+        int l = 0, r = s.length() - 1;
+        while (l < r) {
+            while (l < r && !Character.isLetterOrDigit(s.charAt(l))) {
+                l++;
+            }
+            while (l < r && !Character.isLetterOrDigit(s.charAt(r))) {
+                r--;
+            }
+            if (l < r) {
+                if (Character.toUpperCase(s.charAt(l)) != Character.toUpperCase(s.charAt(r))) {
+                    return false;
+                }
+                l++;
+                r--;
+            }
+        }
+        return true;
     }
 }
