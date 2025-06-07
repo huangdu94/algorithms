@@ -60,4 +60,19 @@ public class IsSubsequence {
         String t = "ahbgdc";
         System.out.println(subsequence.isSubsequence2(s, t));
     }
+
+    public boolean isSubsequence3(String s, String t) {
+        int sn = s.length(), tn = t.length(), si = 0, ti = 0;
+        while (si < sn && ti < tn) {
+            char sc = s.charAt(si);
+            while (ti < tn && t.charAt(ti) != sc) {
+                ti++;
+            }
+            if (ti < tn) {
+                si++;
+                ti++;
+            }
+        }
+        return si == sn;
+    }
 }
