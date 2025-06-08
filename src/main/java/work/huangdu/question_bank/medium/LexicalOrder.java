@@ -41,4 +41,27 @@ public class LexicalOrder {
         LexicalOrder lo = new LexicalOrder();
         System.out.println(lo.lexicalOrder(100));
     }
+
+    public List<Integer> lexicalOrder2(int n) {
+        List<Integer> ans = new ArrayList<>(n);
+        for (int i = 1; i < 10; i++) {
+            if (!generate(ans, i, n)) {
+                break;
+            }
+        }
+        return ans;
+    }
+
+    private boolean generate(List<Integer> ans, int prefix, int limit) {
+        if (prefix > limit) {
+            return false;
+        }
+        ans.add(prefix);
+        for (int i = 0; i < 10; i++) {
+            if (!generate(ans, prefix * 10 + i, limit)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
