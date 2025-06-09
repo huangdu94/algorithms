@@ -62,4 +62,21 @@ public class IsIsomorphic {
         String t = "aa";
         System.out.println(isIsomorphic.isIsomorphic(s, t));
     }
+
+    public boolean isIsomorphic3(String s, String t) {
+        char[] smap = new char[128], tmap = new char[128];
+        char target = 'a';
+        for (int i = 0, n = s.length(); i < n; i++) {
+            char ch1 = s.charAt(i), ch2 = t.charAt(i);
+            if (smap[ch1] == 0 && tmap[ch2] == 0) {
+                smap[ch1] = target;
+                tmap[ch2] = target++;
+                continue;
+            }
+            if (smap[ch1] == 0 || tmap[ch2] == 0 || smap[ch1] != tmap[ch2]) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
