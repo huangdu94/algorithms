@@ -102,4 +102,35 @@ public class WordPattern {
         }
         return true;
     }
+
+    public boolean wordPattern4(String pattern, String s) {
+        int[] map = new int[26];
+        Arrays.fill(map, -1);
+        int m = pattern.length(), n = s.length(), i = 0, j = 0;
+        while (i < m && j < n) {
+            int pi = pattern.charAt(i) - 'a';
+            // hash有溢出风险
+            int hash = 0;
+            while (j < n && s.charAt(j) != ' ') {
+                hash = hash * 26 + s.charAt(j) - 'a';
+                j++;
+            }
+            if (map[pi] == -1) {
+                for (int k = 0; k < 26; k++) {
+                    if (k == pi) {
+                        continue;
+                    }
+                    if (map[k] == hash) {
+                        return false;
+                    }
+                }
+                map[pi] = hash;
+            } else if (map[pi] != hash) {
+                return false;
+            }
+            i++;
+            j++;
+        }
+        return i == m && j >= n;
+    }
 }
