@@ -54,4 +54,31 @@ public class IsAnagram {
         }
         return true;
     }
+
+    public boolean isAnagram3(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int mask = 0;
+        int[] count = new int[26];
+        for (int i = 0, n = s.length(); i < n; i++) {
+            int sidx = s.charAt(i) - 'a', tidx = t.charAt(i) - 'a';
+            if (sidx == tidx) {
+                continue;
+            }
+            if (count[sidx] == 0) {
+                mask |= 1 << sidx;
+            } else if (count[sidx] == -1) {
+                mask ^= 1 << sidx;
+            }
+            if (count[tidx] == 0) {
+                mask |= 1 << tidx;
+            } else if (count[tidx] == 1) {
+                mask ^= 1 << tidx;
+            }
+            count[sidx]++;
+            count[tidx]--;
+        }
+        return mask == 0;
+    }
 }
