@@ -84,4 +84,22 @@ public class GroupAnagrams {
         }
         return true;
     }
+
+    public List<List<String>> groupAnagrams3(String[] strs) {
+        Map<Integer, List<String>> group = new HashMap<>();
+        for (String str : strs) {
+            int hash = hash(str);
+            List<String> list = group.computeIfAbsent(hash, (key) -> new ArrayList<>());
+            list.add(str);
+        }
+        return new ArrayList<>(group.values());
+    }
+
+    private int hash(String str) {
+        int[] count = new int[26];
+        for (int i = 0, n = str.length(); i < n; i++) {
+            count[str.charAt(i) - 'a']++;
+        }
+        return Arrays.hashCode(count);
+    }
 }
