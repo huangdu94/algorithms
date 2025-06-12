@@ -1,6 +1,5 @@
 package work.huangdu.solution;
 
-
 /**
  * Solution
  *
