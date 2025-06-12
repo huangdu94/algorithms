@@ -78,4 +78,22 @@ public class IsHappy {
         }
         return isHappy(next, exist);
     }
+
+    public boolean isHappy3(int n) {
+        Set<Integer> exist = new HashSet<>();
+        do {
+            exist.add(n);
+            int next = 0;
+            while (n > 0) {
+                int unit = n % 10;
+                next += unit * unit;
+                n /= 10;
+            }
+            if (next == 1) {
+                return true;
+            }
+            n = next;
+        } while (!exist.contains(n));
+        return false;
+    }
 }
