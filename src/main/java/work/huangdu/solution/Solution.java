@@ -1,8 +1,6 @@
 package work.huangdu.solution;
 
 /**
- * Solution
- *
  * @author huangdu
  * @version 2025/5/27
  */
