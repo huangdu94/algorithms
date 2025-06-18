@@ -46,4 +46,34 @@ public class Candy {
         }
         return count;
     }
+
+    /**
+     * 找到所有极小值点和所有极大值点，对于极小值点肯定为1，极大值点的值取从左往右计算，和从右往左计算最大的
+     * 对于等值：等值可以重置糖果数，连续的两个等值，另一个可以为1（按照贪心算法，能变成1肯定变成1）
+     */
+    public int candy2(int[] ratings) {
+        int n = ratings.length, i = 0, ans = 0;
+        int[] candy = new int[n];
+        candy[0] = 1;
+        while (i + 1 < n) {
+            while (i + 1 < n && ratings[i] > ratings[i + 1]) {
+                i++;
+            }
+            candy[i] = Math.max(candy[i], 1);
+            for (int k = i; k >= 1 && ratings[k - 1] > ratings[k]; k--) {
+                candy[k - 1] = Math.max(candy[k - 1], candy[k] + 1);
+            }
+            while (i + 1 < n && ratings[i] == ratings[i + 1]) {
+                candy[++i] = 1;
+            }
+            while (i + 1 < n && ratings[i] < ratings[i + 1]) {
+                i++;
+                candy[i] = Math.max(candy[i], candy[i - 1] + 1);
+            }
+        }
+        for (int amount : candy) {
+            ans += amount;
+        }
+        return ans;
+    }
 }
