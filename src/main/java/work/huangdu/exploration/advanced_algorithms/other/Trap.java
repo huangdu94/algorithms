@@ -115,4 +115,25 @@ public class Trap {
         }
         return ans;
     }
+
+    /**
+     * 单调栈，栈中记录“柱子”对应的下标，柱子的高度取height数组中查询
+     * 栈中存的是单调递减的
+     */
+    public int trap6(int[] height) {
+        int n = height.length, ans = 0, top = 0;
+        int[] stack = new int[n];
+        for (int i = 0; i < n; i++) {
+            int curH = height[i], waterH = Math.min(height[stack[0]], curH), ptr = i - 1;
+            while (top > 0 && height[stack[top - 1]] <= curH) {
+                if (top > 1) {
+                    ans += (waterH - height[stack[top - 1]]) * (ptr - stack[top - 2]);
+                    ptr = stack[top - 2];
+                }
+                top--;
+            }
+            stack[top++] = i;
+        }
+        return ans;
+    }
 }
