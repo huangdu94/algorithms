@@ -156,4 +156,62 @@ public class FullJustify {
         int maxWidth = 16;
         System.out.println(fullJustify.fullJustify(words, maxWidth));
     }
+
+    private static final char BLANK = ' ';
+
+    public List<String> fullJustify3(String[] words, int maxWidth) {
+        List<String> ans = new ArrayList<>();
+        int n = words.length, pos = 0, buffer = 0;
+        for (int i = 0; ; i++) {
+            String word = words[i];
+            if (buffer + word.length() + i - pos > maxWidth) {
+                ans.add(createRow(words, maxWidth, pos, i, buffer, false));
+                pos = i;
+                buffer = 0;
+            }
+            if (i == n - 1) {
+                ans.add(createRow(words, maxWidth, pos, n, buffer, true));
+                return ans;
+            }
+            buffer += word.length();
+        }
+    }
+
+    private String createRow(String[] words, int maxWidth, int left, int right, int buffer, boolean last) {
+        StringBuilder sb = new StringBuilder();
+        if (last) {
+            for (int i = left; i < right; i++) {
+                sb.append(words[i]);
+                if (i < right - 1) {
+                    sb.append(BLANK);
+                }
+            }
+            while (sb.length() < maxWidth) {
+                sb.append(BLANK);
+            }
+            return sb.toString();
+        }
+        int count = right - left, blank = maxWidth - buffer;
+        if (count == 1) {
+            sb.append(words[left]);
+            for (int k = 0; k < blank; k++) {
+                sb.append(BLANK);
+            }
+            return sb.toString();
+        }
+        // a表示平均每个空格的长度，b表示有b个空格要多一个
+        int a = blank / (count - 1), b = blank % (count - 1);
+        for (int i = left; i < right; i++) {
+            sb.append(words[i]);
+            if (i < right - 1) {
+                for (int k = 0; k < a; k++) {
+                    sb.append(BLANK);
+                }
+                if (i - left < b) {
+                    sb.append(BLANK);
+                }
+            }
+        }
+        return sb.toString();
+    }
 }
